@@ -4,7 +4,9 @@ created: 2025-12-20
 deadline: 2025-12-31
 ---
 
-## Context
+## Planning
+
+### Task
 Knowledge, files, and folders are unmanaged across multiple workspaces. Needs organization.
 - Discord, Obsidian, OneDrive
 - Miro diagrams
@@ -15,29 +17,43 @@ Knowledge, files, and folders are unmanaged across multiple workspaces. Needs or
 - Desktop
 - Confluence
 
-## Steps
-- [ ] Watch resource video and define what needs to be done
-- [ ] List all places where knowledge is currently scattered
-- [ ] Decide organization direction
-- [ ] Execute actual cleanup
+Steps:
+- Watch resource video and define what needs to be done
+- List all places where knowledge is currently scattered
+- Decide organization direction
+- Execute actual cleanup
 
-## Resources
+### Time Estimate
+- How long will it take?
+- Why do I think so?
+
+### Difficulty Estimate
+- How well can I do this?
+- Why do I think so? (including expected obstacles)
+
+---
+
+## References
 - Reference video: https://youtu.be/LPXpvkvQ8mw?si=rksa9AzREUtKhQrr
 
-## Expectation & Reflection
+---
 
-### Outcome
-- expect:
-- actual:
+## Reflection
 
-### Learn
-- expect:
-- actual:
+### Time
+- Forecast:
+- Actual:
+- Was it accurate? Why?
 
-### Harvest
-- expect:
-- actual:
+### Difficulty
+- Forecast:
+- Actual:
+- Was it accurate? Why?
+
+### How can I forecast better next time?
+-
+
+---
 
 ## Notes
-<!-- For saving time later or AI search -->
 -
