@@ -184,21 +184,19 @@ Implement VM provisioning. Referring to existing VARLab code.
 
 ### Writing Forecast Review
 
-**User:** "Write the forecast review"
+**User:** "Estimated 3 hours but took 3.5 hours. Networking took 30 min longer. Difficulty was medium as expected, got stuck on network security group."
 
 **AI:** Organization suggestion:
 ```markdown
 ## Forecast Review (Evaluating)
 
 ### Time
-- Forecast: 3 hours
-- Actual: 3.5 hours
-- Was it accurate? Almost. 30 min added for networking.
+- Forecast: 3h → Actual: 3.5h
+- Networking task took +30 min
 
 ### Difficulty
-- Forecast: Medium, might get stuck on networking
-- Actual: Medium, got stuck on network security group
-- Was it accurate? Yes. Got stuck where expected.
+- Forecast: Medium → Actual: Medium
+- Got stuck on network security group as expected
 
 ### How can I forecast better next time?
 - Add +30 min buffer for networking tasks

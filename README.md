@@ -31,112 +31,108 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Projects (5)
 
-### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Total: 2.5h | Start: Dec 2024 | Tracked: Dec 2025
+> ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Total: 2.5h | Start: Dec 2024 | Tracked: Dec 2025
+>
+> <details>
+> <summary>Monthly breakdown</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□ |
+>
+> </details>
 
-<details>
-<summary>Monthly breakdown</summary>
+> ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) | Total: 119.8h | Start: Sep 2025
+>
+> <details>
+> <summary>Monthly breakdown</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Dec | 22.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□ |
+> | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
+> | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
+> | Sep | 7.0h | □□□□□□□□□□□□□□□□□□□□□□□□■□□□□■ |
+>
+> </details>
 
-| Month | Hours | Activity |
-|-------|-------|----------|
-| Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□ |
+> ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) | Total: 45.8h | Start: Oct 2024 | Tracked: Nov 2025
+>
+> <details>
+> <summary>Monthly breakdown</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Dec | 22.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□□ |
+> | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
+>
+> </details>
 
-</details>
+> ### [Riipen](Voyages/Projects/riipen/voyage-plan.md) | Total: 17.2h | Start: Sep 2025 | Tracked: Oct 2025
+>
+> <details>
+> <summary>Monthly breakdown</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
+>
+> </details>
 
-### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) | Total: 119.8h | Start: Sep 2025
-
-<details>
-<summary>Monthly breakdown</summary>
-
-| Month | Hours | Activity |
-|-------|-------|----------|
-| Dec | 22.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□ |
-| Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
-| Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
-| Sep | 7.0h | □□□□□□□□□□□□□□□□□□□□□□□□■□□□□■ |
-
-</details>
-
-### [Job Search](Voyages/Projects/job-search/voyage-plan.md) | Total: 45.8h | Start: Oct 2024 | Tracked: Nov 2025
-
-<details>
-<summary>Monthly breakdown</summary>
-
-| Month | Hours | Activity |
-|-------|-------|----------|
-| Dec | 22.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□□ |
-| Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
-
-</details>
-
-### [Riipen](Voyages/Projects/riipen/voyage-plan.md) | Total: 17.2h | Start: Sep 2025 | Tracked: Oct 2025
-
-<details>
-<summary>Monthly breakdown</summary>
-
-| Month | Hours | Activity |
-|-------|-------|----------|
-| Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
-| Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
-| Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
-
-</details>
-
-### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | Total: 111.8h | Start: May 2025 | Tracked: Sep 2025
-
-<details>
-<summary>Monthly breakdown</summary>
-
-| Month | Hours | Activity |
-|-------|-------|----------|
-| Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
-| Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
-| Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
-| Sep | 3.8h | □□□□□□□□□□□■□□□□□□□□□■□□□□□□□■ |
-
-</details>
+> ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | Total: 111.8h | Start: May 2025 | Tracked: Sep 2025
+>
+> <details>
+> <summary>Monthly breakdown</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
+> | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
+> | Sep | 3.8h | □□□□□□□□□□□■□□□□□□□□□■□□□□□□□■ |
+>
+> </details>
 
 ---
 
 ## Areas (2)
 
-### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | Total: 18.2h | Start: Oct 2025
+> ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | Total: 18.2h | Start: Oct 2025
+>
+> <details>
+> <summary>Monthly breakdown</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□ |
+> | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
+> | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
+>
+> </details>
 
-<details>
-<summary>Monthly breakdown</summary>
-
-| Month | Hours | Activity |
-|-------|-------|----------|
-| Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□ |
-| Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
-| Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
-
-</details>
-
-### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) | Total: 13.2h | Start: Oct 2025
-
-<details>
-<summary>Monthly breakdown</summary>
-
-| Month | Hours | Activity |
-|-------|-------|----------|
-| Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
-| Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
-| Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
-
-</details>
+> ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) | Total: 13.2h | Start: Oct 2025
+>
+> <details>
+> <summary>Monthly breakdown</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
+> | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
+>
+> </details>
 
 ---
 
 ## Blueprint
 
-Framework documentation and design principles.
+Framework documentation and design principles. [View all documentation](Blueprint/README.md)
 
-- [About](Blueprint/about.md) - System essence and mission
-- [Terminology](Blueprint/terminology.md) - Nautical terms mapping
-- [Ontology](Blueprint/ontology.md) - Things definitions and relationships
-- [Principles](Blueprint/principles.md) - Core principles
-- [Contracts](Blueprint/contracts.md) - System contracts
-- [Features](Blueprint/features.md) - Feature specifications
-- [Design Decisions](Blueprint/design-decisions.md) - Architecture decisions
-- [AI Usage Example](Blueprint/AI-usage-example.md) - AI interaction patterns
-- [Templates](Blueprint/templates/) - Voyage templates
+---
+
+## License
+
+This work is licensed under [CC BY-NC-SA 4.0](LICENSE).

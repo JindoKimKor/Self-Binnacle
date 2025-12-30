@@ -84,12 +84,19 @@ Self-Binnacle/
 
 ## Documentation Reference (Blueprint)
 
-- [about.md](Blueprint/about.md) - System essence, mission
-- [ontology.md](Blueprint/ontology.md) - Thing definitions
-- [terminology.md](Blueprint/terminology.md) - Term definitions
-- [principles.md](Blueprint/principles.md) - Principles
-- [contracts.md](Blueprint/contracts.md) - System contracts
-- [features.md](Blueprint/features.md) - Features
-- [design-decisions.md](Blueprint/design-decisions.md) - Design decisions
-- [AI-usage-example.md](Blueprint/AI-usage-example.md) - AI interaction patterns
-- [templates/](Blueprint/templates/) - Voyage templates
+### Core
+- [about.md](Blueprint/core/about.md) - System essence, mission
+- [terminology.md](Blueprint/core/terminology.md) - Term definitions
+- [ontology.md](Blueprint/core/ontology.md) - Thing definitions
+- [principles.md](Blueprint/core/principles.md) - Principles
+
+### System
+- [contracts.md](Blueprint/system/contracts.md) - System contracts
+- [features.md](Blueprint/system/features.md) - Features
+- [design-decisions.md](Blueprint/system/design-decisions.md) - Design decisions
+
+### Guides
+- [AI-usage-example.md](Blueprint/guides/AI-usage-example.md) - AI interaction patterns
+
+### Voyage Templates
+- [voyage-templates/](Blueprint/voyage-templates/) - Voyage templates
