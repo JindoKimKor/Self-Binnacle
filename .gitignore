@@ -1,0 +1,20 @@
+# Credentials (sensitive)
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+
+# Token file (generated after first auth)
+token.json
+token.pickle
+
+# System
+_system/
+
+# Job History
+Voyages/Projects/job-search
+
+# NDA / Confidential Projects
+Voyages/Projects/Helprr.ai
