@@ -1,5 +1,16 @@
 # Self-Binnacle Usage Examples
 
+## Table of Contents
+- [1. Structure Creation](#1-structure-creation)
+- [2. Content Writing and Organization](#2-content-writing-and-organization)
+- [3. Discussion/Development](#3-discussiondevelopment)
+- [4. Pattern Recommendation](#4-pattern-recommendation)
+- [5. Missing Check](#5-missing-check)
+- [6. Connection Suggestion](#6-connection-suggestion)
+- [7. Past Reference](#7-past-reference)
+- [8. Passage Writing Flow](#8-passage-writing-flow)
+- [9. AI Scan Alerts](#9-ai-scan-alerts)
+
 ---
 
 ## 1. Structure Creation

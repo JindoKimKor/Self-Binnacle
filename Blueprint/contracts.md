@@ -1,5 +1,15 @@
 # Self-Binnacle Contracts
 
+## Table of Contents
+- [Contract Philosophy](#contract-philosophy)
+- [1. User ↔ Self-Binnacle](#1-user--self-binnacle)
+- [2. User ↔ Time Management App](#2-user--time-management-app)
+- [3. Self-Binnacle ↔ Time Management App](#3-self-binnacle--time-management-app)
+- [4. User ↔ Git/GitHub](#4-user--gitgithub)
+- [5. Self-Binnacle ↔ Git/GitHub](#5-self-binnacle--gitgithub)
+- [6. User ↔ AI](#6-user--ai)
+- [7. Self-Binnacle ↔ AI](#7-self-binnacle--ai)
+
 ---
 
 ## Contract Philosophy

@@ -1,6 +1,13 @@
 # Self-Binnacle Ontology
 
-Definition of Things between Self-Binnacle and Time Management App.
+Definition of all Things in the Self-Binnacle system.
+
+## Table of Contents
+- [Voyage Related](#voyage-related)
+- [Metacognition 3-Stage Cycle](#metacognition-3-stage-cycle)
+- [Passage Related](#passage-related)
+- [Time Management App Related](#time-management-app-related)
+- [Source of Truth Principle](#source-of-truth-principle)
 
 ---
 

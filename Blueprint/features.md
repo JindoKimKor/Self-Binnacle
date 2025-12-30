@@ -1,5 +1,11 @@
 # Self-Binnacle Features
 
+## Table of Contents
+- [1. Dashboard (README.md)](#1-dashboard-readmemd)
+- [2. Logbook Reminder (Not implemented)](#2-logbook-reminder-not-implemented)
+- [3. AI Scan (Not implemented)](#3-ai-scan-not-implemented)
+- [4. Self Reflection Report (Not implemented)](#4-self-reflection-report-not-implemented)
+
 ---
 
 ## 1. Dashboard (README.md)
