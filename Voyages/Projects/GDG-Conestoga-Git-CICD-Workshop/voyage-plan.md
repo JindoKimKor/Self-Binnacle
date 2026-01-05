@@ -1,6 +1,6 @@
 ---
 title: "[Project] Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series"
-created: 2026-12-19
+created: 2025-12-19
 deadline: 2026-03-25
 ---
 
