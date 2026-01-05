@@ -1,7 +1,7 @@
 ---
 title: "[Project] Helena Webb Mentorship Program"
-created: 2024-12-04
-deadline: 2025-04-30
+created: 2025-12-04
+deadline: 2026-04-30
 ---
 
 ## Why
@@ -45,6 +45,8 @@ Conestoga College's Helena Webb Professional Mentorship Program. Bi-weekly 1-hou
 |---------|------|-------|------|
 | [2025-12-21](logbook/2025-12-21/log.md) | Dec 21 | Get-to-know-each-other | First session |
 | [2025-12-23](logbook/2025-12-23/log.md) | Dec 23 | Self-work | PARA setup, reflection |
+| [2026-01-02](logbook/2026-01-02/log.md) | Jan 2 | Self-work | Interview questions review |
+| [2026-01-04](logbook/2026-01-04/log.md) | Jan 4 | Session #2 | First official bi-weekly session |
 
 ---
 
