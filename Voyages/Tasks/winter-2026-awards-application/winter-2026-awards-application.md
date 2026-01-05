@@ -37,7 +37,7 @@ Scholarship application. Deadline: Friday, January 30, 2026 at 4 p.m. (ET)
 - Actual:
 - Was it accurate? Why?
 
-### How can I forecast better next time?
+### How can I forecast better next time? (Metacognition)
 -
 
 ---

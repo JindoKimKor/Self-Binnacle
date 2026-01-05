@@ -131,7 +131,7 @@ Package VARLab's CI/CD infrastructure as open-source plug-and-play solution
 
 **AI:**
 - Create logbook/2024-12-29/ folder
-- Create passage-plan.md, log.md, forecast-review.md
+- Create passage-plan.md, log.md, passage-forecast-review.md
 
 "Would you like to start with passage-plan.md?"
 
@@ -198,7 +198,7 @@ Implement VM provisioning. Referring to existing VARLab code.
 - Forecast: Medium → Actual: Medium
 - Got stuck on network security group as expected
 
-### How can I forecast better next time?
+### How can I forecast better next time? (Metacognition)
 - Add +30 min buffer for networking tasks
 - Consider Portal testing time for Azure work
 ```

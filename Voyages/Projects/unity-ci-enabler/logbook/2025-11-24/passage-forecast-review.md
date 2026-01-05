@@ -1,10 +1,10 @@
 ---
-date: 2025-11-10
+date: 2025-11-24
 ---
 
 ## Forecast Review
 
-<!-- See: resources/2025-11-10-dev-session.pdf -->
+<!-- See: resources/2025-11-24-dev-session.pdf -->
 
 ### Time
 - Forecast:
@@ -16,5 +16,5 @@ date: 2025-11-10
 - Actual:
 - Was it accurate? Why?
 
-### How can I forecast better next time?
+### How can I forecast better next time? (Metacognition)
 -
