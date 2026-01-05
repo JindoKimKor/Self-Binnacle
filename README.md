@@ -12,7 +12,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Dashboard
 
-> Last updated: 2026-01-04
+> Last updated: 2026-01-05
 
 ---
 
@@ -31,38 +31,41 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Projects (6)
 
-> ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Total: 6.8h | Start: Dec 2026 | Tracked: Dec 2025
+> ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md)
+> Total: 7.8h | Start: Dec 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□ |
+> | Jan | 1.0h | □□□■□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
 
-> ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Total: 5.0h | Start: Dec 2024 | Tracked: Dec 2025
+> ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md)
+> Total: 5.0h | Start: Dec 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 2.5h | □■□■ |
+> | Jan | 2.5h | □■□■□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
-> ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) | Total: 123.8h | Start: Sep 2025
+> ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
+> Total: 123.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □■□■ |
+> | Jan | 3.0h | □■□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -70,41 +73,44 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > </details>
 
-> ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) | Total: 48.8h | Start: Oct 2024 | Tracked: Nov 2025
+> ### [Job Search](Voyages/Projects/job-search/voyage-plan.md)
+> Total: 48.8h | Start: Oct 2024 | Tracked from Nov 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□ |
+> | Jan | 0.0h | □□□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
 > </details>
 
-> ### [Riipen](Voyages/Projects/riipen/voyage-plan.md) | Total: 21.2h | Start: Sep 2025 | Tracked: Oct 2025
+> ### [Riipen](Voyages/Projects/riipen/voyage-plan.md)
+> Total: 21.2h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□ |
+> | Jan | 0.0h | □□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
 >
 > </details>
 
-> ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | Total: 111.8h | Start: May 2025 | Tracked: Sep 2025
+> ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
+> Total: 111.8h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□ |
+> | Jan | 0.0h | □□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -116,28 +122,30 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Areas (2)
 
-> ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | Total: 18.2h | Start: Oct 2025
+> ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md)
+> Total: 18.2h | Start: Oct 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□ |
+> | Jan | 0.0h | □□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
 >
 > </details>
 
-> ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) | Total: 13.2h | Start: Oct 2025
+> ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md)
+> Total: 13.2h | Start: Oct 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□ |
+> | Jan | 0.0h | □□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
