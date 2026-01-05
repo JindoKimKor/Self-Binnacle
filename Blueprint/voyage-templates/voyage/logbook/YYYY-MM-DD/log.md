@@ -7,8 +7,18 @@ date: YYYY-MM-DD
 ### What did I actually do?
 -
 
+### Blockers
+-
+
+### Reflection
+-
+
+### Next Steps
+-
+
 ### References
 -
 
 ### Notes
 -
+

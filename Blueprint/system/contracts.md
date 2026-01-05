@@ -126,7 +126,7 @@
 >
 > **Provide Structure:**
 > - Provide folder structure template
-> - Provide file templates (voyage-plan.md, passage-plan.md, log.md, forecast-review.md)
+> - Provide file templates (voyage-plan.md, passage-plan.md, log.md, passage-forecast-review.md)
 >
 > **Data Storage:**
 > - Source of Truth for all data
@@ -140,7 +140,7 @@
 >
 > - Every Voyage must have voyage-plan.md
 > - Every Passage must belong to one Voyage
-> - Every Passage must have passage-plan.md + log.md + forecast-review.md
+> - Every Passage must have passage-plan.md + log.md + passage-forecast-review.md
 > - Task has no Logbook (one-off, just finish it)
 > - Project/Area has Logbook (need process tracking)
 
@@ -163,7 +163,7 @@
 >   - logbook/{YYYY-MM-DD}/ folder created
 >   - passage-plan.md file created
 >   - log.md file created
->   - forecast-review.md file created
+>   - passage-forecast-review.md file created
 >
 > #### Complete Voyage
 > - **Preconditions:**

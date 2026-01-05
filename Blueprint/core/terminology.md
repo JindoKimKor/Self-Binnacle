@@ -10,7 +10,7 @@
 | Passage | {YYYY-MM-DD}/ | Daily voyage record unit |
 | Passage Plan | passage-plan.md | Daily forecast |
 | Log | log.md | Daily record |
-| Forecast Review | forecast-review.md | Forecast evaluation |
+| Passage Forecast Review | passage-forecast-review.md | Forecast evaluation |
 
 ### Folder Structure
 ```
@@ -21,7 +21,7 @@
     │   └── {YYYY-MM-DD}/
     │       ├── passage-plan.md
     │       ├── log.md
-    │       ├── forecast-review.md
+    │       ├── passage-forecast-review.md
     │       └── resources/       # Daily materials/outputs (optional)
     └── resources/               # Voyage-wide materials (optional)
 ```

@@ -114,7 +114,7 @@ Definition of all Things in the Self-Binnacle system.
 > |----------|-------|
 > | Definition | Compare forecast vs actual (Evaluating stage) |
 > | Created by | User |
-> | Storage | `logbook/{YYYY-MM-DD}/forecast-review.md` |
+> | Storage | `logbook/{YYYY-MM-DD}/passage-forecast-review.md` |
 > | Purpose | Check forecast accuracy, improve next forecast |
 > | Lifecycle | Written at Passage end |
 > | Contents | Time (forecast vs actual + accuracy + why), Difficulty (forecast vs actual + accuracy + why), How to forecast better next time |

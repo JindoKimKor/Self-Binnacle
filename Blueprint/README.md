@@ -48,4 +48,4 @@ Templates for creating voyages.
 | [voyage-plan.md](voyage-templates/voyage-plan.md) | Voyage plan template (Why/What/How) |
 | [passage-plan.md](voyage-templates/passage-plan.md) | Daily passage plan template |
 | [log.md](voyage-templates/log.md) | Daily log template |
-| [forecast-review.md](voyage-templates/forecast-review.md) | Forecast review template |
+| [passage-forecast-review.md](voyage-templates/passage-forecast-review.md) | Forecast review template |
