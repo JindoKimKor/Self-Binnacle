@@ -1,26 +1,55 @@
 # Self-Binnacle Project Instructions
 
+## Table of Contents
+
+### 1. Overview
+- [System Essence](#system-essence)
+- [Core Principles](#core-principles)
+- [Terminology](#terminology)
+
+### 2. Structure
+- [Project Structure](#project-structure)
+- [Documentation Reference](#documentation-reference-blueprint)
+
+### 3. AI Guidelines
+- [Context Management](#context-management)
+- [Q&A Save Format](#qa-save-format)
+- [AI Passage Creation](#ai-passage-creation)
+- [AI Passage Evaluation](#ai-passage-evaluation)
+
+### 4. Tools
+- [Dashboard Generation](#dashboard-generation)
+
+---
+
+# 1. Overview
+
 ## System Essence
 
 I navigate myself as a ship in the ocean of life. Self-Binnacle is a framework that holds my defined north (reference point) and voyage records.
 
-## Context Management
+## Core Principles
 
-- When you see a compacting warning or context is running low:
-  1. First, organize the conversation in Q&A format
-  2. Save to `_system/AI-Conversations/YYYY-MM/YYYY-MM-DD-topic.md`
-  3. Then continue
+- AI is not a pattern generator, but a monitor/coach
+- User defines patterns/principles
+- Data ownership belongs to the user
+- Value of process: Do not automate user's thinking/forecasting/judgment
 
-## Q&A Save Format
+## Terminology
 
-- User's question: Keep original, organize but do not summarize
-- AI's answer: Summarize concisely
+| Nautical Term | Self-Binnacle | Description |
+|---------------|---------------|-------------|
+| Voyage | Task, Project, Area | A single voyage |
+| Voyage Plan | voyage-plan.md | Defines Why/What/How |
+| Logbook | logbook/ | Folder storing voyage records |
+| Passage | {YYYY-MM-DD}/ | Daily voyage record unit |
+| Passage Plan | passage-plan.md | Daily forecast (Planning) |
+| Log | log.md | Daily record (Monitoring) |
+| Passage Forecast Review | passage-forecast-review.md | Forecast evaluation (Evaluating) |
 
-```markdown
-### Q: [User's original question - not summarized]
+---
 
-**Answer:** [Summarized solution/response]
-```
+# 2. Structure
 
 ## Project Structure
 
@@ -69,24 +98,54 @@ Self-Binnacle/
 └── LICENSE                       # CC BY-NC-SA 4.0
 ```
 
-## Terminology
+## Documentation Reference (Blueprint)
 
-| Nautical Term | Self-Binnacle | Description |
-|---------------|---------------|-------------|
-| Voyage | Task, Project, Area | A single voyage |
-| Voyage Plan | voyage-plan.md | Defines Why/What/How |
-| Logbook | logbook/ | Folder storing voyage records |
-| Passage | {YYYY-MM-DD}/ | Daily voyage record unit |
-| Passage Plan | passage-plan.md | Daily forecast (Planning) |
-| Log | log.md | Daily record (Monitoring) |
-| Passage Forecast Review | passage-forecast-review.md | Forecast evaluation (Evaluating) |
+### Core
+- [about.md](Blueprint/core/about.md) - System essence, mission
+- [terminology.md](Blueprint/core/terminology.md) - Term definitions
+- [ontology.md](Blueprint/core/ontology.md) - Thing definitions
+- [principles.md](Blueprint/core/principles.md) - Principles
 
-## Core Principles
+### System
+- [contracts.md](Blueprint/system/contracts.md) - System contracts
+- [features.md](Blueprint/system/features.md) - Features
+- [design-decisions.md](Blueprint/system/design-decisions.md) - Design decisions
 
-- AI is not a pattern generator, but a monitor/coach
-- User defines patterns/principles
-- Data ownership belongs to the user
-- Value of process: Do not automate user's thinking/forecasting/judgment
+### Guides
+- [AI-usage-example.md](Blueprint/guides/AI-usage-example.md) - AI interaction patterns
+
+### Voyage Templates
+- [voyage-templates/](Blueprint/voyage-templates/) - Voyage templates
+
+---
+
+# 3. AI Guidelines
+
+## Context Management
+
+- When you see a compacting warning or context is running low:
+  1. First, organize the conversation in Q&A format
+  2. Save to `_system/AI-Conversations/YYYY-MM/YYYY-MM-DD-topic.md`
+  3. Then continue
+
+## Q&A Save Format
+
+- User's question: Keep original, organize but do not summarize
+- AI's answer: Summarize concisely
+
+```markdown
+### Q: [User's original question - not summarized]
+
+**Answer:** [Summarized solution/response]
+```
+
+## AI Passage Creation
+
+When creating a new passage:
+1. Copy templates from `Blueprint/voyage-templates/voyage/logbook/YYYY-MM-DD/`
+2. Create folder with today's date (get from system)
+3. Update `date:` field in frontmatter to today's date
+4. Do NOT fill in content - let user fill it themselves
 
 ## AI Passage Evaluation
 
@@ -118,6 +177,10 @@ Evaluation criteria:
 - Actionable next steps
 - Proper use of resources and references
 
+---
+
+# 4. Tools
+
 ## Dashboard Generation
 
 To update the Dashboard (README.md), run:
@@ -132,22 +195,3 @@ This script:
 - Generates README.md with activity visualization
 
 Note: Requires Google Calendar API credentials in `_system/credentials/`
-
-## Documentation Reference (Blueprint)
-
-### Core
-- [about.md](Blueprint/core/about.md) - System essence, mission
-- [terminology.md](Blueprint/core/terminology.md) - Term definitions
-- [ontology.md](Blueprint/core/ontology.md) - Thing definitions
-- [principles.md](Blueprint/core/principles.md) - Principles
-
-### System
-- [contracts.md](Blueprint/system/contracts.md) - System contracts
-- [features.md](Blueprint/system/features.md) - Features
-- [design-decisions.md](Blueprint/system/design-decisions.md) - Design decisions
-
-### Guides
-- [AI-usage-example.md](Blueprint/guides/AI-usage-example.md) - AI interaction patterns
-
-### Voyage Templates
-- [voyage-templates/](Blueprint/voyage-templates/) - Voyage templates
