@@ -34,7 +34,8 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 - Prepare workshop content with Dany
 - Send poster info and content 1 week before each workshop
 - Deliver workshops
-
+- Use Mermaid Sequence Diagrams to visualize Git/CI-CD workflows (renders in GitHub markdown)
+- Use table to organize: Topic → Sub-topic → Outcome → Associated concepts (helps plan session flow and show connections between concepts)
 ---
 
 ## Progress Tracker

@@ -1,6 +1,6 @@
 ---
 title: "[Area] Software Design Patterns"
-created: 2025-12-22
+created: 2025-01-01
 ---
 
 ## Why

@@ -1,6 +1,6 @@
 ---
 title: "[Area] Data Structures and Algorithms"
-created: 2025-12-22
+created: 2024-07-14
 ---
 
 ## Why

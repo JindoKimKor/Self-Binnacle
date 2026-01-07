@@ -1,6 +1,6 @@
 ---
 title: "[Project] Job Search"
-created: 2024-10-27
+created: 2025-10-27
 deadline: TBD
 ---
 
