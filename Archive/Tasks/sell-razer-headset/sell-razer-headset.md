@@ -25,8 +25,8 @@ Razer BlackShark V2 X Gaming Headset (Green) - never used, only opened box. Sell
 - [x] Take photos of headset
 - [x] Post on Facebook Marketplace
 - [x] Post on Karrot
-- [ ] Respond to inquiries
-- [ ] Complete sale
+- [x] Respond to inquiries
+- [x] Complete sale
 
 ## Resources
 - Amazon listing: Razer BlackShark V2 X Gaming Headset
@@ -36,15 +36,15 @@ Razer BlackShark V2 X Gaming Headset (Green) - never used, only opened box. Sell
 
 ### Outcome
 - expect: Sell for $35-40 CAD
-- actual:
+- actual: Sold for $36 CAD
 
 ### Learn
 - expect: Local marketplace selling experience
-- actual:
+- actual: Gained local marketplace selling experience. Also learned that asking buyers to meet closer to my place is more convenient.
 
 ### Harvest
 - expect: $35-40 CAD, declutter before move
-- actual:
+- actual: $36 CAD, but spent $9 on Uber because I had to travel far to meet the buyer.
 
 ## Notes
 - 50mm drivers, cardioid mic, memory foam cushion
