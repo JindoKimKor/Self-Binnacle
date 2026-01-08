@@ -16,13 +16,12 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ---
 
-## Tasks (5)
+## Tasks (4)
 
 | Task | Created | Deadline |
 |------|---------|----------|
 | [Laptop Migration](Voyages/Tasks/laptop-migration/laptop-migration.md) | Dec 20 | 2026-01-15 (extendible) |
 | [Research Software Compliance Certificate](Voyages/Tasks/research-software-compliance-certificate/research-software-compliance-certificate.md) | Dec 21 | TBD |
-| [Sell Razer BlackShark V2 X Headset](Voyages/Tasks/sell-razer-headset/sell-razer-headset.md) | Dec 23 | TBD |
 | [Transfer VARLab Work Git History](Voyages/Tasks/transfer-varlab-work-git-history/transfer-varlab-work-git-history.md) | Dec 20 | TBD |
 | [Winter 2026 General Awards Application](Voyages/Tasks/winter-2026-awards-application/winter-2026-awards-application.md) | Dec 20 | Jan 30 |
 
@@ -57,14 +56,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
-> Total: 125.8h | Start: Sep 2025
+> Total: 126.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 5.0h | □■□■□■□ |
+> | Jan | 6.0h | □■□■□□■ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
