@@ -65,6 +65,13 @@ Price is slightly negotiable. Pickup in Waterloo area.
 
 **TODO: Verify from System Info before factory reset**
 
+### Factory Reset Checklist
+- [ ] Verify Windows license type: run `slmgr /dli` (OEM_DM = auto-activate after reset)
+- [x] Final backup check (SSH keys, browser data, etc.)
+- [x] Settings → System → Recovery → Reset this PC → "Remove everything"
+- [x] Select "Cloud download" for clean install
+- [x] Enable "Clean data" option (prevents data recovery)
+
 ### Transfer necessary data:
 - **Project code**: Reduced from 60GB → 30GB (deleted node_modules, Unity Library). If GitHub was well-maintained, could have just cloned without worrying about transfer
 - **Opera Pinboard sync**: Only copy log and db files when migrating DB (exclude Current). Must generate shared link from Pinboard on old laptop for it to be included in DB. Sync method is weird, considering migration to different browser later
