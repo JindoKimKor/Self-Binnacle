@@ -12,22 +12,21 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Dashboard
 
-> Last updated: 2026-01-07
+> Last updated: 2026-01-08
 
 ---
 
-## Tasks (4)
+## Tasks (3)
 
 | Task | Created | Deadline |
 |------|---------|----------|
 | [Laptop Migration](Voyages/Tasks/laptop-migration/laptop-migration.md) | Dec 20 | 2026-01-15 (extendible) |
 | [Research Software Compliance Certificate](Voyages/Tasks/research-software-compliance-certificate/research-software-compliance-certificate.md) | Dec 21 | TBD |
-| [Transfer VARLab Work Git History](Voyages/Tasks/transfer-varlab-work-git-history/transfer-varlab-work-git-history.md) | Dec 20 | TBD |
 | [Winter 2026 General Awards Application](Voyages/Tasks/winter-2026-awards-application/winter-2026-awards-application.md) | Dec 20 | Jan 30 |
 
 ---
 
-## Projects (7)
+## Projects (8)
 
 > ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md)
 > Total: 7.8h | Start: Dec 2025
@@ -37,7 +36,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□■□□□ |
+> | Jan | 1.0h | □□□■□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -50,20 +49,20 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 2.5h | □■□■□□□ |
+> | Jan | 2.5h | □■□■□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
-> Total: 126.8h | Start: Sep 2025
+> Total: 125.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Monthly breakdown</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □■□■□□■ |
+> | Jan | 5.0h | □■□■□□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -79,7 +78,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.8h | □□□□■■□ |
+> | Jan | 4.8h | □□□□■■□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -93,7 +92,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.5h | □□□□□■□ |
+> | Jan | 0.5h | □□□□□■□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -108,13 +107,17 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
 > | Sep | 3.8h | □□□□□□□□□□□■□□□□□□□□□■□□□□□□□■ |
 >
 > </details>
+
+> ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md)
+> Total: 0h | Start: Jan 2026
+>
 
 > ### [Year-End Knowledge Cleanup](Voyages/Projects/year-end-cleanup/voyage-plan.md)
 > Total: 0h | Start: Dec 2025
@@ -132,7 +135,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -147,7 +150,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
