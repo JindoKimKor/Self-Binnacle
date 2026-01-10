@@ -2,6 +2,7 @@
 title: "[Task] Laptop Migration"
 created: 2025-12-20
 deadline: 2026-01-15 (extendible)
+completed: 2026-01-10
 ---
 
 ## Context
@@ -11,9 +12,10 @@ Cleaning up old laptop and selling it. Also considering selling headphones since
 - [x] Transfer necessary data
 - [x] Clean old laptop
 - [x] Verify actual specs from laptop (before factory reset)
-- [ ] Factory reset old laptop
+- [x] Factory reset old laptop
 - [x] List for resale
 - [x] Decide whether to sell headphones
+- [x] Sell laptop
 
 ## Resources
 - Old laptop purchase record: https://mail.google.com/mail/u/0/#search/the+source/FMfcgzGrbldDVWFkhQXkMSBlPSHhKRQd
@@ -54,6 +56,14 @@ Includes:
 Everything works perfectly. Great for gaming, schoolwork, or everyday use.
 Price is slightly negotiable. Pickup in Waterloo area.
 
+### Sale Result
+- Listed price: $500
+- Sold price: $350
+- Original purchase: ~$800 (tax included)
+- Usage period: 3 years
+- Market observation: Most offers were $300-350 range, $400 was difficult
+- Residual value: 43.75% - good outcome for 3-year-old laptop
+
 ### Photo Checklist
 - [x] Exterior (lid closed)
 - [x] Keyboard
@@ -66,7 +76,7 @@ Price is slightly negotiable. Pickup in Waterloo area.
 **TODO: Verify from System Info before factory reset**
 
 ### Factory Reset Checklist
-- [ ] Verify Windows license type: run `slmgr /dli` (OEM_DM = auto-activate after reset)
+- [x] Verify Windows license type: run `slmgr /dli` (OEM_DM = auto-activate after reset)
 - [x] Final backup check (SSH keys, browser data, etc.)
 - [x] Settings → System → Recovery → Reset this PC → "Remove everything"
 - [x] Select "Cloud download" for clean install
