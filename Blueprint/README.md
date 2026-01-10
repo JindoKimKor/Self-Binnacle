@@ -10,6 +10,7 @@ Understanding what Self-Binnacle is.
 
 | Document | Description |
 |----------|-------------|
+| [why.md](core/why.md) | Origin story and philosophical foundation |
 | [about.md](core/about.md) | System essence and mission |
 | [terminology.md](core/terminology.md) | Nautical term definitions |
 | [ontology.md](core/ontology.md) | Thing definitions in the system |
