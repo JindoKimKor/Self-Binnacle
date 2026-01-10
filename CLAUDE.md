@@ -43,9 +43,9 @@ I navigate myself as a ship in the ocean of life. Self-Binnacle is a framework t
 | Voyage Plan | voyage-plan.md | Defines Why/What/How |
 | Logbook | logbook/ | Folder storing voyage records |
 | Passage | {YYYY-MM-DD}/ | Daily voyage record unit |
-| Passage Plan | passage-plan.md | Daily forecast (Planning) |
+| Passage Plan | metacognition/passage-plan.md | Daily forecast (Planning) |
 | Log | log.md | Daily record (Monitoring) |
-| Passage Forecast Review | passage-forecast-review.md | Forecast evaluation (Evaluating) |
+| Passage Forecast Review | metacognition/passage-forecast-review.md | Forecast evaluation (Evaluating) |
 
 ---
 
@@ -65,9 +65,10 @@ Self-Binnacle/
 │   │       ├── voyage-plan.md
 │   │       ├── logbook/
 │   │       │   └── {YYYY-MM-DD}/
-│   │       │       ├── passage-plan.md
 │   │       │       ├── log.md
-│   │       │       ├── passage-forecast-review.md
+│   │       │       ├── metacognition/
+│   │       │       │   ├── passage-plan.md
+│   │       │       │   └── passage-forecast-review.md
 │   │       │       └── resources/    # Daily materials/outputs (optional)
 │   │       └── resources/            # Voyage-wide materials (optional)
 │   └── Areas/                    # Ongoing interests
@@ -75,9 +76,10 @@ Self-Binnacle/
 │           ├── voyage-plan.md
 │           ├── logbook/
 │           │   └── {YYYY-MM-DD}/             # Passage
-│           │       ├── passage-plan.md
 │           │       ├── log.md
-│           │       ├── passage-forecast-review.md
+│           │       ├── metacognition/
+│           │       │   ├── passage-plan.md
+│           │       │   └── passage-forecast-review.md
 │           │       └── resources/    # Daily materials/outputs (optional)
 │           └── resources/            # Voyage-wide materials (optional)
 ├── Archive/                      # Completed voyages
@@ -169,9 +171,9 @@ When user requests "ai-passage-evaluation", evaluate the passage and create `ai-
 
 Evaluation criteria:
 - Metacognition 3-Stage Cycle:
-  - Planning (passage-plan.md): Forecast time/difficulty with reasoning
+  - Planning (metacognition/passage-plan.md): Forecast time/difficulty with reasoning
   - Monitoring (log.md): Record what actually happened
-  - Evaluating (passage-forecast-review.md): Compare forecast vs actual, improve forecasting
+  - Evaluating (metacognition/passage-forecast-review.md): Compare forecast vs actual, improve forecasting
 - Forecast accuracy (time/difficulty estimates vs actual)
 - Quality of reflection and lessons learned
 - Actionable next steps
