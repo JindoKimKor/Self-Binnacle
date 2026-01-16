@@ -14,3 +14,6 @@ date: YYYY-MM-DD
 ### Difficulty Estimate
 - How well can I do this?
 - Why do I think so? (including expected obstacles)
+
+### Raw (AI: organize into sections above)
+-

@@ -16,3 +16,6 @@ date: YYYY-MM-DD
 
 ### How can I forecast better next time? (Metacognition)
 -
+
+### Raw (AI: organize into sections above)
+-

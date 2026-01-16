@@ -16,6 +16,7 @@
 - [Q&A Save Format](#qa-save-format)
 - [AI Passage Creation](#ai-passage-creation)
 - [AI Passage Evaluation](#ai-passage-evaluation)
+- [AI Raw Processing](#ai-raw-processing)
 
 ### 4. Tools
 - [Dashboard Generation](#dashboard-generation)
@@ -178,6 +179,14 @@ Evaluation criteria:
 - Quality of reflection and lessons learned
 - Actionable next steps
 - Proper use of resources and references
+
+## AI Raw Processing
+
+When user requests to organize a passage file (log.md, passage-plan.md, or passage-forecast-review.md):
+1. Read the `### Raw` section content
+2. Categorize each item into appropriate sections above
+3. Move processed items from Raw to their correct labels
+4. Keep Raw section empty after processing (just `-`)
 
 ---
 
