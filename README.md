@@ -12,15 +12,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Dashboard
 
-> Last updated: 2026-01-08
+> Last updated: 2026-01-15
 
 ---
 
-## Tasks (3)
+## Tasks (2)
 
 | Task | Created | Deadline |
 |------|---------|----------|
-| [Laptop Migration](Voyages/Tasks/laptop-migration/laptop-migration.md) | Dec 20 | 2026-01-15 (extendible) |
 | [Research Software Compliance Certificate](Voyages/Tasks/research-software-compliance-certificate/research-software-compliance-certificate.md) | Dec 21 | TBD |
 | [Winter 2026 General Awards Application](Voyages/Tasks/winter-2026-awards-application/winter-2026-awards-application.md) | Dec 20 | Jan 30 |
 
@@ -32,11 +31,11 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > Total: 7.8h | Start: Dec 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□■□□□□ |
+> | Jan | 1.0h | □□□■□□□□□□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -45,24 +44,24 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > Total: 5.0h | Start: Dec 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 2.5h | □■□■□□□□ |
+> | Jan | 2.5h | □■□■□□□□□□□□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
-> Total: 125.8h | Start: Sep 2025
+> Total: 126.8h | Start: Sep 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 5.0h | □■□■□□■□ |
+> | Jan | 6.0h | □■□■□□■□□□□□□□■ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -71,14 +70,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md)
-> Total: 53.5h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 54.5h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.8h | □□□□■■□□ |
+> | Jan | 5.8h | □□□□■■□□□■□□□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -88,11 +87,11 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > Total: 21.8h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.5h | □□□□□■□□ |
+> | Jan | 0.5h | □□□□□■□□□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -100,24 +99,32 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 111.8h | Start: May 2025 | Tracked from Sep 2025
+> Total: 111.0h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
-> | Sep | 3.8h | □□□□□□□□□□□■□□□□□□□□□■□□□□□□□■ |
+> | Sep | 3.0h | □□□□□□□□□□□□□□□□□□□□□■□□□□□□□■ |
 >
 > </details>
 
 > ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md)
-> Total: 0h | Start: Jan 2026
+> Total: 51.8h | Start: Jan 2026
 >
+> <details>
+> <summary>Monthly Activity</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Jan | 51.8h | □□□□□□□■□■■■■■□ |
+>
+> </details>
 
 > ### [Year-End Knowledge Cleanup](Voyages/Projects/year-end-cleanup/voyage-plan.md)
 > Total: 0h | Start: Dec 2025
@@ -131,11 +138,11 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > Total: 18.2h | Start: Jul 2024 | Tracked from Oct 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -143,17 +150,69 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md)
-> Total: 13.2h | Start: Jan 2025 | Tracked from Oct 2025
+> Total: 43.5h | Start: Jan 2025 | Tracked from Oct 2025
 >
 > <details>
-> <summary>Monthly breakdown</summary>
+> <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□ |
+> | Jan | 30.2h | □□□□□□□□□□■■■■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
+>
+> </details>
+
+---
+
+## Classes (4)
+
+> ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md)
+> Total: 3.0h | Start: Jan 2026
+>
+> <details>
+> <summary>Monthly Activity</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Jan | 3.0h | □□□□□□□□□□□□□■□ |
+>
+> </details>
+
+> ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md)
+> Total: 4.0h | Start: Jan 2026
+>
+> <details>
+> <summary>Monthly Activity</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Jan | 4.0h | □□□□□□□□□□□□□■■ |
+>
+> </details>
+
+> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md)
+> Total: 3.0h | Start: Jan 2026
+>
+> <details>
+> <summary>Monthly Activity</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Jan | 3.0h | □□□□□□□□□□□□□□■ |
+>
+> </details>
+
+> ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md)
+> Total: 6.0h | Start: Jan 2026
+>
+> <details>
+> <summary>Monthly Activity</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Jan | 6.0h | □□□□□□□□□□□■■□□ |
 >
 > </details>
 
