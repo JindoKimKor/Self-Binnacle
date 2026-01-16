@@ -15,6 +15,11 @@ Continuous study of software design patterns for writing maintainable, scalable,
 
 ---
 
+## Sailing Orders
+-
+
+---
+
 ## Progress Tracker
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|

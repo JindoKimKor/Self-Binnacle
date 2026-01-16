@@ -38,11 +38,19 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 - Use table to organize: Topic → Sub-topic → Outcome → Associated concepts (helps plan session flow and show connections between concepts)
 ---
 
+## Sailing Orders
+-
+
+---
+
 ## Progress Tracker
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
 
 ---
+
+## References
+
 
 ## Resources
 List of materials in the resources/ folder
@@ -65,3 +73,6 @@ List of materials in the resources/ folder
 
 ### Harvest
 - actual:
+
+### Raw
+- 계획을 짤때 최종 결과부터 시작해서 거꾸로 해서 거슬러 올라가면 Git Workshop에서 뭘 할지 알수 있을듯
