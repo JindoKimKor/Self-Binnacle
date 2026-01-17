@@ -16,6 +16,16 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ---
 
+## Portfolios
+
+> **Title:** [Software Smells Analysis & Architecture Redesign](Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/README.md)
+> - Context: 14-month technical debt resolution at VARLab
+> - Analysis: Software Smells (Code/Design/Architecture), SRP, DRY violations
+> - Solution: 4-Layer Architecture, 3-Level Logger System
+> - Keywords: Jenkins, Groovy, SOLID, Design Patterns
+
+---
+
 ## Tasks (2)
 
 | Task | Created | Deadline |

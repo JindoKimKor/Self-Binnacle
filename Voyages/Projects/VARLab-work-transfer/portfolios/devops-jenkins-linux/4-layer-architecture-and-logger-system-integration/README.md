@@ -21,7 +21,7 @@
 - 14 months of accumulated Technical Debt
 - 5 monolithic pipelines (37% duplication, untestable)
 - Discovered Jenkins Global Trusted Shared Library feature at month 13
-- Performed refactoring during 2-week break at month 14
+- Performed refactoring over 54 days (Library setup 35 days, Core refactoring ~2 weeks)
 
 ### Timeline
 
