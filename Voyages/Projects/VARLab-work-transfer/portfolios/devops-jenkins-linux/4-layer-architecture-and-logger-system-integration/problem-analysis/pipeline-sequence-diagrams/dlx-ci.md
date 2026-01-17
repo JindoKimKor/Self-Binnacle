@@ -1,0 +1,324 @@
+# DLX CI Pipeline Sequence Diagrams
+
+> **Analysis Target**: `DLXJenkins/Jenkinsfile` (DLX Unity CI Pipeline)
+
+---
+
+## Domain Summary by Function
+
+| Domain | Function | Used Stage | Helper Location |
+|--------|----------|------------|-----------------|
+| **Git Management** | clone, fetch, checkout, reset, clean, merge | Prepare WORKSPACE, Post | generalHelper |
+| **Bitbucket API** | send build status, get commit hash, send report | Prepare WORKSPACE, Linting, Code Coverage, Build Project, Post | generalHelper + Python |
+| **Unity CLI** | run tests, generate coverage, WebGL build, Rider Sync | Prepare WORKSPACE, EditMode, PlayMode, Code Coverage, Build Project | unityHelper |
+| **Web Server (SSH/SCP)** | deploy report/build results | Code Coverage, Build Project | generalHelper |
+| **Linting (Bash)** | C# code style check | Linting | Bash Script |
+| **Environment Setup** | parseJson, parseTicketNumber, env settings | Prepare WORKSPACE | generalHelper |
+
+### Domain Mapping by Stage
+
+| Stage | Git | Bitbucket | Unity | Web Server | Linting | Environment Setup |
+|-------|:---:|:---------:|:-----:|:----------:|:-------:|:-----------------:|
+| Prepare WORKSPACE | ✓ | ✓ | ✓ | | | ✓ |
+| Linting | | ✓ | | | ✓ | |
+| EditMode Tests | | | ✓ | | | |
+| PlayMode Tests | | | ✓ | | | |
+| Code Coverage | | ✓ | ✓ | ✓ | | |
+| Build Project | | ✓ | ✓ | ✓ | | |
+| Post | ✓ | ✓ | | | | |
+
+---
+
+## Overall Pipeline Overview
+
+```mermaid
+flowchart LR
+    subgraph Stages
+        S1[Prepare WORKSPACE]
+        S2[Linting]
+        S3[EditMode Tests]
+        S4[PlayMode Tests]
+        S5[Code Coverage<br/>Send Reports]
+        S6[Build Project]
+    end
+
+    S1 --> S2 --> S3 --> S4 --> S5 --> S6
+
+    S6 --> Post[Post<br/>always/success/failure/aborted]
+```
+
+---
+
+## Stage 1: Prepare WORKSPACE
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant GH as generalHelper
+    participant UH as unityHelper
+    participant Git as Git CLI
+    participant BB as Bitbucket API
+    participant Unity as Unity CLI
+    participant Python as Python Scripts
+
+    Note over JF: Stage: Prepare WORKSPACE
+
+    JF->>JF: sh 'env' (print environment variables)
+    JF->>GH: load("generalHelper.groovy")
+    JF->>UH: load("unityHelper.groovy")
+
+    JF->>GH: parseJson()
+    GH-->>JF: buildResults, stageResults
+
+    JF->>GH: isBranchUpToDateWithRemote(PR_BRANCH)
+    GH->>Git: git fetch origin
+    GH->>Git: git rev-parse HEAD
+    GH->>Git: git rev-parse origin/{branch}
+    Git-->>GH: commit hashes
+    GH-->>JF: true/false
+
+    JF->>GH: getFullCommitHash(PR_BRANCH)
+    GH->>Python: get_bitbucket_commit_hash.py
+    Python->>BB: GET /commits
+    BB-->>Python: commit hash
+    Python-->>GH: full commit hash
+    GH-->>JF: COMMIT_HASH
+
+    JF->>GH: initializeEnvironment(workspace, commitHash, prBranch)
+    GH->>GH: sendBuildStatus('INPROGRESS')
+    GH->>Python: send_bitbucket_build_status.py
+    Python->>BB: POST /statuses/build
+    GH->>GH: parseTicketNumber(prBranch)
+    GH-->>JF: TICKET_NUMBER, FOLDER_NAME
+
+    JF->>GH: cloneOrUpdateRepo(workspace, projectDir, prBranch)
+    GH->>Git: git clone / git fetch
+    GH->>Git: git checkout
+    GH->>Git: git reset --hard
+    GH->>Git: git clean -fd
+    Git-->>GH: OK
+    GH-->>JF: OK
+
+    JF->>GH: mergeBranchIfNeeded(prBranch)
+    GH->>GH: getDefaultBranch()
+    GH->>Git: git remote show origin
+    Git-->>GH: default branch
+    GH->>GH: isBranchUpToDateWithMain()
+    GH->>Git: git merge-base --is-ancestor
+    GH->>GH: tryMerge(defaultBranch)
+    GH->>Git: git merge origin/{default}
+    Git-->>GH: OK
+    GH-->>JF: OK
+
+    JF->>UH: getUnityExecutable(workspace, projectDir)
+    UH->>Python: get_unity_version.py (executable-path)
+    Python-->>UH: unity path
+    UH-->>JF: UNITY_EXECUTABLE
+
+    JF->>UH: runUnityStage('Rider', errorMsg)
+    UH->>UH: runUnityBatchMode('Rider')
+    UH->>Unity: unity -batchmode -executeMethod Rider.SyncSolution
+    Unity-->>UH: exit code
+    UH-->>JF: OK
+```
+
+---
+
+## Stage 2: Linting
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant Bash as Bash Scripts
+    participant Python as Python Scripts
+    participant BB as Bitbucket API
+
+    Note over JF: Stage: Linting
+
+    JF->>JF: mkdir -p linting_results
+    JF->>JF: cp .editorconfig
+    JF->>Bash: sh Linting.bash
+    Bash-->>JF: exitCode
+
+    alt exitCode == 2 (lint errors)
+        JF->>Python: linting_error_report.py (fail)
+        Python->>BB: POST /reports
+    else exitCode == 0
+        JF->>Python: linting_error_report.py (pass)
+        Python->>BB: POST /reports
+    end
+```
+
+---
+
+## Stage 3: EditMode Tests
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant UH as unityHelper
+    participant Unity as Unity CLI
+
+    Note over JF: Stage: EditMode Tests
+
+    JF->>JF: mkdir -p test_results
+    JF->>JF: mkdir -p coverage_results
+
+    JF->>UH: runUnityStage('EditMode', errorMsg)
+    UH->>UH: runUnityBatchMode('EditMode')
+    UH->>UH: setLogFilePathAndUrl()
+    UH->>UH: getTestRunArgs()
+    UH->>UH: getCodeCoverageArguments()
+    UH->>Unity: unity -batchmode -nographics -testPlatform EditMode -runTests -enableCodeCoverage
+    Unity-->>UH: exit code + test_results/*.xml
+    UH-->>JF: OK/FAIL
+```
+
+---
+
+## Stage 4: PlayMode Tests
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant UH as unityHelper
+    participant Unity as Unity CLI
+
+    Note over JF: Stage: PlayMode Tests
+
+    JF->>UH: runUnityStage('PlayMode', errorMsg)
+    UH->>UH: runUnityBatchMode('PlayMode')
+    UH->>Unity: xvfb-run unity -batchmode -testPlatform PlayMode -runTests -enableCodeCoverage
+    Unity-->>UH: exit code + test_results/*.xml
+    UH-->>JF: OK/FAIL
+```
+
+---
+
+## Stage 5: Code Coverage & Send Reports
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant GH as generalHelper
+    participant UH as unityHelper
+    participant Unity as Unity CLI
+    participant Python as Python Scripts
+    participant BB as Bitbucket API
+    participant WS as Web Server<br/>(SSH/SCP)
+
+    Note over JF: Stage: Code Coverage & Send Reports
+
+    JF->>UH: runUnityStage('Coverage', errorMsg)
+    UH->>UH: runUnityBatchMode('Coverage')
+    UH->>UH: loadPathsToExclude()
+    Note over UH: Read Settings.json
+    UH->>UH: fetCoverageOptionsKeyAndValue()
+    UH->>UH: buildCoverageOptions()
+    UH->>Unity: unity -batchmode -nographics -enableCodeCoverage -coverageOptions
+    Unity-->>UH: coverage_results/Report
+    UH-->>JF: OK/FAIL
+
+    JF->>GH: publishTestResultsHtmlToWebServer(folderName, ticketNum, reportPath, 'CodeCoverage')
+    GH->>WS: ssh mkdir -p /var/www/html/{folder}/{ticket}/CodeCoverage
+    GH->>WS: scp -r coverage_results/Report/*
+    GH->>WS: ssh chmod 755 & chown
+    WS-->>GH: OK
+    GH-->>JF: OK
+
+    JF->>UH: sendTestReport(workspace, reportDir, commitHash)
+    UH->>Python: create_bitbucket_test_report.py
+    Python->>BB: POST /reports
+    BB-->>Python: OK
+    UH-->>JF: OK
+```
+
+---
+
+## Stage 6: Build Project
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant GH as generalHelper
+    participant UH as unityHelper
+    participant Unity as Unity CLI
+    participant Python as Python Scripts
+    participant BB as Bitbucket API
+    participant WS as Web Server<br/>(SSH/SCP)
+
+    Note over JF: Stage: Build Project
+
+    JF->>JF: mkdir -p Assets/Editor
+    JF->>JF: cp Builder.cs Assets/Editor/
+
+    JF->>UH: runUnityStage('Webgl', errorMsg)
+    UH->>UH: runUnityBatchMode('Webgl')
+    UH->>Unity: xvfb-run unity -batchmode -buildTarget WebGL -executeMethod Builder.BuildWebGL
+    Unity-->>UH: Builds/* + build_project_results/*.log
+    UH-->>JF: OK/FAIL
+
+    JF->>Python: create_bitbucket_webgl_build_report.py (commitHash, logPath)
+    Python->>BB: POST /reports
+    BB-->>Python: OK
+
+    JF->>GH: publishBuildResultsToWebServer(folderName, ticketNum, buildsPath, resultsPath)
+    GH->>WS: ssh mkdir -p /var/www/html/{folder}/{ticket}/build
+    GH->>WS: scp -r Builds/*
+    GH->>WS: scp -r build_project_results/*
+    GH->>WS: ssh chmod 755 & chown
+    WS-->>GH: OK
+    GH-->>JF: OK
+```
+
+---
+
+## Post: always/success/failure/aborted
+
+```mermaid
+sequenceDiagram
+    autonumber
+
+    participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant GH as generalHelper
+    participant Git as Git CLI
+    participant Python as Python Scripts
+    participant BB as Bitbucket API
+
+    Note over JF: Post: always/success/failure/aborted
+
+    Note over JF,GH: always block
+    JF->>GH: checkoutBranch(PROJECT_DIR, DESTINATION_BRANCH)
+    GH->>Git: git reset --hard
+    GH->>Git: git clean -fd
+    GH->>Git: git checkout {destination}
+    GH->>Git: git reset --hard origin/{destination}
+    Git-->>GH: OK
+    GH-->>JF: OK
+    JF->>JF: currentBuild.description = PR_BRANCH
+
+    Note over JF,GH: success/failure/aborted
+    alt success
+        JF->>GH: sendBuildStatus(workspace, 'SUCCESSFUL', commitHash)
+    else failure
+        JF->>GH: sendBuildStatus(workspace, 'FAILED', commitHash)
+    else aborted
+        JF->>GH: sendBuildStatus(workspace, 'STOPPED', commitHash)
+    end
+    GH->>Python: send_bitbucket_build_status.py
+    Python->>BB: POST /statuses/build
+    BB-->>Python: OK
+    GH-->>JF: OK
+```
