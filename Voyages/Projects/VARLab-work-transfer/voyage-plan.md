@@ -41,16 +41,23 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 ---
 
+## Sailing Orders
+-
+
+---
+
 ## Progress Tracker
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
 | [2026-01-08](logbook/2026-01-08/log.md) | 2026-01-08 | README verification | Fixed commit counts, identified squash-merged branches |
+| [2026-01-11](logbook/2026-01-11/log.md) | 2026-01-11~17 | Portfolio documentation | 65.5h, 4-layer architecture portfolio complete |
 
 ---
 
 ## Resources
 - repos/ - 4 git repositories (not tracked by Self-Binnacle)
 - legs/ - Achievement documentation by domain
+- portfolios/ - Portfolio documents for job applications
 
 ---
 
@@ -69,3 +76,8 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 ### Harvest
 - actual:
+
+
+
+### Raw
+- 나중에 완료하고 나서 수정된 결과물을 가지고 다이어그램으로 Architecture를 만들면 좋을듯 -> 그것도 웹 형태로 그래서 포트폴리오가 될수 있게
