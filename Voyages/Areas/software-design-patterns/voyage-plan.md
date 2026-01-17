@@ -23,6 +23,7 @@ Continuous study of software design patterns for writing maintainable, scalable,
 ## Progress Tracker
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
+| [2026-01-11](logbook/2026-01-11/log.md) | 2026-01-11~17 | SRP & Smells analysis | Jenkins pipeline analysis, 51 issues identified |
 
 ---
 
@@ -32,7 +33,7 @@ Continuous study of software design patterns for writing maintainable, scalable,
 ---
 
 ## Notes
--
+- Cross-referenced with VARLab-work-transfer project for Jenkins pipeline analysis
 
 ---
 
