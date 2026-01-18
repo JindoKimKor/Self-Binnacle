@@ -301,4 +301,4 @@ Step-by-step logging makes progress tracking easier in Blue Ocean UI
 
 ## Reference
 
-- [logger-system-design-integration.md](../logger-system-design-integration.md) - Logger System design document (Problem analysis → Solution → Implementation)
+- [logger-system-design-integration.md](../../logger-system-design-integration.md) - Logger System design document (Problem analysis → Solution → Implementation)

@@ -20,9 +20,9 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 > **Title:** [Software Smells Analysis & Architecture Redesign](https://jindokimkor.github.io/Self-Binnacle/)
 > - Context: 14-month technical debt resolution at VARLab
-> - Analysis: Software Smells (Code/Design/Architecture), SRP, DRY violations
+> - Analysis: SRP Violation, Code Smells, Design Smells (Symptoms/Principles), Architecture Smells, DRY Violation
 > - Solution: 4-Layer Architecture, 3-Level Logger System
-> - Keywords: Jenkins, Groovy, SOLID, Design Patterns
+> - Keywords: Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)
 
 ---
 
@@ -109,14 +109,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 112.5h | Start: May 2025 | Tracked from Sep 2025
+> Total: 111.0h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.5h | □□□□□□□□□□□□□□□□■□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -125,14 +125,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md)
-> Total: 78.0h | Start: Jan 2026
+> Total: 83.2h | Start: Jan 2026
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 78.0h | □□□□□□□■□■■■■■■■■□ |
+> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□ |
 >
 > </details>
 
@@ -160,14 +160,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md)
-> Total: 69.8h | Start: Jan 2025 | Tracked from Oct 2025
+> Total: 75.0h | Start: Jan 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 56.5h | □□□□□□□□□□■■■■■■■□ |
+> | Jan | 61.8h | □□□□□□□□□□■■■■■■■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |

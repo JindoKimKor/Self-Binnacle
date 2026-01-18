@@ -2,11 +2,11 @@
 
 > **Context:** 14-month technical debt resolution at VARLab
 >
-> **Analysis:** Software Smells (Code/Design/Architecture), SRP, DRY violations
+> **Analysis:** SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells
 >
 > **Solution:** 4-Layer Architecture, 3-Level Logger System
 >
-> **Keywords:** Jenkins, Groovy, SOLID, Design Patterns
+> **Keywords:** Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)
 
 ---
 
@@ -85,7 +85,7 @@ This portfolio is a **post-refactoring analysis** of intuitive problem-solving d
 | [legs/README.md](legs/README.md) | 5-stage Leg Overview | Core |
 | [legs/leg-0~4/changelog.md](legs/) | Detailed Records by Commit | Detailed |
 | [legs/refactoring-result-snapshot.md](legs/refactoring-result-snapshot.md) | Architecture Details, Design Patterns (commit `12910c1`) | Detailed |
-| [legs/logger-system-design-integration.md](legs/logger-system-design-integration.md) | 3-Level Logger Design (Problem Analysis → Solution → Implementation) | Detailed |
+| [logger-system-design-integration.md](logger-system-design-integration.md) | 3-Level Logger Design (Problem Analysis → Solution → Implementation) | Detailed |
 
 ---
 
@@ -98,6 +98,7 @@ This portfolio is a **post-refactoring analysis** of intuitive problem-solving d
 │
 ├── Part 1: What (Results)
 │   ├── highlights.md            # Final architecture highlights
+│   ├── logger-system-design-integration.md  # Logger design document
 │   └── pull-request-documentation.pdf   # Pull Request attachment
 │
 ├── Part 2: Why (Problems)
@@ -129,7 +130,6 @@ This portfolio is a **post-refactoring analysis** of intuitive problem-solving d
 │   └── legs/                    # Step-by-step implementation
 │       ├── README.md
 │       ├── refactoring-result-snapshot.md  # Architecture/patterns detailed
-│       ├── logger-system-design-integration.md  # Logger design document
 │       ├── leg-0-global-trusted-shared-library-setup/
 │       ├── leg-1-shellscript-modularization-and-initialization-stage/
 │       ├── leg-2-3-level-logger-system-implementation/

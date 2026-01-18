@@ -37,6 +37,7 @@ nav:
   - Home: README.md
   - Part 1 - What (Results):
     - Highlights: highlights.md
+    - Logger System Design: logger-system-design-integration.md
     - Pull Request Documentation: pull-request-documentation.md
   - Part 2 - Why (Problems):
     - Overview: problem-analysis-overview.md
@@ -98,7 +99,6 @@ nav:
   - Part 3 - How (Process):
     - Overview: legs/README.md
     - Architecture Snapshot: legs/refactoring-result-snapshot.md
-    - Logger System Design: legs/logger-system-design-integration.md
     - Leg 0 - Library Setup: legs/leg-0-global-trusted-shared-library-setup/changelog.md
     - Leg 1 - Shell Modularization: legs/leg-1-shellscript-modularization-and-initialization-stage/changelog.md
     - Leg 2 - Logger System: legs/leg-2-3-level-logger-system-implementation/changelog.md

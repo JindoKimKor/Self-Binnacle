@@ -113,7 +113,7 @@ Leg 0: Infrastructure → Leg 1: Shell Helper → Leg 2: Logger → Leg 3: API/L
 | Document | Description | Analysis Basis |
 |----------|-------------|----------------|
 | [refactoring-result-snapshot.md](refactoring-result-snapshot.md) | 4-Layer Architecture details, Design Patterns, code statistics | Commit `12910c1` |
-| [logger-system-design-integration.md](logger-system-design-integration.md) | 3-Level Logger design document (Problem analysis → Solution → Implementation) | Leg 2 details |
+| [logger-system-design-integration.md](../logger-system-design-integration.md) | 3-Level Logger design document (Problem analysis → Solution → Implementation) | Leg 2 details |
 
 ---
 

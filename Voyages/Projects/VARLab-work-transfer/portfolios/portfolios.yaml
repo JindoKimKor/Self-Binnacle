@@ -5,6 +5,6 @@ portfolios:
     title: "Software Smells Analysis & Architecture Redesign"
     labels:
       Context: "14-month technical debt resolution at VARLab"
-      Analysis: "Software Smells (Code/Design/Architecture), SRP, DRY violations"
+      Analysis: "SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells"
       Solution: "4-Layer Architecture, 3-Level Logger System"
-      Keywords: "Jenkins, Groovy, SOLID, Design Patterns"
+      Keywords: "Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)"

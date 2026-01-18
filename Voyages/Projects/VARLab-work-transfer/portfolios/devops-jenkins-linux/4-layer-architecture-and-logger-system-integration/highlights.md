@@ -1167,4 +1167,4 @@ After:  bitbucketApiLibrary ──→ Map { apiUrlString, requestBody, method }
 ### Related Documents
 
 - [legs/](legs/) - Step-by-step change records
-- [legs/logger-system-design-integration.md](legs/logger-system-design-integration.md) - Logger System design details
+- [logger-system-design-integration.md](logger-system-design-integration.md) - Logger System design details
