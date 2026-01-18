@@ -367,6 +367,8 @@
       
         
       
+        
+      
     
     
     
@@ -422,6 +424,34 @@
     
   
     Highlights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="logger-system-design-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logger System Design
   
 
     
@@ -2533,8 +2563,6 @@
       
         
       
-        
-      
     
     
     
@@ -2599,34 +2627,6 @@
     
   
     Architecture Snapshot
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="legs/logger-system-design-integration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Logger System Design
   
 
     
@@ -2807,9 +2807,9 @@
 <h1 id="software-smells-analysis-architecture-redesign">Software Smells Analysis &amp; Architecture Redesign</h1>
 <blockquote>
 <p><strong>Context:</strong> 14-month technical debt resolution at VARLab</p>
-<p><strong>Analysis:</strong> Software Smells (Code/Design/Architecture), SRP, DRY violations</p>
+<p><strong>Analysis:</strong> SRP/DRY Violation &amp; Code, Design (Symptoms/Principles), Architecture Smells</p>
 <p><strong>Solution:</strong> 4-Layer Architecture, 3-Level Logger System</p>
-<p><strong>Keywords:</strong> Jenkins, Groovy, SOLID, Design Patterns</p>
+<p><strong>Keywords:</strong> Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)</p>
 </blockquote>
 <hr />
 <h2 id="purpose">Purpose</h2>
@@ -3003,7 +3003,7 @@ Initial commit (2023-12-17) → Baseline (2025-03-20) = ~14 months of accumulate
 <td>Detailed</td>
 </tr>
 <tr>
-<td><a href="legs/logger-system-design-integration/">legs/logger-system-design-integration.md</a></td>
+<td><a href="logger-system-design-integration/">logger-system-design-integration.md</a></td>
 <td>3-Level Logger Design (Problem Analysis → Solution → Implementation)</td>
 <td>Detailed</td>
 </tr>
@@ -3017,6 +3017,7 @@ Initial commit (2023-12-17) → Baseline (2025-03-20) = ~14 months of accumulate
 │
 ├── Part 1: What (Results)
 │   ├── highlights.md            # Final architecture highlights
+│   ├── logger-system-design-integration.md  # Logger design document
 │   └── pull-request-documentation.pdf   # Pull Request attachment
 │
 ├── Part 2: Why (Problems)
@@ -3048,7 +3049,6 @@ Initial commit (2023-12-17) → Baseline (2025-03-20) = ~14 months of accumulate
 │   └── legs/                    # Step-by-step implementation
 │       ├── README.md
 │       ├── refactoring-result-snapshot.md  # Architecture/patterns detailed
-│       ├── logger-system-design-integration.md  # Logger design document
 │       ├── leg-0-global-trusted-shared-library-setup/
 │       ├── leg-1-shellscript-modularization-and-initialization-stage/
 │       ├── leg-2-3-level-logger-system-implementation/

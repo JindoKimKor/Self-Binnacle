@@ -13,16 +13,16 @@
       
       
       
-        <link rel="prev" href="../refactoring-result-snapshot/">
+        <link rel="prev" href="../highlights/">
       
       
-        <link rel="next" href="../leg-0-global-trusted-shared-library-setup/changelog/">
+        <link rel="next" href="../pull-request-documentation/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Software Smells Analysis &amp; Architecture Redesign" class="md-header__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+    <a href=".." title="Software Smells Analysis &amp; Architecture Redesign" class="md-header__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -194,7 +194,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Software Smells Analysis &amp; Architecture Redesign" class="md-nav__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+    <a href=".." title="Software Smells Analysis &amp; Architecture Redesign" class="md-nav__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -212,7 +212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -236,8 +236,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -245,15 +247,17 @@
       
         
       
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -274,7 +278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -292,7 +296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../highlights/" class="md-nav__link">
+      <a href="../highlights/" class="md-nav__link">
         
   
   
@@ -317,10 +321,140 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logger System Design
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logger System Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-design-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Design Background
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecture-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Architecture Integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-beforeafter-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Before/After Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../pull-request-documentation/" class="md-nav__link">
+      <a href="../pull-request-documentation/" class="md-nav__link">
         
   
   
@@ -418,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis-overview/" class="md-nav__link">
+      <a href="../problem-analysis-overview/" class="md-nav__link">
         
   
   
@@ -446,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/detailed-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/detailed-analysis/" class="md-nav__link">
         
   
   
@@ -474,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/baseline-technical-snapshot/" class="md-nav__link">
+      <a href="../problem-analysis/baseline-technical-snapshot/" class="md-nav__link">
         
   
   
@@ -502,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/DRY-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/DRY-violation-analysis/" class="md-nav__link">
         
   
   
@@ -589,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/pipeline-sequence-diagrams/dlx-ci/" class="md-nav__link">
+      <a href="../problem-analysis/pipeline-sequence-diagrams/dlx-ci/" class="md-nav__link">
         
   
   
@@ -617,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/pipeline-sequence-diagrams/dlx-cd/" class="md-nav__link">
+      <a href="../problem-analysis/pipeline-sequence-diagrams/dlx-cd/" class="md-nav__link">
         
   
   
@@ -645,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/pipeline-sequence-diagrams/js-ci/" class="md-nav__link">
+      <a href="../problem-analysis/pipeline-sequence-diagrams/js-ci/" class="md-nav__link">
         
   
   
@@ -673,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/pipeline-sequence-diagrams/js-cd/" class="md-nav__link">
+      <a href="../problem-analysis/pipeline-sequence-diagrams/js-cd/" class="md-nav__link">
         
   
   
@@ -701,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/pipeline-sequence-diagrams/jenkins-ci/" class="md-nav__link">
+      <a href="../problem-analysis/pipeline-sequence-diagrams/jenkins-ci/" class="md-nav__link">
         
   
   
@@ -857,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/01-generalHelper/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/01-generalHelper/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -885,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/01-generalHelper/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/01-generalHelper/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -913,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/01-generalHelper/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/01-generalHelper/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -1004,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/02-jsHelper/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/02-jsHelper/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -1032,7 +1166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/02-jsHelper/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/02-jsHelper/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -1060,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/02-jsHelper/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/02-jsHelper/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -1151,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/03-unityHelper/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/03-unityHelper/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -1179,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/03-unityHelper/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/03-unityHelper/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -1207,7 +1341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/03-unityHelper/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/03-unityHelper/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -1298,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/04-DLXJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/04-DLXJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -1326,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/04-DLXJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/04-DLXJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -1354,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/04-DLXJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/04-DLXJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -1445,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -1473,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -1501,7 +1635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -1592,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/06-JsJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/06-JsJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -1620,7 +1754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/06-JsJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/06-JsJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -1648,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/06-JsJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/06-JsJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -1739,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/07-JsJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/07-JsJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -1767,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/07-JsJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/07-JsJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -1795,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/07-JsJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/07-JsJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -1886,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/08-PipelineForJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/08-PipelineForJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
         
   
   
@@ -1914,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/08-PipelineForJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+      <a href="../problem-analysis/08-PipelineForJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
         
   
   
@@ -1942,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/08-PipelineForJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/08-PipelineForJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -2026,7 +2160,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../problem-analysis/reference/" class="md-nav__link ">
+            <a href="../problem-analysis/reference/" class="md-nav__link ">
               
   
   
@@ -2070,7 +2204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/01-code-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/01-code-smells/" class="md-nav__link">
         
   
   
@@ -2098,7 +2232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/02a-design-smells-symptoms/" class="md-nav__link">
+      <a href="../problem-analysis/reference/02a-design-smells-symptoms/" class="md-nav__link">
         
   
   
@@ -2126,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/02b-design-smells-principles/" class="md-nav__link">
+      <a href="../problem-analysis/reference/02b-design-smells-principles/" class="md-nav__link">
         
   
   
@@ -2154,7 +2288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/03-architecture-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/03-architecture-smells/" class="md-nav__link">
         
   
   
@@ -2182,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/04-anti-patterns/" class="md-nav__link">
+      <a href="../problem-analysis/reference/04-anti-patterns/" class="md-nav__link">
         
   
   
@@ -2210,7 +2344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/05-implementation-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/05-implementation-smells/" class="md-nav__link">
         
   
   
@@ -2238,7 +2372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/06-test-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/06-test-smells/" class="md-nav__link">
         
   
   
@@ -2266,7 +2400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/07-configuration-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/07-configuration-smells/" class="md-nav__link">
         
   
   
@@ -2294,7 +2428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/08-database-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/08-database-smells/" class="md-nav__link">
         
   
   
@@ -2322,7 +2456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/09-performance-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/09-performance-smells/" class="md-nav__link">
         
   
   
@@ -2350,7 +2484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../problem-analysis/reference/10-grammar-smells/" class="md-nav__link">
+      <a href="../problem-analysis/reference/10-grammar-smells/" class="md-nav__link">
         
   
   
@@ -2390,8 +2524,6 @@
       
   
   
-    
-  
   
   
     
@@ -2413,21 +2545,19 @@
       
         
       
-        
-      
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../legs/" class="md-nav__link ">
               
   
   
@@ -2451,7 +2581,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2471,7 +2601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../refactoring-result-snapshot/" class="md-nav__link">
+      <a href="../legs/refactoring-result-snapshot/" class="md-nav__link">
         
   
   
@@ -2496,140 +2626,10 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Logger System Design
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Logger System Design
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Table of Contents
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-design-background" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Design Background
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-architecture-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Architecture Integration
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-beforeafter-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Before/After Comparison
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reference
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../leg-0-global-trusted-shared-library-setup/changelog/" class="md-nav__link">
+      <a href="../legs/leg-0-global-trusted-shared-library-setup/changelog/" class="md-nav__link">
         
   
   
@@ -2657,7 +2657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../leg-1-shellscript-modularization-and-initialization-stage/changelog/" class="md-nav__link">
+      <a href="../legs/leg-1-shellscript-modularization-and-initialization-stage/changelog/" class="md-nav__link">
         
   
   
@@ -2685,7 +2685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../leg-2-3-level-logger-system-implementation/changelog/" class="md-nav__link">
+      <a href="../legs/leg-2-3-level-logger-system-implementation/changelog/" class="md-nav__link">
         
   
   
@@ -2713,7 +2713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../leg-3-bitbucket-api-and-shell-library-integration/changelog/" class="md-nav__link">
+      <a href="../legs/leg-3-bitbucket-api-and-shell-library-integration/changelog/" class="md-nav__link">
         
   
   
@@ -2741,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../leg-4-full-pipeline-refactoring-and-stage-modularization/changelog/" class="md-nav__link">
+      <a href="../legs/leg-4-full-pipeline-refactoring-and-stage-modularization/changelog/" class="md-nav__link">
         
   
   
@@ -2926,8 +2926,8 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><img alt="Stage View - scattered echo" src="../../resources/stage-logger-before.png" /></td>
-<td style="text-align: center;"><img alt="Console Output" src="../../resources/console-log-view-example.png" /></td>
+<td style="text-align: center;"><img alt="Stage View - scattered echo" src="../resources/stage-logger-before.png" /></td>
+<td style="text-align: center;"><img alt="Console Output" src="../resources/console-log-view-example.png" /></td>
 </tr>
 <tr>
 <td style="text-align: center;">Log visible in Pipeline Stage UI</td>
@@ -3374,8 +3374,8 @@
 </thead>
 <tbody>
 <tr>
-<td><img alt="Before - scattered echo" src="../../resources/stage-logger-before.png" /></td>
-<td><img alt="After - 3-Level logging" src="../../resources/stage-logger-after.png" /></td>
+<td><img alt="Before - scattered echo" src="../resources/stage-logger-before.png" /></td>
+<td><img alt="After - 3-Level logging" src="../resources/stage-logger-after.png" /></td>
 </tr>
 </tbody>
 </table>
@@ -3435,9 +3435,9 @@
 <hr />
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="../leg-2-3-level-logger-system-implementation/changelog/">Leg 2 Changelog</a> - Detailed implementation process record</li>
-<li><a href="../../highlights/">highlights.md</a> - Logger System Integration section</li>
-<li><a href="../refactoring-result-snapshot/">refactoring-result-snapshot.md</a> - Facade Pattern explanation</li>
+<li><a href="../legs/leg-2-3-level-logger-system-implementation/changelog/">Leg 2 Changelog</a> - Detailed implementation process record</li>
+<li><a href="../highlights/">highlights.md</a> - Logger System Integration section</li>
+<li><a href="../legs/refactoring-result-snapshot/">refactoring-result-snapshot.md</a> - Facade Pattern explanation</li>
 </ul>
 
 
@@ -3494,10 +3494,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
