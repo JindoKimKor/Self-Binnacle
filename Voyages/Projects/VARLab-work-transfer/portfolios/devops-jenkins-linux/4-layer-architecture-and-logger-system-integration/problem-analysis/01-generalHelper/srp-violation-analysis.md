@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](software-smells-analysis.md)
 
 # groovy/generalHelper.groovy - SRP Violation Analysis
 
@@ -56,7 +56,7 @@
 
 ## 4. Function Level SRP Violation Analysis - Functions with Multiple Change Reasons
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Function: <code>initializeEnvironment()</code> (2 change reasons)</summary>
 
 ```groovy
@@ -74,7 +74,7 @@ void initializeEnvironment(String workspace, String commitHash, String prBranch)
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Function: <code>cleanUpPRBranch()</code> (2 change reasons)</summary>
 
 ```groovy
@@ -112,7 +112,7 @@ void cleanUpPRBranch(String prBranch) {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Function: <code>checkQualityGateStatus()</code> (5 change reasons)</summary>
 
 ```groovy
@@ -165,4 +165,4 @@ Map checkQualityGateStatus(String projectKey, String adminToken) {
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](software-smells-analysis.md)

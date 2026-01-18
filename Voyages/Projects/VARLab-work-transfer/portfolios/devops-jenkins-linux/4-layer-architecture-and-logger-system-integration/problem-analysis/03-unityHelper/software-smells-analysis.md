@@ -1,4 +1,4 @@
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)
 
 # groovy/unityHelper.groovy - Software Smells Analysis
 
@@ -27,7 +27,7 @@
 
 ### 1.1 Change Preventers
 
-<details>
+<details markdown>
 <summary>Divergent Change (4 change reasons)</summary>
 
 **Definition**: A single class is frequently changed for several different reasons
@@ -46,7 +46,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Shotgun Surgery (7 locations when adding Stage)</summary>
 
 **Definition**: A single change requires modifications to multiple classes/functions
@@ -72,7 +72,7 @@
 
 ### 1.2 Bloaters
 
-<details>
+<details markdown>
 <summary>Long Method - runUnityBatchMode() 126 lines</summary>
 
 | Function | Line Count | Responsibility Count | Detailed Responsibilities |
@@ -94,7 +94,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Switch Statements (Stage-specific repeated branches)</summary>
 
 **Definition**: The same switch/if-else branches are repeated in multiple places
@@ -132,7 +132,7 @@
 
 #### Abstraction Smells
 
-<details>
+<details markdown>
 <summary>Multifaceted Abstraction</summary>
 
 **Definition**: A single abstraction (class/file) expresses multiple concerns (SRP violation)
@@ -154,7 +154,7 @@
 
 #### Encapsulation Smells
 
-<details>
+<details markdown>
 <summary>Missing Encapsulation</summary>
 
 **Definition**: Variations are not encapsulated, causing logic to be scattered
@@ -179,7 +179,7 @@
 
 #### Hierarchy Smells
 
-<details>
+<details markdown>
 <summary>Missing Hierarchy</summary>
 
 **Definition**: Should use inheritance/polymorphism instead of conditional branches (if/else)
@@ -218,7 +218,7 @@ stage.getTestRunArgs()  // Each Stage object encapsulates its own logic
 
 ### 3.1 Dependency Issues
 
-<details>
+<details markdown>
 <summary>Implicit Cross-module Dependency</summary>
 
 **Definition**: Hidden dependencies cause coupling to external systems without explicit interfaces
@@ -241,4 +241,4 @@ stage.getTestRunArgs()  // Each Stage object encapsulates its own logic
 
 ---
 
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)

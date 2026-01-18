@@ -1,0 +1,3633 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Post-refactoring analysis - Transform intuitive problem-solving into systematic knowledge">
+      
+      
+        <meta name="author" content="Jindo Kim">
+      
+      
+      
+        <link rel="prev" href="../srp-violation-analysis/">
+      
+      
+        <link rel="next" href="../design-smells-symptoms/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Software Smells - Software Smells Analysis & Architecture Redesign</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jsjenkinsjenkinsfile-software-smells-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Software Smells Analysis &amp; Architecture Redesign" class="md-header__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Software Smells Analysis & Architecture Redesign
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software Smells
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Software Smells Analysis &amp; Architecture Redesign" class="md-nav__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Software Smells Analysis & Architecture Redesign
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - What (Results)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - What (Results)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../highlights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Highlights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pull-request-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Why (Problems)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Why (Problems)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../problem-analysis-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../detailed-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baseline-technical-snapshot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baseline Snapshot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DRY-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DRY Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipeline Sequence Diagrams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline-sequence-diagrams/dlx-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins/Jenkinsfile (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline-sequence-diagrams/dlx-cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins/JenkinsfileDeployment (CD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline-sequence-diagrams/js-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins/Jenkinsfile (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline-sequence-diagrams/js-cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins/JenkinsfileDeployment (CD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipeline-sequence-diagrams/jenkins-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PipelineForJenkins/Jenkinsfile (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    File Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    generalHelper
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    generalHelper
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-generalHelper/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-generalHelper/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-generalHelper/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    jsHelper
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    jsHelper
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-jsHelper/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-jsHelper/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-jsHelper/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unityHelper
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    unityHelper
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-unityHelper/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-unityHelper/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-unityHelper/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_4" id="__nav_3_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins-Jenkinsfile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DLXJenkins-Jenkinsfile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-DLXJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-DLXJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-DLXJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins-Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DLXJenkins-Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-DLXJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-DLXJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-DLXJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_6" id="__nav_3_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins-Jenkinsfile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JsJenkins-Jenkinsfile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-code-smells-methodfunction-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Code Smells (Method/Function Level)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-design-smells-modulefile-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Design Smells (Module/File Level)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-architecture-smells-system-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Architecture Smells (System Level)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_7" id="__nav_3_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins-Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JsJenkins-Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-JsJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-JsJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-JsJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_8" id="__nav_3_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PipelineForJenkins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PipelineForJenkins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-PipelineForJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-PipelineForJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-PipelineForJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/01-code-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/02a-design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells (Symptoms)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/02b-design-smells-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells (Principles)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/03-architecture-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/04-anti-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/05-implementation-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/06-test-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/07-configuration-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/08-database-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/09-performance-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/10-grammar-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../legs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - How (Process)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - How (Process)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../legs/refactoring-result-snapshot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Snapshot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../legs/logger-system-design-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logger System Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../legs/leg-0-global-trusted-shared-library-setup/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 0 - Library Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../legs/leg-1-shellscript-modularization-and-initialization-stage/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 1 - Shell Modularization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../legs/leg-2-3-level-logger-system-implementation/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 2 - Logger System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../legs/leg-3-bitbucket-api-and-shell-library-integration/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 3 - Bitbucket API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../legs/leg-4-full-pipeline-refactoring-and-stage-modularization/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 4 - Full Refactoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a href="../srp-violation-analysis/">← SRP Analysis</a> | <a href="../../detailed-analysis/">← Overview</a></p>
+<h1 id="jsjenkinsjenkinsfile-software-smells-analysis">JsJenkins/Jenkinsfile - Software Smells Analysis</h1>
+<blockquote>
+<p>Level-based classification: Code Smell (function level) → Design Smell (module level) → Architecture Smell (system level)</p>
+</blockquote>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Category</th>
+<th>Smell Type</th>
+<th style="text-align: center;">Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>Change Preventers</td>
+<td>Divergent Change</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Change Preventers</td>
+<td>Shotgun Surgery</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Dispensables</td>
+<td>Duplicated Code</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Dispensables</td>
+<td>Comments (Dead Code)</td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Bloaters</td>
+<td>Long Method</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Bloaters</td>
+<td>Primitive Obsession</td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Couplers</td>
+<td>Feature Envy</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Logic/Flow</td>
+<td>Magic String</td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>Logic/Flow</td>
+<td>Deeply Nested Code</td>
+<td style="text-align: center;">Medium</td>
+</tr>
+<tr>
+<td>Design</td>
+<td>Abstraction</td>
+<td>Multifaceted Abstraction</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Design</td>
+<td>Abstraction</td>
+<td>Missing Abstraction</td>
+<td style="text-align: center;">Medium</td>
+</tr>
+<tr>
+<td>Design</td>
+<td>Encapsulation</td>
+<td>Missing Encapsulation</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Design</td>
+<td>Abstraction</td>
+<td>Imperative Abstraction</td>
+<td style="text-align: center;">Medium</td>
+</tr>
+<tr>
+<td>Design</td>
+<td>Modularization</td>
+<td>Insufficient Modularization</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>Dependency Issues</td>
+<td>Implicit Cross-module Dependency</td>
+<td style="text-align: center;">High</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-code-smells-methodfunction-level">1. Code Smells (Method/Function Level)</h2>
+<blockquote>
+<p><strong>Source</strong>: Fowler, M. (1999). <em>Refactoring: Improving the Design of Existing Code</em></p>
+</blockquote>
+<h3 id="11-change-preventers">1.1 Change Preventers</h3>
+<details>
+<summary>Divergent Change (5 change reasons)</summary>
+<p><strong>Definition</strong>: A single class/file is frequently changed for multiple different reasons</p>
+<table>
+<thead>
+<tr>
+<th>Change Reason</th>
+<th>Affected Area</th>
+<th>Line Numbers</th>
+<th>Example Scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jenkins environment config change</td>
+<td><code>Prepare WORKSPACE</code></td>
+<td>69-77</td>
+<td>Script loading path, JSON parsing logic change</td>
+</tr>
+<tr>
+<td>Git/Bitbucket workflow change</td>
+<td><code>Prepare WORKSPACE</code></td>
+<td>79-94</td>
+<td>Branch check, clone/merge policy change</td>
+</tr>
+<tr>
+<td>npm/Node config change</td>
+<td><code>Install Dependencies</code></td>
+<td>104-119</td>
+<td>checkNodeVersion, installNpmInTestingDirs call method change</td>
+</tr>
+<tr>
+<td>Test/report change</td>
+<td><code>Unit Testing</code></td>
+<td>134-246</td>
+<td>Coverage report path, Python script argument change</td>
+</tr>
+<tr>
+<td>SonarQube config change</td>
+<td><code>Static Analysis</code></td>
+<td>249-285</td>
+<td>Scanner options, Quality Gate condition change</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: High - Single Jenkinsfile handles entire JS CI pipeline logic
+- <strong>Bug Potential</strong>: Medium - Modifying one domain may cause unexpected impact on other domains
+- <strong>Modification Cost</strong>: Medium - Separating 5 domains requires shared library or separate script extraction</p>
+</details>
+<details>
+<summary>Shotgun Surgery (6 locations to modify when adding new report type)</summary>
+<p><strong>Definition</strong>: A single change requires modification of multiple classes/functions</p>
+<p><strong>Locations needing modification when adding new report type (e.g., 'admin')</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Line Number</th>
+<th>Modification Content</th>
+<th>Current Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>149-156</td>
+<td>Add <code>publishTestResultsHtmlToWebServer</code> call</td>
+<td><code>'server'</code>, <code>'client'</code></td>
+</tr>
+<tr>
+<td>164</td>
+<td>Add <code>params.ADMIN_SOURCE_FOLDER</code> condition</td>
+<td><code>params.SERVER_SOURCE_FOLDER?.trim()</code></td>
+</tr>
+<tr>
+<td>167</td>
+<td>Add new folder in path</td>
+<td><code>${params.SERVER_SOURCE_FOLDER}</code></td>
+</tr>
+<tr>
+<td>184</td>
+<td>Add Python script flag</td>
+<td><code>' --server'</code></td>
+</tr>
+<tr>
+<td>206</td>
+<td>Add new condition block</td>
+<td><code>if (params.CLIENT_SOURCE_FOLDER?.trim())</code></td>
+</tr>
+<tr>
+<td>226</td>
+<td>Add Python script flag</td>
+<td><code>' --client'</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Change Scenario</strong>: When adding new report type <code>'admin'</code>:
+- Add <code>publishTestResultsHtmlToWebServer(..., 'admin')</code> call
+- Add <code>params.ADMIN_SOURCE_FOLDER</code> condition block (copy 40+ lines)
+- Add <code>' --admin'</code> flag
+- Missing even one of 6 locations causes new report type to not work</p>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: High - 6 locations across entire Unit Testing stage (112 lines) need modification
+- <strong>Bug Potential</strong>: High - Missing even one of 6 locations causes report omission or runtime error
+- <strong>Modification Cost</strong>: Medium - Refactoring needed to extract report types into data structure and process with loops</p>
+</details>
+<h3 id="12-dispensables">1.2 Dispensables</h3>
+<details>
+<summary>Duplicated Code (Server/Client report handling pattern repeated 2 times)</summary>
+<p><strong>Definition</strong>: Same code pattern repeated in multiple places</p>
+<p><strong>Server vs Client report handling pattern repetition</strong> (lines 164-203 vs 206-244):</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Lines 164-203 (Server-side report)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">SERVER_SOURCE_FOLDER</span><span class="o">?.</span><span class="na">trim</span><span class="o">())</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">Map</span><span class="w"> </span><span class="n">serverTestSummaryDirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsUtil</span><span class="o">.</span><span class="na">retrieveReportSummaryDirs</span><span class="o">(</span>
+<span class="w">        </span><span class="s2">&quot;${env.PROJECT_DIR}/${params.SERVER_SOURCE_FOLDER?.trim() ?: &#39;&#39;}&quot;</span><span class="o">,</span>
+<span class="w">        </span><span class="n">COVERAGE_SUMMARY_FILE_NAME</span><span class="o">,</span><span class="w"> </span><span class="n">TEST_SUMMARY_FILE_NAME</span>
+<span class="w">    </span><span class="o">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(!</span><span class="n">serverTestSummaryDirs</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">cmdArgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot; ${COMMIT_HASH}&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                        </span><span class="s2">&quot; ${serverTestSummaryDirs[&#39;coverageSummaryDir&#39;]}&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                        </span><span class="s2">&quot; ${serverTestSummaryDirs[&#39;testSummaryDir&#39;]}&quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                        </span><span class="s1">&#39; --server&#39;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="n">params</span><span class="o">.</span><span class="na">DEBUG_MODE</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">).</span><span class="na">toUpperCase</span><span class="o">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">cmdArgs</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39; --debug&#39;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">sh</span><span class="w"> </span><span class="s2">&quot; python python/create_bitbucket_coverage_report.py ${cmdArgs}&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Lines 206-244 (Client-side report) - Same pattern, only variable names and flags differ</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">CLIENT_SOURCE_FOLDER</span><span class="o">?.</span><span class="na">trim</span><span class="o">())</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1">// ... same structure, uses &#39;--client&#39; flag</span>
+<span class="o">}</span>
+</code></pre></div>
+<p><strong>→ When adding new report type</strong>: Copy-paste of same pattern required (40+ lines of duplication)</p>
+<p><strong>publishTestResultsHtmlToWebServer calls also repeated 2 times</strong> (lines 149-156)</p>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: High - 2 locations need simultaneous modification when changing report handling logic
+- <strong>Bug Potential</strong>: High - Inconsistency if only one of 2 locations modified when Python script argument format changes
+- <strong>Modification Cost</strong>: Medium - Refactoring needed to extract report handling logic into function</p>
+</details>
+<details>
+<summary>Comments (Dead Code)</summary>
+<p><strong>Definition</strong>: Commented-out code or incorrect comments remain</p>
+<table>
+<thead>
+<tr>
+<th>Line Number</th>
+<th>Problem</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52</td>
+<td>Commented-out code</td>
+<td><code>// JENKINS_API_KEY = credentials('jenkins-api-key')</code> - Unused code</td>
+</tr>
+<tr>
+<td>63-64</td>
+<td>Incorrect comment</td>
+<td><code>// Unity Setup, Initial running the project on Unity Editor</code> - Mentions Unity in JS project</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: Low - No impact on code behavior
+- <strong>Bug Potential</strong>: Low - Just causes confusion during maintenance
+- <strong>Modification Cost</strong>: Low - Simple fix by deleting/correcting comments</p>
+</details>
+<h3 id="13-bloaters">1.3 Bloaters</h3>
+<details>
+<summary>Long Method - Unit Testing stage (112 lines)</summary>
+<p><strong>Definition</strong>: A single method/area has too many responsibilities</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Lines</th>
+<th>Responsibility Count</th>
+<th>Detailed Responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Unit Testing</code></td>
+<td>112 lines (134-246)</td>
+<td>7</td>
+<td>Test execution, web server deployment (server), web server deployment (client), server report path lookup, server report sending, client report path lookup, client report sending</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsibilities needing separation</strong>:
+1. Test execution (lines 136-144): <code>runUnitTestsInTestingDirs</code>
+2. Web server deployment (lines 148-156): <code>publishTestResultsHtmlToWebServer</code> × 2
+3. Server report handling (lines 164-203): retrieveReportSummaryDirs + Python script call
+4. Client report handling (lines 206-244): Same pattern</p>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: High - Affects entire Unit Testing stage
+- <strong>Bug Potential</strong>: High - Unexpected behavior possible when modifying 112 lines with 7 mixed responsibilities
+- <strong>Modification Cost</strong>: Medium - Refactoring needed to separate server/client report handling into separate functions</p>
+</details>
+<details>
+<summary>Primitive Obsession</summary>
+<p><strong>Definition</strong>: Primitive types (strings) used instead of objects/constants</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Current State</th>
+<th>Line Numbers</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filename constants</td>
+<td><code>'coverage-summary.json'</code>, <code>'test-results.json'</code></td>
+<td>159-160</td>
+<td>Defined only inside Unit Testing stage</td>
+</tr>
+<tr>
+<td>Directory name</td>
+<td><code>'linting_results'</code> string</td>
+<td>124</td>
+<td>Same name hardcoded across different Jenkinsfiles</td>
+</tr>
+<tr>
+<td>SonarQube URL</td>
+<td><code>'http://localhost:9000/sonarqube'</code> string</td>
+<td>260</td>
+<td>Hardcoded URL</td>
+</tr>
+<tr>
+<td>Quality Gate status</td>
+<td><code>'OK'</code> string</td>
+<td>274</td>
+<td>Hardcoded status value</td>
+</tr>
+<tr>
+<td>Report types</td>
+<td><code>'server'</code>, <code>'client'</code> strings</td>
+<td>152, 156, 184, 226</td>
+<td>Repeated in 4 locations</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: Low - Affects only functions within single Jenkinsfile file
+- <strong>Bug Potential</strong>: Low - No issues with current behavior, just maintenance inconvenience
+- <strong>Modification Cost</strong>: Low - Simple fix by extracting to constants</p>
+</details>
+<h3 id="14-couplers">1.4 Couplers</h3>
+<details>
+<summary>Feature Envy</summary>
+<p><strong>Definition</strong>: One class/module is overly dependent on data or methods of another class/module</p>
+<p><strong>Unit Testing stage's Feature Envy</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Dependency Target</th>
+<th>Call Count</th>
+<th>Line Numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jsUtil</code></td>
+<td>3 times</td>
+<td>139, 166-170, 208-212</td>
+</tr>
+<tr>
+<td><code>generalUtil</code></td>
+<td>2 times</td>
+<td>149-152, 153-156</td>
+</tr>
+<tr>
+<td>Python script</td>
+<td>2 times</td>
+<td>192, 233</td>
+</tr>
+<tr>
+<td><code>params</code></td>
+<td>6 times</td>
+<td>151, 155, 164, 167, 187, 206, 209, 228</td>
+</tr>
+</tbody>
+</table>
+<p><strong>→ Unit Testing stage is more interested in external module functionality than its own responsibilities</strong></p>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: High - Entire Unit Testing stage coupled to external dependencies
+- <strong>Bug Potential</strong>: Medium - Stage modification required when external modules change
+- <strong>Modification Cost</strong>: Medium - Report handling logic needs to move to jsHelper or separate module</p>
+</details>
+<h3 id="15-implementation-smells">1.5 Implementation Smells</h3>
+<details>
+<summary>Magic String</summary>
+<p><strong>Definition</strong>: Unexplained string literals hardcoded in code</p>
+<table>
+<thead>
+<tr>
+<th>Line Number</th>
+<th>Magic String</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>260</td>
+<td><code>'http://localhost:9000/sonarqube'</code></td>
+<td>SonarQube URL hardcoded - Code modification required when environment changes</td>
+</tr>
+<tr>
+<td>262</td>
+<td><code>'3.10'</code></td>
+<td>Python version hardcoded - Code modification required when version upgrades</td>
+</tr>
+<tr>
+<td>274</td>
+<td><code>'OK'</code></td>
+<td>Quality Gate status value hardcoded - Code modification required when API changes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: Low - Affects only Static Analysis stage
+- <strong>Bug Potential</strong>: Medium - Need to find and modify hardcoded values when SonarQube environment changes
+- <strong>Modification Cost</strong>: Low - Simple fix by extracting to constants or environment variables</p>
+</details>
+<details>
+<summary>Deeply Nested Code</summary>
+<p><strong>Definition</strong>: Excessive nesting (3+ levels) reduces code readability</p>
+<p><strong>Unit Testing stage's 3-level nesting</strong> (lines 164-203, 206-244):</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 3-level nesting structure</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">SERVER_SOURCE_FOLDER</span><span class="o">?.</span><span class="na">trim</span><span class="o">())</span><span class="w"> </span><span class="o">{</span><span class="w">           </span><span class="c1">// Level 1: params existence check</span>
+<span class="w">    </span><span class="n">Map</span><span class="w"> </span><span class="n">serverTestSummaryDirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsUtil</span><span class="o">.</span><span class="na">retrieveReportSummaryDirs</span><span class="o">(...)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(!</span><span class="n">serverTestSummaryDirs</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span><span class="w"> </span><span class="o">{</span><span class="w">          </span><span class="c1">// Level 2: Map not empty check</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="n">params</span><span class="o">.</span><span class="na">DEBUG_MODE</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">).</span><span class="na">toUpperCase</span><span class="o">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w">  </span><span class="c1">// Level 3: DEBUG_MODE check</span>
+<span class="w">            </span><span class="n">cmdArgs</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39; --debug&#39;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">sh</span><span class="w"> </span><span class="s2">&quot; python python/create_bitbucket_coverage_report.py ${cmdArgs}&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Server-side summary files are not founded.&#39;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+<span class="k">else</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;params.SERVER_SOURCE_FOLDER is not founded...&#39;</span>
+<span class="o">}</span>
+</code></pre></div>
+<p><strong>Same pattern repeated for Client</strong> (lines 206-244)</p>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: Medium - Entire Unit Testing stage (112 lines)
+- <strong>Bug Potential</strong>: Medium - Hard to track conditional branches due to nested structure
+- <strong>Modification Cost</strong>: Low - Refactorable with Early Return pattern or Guard Clause</p>
+</details>
+<hr />
+<h2 id="2-design-smells-modulefile-level">2. Design Smells (Module/File Level)</h2>
+<h3 id="21-symptoms-martin-2000">2.1 Symptoms (Martin 2000)</h3>
+<blockquote>
+<p><strong>Source</strong>: Martin, R.C. (2000). <em>Design Principles and Design Patterns</em></p>
+<p>Detailed analysis inferred from static analysis results: <strong><a href="../design-smells-symptoms/">design-smells-symptoms.md</a></strong></p>
+</blockquote>
+<h3 id="22-principles-suryanarayana-2014">2.2 Principles (Suryanarayana 2014)</h3>
+<blockquote>
+<p><strong>Source</strong>: Suryanarayana, G. et al. (2014). <em>Refactoring for Software Design Smells</em></p>
+</blockquote>
+<h4 id="abstraction-smells">Abstraction Smells</h4>
+<details>
+<summary>Multifaceted Abstraction</summary>
+<p><strong>Definition</strong>: A single abstraction (class/file) represents multiple concerns (SRP violation)</p>
+<p><strong>JsJenkins/Jenkinsfile's 5 domains</strong>:
+- Jenkins environment config: Script loading, JSON parsing, env output
+- Git/Bitbucket: Branch check, clone, merge
+- npm/Node testing: Dependency installation, test execution, coverage
+- Reports: Web server deployment, Python Bitbucket reports (server/client)
+- SonarQube: Code analysis, Quality Gate check</p>
+<p><strong>Modules needing separation</strong>:
+- <code>PrepareStage.groovy</code>: Script loading, branch check, Git workflow
+- <code>TestStage.groovy</code>: npm dependencies, test execution
+- <code>ReportStage.groovy</code>: Web server deployment, Bitbucket reports (remove server/client repetition)
+- <code>AnalysisStage.groovy</code>: SonarQube scan, Quality Gate</p>
+<p><strong>→ Related symptom</strong>: Divergent Change (single file changes for 5 different reasons)</p>
+</details>
+<details>
+<summary>Missing Abstraction</summary>
+<p><strong>Definition</strong>: Concepts implemented with primitive types or strings instead of dedicated classes/constants</p>
+<table>
+<thead>
+<tr>
+<th>Concept Needing Abstraction</th>
+<th>Current State</th>
+<th>Line Numbers</th>
+<th>Affected Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Report types</td>
+<td><code>'server'</code>, <code>'client'</code> hardcoded in 4 locations</td>
+<td>152, 156, 184, 226</td>
+<td>Unit Testing</td>
+</tr>
+<tr>
+<td>Filename constants</td>
+<td><code>'coverage-summary.json'</code>, <code>'test-results.json'</code> defined inside stage</td>
+<td>159-160</td>
+<td>Unit Testing</td>
+</tr>
+<tr>
+<td>SonarQube URL</td>
+<td><code>'http://localhost:9000/sonarqube'</code> hardcoded</td>
+<td>260</td>
+<td>Static Analysis</td>
+</tr>
+<tr>
+<td>Quality Gate status</td>
+<td><code>'OK'</code> hardcoded</td>
+<td>274</td>
+<td>Static Analysis</td>
+</tr>
+<tr>
+<td>Python version</td>
+<td><code>'3.10'</code> hardcoded</td>
+<td>262</td>
+<td>Static Analysis</td>
+</tr>
+<tr>
+<td>Directory name</td>
+<td><code>'linting_results'</code></td>
+<td>124</td>
+<td>Linting</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Report type abstraction needed</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// Before: Hardcoded per type</span>
+<span class="n">generalUtil</span><span class="o">.</span><span class="na">publishTestResultsHtmlToWebServer</span><span class="o">(...,</span><span class="w"> </span><span class="s1">&#39;server&#39;</span><span class="o">)</span>
+<span class="n">generalUtil</span><span class="o">.</span><span class="na">publishTestResultsHtmlToWebServer</span><span class="o">(...,</span><span class="w"> </span><span class="s1">&#39;client&#39;</span><span class="o">)</span>
+
+<span class="c1">// After: Report type objectified</span>
+<span class="kt">def</span><span class="w"> </span><span class="n">REPORT_TYPES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+<span class="w">    </span><span class="nl">server:</span><span class="w"> </span><span class="o">[</span><span class="nl">folder:</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">SERVER_SOURCE_FOLDER</span><span class="o">,</span><span class="w"> </span><span class="nl">flag:</span><span class="w"> </span><span class="s1">&#39;--server&#39;</span><span class="o">],</span>
+<span class="w">    </span><span class="nl">client:</span><span class="w"> </span><span class="o">[</span><span class="nl">folder:</span><span class="w"> </span><span class="n">params</span><span class="o">.</span><span class="na">CLIENT_SOURCE_FOLDER</span><span class="o">,</span><span class="w"> </span><span class="nl">flag:</span><span class="w"> </span><span class="s1">&#39;--client&#39;</span><span class="o">]</span>
+<span class="o">]</span>
+</code></pre></div></p>
+<p><strong>→ Related symptoms</strong>:
+- Primitive Obsession (report types/URLs expressed as primitive type strings)
+- Magic String (SonarQube URL, Quality Gate status value)
+- Shotgun Surgery (6 locations need modification when adding report type)</p>
+</details>
+<details>
+<summary>Imperative Abstraction</summary>
+<p><strong>Definition</strong>: Abstraction operations written procedurally rather than object-oriented</p>
+<p><strong>JsJenkins/Jenkinsfile's Imperative Abstraction evidence</strong>:</p>
+<p>Procedural script structure due to Jenkins Pipeline DSL characteristics:
+- <code>stage()</code> blocks execute sequentially
+- Connected to external scripts/servers via implicit contracts
+- Called via <code>sh</code> commands without explicit interfaces</p>
+<table>
+<thead>
+<tr>
+<th>External System</th>
+<th>Call Method</th>
+<th>Implicit Contract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python/create_bitbucket_coverage_report.py</code></td>
+<td><code>sh " python ..."</code></td>
+<td>Argument order, --server/--client/--debug flags</td>
+</tr>
+<tr>
+<td>SonarQube Scanner</td>
+<td><code>sh "${scannerTool}/bin/sonar-scanner ..."</code></td>
+<td>CLI option format</td>
+</tr>
+<tr>
+<td><code>generalHelper.groovy</code></td>
+<td><code>load()</code> + function call</td>
+<td>7+ function signatures</td>
+</tr>
+<tr>
+<td><code>jsHelper.groovy</code></td>
+<td><code>load()</code> + function call</td>
+<td>6 function signatures</td>
+</tr>
+<tr>
+<td>Jenkins params</td>
+<td><code>params.SERVER_SOURCE_FOLDER</code></td>
+<td>Parameter existence assumed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>→ Related symptom</strong>: Implicit Cross-module Dependency (implicit contracts with 7 external systems)</p>
+</details>
+<h4 id="encapsulation-smells">Encapsulation Smells</h4>
+<details>
+<summary>Missing Encapsulation</summary>
+<p><strong>Definition</strong>: Variations not encapsulated, causing logic to be scattered</p>
+<p><strong>Server/Client report handling pattern repetition</strong> (lines 164-203 vs 206-244):</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Type</th>
+<th>Pattern (40 lines)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lines 164-203</td>
+<td>Server</td>
+<td><code>params check</code> + <code>retrieveReportSummaryDirs</code> + <code>DEBUG_MODE check</code> + <code>Python call</code></td>
+</tr>
+<tr>
+<td>Lines 206-244</td>
+<td>Client</td>
+<td>Same pattern, only variable names and flags (<code>--server</code>/<code>--client</code>) differ</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Encapsulation approach</strong>: Extract to report handling function</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Before: Repeated 2 times (40 lines × 2 = 80 lines)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">SERVER_SOURCE_FOLDER</span><span class="o">?.</span><span class="na">trim</span><span class="o">())</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">Map</span><span class="w"> </span><span class="n">serverTestSummaryDirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsUtil</span><span class="o">.</span><span class="na">retrieveReportSummaryDirs</span><span class="o">(...)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(!</span><span class="n">serverTestSummaryDirs</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">cmdArgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot; ${COMMIT_HASH} ${serverTestSummaryDirs[&#39;coverageSummaryDir&#39;]}...&quot;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">((</span><span class="n">params</span><span class="o">.</span><span class="na">DEBUG_MODE</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">).</span><span class="na">toUpperCase</span><span class="o">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">cmdArgs</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39; --debug&#39;</span><span class="w"> </span><span class="o">}</span>
+<span class="w">        </span><span class="n">sh</span><span class="w"> </span><span class="s2">&quot; python python/create_bitbucket_coverage_report.py ${cmdArgs}&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">// Client also repeats same pattern...</span>
+
+<span class="c1">// After: Encapsulated in function</span>
+<span class="kt">def</span><span class="w"> </span><span class="nf">processReport</span><span class="o">(</span><span class="n">sourceFolder</span><span class="o">,</span><span class="w"> </span><span class="n">reportType</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(!</span><span class="n">sourceFolder</span><span class="o">?.</span><span class="na">trim</span><span class="o">())</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="o">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="n">Map</span><span class="w"> </span><span class="n">summaryDirs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsUtil</span><span class="o">.</span><span class="na">retrieveReportSummaryDirs</span><span class="o">(</span><span class="s2">&quot;${env.PROJECT_DIR}/${sourceFolder}&quot;</span><span class="o">,</span><span class="w"> </span><span class="o">...)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">summaryDirs</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="o">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">cmdArgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot; ${COMMIT_HASH} ${summaryDirs[&#39;coverageSummaryDir&#39;]} ... --${reportType}&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">isDebugMode</span><span class="o">())</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">cmdArgs</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39; --debug&#39;</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="n">sh</span><span class="w"> </span><span class="s2">&quot; python python/create_bitbucket_coverage_report.py ${cmdArgs}&quot;</span>
+<span class="o">}</span>
+<span class="n">processReport</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">SERVER_SOURCE_FOLDER</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;server&#39;</span><span class="o">)</span>
+<span class="n">processReport</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">CLIENT_SOURCE_FOLDER</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;client&#39;</span><span class="o">)</span>
+</code></pre></div>
+<p><strong>publishTestResultsHtmlToWebServer calls also repeated 2 times</strong> (lines 149-156)</p>
+<p><strong>→ Related symptoms</strong>:
+- Duplicated Code (Server/Client pattern repeated 2 times = 80+ lines duplication)
+- Shotgun Surgery (2 locations need simultaneous modification when report format changes)
+- Deeply Nested Code (3-level nesting repeated 2 times)</p>
+</details>
+<h4 id="modularization-smells">Modularization Smells</h4>
+<details>
+<summary>Insufficient Modularization</summary>
+<p><strong>Definition</strong>: Abstraction is too large or complex (God Class/Method)</p>
+<p><strong>Unit Testing stage's excessive size</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Threshold</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lines</td>
+<td>112 lines (134-246)</td>
+<td>~30 lines</td>
+<td>❌ Exceeded</td>
+</tr>
+<tr>
+<td>Responsibility count</td>
+<td>7</td>
+<td>1-2</td>
+<td>❌ Exceeded</td>
+</tr>
+<tr>
+<td>External dependencies</td>
+<td>4 (jsUtil, generalUtil, params, Python)</td>
+<td>2-3</td>
+<td>❌ Exceeded</td>
+</tr>
+<tr>
+<td>Nesting depth</td>
+<td>3 levels</td>
+<td>2 levels</td>
+<td>❌ Exceeded</td>
+</tr>
+</tbody>
+</table>
+<p><strong>7 responsibilities list</strong>:
+1. Test execution (<code>runUnitTestsInTestingDirs</code>)
+2. Web server deployment - Server (<code>publishTestResultsHtmlToWebServer</code>)
+3. Web server deployment - Client (<code>publishTestResultsHtmlToWebServer</code>)
+4. Server report path lookup (<code>retrieveReportSummaryDirs</code>)
+5. Server report sending (<code>create_bitbucket_coverage_report.py</code>)
+6. Client report path lookup (<code>retrieveReportSummaryDirs</code>)
+7. Client report sending (<code>create_bitbucket_coverage_report.py</code>)</p>
+<p><strong>Separation approach</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// Before: 112-line single stage</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Unit Testing&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="cm">/* 7 responsibilities mixed */</span><span class="w"> </span><span class="o">}</span>
+
+<span class="c1">// After: Separated by responsibility</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Unit Testing&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">jsUtil</span><span class="o">.</span><span class="na">runUnitTestsInTestingDirs</span><span class="o">(...)</span><span class="w"> </span><span class="o">}</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Publish Results&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">reportUtil</span><span class="o">.</span><span class="na">publishToWebServer</span><span class="o">(...)</span><span class="w"> </span><span class="o">}</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Send Reports&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">reportUtil</span><span class="o">.</span><span class="na">sendBitbucketReports</span><span class="o">(...)</span><span class="w"> </span><span class="o">}</span>
+</code></pre></div></p>
+<p><strong>→ Related symptoms</strong>:
+- Long Method (112 lines, 7 responsibilities)
+- Feature Envy (excessive dependency on jsUtil, generalUtil, params)</p>
+</details>
+<hr />
+<h2 id="3-architecture-smells-system-level">3. Architecture Smells (System Level)</h2>
+<blockquote>
+<p><strong>Source</strong>: Garcia et al. (2009), Lippert &amp; Roock (2006), Sharma &amp; Spinellis (2018)</p>
+</blockquote>
+<h3 id="31-dependency-issues">3.1 Dependency Issues</h3>
+<details>
+<summary>Implicit Cross-module Dependency</summary>
+<p><strong>Definition</strong>: Hidden dependencies causing coupling to external systems without explicit interfaces</p>
+<table>
+<thead>
+<tr>
+<th>External System</th>
+<th>Line Numbers</th>
+<th>Implicit Contract Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python/create_bitbucket_coverage_report.py</code></td>
+<td>192, 233</td>
+<td>Argument format (commitHash, coverageDir, testDir, --server/--client, --debug)</td>
+</tr>
+<tr>
+<td><code>generalHelper.groovy</code></td>
+<td>72</td>
+<td><code>load()</code> success + function signatures (parseJson, isBranchUpToDateWithRemote, initializeEnvironment, cloneOrUpdateRepo, mergeBranchIfNeeded, publishTestResultsHtmlToWebServer, checkQualityGateStatus, etc.)</td>
+</tr>
+<tr>
+<td><code>jsHelper.groovy</code></td>
+<td>73</td>
+<td><code>load()</code> success + function signatures (findTestingDirs, checkNodeVersion, installNpmInTestingDirs, executeLintingInTestingDirs, runUnitTestsInTestingDirs, retrieveReportSummaryDirs)</td>
+</tr>
+<tr>
+<td>SonarQube Scanner</td>
+<td>254-265</td>
+<td>Scanner path, CLI option format (<code>-Dsonar.projectKey</code>, <code>-Dsonar.host.url</code>, etc.)</td>
+</tr>
+<tr>
+<td>SonarQube API</td>
+<td>271</td>
+<td><code>checkQualityGateStatus</code> return value structure (<code>entireCodeStatus</code>, <code>newCodeStatus</code>)</td>
+</tr>
+<tr>
+<td>Jenkins Pipeline Params</td>
+<td>164, 206</td>
+<td><code>params.SERVER_SOURCE_FOLDER</code>, <code>params.CLIENT_SOURCE_FOLDER</code>, <code>params.DEBUG_MODE</code> existence</td>
+</tr>
+<tr>
+<td>Jenkins Pipeline DSL</td>
+<td>Entire file</td>
+<td><code>env</code>, <code>sh()</code>, <code>dir()</code>, <code>echo()</code>, <code>error()</code>, <code>tool()</code>, <code>withSonarQubeEnv()</code>, <code>withCredentials()</code>, <code>currentBuild</code>, etc.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Severity Evidence</strong>:
+- <strong>Impact Range</strong>: High - Affects Jenkinsfile + 7 external systems/scripts
+- <strong>Bug Potential</strong>: High - Runtime errors occur when Python script/SonarQube API/params change (not detectable at compile time)
+- <strong>Modification Cost</strong>: Medium - Interface documentation or Wrapper functions needed per external system</p>
+</details>
+<hr />
+<p><a href="../srp-violation-analysis/">← SRP Analysis</a> | <a href="../../detailed-analysis/">← Overview</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "navigation.top", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

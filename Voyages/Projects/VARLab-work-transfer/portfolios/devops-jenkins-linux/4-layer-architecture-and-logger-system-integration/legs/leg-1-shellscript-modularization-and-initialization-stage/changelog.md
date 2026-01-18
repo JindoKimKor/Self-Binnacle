@@ -57,7 +57,7 @@ Separate Shell script execution logic from pipeline code and modularize common i
 
 ### 3.1 Step 1: Initialization Stage Initial Implementation
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Commits**: `fe1a82a` ~ `44c4d06` (3 commits)
@@ -82,7 +82,7 @@ Separate Shell script execution logic from pipeline code and modularize common i
 
 ### 3.2 Step 2: ShellScript Modularization
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Commits**: `8be55ee` ~ `8ef6fef` (3 commits)
@@ -115,7 +115,7 @@ After:  vars/Initialization.groovy
 
 ### 3.3 Step 3: Package Structure and Annotation Modifications
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Commits**: `58a41e0` ~ `40bf3c4` (3 commits)
@@ -161,7 +161,7 @@ class ShellParams {
 
 ### 3.4 Step 4: Naming Convention Establishment and Logging Improvement
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Commits**: `d12ef93` ~ `d3613c8` (3 commits)

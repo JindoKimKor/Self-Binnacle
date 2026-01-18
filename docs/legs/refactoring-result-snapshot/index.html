@@ -1,0 +1,4453 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Post-refactoring analysis - Transform intuitive problem-solving into systematic knowledge">
+      
+      
+        <meta name="author" content="Jindo Kim">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../logger-system-design-integration/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Architecture Snapshot - Software Smells Analysis & Architecture Redesign</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#refactoring-result-snapshot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Software Smells Analysis &amp; Architecture Redesign" class="md-header__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Software Smells Analysis & Architecture Redesign
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture Snapshot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Software Smells Analysis &amp; Architecture Redesign" class="md-nav__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Software Smells Analysis & Architecture Redesign
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - What (Results)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - What (Results)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../highlights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Highlights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pull-request-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Why (Problems)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - Why (Problems)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/detailed-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/baseline-technical-snapshot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baseline Snapshot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/DRY-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DRY Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Sequence Diagrams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pipeline Sequence Diagrams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/pipeline-sequence-diagrams/dlx-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins/Jenkinsfile (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/pipeline-sequence-diagrams/dlx-cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins/JenkinsfileDeployment (CD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/pipeline-sequence-diagrams/js-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins/Jenkinsfile (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/pipeline-sequence-diagrams/js-cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins/JenkinsfileDeployment (CD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/pipeline-sequence-diagrams/jenkins-ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PipelineForJenkins/Jenkinsfile (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    File Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    generalHelper
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    generalHelper
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/01-generalHelper/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/01-generalHelper/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/01-generalHelper/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    jsHelper
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    jsHelper
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/02-jsHelper/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/02-jsHelper/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/02-jsHelper/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unityHelper
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    unityHelper
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/03-unityHelper/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/03-unityHelper/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/03-unityHelper/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_4" id="__nav_3_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins-Jenkinsfile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DLXJenkins-Jenkinsfile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/04-DLXJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/04-DLXJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/04-DLXJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLXJenkins-Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DLXJenkins-Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/05-DLXJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_6" id="__nav_3_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins-Jenkinsfile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JsJenkins-Jenkinsfile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/06-JsJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/06-JsJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/06-JsJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_7" id="__nav_3_6_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsJenkins-Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JsJenkins-Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/07-JsJenkins-JenkinsfileDeployment/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/07-JsJenkins-JenkinsfileDeployment/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/07-JsJenkins-JenkinsfileDeployment/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_8" id="__nav_3_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PipelineForJenkins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PipelineForJenkins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/08-PipelineForJenkins-Jenkinsfile/srp-violation-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SRP Violations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/08-PipelineForJenkins-Jenkinsfile/software-smells-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/08-PipelineForJenkins-Jenkinsfile/design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../problem-analysis/reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/01-code-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/02a-design-smells-symptoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells (Symptoms)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/02b-design-smells-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Smells (Principles)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/03-architecture-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/04-anti-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/05-implementation-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/06-test-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/07-configuration-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/08-database-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/09-performance-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../problem-analysis/reference/10-grammar-smells/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Smells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - How (Process)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - How (Process)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Snapshot
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Snapshot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-complete-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Complete File Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-folder-by-folder-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Folder-by-Folder Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-design-patterns-applied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Design Patterns Applied
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-integration-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Integration Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-current-state-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Current State Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-dependency-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Dependency Graph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-remaining-work-migration-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Remaining Work (Migration Targets)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-code-duplication-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Code Duplication Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logger-system-design-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logger System Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leg-0-global-trusted-shared-library-setup/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 0 - Library Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leg-1-shellscript-modularization-and-initialization-stage/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 1 - Shell Modularization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leg-2-3-level-logger-system-implementation/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 2 - Logger System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leg-3-bitbucket-api-and-shell-library-integration/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 3 - Bitbucket API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leg-4-full-pipeline-refactoring-and-stage-modularization/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leg 4 - Full Refactoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="refactoring-result-snapshot">Refactoring Result Snapshot</h1>
+<blockquote>
+<p><strong>Note</strong>: This document is analyzed based on commit <code>12910c1</code>.</p>
+<p><strong>Analysis Direction</strong>:
+- 4-Layer Architecture detailed structure
+- Design Patterns application status
+- Integration Flow (Mermaid Diagrams)
+- Code Duplication Before/After comparison</p>
+</blockquote>
+<hr />
+<p>This document provides a comprehensive analysis of the codebase after the refactoring effort.</p>
+<ul>
+<li><strong>Commit</strong>: <code>12910c1</code> (Latest on Temporary-Branch)</li>
+<li><strong>Purpose</strong>: Portfolio documentation, Resume preparation, Interview reference, Technical blog content</li>
+</ul>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#1-overview">Overview</a></li>
+<li><a href="#11-file-statistics">1.1 File Statistics</a></li>
+<li><a href="#12-architecture-summary">1.2 Architecture Summary</a></li>
+<li><a href="#2-complete-file-structure">Complete File Structure</a></li>
+<li><a href="#3-folder-by-folder-analysis">Folder-by-Folder Analysis</a></li>
+<li><a href="#31-sharedlibrariesvars---pipeline-stage-functions">3.1 sharedLibraries/vars/</a></li>
+<li><a href="#32-sharedlibrariessrc---core-business-logic">3.2 sharedLibraries/src/</a></li>
+<li><a href="#33-dlxjenkins--jsjenkins---pipeline-definitions">3.3 DLXJenkins/ &amp; JsJenkins/</a></li>
+<li><a href="#34-groovy---legacy-helpers-migration-in-progress">3.4 groovy/</a></li>
+<li><a href="#35-python---legacy-scripts-to-be-eliminated">3.5 python/</a></li>
+<li><a href="#36-tests---unit-tests">3.6 tests/</a></li>
+<li><a href="#4-design-patterns-applied">Design Patterns Applied</a></li>
+<li><a href="#5-integration-flow">Integration Flow</a></li>
+<li><a href="#6-current-state-summary">Current State Summary</a></li>
+<li><a href="#7-dependency-graph">Dependency Graph</a></li>
+<li><a href="#8-remaining-work-migration-targets">Remaining Work</a></li>
+<li><a href="#9-code-duplication-analysis">Code Duplication Analysis</a></li>
+<li><a href="#10-conclusion">Conclusion</a></li>
+</ol>
+<hr />
+<h2 id="1-overview">1. Overview</h2>
+<h3 id="11-file-statistics">1.1 File Statistics</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Files</th>
+<th>Lines (approx)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>sharedLibraries/vars/</strong></td>
+<td>13</td>
+<td>1,104</td>
+<td>NEW - Pipeline stages</td>
+</tr>
+<tr>
+<td><strong>sharedLibraries/src/</strong></td>
+<td>7</td>
+<td>1,126</td>
+<td>NEW - Core business logic</td>
+</tr>
+<tr>
+<td><strong>groovy/</strong></td>
+<td>3</td>
+<td>1,824</td>
+<td>Legacy (being migrated)</td>
+</tr>
+<tr>
+<td><strong>DLXJenkins/</strong></td>
+<td>2</td>
+<td>286</td>
+<td>Refactored</td>
+</tr>
+<tr>
+<td><strong>JsJenkins/</strong></td>
+<td>2</td>
+<td>743</td>
+<td>Being Refactored</td>
+</tr>
+<tr>
+<td><strong>PipelineForJenkins/</strong></td>
+<td>1</td>
+<td>185</td>
+<td>Being Refactored</td>
+</tr>
+<tr>
+<td><strong>python/</strong></td>
+<td>15</td>
+<td>2,069</td>
+<td>Legacy (to be eliminated)</td>
+</tr>
+<tr>
+<td><strong>Bash/</strong></td>
+<td>2</td>
+<td>330</td>
+<td>Shell scripts</td>
+</tr>
+<tr>
+<td><strong>tests/</strong></td>
+<td>6</td>
+<td>243</td>
+<td>NEW - Unit tests</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td>51</td>
+<td>7,910</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-architecture-summary">1.2 Architecture Summary</h3>
+<blockquote>
+<p>The refactored codebase implements a <strong>4-Layer Architecture</strong> with clear separation of concerns:</p>
+</blockquote>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Layer1["Layer 1: Entry Point"]
+        JF[Jenkinsfile]
+    end
+
+    subgraph Layer2["Layer 2: Orchestration (vars/)"]
+        STAGES[Stage Functions]
+        LOGGER[logger.groovy]
+        SSH[shellScriptHelper.groovy]
+        BAH[bitbucketApiHelper.groovy]
+    end
+
+    subgraph Layer3["Layer 3: Services (src/service/)"]
+        HTTP[HttpApiService]
+        PWS[PrepareWorkspaceService]
+        BPS[BuildProjectService]
+    end
+
+    subgraph Layer4["Layer 4: Utilities (src/utils/)"]
+        GIT[GitLibrary]
+        SHELL[ShellLibrary]
+        SSHLIB[SSHShellLibrary]
+    end
+
+    subgraph Layer5["Layer 5: Resources (src/resource/)"]
+        STATUS[Status Constants]
+    end
+
+    JF --&gt; STAGES
+    STAGES --&gt; LOGGER
+    STAGES --&gt; SSH
+    STAGES --&gt; BAH
+    SSH --&gt; GIT
+    SSH --&gt; SHELL
+    SSH --&gt; SSHLIB
+    BAH --&gt; HTTP
+    STAGES --&gt; STATUS
+    HTTP --&gt; STATUS</code></pre>
+<hr />
+<h2 id="2-complete-file-structure">2. Complete File Structure</h2>
+<div class="highlight"><pre><span></span><code>devops-linux-jenkins/
+│
+├── sharedLibraries/                                    [20 files - Core Library]
+│   ├── vars/                                           [13 files - Pipeline Functions]
+│   │   ├── logger.groovy                                   - Centralized logging
+│   │   ├── shellScriptHelper.groovy                        - Shell execution wrapper
+│   │   ├── bitbucketApiHelper.groovy                       - Bitbucket API facade
+│   │   ├── bitbucketApiLibrary.groovy                      - API request builder
+│   │   ├── stageInitialization.groovy                      - Pipeline initialization
+│   │   ├── stageProjectPrepare.groovy                      - Project preparation
+│   │   ├── stageLintUnity.groovy                           - Unity linting
+│   │   ├── stageLintGroovyJenkinsfile.groovy               - Groovy linting
+│   │   ├── stageUnityExecution.groovy                      - Unity test execution
+│   │   ├── stageStaticAnalysis.groovy                      - SonarQube analysis
+│   │   ├── stageSendBuildResults.groovy                    - Build result reporting
+│   │   ├── stageDeployBuild.groovy                         - Build deployment
+│   │   └── stageCleanupPRBranchArtifacts.groovy            - PR cleanup
+│   │
+│   └── src/                                            [7 files - Library Source]
+│       ├── resource/
+│       │   └── Status.groovy                               - Status constants
+│       │
+│       ├── service/
+│       │   ├── general/
+│       │   │   ├── HttpApiService.groovy                   - HTTP client
+│       │   │   └── PrepareWorkspaceService.groovy
+│       │   │
+│       │   └── unity/
+│       │       └── BuildProjectService.groovy
+│       │
+│       └── utils/
+│           ├── GitLibrary.groovy                           - Git operations
+│           ├── ShellLibrary.groovy                         - Shell operations
+│           └── SSHShellLibrary.groovy                      - SSH operations
+│
+├── DLXJenkins/                                         [2 files - Unity Pipeline]
+│   ├── Jenkinsfile
+│   └── JenkinsfileDeployment
+│
+├── JsJenkins/                                          [2 files - JavaScript Pipeline]
+│   ├── Jenkinsfile
+│   └── JenkinsfileDeployment
+│
+├── PipelineForJenkins/                                 [1 file - Self Pipeline]
+│   └── Jenkinsfile
+│
+├── groovy/                                             [3 files - Legacy Helpers]
+│   ├── generalHelper.groovy                                - Being migrated
+│   ├── jsHelper.groovy                                     - Being migrated
+│   └── unityHelper.groovy                                  - Being migrated
+│
+├── python/                                             [15 files - Supporting Scripts]
+│   ├── send_bitbucket_build_status.py                      - Being migrated
+│   ├── create_bitbucket_test_report.py                     - Being migrated
+│   ├── create_bitbucket_coverage_report.py                 - Being migrated
+│   ├── create_bitbucket_webgl_build_report.py              - Being migrated
+│   ├── create_log_report.py                                - Being migrated
+│   ├── get_bitbucket_commit_hash.py                        - Being migrated
+│   ├── get_unity_failure.py                                - Being migrated
+│   ├── get_unity_version.py                                - Being migrated
+│   ├── linting_error_report.py                             - Being migrated
+│   ├── npm_audit.py                                        - Being migrated
+│   ├── extract_build_error_log_messages.py                 - Being migrated
+│   ├── Lint_groovy_report.py                               - Being migrated
+│   └── JsReporting/
+│       ├── extract_coverage_rates.py                       - Being migrated
+│       └── extract_test_result.py                          - Being migrated
+│
+├── Bash/                                               [2 files]
+│   ├── .editorconfig
+│   └── Linting.bash
+│
+├── tests/                                              [6 files - Unit Tests]
+│   ├── GeneralHelperSpec.groovy
+│   └── src/
+│       ├── resource/
+│       │   ├── JenkinsFile.groovy                          - Mock interface
+│       │   └── StatusSpec.groovy
+│       └── service/
+│           ├── MyPipelineTest.groovy
+│           ├── general/
+│           │   └── PrepareWorkspaceServiceSpec.groovy
+│           └── unity/
+│               └── BuildProjectServiceSpec.groovy
+│
+└── Configuration Files
+    ├── build.gradle
+    ├── .groovylintrc.groovy.json
+    └── .groovylintrc.jenkins.json
+</code></pre></div>
+<hr />
+<h2 id="3-folder-by-folder-analysis">3. Folder-by-Folder Analysis</h2>
+<h3 id="31-sharedlibrariesvars-pipeline-stage-functions">3.1 sharedLibraries/vars/ - Pipeline Stage Functions</h3>
+<h4 id="purpose">Purpose</h4>
+<blockquote>
+<p>The <code>vars/</code> directory in Jenkins Global Shared Library defines global functions that can be called directly from pipelines.</p>
+</blockquote>
+<h4 id="file-analysis">File Analysis</h4>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Lines</th>
+<th>Purpose</th>
+<th>Design Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>logger.groovy</code></td>
+<td>83</td>
+<td>3-level hierarchical logging</td>
+<td>Facade</td>
+</tr>
+<tr>
+<td><code>shellScriptHelper.groovy</code></td>
+<td>105</td>
+<td>Validated shell execution</td>
+<td>Command/Adapter</td>
+</tr>
+<tr>
+<td><code>bitbucketApiHelper.groovy</code></td>
+<td>36</td>
+<td>Bitbucket API facade</td>
+<td>Facade</td>
+</tr>
+<tr>
+<td><code>bitbucketApiLibrary.groovy</code></td>
+<td>69</td>
+<td>API request builder</td>
+<td>Builder</td>
+</tr>
+<tr>
+<td><code>stageInitialization.groovy</code></td>
+<td>103</td>
+<td>Environment setup</td>
+<td>Initialization</td>
+</tr>
+<tr>
+<td><code>stageProjectPrepare.groovy</code></td>
+<td>186</td>
+<td>Git workspace preparation</td>
+<td>State Machine</td>
+</tr>
+<tr>
+<td><code>stageLintUnity.groovy</code></td>
+<td>67</td>
+<td>Unity C# linting</td>
+<td>Wrapper</td>
+</tr>
+<tr>
+<td><code>stageLintGroovyJenkinsfile.groovy</code></td>
+<td>96</td>
+<td>Groovy/Jenkinsfile linting</td>
+<td>Wrapper</td>
+</tr>
+<tr>
+<td><code>stageUnityExecution.groovy</code></td>
+<td>99</td>
+<td>Unity test execution</td>
+<td>Strategy</td>
+</tr>
+<tr>
+<td><code>stageStaticAnalysis.groovy</code></td>
+<td>87</td>
+<td>SonarQube analysis</td>
+<td>Configuration</td>
+</tr>
+<tr>
+<td><code>stageSendBuildResults.groovy</code></td>
+<td>39</td>
+<td>Build result publishing</td>
+<td>Publisher</td>
+</tr>
+<tr>
+<td><code>stageDeployBuild.groovy</code></td>
+<td>72</td>
+<td>SSH deployment</td>
+<td>Command</td>
+</tr>
+<tr>
+<td><code>stageCleanupPRBranchArtifacts.groovy</code></td>
+<td>62</td>
+<td>PR artifact cleanup</td>
+<td>Cleanup</td>
+</tr>
+</tbody>
+</table>
+<h4 id="loggergroovy-3-level-hierarchical-logging">logger.groovy - 3-Level Hierarchical Logging</h4>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Level1["Level 1: Stage"]
+        SS[stageStart]
+        SE[stageEnd]
+    end
+
+    subgraph Level2["Level 2: Steps Group"]
+        SGS[stepsGroupStart]
+        SGE[stepsGroupEnd]
+    end
+
+    subgraph Level3["Level 3: Step"]
+        SSTART[stepStart ➡️]
+        SINFO[stepInfo 🗒️]
+        SATT[stepAttention ❗]
+        SPROC[stepProcessing 🏃]
+        SSUC[stepSuccess ✅]
+        SWARN[stepWarning ⚠️]
+        SFAIL[stepFailed ❌]
+        SERR[stepError 🔥]
+    end
+
+    SS --&gt; SGS
+    SGS --&gt; SSTART
+    SGS --&gt; SINFO
+    SGS --&gt; SATT
+    SGS --&gt; SPROC
+    SGS --&gt; SSUC
+    SGS --&gt; SWARN
+    SGS --&gt; SFAIL
+    SGS --&gt; SERR
+    SGE --&gt; SE</code></pre>
+<p><strong>Key Features:</strong>
+- Automatic stack trace capture (<code>stepError(String, Throwable)</code>)
+- Emoji-based visual identification
+- Consistent formatting across all pipeline stages</p>
+<h4 id="shellscripthelpergroovy-validated-shell-execution">shellScriptHelper.groovy - Validated Shell Execution</h4>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Input
+        CL[Closure from Library]
+        ARGS[Arguments List]
+    end
+
+    subgraph Validation
+        V1[Non-null script]
+        V2[Non-null label]
+        V3[Mutually exclusive flags]
+    end
+
+    subgraph Execution
+        RS[returnStatus → int]
+        RO[returnStdout → String]
+        RV[returnVoid → void]
+    end
+
+    subgraph Output
+        LOG[Logger Integration]
+        RES[Result]
+    end
+
+    CL --&gt; V1
+    ARGS --&gt; V1
+    V1 --&gt; V2
+    V2 --&gt; V3
+    V3 --&gt; RS
+    V3 --&gt; RO
+    V3 --&gt; RV
+    RS --&gt; LOG
+    RO --&gt; LOG
+    RV --&gt; LOG
+    LOG --&gt; RES</code></pre>
+<p><strong>Validation Rules:</strong>
+- <code>script</code>: Non-null, non-empty string required
+- <code>label</code>: Non-null, non-empty string required
+- Return flags: <code>returnStatus</code>, <code>returnStdout</code>, <code>returnStderr</code> are mutually exclusive</p>
+<hr />
+<h3 id="32-sharedlibrariessrc-core-business-logic">3.2 sharedLibraries/src/ - Core Business Logic</h3>
+<h4 id="321-utils-command-libraries">3.2.1 utils/ - Command Libraries</h4>
+<h5 id="gitlibrarygroovy-480-lines-31-operations">GitLibrary.groovy (480 lines, 31 operations)</h5>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fetch</strong></td>
+<td>FetchOriginReturnStatus, FetchOriginReturnStdout, FetchOriginBranchReturnStatus, FetchOriginBranchReturnStdout</td>
+</tr>
+<tr>
+<td><strong>Branch</strong></td>
+<td>ShowCurrentBranch, CheckoutBranch, GetOriginDefaultBranch, CheckOriginBranchExists, CheckBranchExists</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>StatusPorcelain, CheckUpToDateWithRemote, CheckIsRemoteBranchAncestor</td>
+</tr>
+<tr>
+<td><strong>Reset/Clean</strong></td>
+<td>ResetHard, CleanUntracked, RestoreWorkingDirectory, RemoveIndexLock</td>
+</tr>
+<tr>
+<td><strong>Clone/Pull</strong></td>
+<td>CloneRepository, Pull, ResetHardOriginBranch</td>
+</tr>
+<tr>
+<td><strong>Merge</strong></td>
+<td>MergeOriginBranch</td>
+</tr>
+<tr>
+<td><strong>LFS</strong></td>
+<td>LfsFilesMissingFromGitIndex, LfsFetchAndCheckout</td>
+</tr>
+<tr>
+<td><strong>Hash</strong></td>
+<td>GetRemoteBranchHash</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Command Pattern Implementation:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Closure</span><span class="w"> </span><span class="n">ShowCurrentBranch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="o">[</span>
+<span class="w">        </span><span class="nl">script:</span><span class="w"> </span><span class="s1">&#39;git branch --show-current 2&gt;&amp;1&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="nl">label:</span><span class="w"> </span><span class="s1">&#39;Show current branch name&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="nl">returnStdout:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+</code></pre></div></p>
+<h5 id="shelllibrarygroovy-252-lines-15-operations">ShellLibrary.groovy (252 lines, 15+ operations)</h5>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Environment</strong></td>
+<td>PrintJenkinsEnv</td>
+</tr>
+<tr>
+<td><strong>Directory</strong></td>
+<td>FindPRJobDirectory, FindProjectDirectory, CreateLintingResultsDir</td>
+</tr>
+<tr>
+<td><strong>Docker</strong></td>
+<td>DockerInfo, GroovyLint</td>
+</tr>
+<tr>
+<td><strong>Unity</strong></td>
+<td>GetUnityExecutable, LintUnity, CopyWebGLBuilder, CopyLintConfig</td>
+</tr>
+<tr>
+<td><strong>Python</strong></td>
+<td>ExecutePythonStatusReport, CreateBitbucketBuildReport, CreateBitbucketTestReport</td>
+</tr>
+<tr>
+<td><strong>SonarQube</strong></td>
+<td>SonarqubeScanner</td>
+</tr>
+<tr>
+<td><strong>Azure</strong></td>
+<td>UploadWebGLBuildToWebStorageContainer</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sshshelllibrarygroovy-115-lines-8-operations">SSHShellLibrary.groovy (115 lines, 8 operations)</h5>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CheckSSHConnectivity</td>
+<td>Test SSH connection</td>
+</tr>
+<tr>
+<td>CreateDirectoryAndSetPermission</td>
+<td>Create remote directory</td>
+</tr>
+<tr>
+<td>CopyBuildToHostServer</td>
+<td>SCP build artifacts</td>
+</tr>
+<tr>
+<td>UpdateBuildURL</td>
+<td>Execute remote script</td>
+</tr>
+<tr>
+<td>CleanMergedPRBranchFromHostServer</td>
+<td>Remove PR artifacts</td>
+</tr>
+<tr>
+<td>CreateDirectoryAndSetPermissionForEconestogaDlxServer</td>
+<td>Econestoga server setup</td>
+</tr>
+<tr>
+<td>CopyBuildToEconestogaDlxServer</td>
+<td>Econestoga deployment</td>
+</tr>
+<tr>
+<td>UpdateBuildURLForEconestogaDlxServer</td>
+<td>Econestoga URL update</td>
+</tr>
+</tbody>
+</table>
+<h4 id="322-service-business-logic-services">3.2.2 service/ - Business Logic Services</h4>
+<h5 id="httpapiservicegroovy-171-lines">HttpApiService.groovy (171 lines)</h5>
+<pre class="mermaid"><code>flowchart TB
+    subgraph API["HttpApiService"]
+        GET[get]
+        POST[post]
+        PUT[put]
+        DELETE[delete]
+    end
+
+    subgraph Execution
+        EXEC[executeRequest]
+    end
+
+    subgraph ErrorHandling["Error Handling"]
+        UH[UnknownHostException]
+        CE[ConnectException]
+        ST[SocketTimeoutException]
+        SSL[SSLHandshakeException]
+        CC[ConnectionClosedException]
+        IO[IOException]
+    end
+
+    subgraph Response
+        RES["[statusCode, success, body]"]
+    end
+
+    GET --&gt; EXEC
+    POST --&gt; EXEC
+    PUT --&gt; EXEC
+    DELETE --&gt; EXEC
+    EXEC --&gt; UH
+    EXEC --&gt; CE
+    EXEC --&gt; ST
+    EXEC --&gt; SSL
+    EXEC --&gt; CC
+    EXEC --&gt; IO
+    EXEC --&gt; RES</code></pre>
+<p><strong>Key Features:</strong>
+- Built on Apache HttpClient
+- Bearer Token authentication
+- 6 exception types handled
+- Automatic resource cleanup</p>
+<h5 id="prepareworkspaceservicegroovy-34-lines">PrepareWorkspaceService.groovy (34 lines)</h5>
+<ul>
+<li>Git LFS file management</li>
+<li>Untracked LFS file detection and pull</li>
+</ul>
+<h5 id="buildprojectservicegroovy-45-lines">BuildProjectService.groovy (45 lines)</h5>
+<ul>
+<li>Unity build asset validation</li>
+<li>LightingData.asset, ReflectionProbe verification</li>
+</ul>
+<h4 id="323-resource-constants">3.2.3 resource/ - Constants</h4>
+<h5 id="statusgroovy-29-lines">Status.groovy (29 lines)</h5>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nc">Status</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">STAGE_STATUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="s1">&#39;SUCCESS&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SUCCESS&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="s1">&#39;UNSTABLE&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;UNSTABLE&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="s1">&#39;FAILURE&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;FAILURE&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="s1">&#39;ABORTED&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ABORTED&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="s1">&#39;SKIPPED&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SKIPPED&#39;</span>
+<span class="w">    </span><span class="o">]</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">BUILD_STATUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[...]</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">COMMIT_STATUS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="s1">&#39;SUCCESSFUL&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SUCCESSFUL&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="s1">&#39;INPROGRESS&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;INPROGRESS&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="s1">&#39;FAILED&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;FAILED&#39;</span><span class="o">,</span>
+<span class="w">        </span><span class="s1">&#39;STOPPED&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;STOPPED&#39;</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+</code></pre></div>
+<hr />
+<h3 id="33-dlxjenkins-jsjenkins-pipeline-definitions">3.3 DLXJenkins/ &amp; JsJenkins/ - Pipeline Definitions</h3>
+<h4 id="jenkinsfile-structure-after-refactoring">Jenkinsfile Structure (After Refactoring)</h4>
+<div class="highlight"><pre><span></span><code><span class="nd">@Library</span><span class="o">(</span><span class="s1">&#39;global-trusted-shared-library@Temporary-Branch&#39;</span><span class="o">)</span><span class="w"> </span><span class="n">_</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">resource.Status</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">utils.GitLibrary</span>
+
+<span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<span class="w">    </span><span class="n">tools</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="n">parameters</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="n">triggers</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+
+<span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Initialize&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">stageInitialization</span><span class="o">()</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Prepare&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">stageProjectPrepare</span><span class="o">()</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Lint&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">stageLintUnity</span><span class="o">()</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="c1">// ... more stages</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="n">post</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="n">always</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+<span class="w">        </span><span class="n">success</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+<span class="w">        </span><span class="n">failure</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<p><strong>Key Characteristics:</strong>
+- No business logic (all delegated to vars/ functions)
+- Declarative pipeline structure
+- Clean stage definitions
+- Consistent pattern across all Jenkinsfiles</p>
+<p><strong>Target State (Goal):</strong>
+All stages should follow the pattern: <code>steps { script { stageFunctionName() } }</code></p>
+<hr />
+<h3 id="34-groovy-legacy-helpers-migration-in-progress">3.4 groovy/ - Legacy Helpers (Migration in Progress)</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Lines</th>
+<th>Status</th>
+<th>Migration Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>generalHelper.groovy</code></td>
+<td>654</td>
+<td>Being migrated</td>
+<td>vars/, services/</td>
+</tr>
+<tr>
+<td><code>jsHelper.groovy</code></td>
+<td>796</td>
+<td>Being migrated</td>
+<td>vars/, services/</td>
+</tr>
+<tr>
+<td><code>unityHelper.groovy</code></td>
+<td>374</td>
+<td>Being migrated</td>
+<td>vars/, services/</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Migration Strategy:</strong>
+1. Common functions → Extract to vars/ functions
+2. Business logic → Move to service/ classes
+3. Shell commands → Move to utils/ Libraries
+4. Incremental migration (maintain existing functionality)</p>
+<hr />
+<h3 id="35-python-legacy-scripts-to-be-eliminated">3.5 python/ - Legacy Scripts (To Be Eliminated)</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Scripts</th>
+<th>Replacement Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bitbucket API</strong></td>
+<td>send_bitbucket_build_status.py, create_bitbucket_test_report.py, create_bitbucket_coverage_report.py, create_bitbucket_webgl_build_report.py</td>
+<td>Replaced by HttpApiService + bitbucketApiHelper</td>
+</tr>
+<tr>
+<td><strong>Unity</strong></td>
+<td>get_unity_failure.py, get_unity_version.py</td>
+<td>To be migrated</td>
+</tr>
+<tr>
+<td><strong>Reporting</strong></td>
+<td>create_log_report.py, linting_error_report.py, Lint_groovy_report.py</td>
+<td>To be migrated</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>npm_audit.py</td>
+<td>To be migrated</td>
+</tr>
+<tr>
+<td><strong>Analysis</strong></td>
+<td>extract_build_error_log_messages.py</td>
+<td>To be migrated</td>
+</tr>
+<tr>
+<td><strong>JavaScript</strong></td>
+<td>JsReporting/extract_coverage_rates.py, JsReporting/extract_test_result.py</td>
+<td>To be migrated</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Elimination Goal:</strong>
+The refactoring established the foundation to completely eliminate Python dependencies:
+- <code>HttpApiService.groovy</code> replaces Python HTTP/API calls
+- <code>bitbucketApiHelper.groovy</code> + <code>bitbucketApiLibrary.groovy</code> handle Bitbucket API
+- All Python scripts will be converted to native Groovy services</p>
+<hr />
+<h3 id="36-tests-unit-tests">3.6 tests/ - Unit Tests</h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph TestFramework["Spock Framework"]
+        SPEC[Specification]
+    end
+
+    subgraph MockInfra["Mock Infrastructure"]
+        JF[JenkinsFile.groovy&lt;br/&gt;Mock Interface]
+    end
+
+    subgraph Tests["Test Suites"]
+        SS[StatusSpec.groovy]
+        PWSS[PrepareWorkspaceServiceSpec.groovy]
+        BPSS[BuildProjectServiceSpec.groovy]
+    end
+
+    SPEC --&gt; Tests
+    JF --&gt; PWSS
+    JF --&gt; BPSS</code></pre>
+<p><strong>Test Coverage:</strong>
+- <code>GeneralHelperSpec.groovy</code>: General helper function tests
+- <code>StatusSpec.groovy</code>: Status constants verification
+- <code>MyPipelineTest.groovy</code>: Pipeline test framework setup
+- <code>PrepareWorkspaceServiceSpec.groovy</code>: Workspace preparation logic
+- <code>BuildProjectServiceSpec.groovy</code>: Unity build validation logic
+- <code>JenkinsFile.groovy</code>: Jenkins method mocking interface</p>
+<hr />
+<h2 id="4-design-patterns-applied">4. Design Patterns Applied</h2>
+<h3 id="41-command-pattern">4.1 Command Pattern</h3>
+<p><strong>Where:</strong> GitLibrary, ShellLibrary, SSHShellLibrary</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Command["Command (Closure)"]
+        GIT["GitLibrary.ShowCurrentBranch"]
+    end
+
+    subgraph Invoker["Invoker"]
+        SSH["shellScriptHelper"]
+    end
+
+    subgraph Receiver["Receiver"]
+        SH["Jenkins sh() step"]
+    end
+
+    Command --&gt; Invoker
+    Invoker --&gt; Receiver</code></pre>
+<p><strong>Benefits:</strong>
+- Separation of command definition and execution
+- Reusable command set
+- Parameterized command support
+- Improved testability</p>
+<h3 id="42-facade-pattern">4.2 Facade Pattern</h3>
+<p><strong>Where:</strong> logger, bitbucketApiHelper, shellScriptHelper</p>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Client["Pipeline Stage"]
+        STAGE[stageProjectPrepare]
+    end
+
+    subgraph Facades["Facades"]
+        LOG[logger]
+        SSH[shellScriptHelper]
+        BAH[bitbucketApiHelper]
+    end
+
+    subgraph Subsystems["Complex Subsystems"]
+        ECHO[Jenkins echo]
+        SH[Jenkins sh]
+        HTTP[HttpApiService]
+        CREDS[Jenkins credentials]
+    end
+
+    STAGE --&gt; LOG
+    STAGE --&gt; SSH
+    STAGE --&gt; BAH
+    LOG --&gt; ECHO
+    SSH --&gt; SH
+    BAH --&gt; HTTP
+    BAH --&gt; CREDS</code></pre>
+<h3 id="43-service-layer-pattern">4.3 Service Layer Pattern</h3>
+<p><strong>Where:</strong> HttpApiService, PrepareWorkspaceService, BuildProjectService</p>
+<p><strong>Benefits:</strong>
+- Business logic encapsulation
+- Single Responsibility Principle
+- Dependency injection (jenkinsfile object)
+- Testable structure</p>
+<h3 id="44-builder-pattern">4.4 Builder Pattern</h3>
+<p><strong>Where:</strong> bitbucketApiLibrary</p>
+<div class="highlight"><pre><span></span><code><span class="kt">def</span><span class="w"> </span><span class="nf">createBuildStatusForCommit</span><span class="o">(</span><span class="n">String</span><span class="w"> </span><span class="n">status</span><span class="o">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">description</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1">// Builds complex API request Map step by step</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="nl">apiUrlString:</span><span class="w"> </span><span class="s2">&quot;https://api.bitbucket.org/...&quot;</span><span class="o">,</span>
+<span class="w">        </span><span class="nl">requestBody:</span><span class="w"> </span><span class="n">JsonOutput</span><span class="o">.</span><span class="na">toJson</span><span class="o">([...]),</span>
+<span class="w">        </span><span class="nl">method:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+</code></pre></div>
+<h3 id="45-strategy-pattern">4.5 Strategy Pattern</h3>
+<p><strong>Where:</strong> stageUnityExecution</p>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Context["stageUnityExecution"]
+        CALL["call(stageName)"]
+    end
+
+    subgraph Strategies["Execution Strategies"]
+        EM[editMode]
+        PM[playMode]
+        COV[coverage]
+        WGL[webgl]
+    end
+
+    CALL --&gt;|"'EditMode'"| EM
+    CALL --&gt;|"'PlayMode'"| PM
+    CALL --&gt;|"'Coverage'"| COV
+    CALL --&gt;|"'Webgl'"| WGL</code></pre>
+<hr />
+<h2 id="5-integration-flow">5. Integration Flow</h2>
+<h3 id="51-stage-execution-flow">5.1 Stage Execution Flow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant JF as Jenkinsfile
+    participant STAGE as stageProjectPrepare
+    participant LOG as logger
+    participant SSH as shellScriptHelper
+    participant GIT as GitLibrary
+    participant SH as Jenkins sh()
+
+    JF-&gt;&gt;STAGE: call()
+    STAGE-&gt;&gt;LOG: stageStart("Project Prepare")
+    STAGE-&gt;&gt;LOG: stepsGroupStart("Validate Workspace")
+    STAGE-&gt;&gt;SSH: shellScriptHelper(GitLibrary.StatusPorcelain)
+    SSH-&gt;&gt;GIT: Invoke closure
+    GIT--&gt;&gt;SSH: Returns Map {script, label, returnStdout}
+    SSH-&gt;&gt;SH: sh(map)
+    SH--&gt;&gt;SSH: stdout result
+    SSH-&gt;&gt;LOG: stepSuccess("...")
+    SSH--&gt;&gt;STAGE: result
+    STAGE-&gt;&gt;LOG: stepsGroupEnd("Validate Workspace")
+    STAGE-&gt;&gt;LOG: stageEnd("Project Prepare")</code></pre>
+<h3 id="52-bitbucket-api-flow">5.2 Bitbucket API Flow</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant STAGE as stageInitialization
+    participant BAL as bitbucketApiLibrary
+    participant BAH as bitbucketApiHelper
+    participant CREDS as Jenkins Credentials
+    participant HTTP as HttpApiService
+    participant BB as Bitbucket API
+
+    STAGE-&gt;&gt;BAL: createBuildStatusForCommit("INPROGRESS", "...")
+    BAL--&gt;&gt;STAGE: {apiUrl, body, method}
+    STAGE-&gt;&gt;BAH: call(map)
+    BAH-&gt;&gt;CREDS: withCredentials()
+    CREDS--&gt;&gt;BAH: Bearer Token
+    BAH-&gt;&gt;HTTP: post(url, body, token)
+    HTTP-&gt;&gt;BB: HTTP POST
+    BB--&gt;&gt;HTTP: Response
+    HTTP--&gt;&gt;BAH: {statusCode, success, body}
+    BAH--&gt;&gt;STAGE: Response</code></pre>
+<hr />
+<h2 id="6-current-state-summary">6. Current State Summary</h2>
+<h3 id="61-architecture-characteristics">6.1 Architecture Characteristics</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Current State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Architecture</strong></td>
+<td>4-Layer Modular Design</td>
+</tr>
+<tr>
+<td><strong>Code Location</strong></td>
+<td>Centralized in sharedLibraries</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>3-Level hierarchical logger (15+ methods)</td>
+</tr>
+<tr>
+<td><strong>Shell Execution</strong></td>
+<td>Validated shellScriptHelper with Command Pattern</td>
+</tr>
+<tr>
+<td><strong>Git Operations</strong></td>
+<td>31 reusable closures in GitLibrary</td>
+</tr>
+<tr>
+<td><strong>API Calls</strong></td>
+<td>Native HttpApiService (Apache HttpClient)</td>
+</tr>
+<tr>
+<td><strong>Error Handling</strong></td>
+<td>Centralized with automatic stack traces</td>
+</tr>
+<tr>
+<td><strong>Test Infrastructure</strong></td>
+<td>Spock framework + Mock interface</td>
+</tr>
+<tr>
+<td><strong>Constants</strong></td>
+<td>Centralized in Status.groovy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-code-statistics">6.2 Code Statistics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total files</td>
+<td>51</td>
+</tr>
+<tr>
+<td>Total lines</td>
+<td>7,910</td>
+</tr>
+<tr>
+<td>vars/ functions</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Service classes</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Utility libraries</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Shell command closures</td>
+<td>54</td>
+</tr>
+<tr>
+<td>Logger methods</td>
+<td>15+</td>
+</tr>
+<tr>
+<td>Test specs</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Test lines</td>
+<td>243</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-architectural-principles-applied">6.3 Architectural Principles Applied</h3>
+<ol>
+<li><strong>Separation of Concerns</strong></li>
+<li>vars/: Pipeline orchestration (WHAT to do)</li>
+<li>service/: Business logic (HOW to do it)</li>
+<li>utils/: Command definitions (WHAT commands)</li>
+<li>
+<p>resource/: Constants (shared knowledge)</p>
+</li>
+<li>
+<p><strong>Reusability</strong></p>
+</li>
+<li>Stage functions designed to be used across multiple Jenkinsfiles</li>
+<li>54 shell commands available to all stages</li>
+<li>
+<p>Single logger instance used everywhere</p>
+</li>
+<li>
+<p><strong>Maintainability</strong></p>
+</li>
+<li>Change logging format → Edit 1 file (logger.groovy)</li>
+<li>Add Git operation → Add 1 closure to GitLibrary</li>
+<li>
+<p>Fix API issue → Edit HttpApiService only</p>
+</li>
+<li>
+<p><strong>Testability</strong></p>
+</li>
+<li>Services accept injectable jenkinsfile object</li>
+<li>Mock interface (JenkinsFile.groovy) for testing</li>
+<li>Spock framework integration</li>
+</ol>
+<hr />
+<h2 id="7-dependency-graph">7. Dependency Graph</h2>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Jenkinsfiles
+        DLX[DLXJenkins/Jenkinsfile]
+        JS[JsJenkins/Jenkinsfile]
+        PFJ[PipelineForJenkins/Jenkinsfile]
+    end
+
+    subgraph VarsLayer["vars/ Layer"]
+        STAGES[stage*.groovy]
+        LOG[logger.groovy]
+        SSH[shellScriptHelper.groovy]
+        BAH[bitbucketApiHelper.groovy]
+        BAL[bitbucketApiLibrary.groovy]
+    end
+
+    subgraph ServiceLayer["service/ Layer"]
+        HTTP[HttpApiService]
+        PWS[PrepareWorkspaceService]
+        BPS[BuildProjectService]
+    end
+
+    subgraph UtilsLayer["utils/ Layer"]
+        GIT[GitLibrary]
+        SHELL[ShellLibrary]
+        SSHLIB[SSHShellLibrary]
+    end
+
+    subgraph ResourceLayer["resource/ Layer"]
+        STATUS[Status]
+    end
+
+    DLX --&gt; STAGES
+    JS --&gt; STAGES
+    PFJ --&gt; STAGES
+
+    STAGES --&gt; LOG
+    STAGES --&gt; SSH
+    STAGES --&gt; BAH
+    STAGES --&gt; BAL
+
+    SSH --&gt; GIT
+    SSH --&gt; SHELL
+    SSH --&gt; SSHLIB
+
+    BAH --&gt; HTTP
+    BAL --&gt; STATUS
+
+    HTTP --&gt; STATUS</code></pre>
+<hr />
+<h2 id="8-remaining-work-migration-targets">8. Remaining Work (Migration Targets)</h2>
+<h3 id="81-legacy-code-to-migrate">8.1 Legacy Code to Migrate</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Current State</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>groovy/generalHelper.groovy</td>
+<td>654 lines legacy</td>
+<td>Migrate to vars/ and services/</td>
+</tr>
+<tr>
+<td>groovy/jsHelper.groovy</td>
+<td>796 lines legacy</td>
+<td>Migrate to vars/ and services/</td>
+</tr>
+<tr>
+<td>groovy/unityHelper.groovy</td>
+<td>374 lines legacy</td>
+<td>Migrate to vars/ and services/</td>
+</tr>
+<tr>
+<td>JsJenkins/Jenkinsfile</td>
+<td>Being refactored</td>
+<td>Apply <code>steps { script { stage*() } }</code> pattern</td>
+</tr>
+<tr>
+<td>JsJenkins/JenkinsfileDeployment</td>
+<td>Being refactored</td>
+<td>Apply <code>steps { script { stage*() } }</code> pattern</td>
+</tr>
+<tr>
+<td>PipelineForJenkins/Jenkinsfile</td>
+<td>Being refactored</td>
+<td>Apply <code>steps { script { stage*() } }</code> pattern</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-python-scripts-to-eliminate">8.2 Python Scripts to Eliminate</h3>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>send_bitbucket_build_status.py</td>
+<td>HttpApiService + bitbucketApiHelper (DONE)</td>
+</tr>
+<tr>
+<td>create_bitbucket_test_report.py</td>
+<td>HttpApiService + new API library</td>
+</tr>
+<tr>
+<td>create_bitbucket_coverage_report.py</td>
+<td>HttpApiService + new API library</td>
+</tr>
+<tr>
+<td>create_bitbucket_webgl_build_report.py</td>
+<td>HttpApiService + new API library</td>
+</tr>
+<tr>
+<td>Other Python scripts</td>
+<td>Native Groovy services</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-foundation-established">8.3 Foundation Established</h3>
+<p>The refactoring has established the architectural foundation to:
+1. Completely eliminate Python dependencies using HttpApiService pattern
+2. Convert all Jenkinsfile stages to <code>steps { script { stageFunctionName() } }</code> pattern
+3. Migrate all legacy groovy helpers to modular services and vars functions</p>
+<hr />
+<h2 id="9-code-duplication-analysis">9. Code Duplication Analysis</h2>
+<p>This section compares code duplication metrics between the pre-refactoring state (commit 54479b2) and post-refactoring state (commit 12910c1), using the same methodology as BEFORE_REFACTORING_ANALYSIS.md Section 7.7.</p>
+<h3 id="91-pipeline-specific-duplication-analysis">9.1 Pipeline-Specific Duplication Analysis</h3>
+<h4 id="file-sizes-4-main-jenkinsfiles">File Sizes (4 Main Jenkinsfiles)</h4>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Before (54479b2)</th>
+<th>After (12910c1)</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLXJenkins/Jenkinsfile</td>
+<td>249</td>
+<td>150</td>
+<td>-99</td>
+</tr>
+<tr>
+<td>DLXJenkins/JenkinsfileDeployment</td>
+<td>242</td>
+<td>136</td>
+<td>-106</td>
+</tr>
+<tr>
+<td>JsJenkins/Jenkinsfile</td>
+<td>198</td>
+<td>298</td>
+<td>+100</td>
+</tr>
+<tr>
+<td>JsJenkins/JenkinsfileDeployment</td>
+<td>372</td>
+<td>445</td>
+<td>+73</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>1,061</strong></td>
+<td><strong>1,029</strong></td>
+<td><strong>-32</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: DLX pipelines significantly reduced by moving logic to shared library. JS pipelines increased due to additional features added during partial refactoring.</em></p>
+<h4 id="within-project-duplication-pr-vs-deployment">Within-Project Duplication (PR vs Deployment)</h4>
+<p><strong>DLX Pipeline (Unity)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total lines (both files)</td>
+<td>491</td>
+<td>286</td>
+<td>-205</td>
+</tr>
+<tr>
+<td>Identical lines</td>
+<td>146</td>
+<td>126</td>
+<td>-20</td>
+</tr>
+<tr>
+<td><strong>Duplication rate</strong></td>
+<td><strong>29.7%</strong></td>
+<td><strong>44.1%</strong></td>
+<td>+14.4%</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Higher rate despite fewer absolute lines because both files are now much smaller (shared library usage)</em></p>
+<p><strong>JS Pipeline (JavaScript)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total lines (both files)</td>
+<td>570</td>
+<td>743</td>
+<td>+173</td>
+</tr>
+<tr>
+<td>Identical lines</td>
+<td>156</td>
+<td>172</td>
+<td>+16</td>
+</tr>
+<tr>
+<td><strong>Duplication rate</strong></td>
+<td><strong>27.4%</strong></td>
+<td><strong>23.1%</strong></td>
+<td>-4.3%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cross-project-duplication-dlx-vs-js">Cross-Project Duplication (DLX vs JS)</h4>
+<p><strong>PR Pipelines (DLX Jenkinsfile vs JS Jenkinsfile)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smaller file</td>
+<td>198 lines</td>
+<td>150 lines</td>
+<td>-48</td>
+</tr>
+<tr>
+<td>Identical lines</td>
+<td>135</td>
+<td>103</td>
+<td><strong>-32</strong></td>
+</tr>
+<tr>
+<td><strong>Duplication rate</strong></td>
+<td><strong>54.2%</strong></td>
+<td><strong>68.7%</strong></td>
+<td>+14.5%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Deployment Pipelines (DLX vs JS JenkinsfileDeployment)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smaller file</td>
+<td>242 lines</td>
+<td>136 lines</td>
+<td>-106</td>
+</tr>
+<tr>
+<td>Identical lines</td>
+<td>167</td>
+<td>95</td>
+<td><strong>-72</strong></td>
+</tr>
+<tr>
+<td><strong>Duplication rate</strong></td>
+<td><strong>69.0%</strong></td>
+<td><strong>69.9%</strong></td>
+<td>+0.9%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="summary-comparison">Summary Comparison</h4>
+<table>
+<thead>
+<tr>
+<th>Comparison</th>
+<th>Before</th>
+<th>After</th>
+<th>Identical Lines Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLX: PR vs Deployment</td>
+<td>146 (29.7%)</td>
+<td>126 (44.1%)</td>
+<td><strong>-20 lines</strong></td>
+</tr>
+<tr>
+<td>JS: PR vs Deployment</td>
+<td>156 (27.4%)</td>
+<td>172 (23.1%)</td>
+<td>+16 lines</td>
+</tr>
+<tr>
+<td><strong>DLX PR vs JS PR</strong></td>
+<td><strong>135 (54.2%)</strong></td>
+<td><strong>103 (68.7%)</strong></td>
+<td><strong>-32 lines</strong></td>
+</tr>
+<tr>
+<td><strong>DLX Deploy vs JS Deploy</strong></td>
+<td><strong>167 (69.0%)</strong></td>
+<td><strong>95 (69.9%)</strong></td>
+<td><strong>-72 lines</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-key-insights">9.2 Key Insights</h3>
+<h4 id="what-changed">What Changed</h4>
+<ol>
+<li><strong>DLX Pipelines (Fully Refactored)</strong></li>
+<li>File sizes reduced by ~40% (249→150, 242→136)</li>
+<li>Stage logic moved to shared library functions</li>
+<li>Post block uses <code>bitbucketApiHelper()</code> + <code>Status</code> constants</li>
+<li>
+<p>Identical lines reduced but percentage increased (smaller denominator)</p>
+</li>
+<li>
+<p><strong>JS Pipelines (Partially Refactored)</strong></p>
+</li>
+<li>File sizes increased (additional features added)</li>
+<li>Still uses legacy <code>generalUtil</code>/<code>jsUtil</code> helpers</li>
+<li>
+<p>Post block still uses <code>generalUtil.sendBuildStatus()</code></p>
+</li>
+<li>
+<p><strong>Cross-Project Duplication Reduced</strong></p>
+</li>
+<li>DLX PR vs JS PR: 135 → 103 lines (-24%)</li>
+<li>DLX Deploy vs JS Deploy: 167 → 95 lines (-43%)</li>
+<li>DLX now uses shared library, JS uses legacy → less common code</li>
+</ol>
+<h3 id="93-migration-status-by-pipeline">9.3 Migration Status by Pipeline</h3>
+<table>
+<thead>
+<tr>
+<th>Pipeline</th>
+<th>Status</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DLXJenkins/Jenkinsfile</td>
+<td>✅ Fully Refactored</td>
+<td>All stages use shared library (stageInitialization, stageProjectPrepare, etc.)</td>
+</tr>
+<tr>
+<td>DLXJenkins/JenkinsfileDeployment</td>
+<td>✅ Fully Refactored</td>
+<td>All stages use shared library + bitbucketApiHelper</td>
+</tr>
+<tr>
+<td>JsJenkins/Jenkinsfile</td>
+<td>⚠️ Partial</td>
+<td>stageInitialization + stageProjectPrepare only, rest uses legacy</td>
+</tr>
+<tr>
+<td>JsJenkins/JenkinsfileDeployment</td>
+<td>⚠️ Partial</td>
+<td>stageInitialization + stageProjectPrepare only, rest uses legacy</td>
+</tr>
+<tr>
+<td>PipelineForJenkins/Jenkinsfile</td>
+<td>⚠️ Partial</td>
+<td>Mixed usage</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-refactoring-solutions-applied">9.4 Refactoring Solutions Applied</h3>
+<table>
+<thead>
+<tr>
+<th>Before Pattern</th>
+<th>After Solution</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>generalUtil.sendBuildStatus()</code></td>
+<td><code>bitbucketApiHelper()</code> + <code>bitbucketApiLibrary</code></td>
+<td>vars/</td>
+</tr>
+<tr>
+<td>Helper loading in Prepare WORKSPACE</td>
+<td><code>stageProjectPrepare()</code></td>
+<td>vars/stageProjectPrepare.groovy</td>
+</tr>
+<tr>
+<td>Multiple <code>echo</code> statements</td>
+<td><code>logger.*</code> methods</td>
+<td>vars/logger.groovy</td>
+</tr>
+<tr>
+<td>Raw <code>sh</code> commands</td>
+<td><code>shellScriptHelper()</code> + Library closures</td>
+<td>vars/shellScriptHelper.groovy</td>
+</tr>
+<tr>
+<td>Direct git commands</td>
+<td><code>GitLibrary.*</code> closures</td>
+<td>src/utils/GitLibrary.groovy</td>
+</tr>
+<tr>
+<td>Python HTTP calls</td>
+<td><code>HttpApiService</code></td>
+<td>src/service/general/HttpApiService.groovy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="95-target-state-after-full-js-migration">9.5 Target State (After Full JS Migration)</h3>
+<p>When JS pipelines are fully migrated to use shared library:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Current</th>
+<th>Target</th>
+<th>Expected Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JS Jenkinsfile</td>
+<td>298 lines</td>
+<td>~150 lines</td>
+<td>-148 lines</td>
+</tr>
+<tr>
+<td>JS JenkinsfileDeployment</td>
+<td>445 lines</td>
+<td>~150 lines</td>
+<td>-295 lines</td>
+</tr>
+<tr>
+<td>Cross-project identical lines</td>
+<td>103/95</td>
+<td>~120/~110</td>
+<td>Increase (more shared patterns)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Full migration would result in all pipelines having similar structure: declarative boilerplate + shared library stage calls.</em></p>
+<hr />
+<h2 id="10-conclusion">10. Conclusion</h2>
+<p>This commit (<code>12910c1</code>) represents a well-structured, modular Jenkins CI/CD pipeline architecture.</p>
+<p><strong>Architecture Characteristics:</strong>
+- 4-Layer Architecture with clear separation of concerns
+- Command Pattern for 54 shell operations
+- Facade Pattern for simplified interfaces (logger, shellScriptHelper, bitbucketApiHelper)
+- Service Layer for testable business logic
+- 3-Level hierarchical logging system
+- Spock-based test infrastructure with mock interfaces</p>
+<p><strong>Architecture Quality:</strong>
+- High cohesion within each layer
+- Low coupling between layers
+- Single Responsibility Principle applied
+- Dependency Injection enabled
+- Jenkins CPS-compatible design</p>
+<p><strong>Refactoring Goal:</strong>
+The ultimate goal is to have all pipeline logic encapsulated in sharedLibraries, with Jenkinsfiles containing only declarative structure and stage function calls. Python dependencies will be completely eliminated in favor of native Groovy services.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

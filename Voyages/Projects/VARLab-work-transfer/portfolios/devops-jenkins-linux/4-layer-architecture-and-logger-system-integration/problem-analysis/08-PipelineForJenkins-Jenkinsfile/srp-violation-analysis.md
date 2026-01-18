@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)
 
 # PipelineForJenkins/Jenkinsfile (315 lines)
 
@@ -46,7 +46,7 @@
 | 234-240 | `Publish Test Results` stage | junit test result path |
 | 242-286 | `Static Analysis` | **3 reasons**: catchError error handling policy + SonarQube scanner config + Quality Gate check logic |
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Prepare Workspace</code> (4 change reasons)</summary>
 
 ```groovy
@@ -99,7 +99,7 @@ stage('Prepare Workspace') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Lint Groovy Code</code> (5 change reasons)</summary>
 
 ```groovy
@@ -185,7 +185,7 @@ stage('Lint Groovy Code') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Generate Groovydoc</code> (2 change reasons)</summary>
 
 ```groovy
@@ -231,7 +231,7 @@ stage('Generate Groovydoc') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Static Analysis</code> (3 change reasons)</summary>
 
 ```groovy
@@ -307,4 +307,4 @@ stage('Static Analysis') {
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)

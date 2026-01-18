@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)
 
 # DLXJenkins/JenkinsfileDeployment (265 lines)
 
@@ -44,7 +44,7 @@
 | 186-198 | `Build Project` stage | **3 reasons**: Assets/Editor path + Builder.cs location + Unity stage name/error message |
 | 200-237 | `Deploy Build` | **5 reasons**: SSH directory creation + SCP copy options + UpdateBuildURL.sh script + DLX project list + eConestoga server config |
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Delete Merged Branch</code> (4 change reasons)</summary>
 
 ```groovy
@@ -85,7 +85,7 @@ stage('Delete Merged Branch') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Prepare WORKSPACE</code> (7 change reasons)</summary>
 
 ```groovy
@@ -141,7 +141,7 @@ stage('Prepare WORKSPACE') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Linting</code> stage (4 change reasons)</summary>
 
 ```groovy
@@ -175,7 +175,7 @@ stage('Linting') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>EditMode Tests</code> stage (2 change reasons)</summary>
 
 ```groovy
@@ -202,7 +202,7 @@ stage('EditMode Tests') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Build Project</code> stage (3 change reasons)</summary>
 
 ```groovy
@@ -227,7 +227,7 @@ stage('Build Project') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Deploy Build</code> (5 change reasons)</summary>
 
 ```groovy
@@ -287,4 +287,4 @@ stage('Deploy Build') {
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)

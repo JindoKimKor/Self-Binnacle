@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)
 
 # JsJenkins/Jenkinsfile (314 lines)
 
@@ -41,7 +41,7 @@
 | 134-246 | `Unit Testing` | **7 reasons**: test execution arguments + server report path/type + client report path/type + server/client branching logic + DEBUG_MODE handling + Python script interface + client DEBUG_MODE handling |
 | 249-286 | `Static Analysis` | **2 reasons**: SonarQube scanner config + Quality Gate check logic |
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Prepare WORKSPACE</code> (4 change reasons)</summary>
 
 ```groovy
@@ -93,7 +93,7 @@ stage('Prepare WORKSPACE') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Linting</code> stage (2 change reasons)</summary>
 
 ```groovy
@@ -116,7 +116,7 @@ stage('Linting') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Unit Testing</code> (7 change reasons)</summary>
 
 ```groovy
@@ -181,7 +181,7 @@ stage('Unit Testing') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Static Analysis</code> (2 change reasons)</summary>
 
 ```groovy
@@ -240,4 +240,4 @@ stage('Static Analysis') {
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)

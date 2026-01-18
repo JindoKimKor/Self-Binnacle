@@ -455,13 +455,6 @@ flowchart TB
     GH --> J1[JsJenkins/Jenkinsfile]
     GH --> J2[JsJenkins/JenkinsfileDeployment]
     GH --> P1[PipelineForJenkins/Jenkinsfile]
-
-    style GH fill:#ff6b6b,color:#fff
-    style D1 fill:#ffd93d
-    style D2 fill:#ffd93d
-    style J1 fill:#ffd93d
-    style J2 fill:#ffd93d
-    style P1 fill:#ffd93d
 ```
 
 **→ All 5 pipelines affected!**
@@ -478,14 +471,6 @@ flowchart TB
     GH --> J1[JsJenkins/Jenkinsfile<br/>post success/failure]
     GH --> J2[JsJenkins/JenkinsfileDeployment<br/>post success/failure]
     GH --> P1[PipelineForJenkins/Jenkinsfile<br/>post success/failure]
-
-    style PY fill:#ff6b6b,color:#fff
-    style GH fill:#ffa502
-    style D1 fill:#ffd93d
-    style D2 fill:#ffd93d
-    style J1 fill:#ffd93d
-    style J2 fill:#ffd93d
-    style P1 fill:#ffd93d
 ```
 
 **→ Affects Bitbucket status updates for all pipelines!**

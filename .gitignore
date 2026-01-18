@@ -12,3 +12,6 @@ token.pickle
 
 # System
 _system/
+
+# MkDocs build output (use docs/ for GitHub Pages)
+site/

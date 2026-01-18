@@ -19,7 +19,7 @@ This folder documents the Jenkins Shared Library 4-Layer architecture constructi
 | Document | Description | Reading Order |
 |----------|-------------|---------------|
 | [highlights.md](../highlights.md) | Final architecture and key features | 1. Results first |
-| [problem-analysis.md](../problem-analysis.md) | Baseline code problems | 2. Why it was needed |
+| [problem-analysis-overview.md](../problem-analysis-overview.md) | Baseline code problems | 2. Why it was needed |
 | **legs/** (current) | Step-by-step implementation process | 3. How it was built |
 
 ---
@@ -47,7 +47,7 @@ This folder documents the Jenkins Shared Library 4-Layer architecture constructi
 
 ## 5. Key Content by Leg
 
-<details>
+<details markdown>
 <summary><strong>Leg 0: Global Trusted Shared Library Setup</strong></summary>
 
 - Jenkins Global Trusted Shared Library connection
@@ -57,7 +57,7 @@ This folder documents the Jenkins Shared Library 4-Layer architecture constructi
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Leg 1: ShellScript Modularization</strong></summary>
 
 - helperShellScript.groovy separation
@@ -67,7 +67,7 @@ This folder documents the Jenkins Shared Library 4-Layer architecture constructi
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Leg 2: 3-Level Logger System</strong></summary>
 
 - logger.groovy 3-level logging
@@ -77,7 +77,7 @@ This folder documents the Jenkins Shared Library 4-Layer architecture constructi
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Leg 3: Bitbucket API & Shell Library</strong></summary>
 
 - BitbucketApiService class
@@ -87,7 +87,7 @@ This folder documents the Jenkins Shared Library 4-Layer architecture constructi
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Leg 4: Full Pipeline Refactoring</strong></summary>
 
 - Complete refactoring of 3 pipelines

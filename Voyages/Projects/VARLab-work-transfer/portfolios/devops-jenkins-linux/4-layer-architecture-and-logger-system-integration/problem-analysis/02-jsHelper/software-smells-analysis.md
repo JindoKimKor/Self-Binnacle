@@ -1,4 +1,4 @@
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)
 
 # groovy/jsHelper.groovy - Software Smells Analysis
 
@@ -29,7 +29,7 @@
 
 ### 1.1 Change Preventers
 
-<details>
+<details markdown>
 <summary>Divergent Change (5 change reasons)</summary>
 
 **Definition**: A single class is frequently changed for several different reasons
@@ -49,7 +49,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Shotgun Surgery (up to 3 functions require simultaneous modification)</summary>
 
 **Definition**: A single change requires modifications to multiple classes/functions
@@ -69,7 +69,7 @@
 
 ### 1.2 Dispensables
 
-<details>
+<details markdown>
 <summary>Duplicated Code (external + internal duplication)</summary>
 
 **External Duplication (with generalHelper.groovy)**:
@@ -92,7 +92,7 @@
 
 ### 1.3 Bloaters
 
-<details>
+<details markdown>
 <summary>Primitive Obsession</summary>
 
 **Definition**: Using primitive types instead of objects
@@ -109,7 +109,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Long Method</summary>
 
 | Function | Line Count | Responsibility Count | Needs Separation |
@@ -140,7 +140,7 @@
 
 #### Abstraction Smells
 
-<details>
+<details markdown>
 <summary>Multifaceted Abstraction</summary>
 
 **Definition**: A single abstraction (class/file) expresses multiple concerns (SRP violation)
@@ -156,7 +156,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Missing Abstraction</summary>
 
 **Definition**: Concepts are implemented with primitive types or strings instead of dedicated classes/constants
@@ -173,7 +173,7 @@
 
 #### Encapsulation Smells
 
-<details>
+<details markdown>
 <summary>Missing Encapsulation</summary>
 
 **Definition**: Variations are not encapsulated, causing logic to be scattered
@@ -192,7 +192,7 @@
 
 #### Modularization Smells
 
-<details>
+<details markdown>
 <summary>Insufficient Modularization</summary>
 
 **Definition**: A module (class/file) is too large or complex and should be further decomposed
@@ -227,7 +227,7 @@
 
 ### 3.1 Dependency Issues
 
-<details>
+<details markdown>
 <summary>Implicit Cross-module Dependency</summary>
 
 **Definition**: Hidden dependencies cause coupling to external systems without explicit interfaces
@@ -249,4 +249,4 @@
 
 ---
 
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)

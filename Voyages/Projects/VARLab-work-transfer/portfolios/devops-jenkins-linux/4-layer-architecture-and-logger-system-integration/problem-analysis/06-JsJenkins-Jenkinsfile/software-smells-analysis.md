@@ -1,4 +1,4 @@
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)
 
 # JsJenkins/Jenkinsfile - Software Smells Analysis
 
@@ -34,7 +34,7 @@
 
 ### 1.1 Change Preventers
 
-<details>
+<details markdown>
 <summary>Divergent Change (5 change reasons)</summary>
 
 **Definition**: A single class/file is frequently changed for multiple different reasons
@@ -54,7 +54,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Shotgun Surgery (6 locations to modify when adding new report type)</summary>
 
 **Definition**: A single change requires modification of multiple classes/functions
@@ -85,7 +85,7 @@
 
 ### 1.2 Dispensables
 
-<details>
+<details markdown>
 <summary>Duplicated Code (Server/Client report handling pattern repeated 2 times)</summary>
 
 **Definition**: Same code pattern repeated in multiple places
@@ -128,7 +128,7 @@ if (params.CLIENT_SOURCE_FOLDER?.trim()) {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Comments (Dead Code)</summary>
 
 **Definition**: Commented-out code or incorrect comments remain
@@ -147,7 +147,7 @@ if (params.CLIENT_SOURCE_FOLDER?.trim()) {
 
 ### 1.3 Bloaters
 
-<details>
+<details markdown>
 <summary>Long Method - Unit Testing stage (112 lines)</summary>
 
 **Definition**: A single method/area has too many responsibilities
@@ -169,7 +169,7 @@ if (params.CLIENT_SOURCE_FOLDER?.trim()) {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Primitive Obsession</summary>
 
 **Definition**: Primitive types (strings) used instead of objects/constants
@@ -191,7 +191,7 @@ if (params.CLIENT_SOURCE_FOLDER?.trim()) {
 
 ### 1.4 Couplers
 
-<details>
+<details markdown>
 <summary>Feature Envy</summary>
 
 **Definition**: One class/module is overly dependent on data or methods of another class/module
@@ -216,7 +216,7 @@ if (params.CLIENT_SOURCE_FOLDER?.trim()) {
 
 ### 1.5 Implementation Smells
 
-<details>
+<details markdown>
 <summary>Magic String</summary>
 
 **Definition**: Unexplained string literals hardcoded in code
@@ -234,7 +234,7 @@ if (params.CLIENT_SOURCE_FOLDER?.trim()) {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Deeply Nested Code</summary>
 
 **Definition**: Excessive nesting (3+ levels) reduces code readability
@@ -285,7 +285,7 @@ else {
 
 #### Abstraction Smells
 
-<details>
+<details markdown>
 <summary>Multifaceted Abstraction</summary>
 
 **Definition**: A single abstraction (class/file) represents multiple concerns (SRP violation)
@@ -307,7 +307,7 @@ else {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Missing Abstraction</summary>
 
 **Definition**: Concepts implemented with primitive types or strings instead of dedicated classes/constants
@@ -341,7 +341,7 @@ def REPORT_TYPES = [
 
 </details>
 
-<details>
+<details markdown>
 <summary>Imperative Abstraction</summary>
 
 **Definition**: Abstraction operations written procedurally rather than object-oriented
@@ -367,7 +367,7 @@ Procedural script structure due to Jenkins Pipeline DSL characteristics:
 
 #### Encapsulation Smells
 
-<details>
+<details markdown>
 <summary>Missing Encapsulation</summary>
 
 **Definition**: Variations not encapsulated, causing logic to be scattered
@@ -417,7 +417,7 @@ processReport(params.CLIENT_SOURCE_FOLDER, 'client')
 
 #### Modularization Smells
 
-<details>
+<details markdown>
 <summary>Insufficient Modularization</summary>
 
 **Definition**: Abstraction is too large or complex (God Class/Method)
@@ -465,7 +465,7 @@ stage('Send Reports') { reportUtil.sendBitbucketReports(...) }
 
 ### 3.1 Dependency Issues
 
-<details>
+<details markdown>
 <summary>Implicit Cross-module Dependency</summary>
 
 **Definition**: Hidden dependencies causing coupling to external systems without explicit interfaces
@@ -489,4 +489,4 @@ stage('Send Reports') { reportUtil.sendBitbucketReports(...) }
 
 ---
 
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)

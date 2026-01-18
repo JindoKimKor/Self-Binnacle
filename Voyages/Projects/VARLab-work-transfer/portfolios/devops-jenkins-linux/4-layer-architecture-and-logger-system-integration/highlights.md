@@ -4,8 +4,8 @@
 
 | State | Commit Hash | Date |
 |-------|-------------|------|
-| **Baseline (Before)** | `74fc356` | 2025-03-20 |
-| **Final (After)** | `ff74ac8` | 2025-05-12 |
+| **Baseline (Before)** | [`74fc356`](https://github.com/JindoKimKor/devops-jenkins-linux/tree/74fc3563713df593f070f1c418ef9ee68f2682ed) | 2025-03-20 |
+| **Final (After)** | [`ff74ac8`](https://github.com/JindoKimKor/devops-jenkins-linux/tree/ff74ac8) | 2025-05-12 |
 
 ---
 
@@ -13,43 +13,43 @@
 
 1. [Achievement Summary](#1-achievement-summary)
 2. [4-Layer Architecture](#2-4-layer-architecture)
-   - 2.1 [Structure Visualization](#21-structure-visualization)
-   - 2.2 [Layer Responsibilities](#22-layer-responsibilities)
-   - 2.3 [Before/After Comparison](#23-beforeafter-comparison)
-     - 2.3.1 [Folder Structure](#231-folder-structure)
-     - 2.3.2 [Dependency Flow](#232-dependency-flow)
+    1. [Structure Visualization](#21-structure-visualization)
+    2. [Layer Responsibilities](#22-layer-responsibilities)
+    3. [Before/After Comparison](#23-beforeafter-comparison)
+        1. [Folder Structure](#231-folder-structure)
+        2. [Dependency Flow](#232-dependency-flow)
 3. [Logger System Integration](#3-logger-system-integration)
-   - 3.1 [3-Level Structure](#31-3-level-structure)
-   - 3.2 [Execution Flow](#32-execution-flow)
-   - 3.3 [Before/After Comparison](#33-beforeafter-comparison)
-     - 3.3.1 [Stage Log Output Comparison](#331-stage-log-output-comparison)
-     - 3.3.2 [Console Log Output Comparison](#332-console-log-output-comparison)
-   - 3.4 [Design Decisions](#34-design-decisions)
-     - 3.4.1 [Jenkins Platform Constraints](#341-jenkins-platform-constraints)
-     - 3.4.2 [Design Decisions](#342-design-decisions)
+    1. [3-Level Structure](#31-3-level-structure)
+    2. [Execution Flow](#32-execution-flow)
+    3. [Before/After Comparison](#33-beforeafter-comparison)
+        1. [Stage Log Output Comparison](#331-stage-log-output-comparison)
+        2. [Console Log Output Comparison](#332-console-log-output-comparison)
+    4. [Design Decisions](#34-design-decisions)
+        1. [Jenkins Platform Constraints](#341-jenkins-platform-constraints)
+        2. [Design Decisions](#342-design-decisions)
 4. [Key Changes in Detail](#4-key-changes-in-detail)
-   - 4.1 [Bitbucket API Migration](#41-bitbucket-api-migration)
-     - 4.1.1 [Folder Structure Comparison](#411-folder-structure-comparison)
-     - 4.1.2 [Before](#412-before-74fc356)
-     - 4.1.3 [After](#413-after-ff74ac8)
-     - 4.1.4 [Design Decisions](#414-design-decisions)
-   - 4.2 [Shell Script Libraries](#42-shell-script-libraries)
-     - 4.2.1 [File Structure](#421-file-structure)
-     - 4.2.2 [Closure Pattern Structure](#422-closure-pattern-structure)
-     - 4.2.3 [Before](#423-before-74fc356)
-     - 4.2.4 [After](#424-after-ff74ac8)
-     - 4.2.5 [Closure List by Library](#425-closure-list-by-library)
-     - 4.2.6 [Closure Map Schema](#426-closure-map-schema)
-     - 4.2.7 [Design Decisions](#427-design-decisions)
-   - 4.3 [Stage Modularization](#43-stage-modularization)
-     - 4.3.1 [Folder Structure Comparison (Linting Stage Example)](#431-folder-structure-comparison-linting-stage-example)
-     - 4.3.2 [Linting Stage Example](#432-linting-stage-example)
-     - 4.3.3 [Complete Stage Modularization Design](#433-complete-stage-modularization-design)
-   - 4.4 [Testability](#44-testability)
-     - 4.4.1 [Before: Helper + Python Script Structure](#441-before-helper--python-script-structure)
-     - 4.4.2 [After: Library + Service Separation](#442-after-library--service-separation)
-     - 4.4.3 [Test Code Examples](#443-test-code-examples)
-     - 4.4.4 [Before vs After: API Testability Comparison](#444-before-vs-after-api-testability-comparison)
+    1. [Bitbucket API Migration](#41-bitbucket-api-migration)
+        1. [Folder Structure Comparison](#411-folder-structure-comparison)
+        2. [Before](#412-before-74fc356)
+        3. [After](#413-after-ff74ac8)
+        4. [Design Decisions](#414-design-decisions)
+    2. [Shell Script Libraries](#42-shell-script-libraries)
+        1. [File Structure](#421-file-structure)
+        2. [Closure Pattern Structure](#422-closure-pattern-structure)
+        3. [Before](#423-before-74fc356)
+        4. [After](#424-after-ff74ac8)
+        5. [Closure List by Library](#425-closure-list-by-library)
+        6. [Closure Map Schema](#426-closure-map-schema)
+        7. [Design Decisions](#427-design-decisions)
+    3. [Stage Modularization](#43-stage-modularization)
+        1. [Folder Structure Comparison (Linting Stage Example)](#431-folder-structure-comparison-linting-stage-example)
+        2. [Linting Stage Example](#432-linting-stage-example)
+        3. [Complete Stage Modularization Design](#433-complete-stage-modularization-design)
+    4. [Testability](#44-testability)
+        1. [Before: Helper + Python Script Structure](#441-before-helper--python-script-structure)
+        2. [After: Library + Service Separation](#442-after-library--service-separation)
+        3. [Test Code Examples](#443-test-code-examples)
+        4. [Before vs After: API Testability Comparison](#444-before-vs-after-api-testability-comparison)
 5. [Reference](#5-reference)
 
 ---
@@ -832,71 +832,71 @@ sequenceDiagram
 #### 4.3.3 Complete Stage Modularization Design
 
 ```
-Before (74fc356)                                                 After (ff74ac8)
-─────────────────                                                ─────────────────
-> Stage logic Inline/Duplicated                                  > Stage logic separated into stage*.groovy modules
-> groovy/ Helper mixed with Git/API/logging/domain logic         > Role-based Layer separation, 1-line calls
-  (God Object)
+Before (74fc356)                                    After (ff74ac8)
+─────────────────                                   ─────────────────
+> Stage logic Inline/Duplicated                     > Stage logic separated into stage*.groovy modules
+> groovy/ Helper mixed with                         > Role-based Layer separation, 1-line calls
+  Git/API/logging/domain logic (God Object)
 
-DLXJenkins/Jenkinsfile                                           DLXJenkins/Jenkinsfile
-├── stage('Prepare WORKSPACE')                                   ├── stage('Jenkins Initialization') { stageInitialization() }
-├── stage('Linting')                                             ├── stage('Prepare Project') { stageProjectPrepare() }
-├── stage('EditMode Tests')                                      ├── stage('Linting') { stageLintUnity() }
-├── stage('PlayMode Tests in Editor')                            ├── stage('Unity Execution') { stageUnityExecution() }
-├── stage('Code Coverage Send Reports')                          └── stage('Send Build Results') { stageSendBuildResults() }
+DLXJenkins/Jenkinsfile                              DLXJenkins/Jenkinsfile
+├── stage('Prepare WORKSPACE')                      ├── stage('Jenkins Initialization') { stageInitialization() }
+├── stage('Linting')                                ├── stage('Prepare Project') { stageProjectPrepare() }
+├── stage('EditMode Tests')                         ├── stage('Linting') { stageLintUnity() }
+├── stage('PlayMode Tests in Editor')               ├── stage('Unity Execution') { stageUnityExecution() }
+├── stage('Code Coverage Send Reports')             └── stage('Send Build Results') { stageSendBuildResults() }
 └── stage('Build Project')
-                                                                 DLXJenkins/JenkinsfileDeployment
-DLXJenkins/JenkinsfileDeployment                                 ├── stage('Cleanup PR Branch Artifacts') { stageCleanupPRBranchArtifacts() }
-├── stage('Delete Merged Branch')                                ├── stage('Jenkins Initialization') { stageInitialization() }
-├── stage('Prepare WORKSPACE')                                   ├── stage('Prepare Project') { stageProjectPrepare() }
-├── stage('Linting')                                             ├── stage('Linting') { stageLintUnity() }
-├── stage('EditMode Tests')                                      ├── stage('Unity Execution') { stageUnityExecution() }
-├── stage('PlayMode Tests In Editor')                            ├── stage('Deploy Build') { stageDeployBuild() }
-├── stage('Build Project')                                       └── stage('Send Build Results') { stageSendBuildResults() }
+                                                    DLXJenkins/JenkinsfileDeployment
+DLXJenkins/JenkinsfileDeployment                    ├── stage('Cleanup PR Branch Artifacts') { stageCleanupPRBranchArtifacts() }
+├── stage('Delete Merged Branch')                   ├── stage('Jenkins Initialization') { stageInitialization() }
+├── stage('Prepare WORKSPACE')                      ├── stage('Prepare Project') { stageProjectPrepare() }
+├── stage('Linting')                                ├── stage('Linting') { stageLintUnity() }
+├── stage('EditMode Tests')                         ├── stage('Unity Execution') { stageUnityExecution() }
+├── stage('PlayMode Tests In Editor')               ├── stage('Deploy Build') { stageDeployBuild() }
+├── stage('Build Project')                          └── stage('Send Build Results') { stageSendBuildResults() }
 └── stage('Deploy Build')
-                                                                 JsJenkins/Jenkinsfile *
-JsJenkins/Jenkinsfile                                            ├── stage('Jenkins Initialization') { stageInitialization() }
-├── stage('Prepare WORKSPACE')                                   ├── stage('Install Dependencies') { stageInstallDependencies() }
-├── stage('Install Dependencies')                                ├── stage('Linting') { stageLintJs() }
-├── stage('Linting')                                             ├── stage('Unit Testing') { stageUnitTesting() }
-├── stage('Unit Testing')                                        └── stage('Static Analysis') { stageStaticAnalysis() }
+                                                    JsJenkins/Jenkinsfile *
+JsJenkins/Jenkinsfile                               ├── stage('Jenkins Initialization') { stageInitialization() }
+├── stage('Prepare WORKSPACE')                      ├── stage('Install Dependencies') { stageInstallDependencies() }
+├── stage('Install Dependencies')                   ├── stage('Linting') { stageLintJs() }
+├── stage('Linting')                                ├── stage('Unit Testing') { stageUnitTesting() }
+├── stage('Unit Testing')                           └── stage('Static Analysis') { stageStaticAnalysis() }
 └── stage('Static Analysis')
-                                                                 JsJenkins/JenkinsfileDeployment *
-JsJenkins/JenkinsfileDeployment                                  ├── stage('Cleanup PR Branch Artifacts') { stageCleanupPRBranchArtifacts() }
-├── stage('Delete Merged Branch')                                ├── stage('Jenkins Initialization') { stageInitialization() }
-├── stage('Prepare WORKSPACE')                                   ├── stage('Install Dependencies') { stageInstallDependencies() }
-├── stage('Install Dependencies')                                ├── stage('Linting') { stageLintJs() }
-├── stage('Linting')                                             ├── stage('Unit Testing') { stageUnitTesting() }
-├── stage('Unit Testing')                                        ├── stage('Static Analysis') { stageStaticAnalysis() }
-├── stage('Static Analysis')                                     ├── stage('Server Build and Deploy') { stageServerBuildAndDeploy() }
-├── stage('Check Build and Deploy Condition')                    └── stage('Client Build and Deploy') { stageClientBuildAndDeploy() }
+                                                    JsJenkins/JenkinsfileDeployment *
+JsJenkins/JenkinsfileDeployment                     ├── stage('Cleanup PR Branch Artifacts') { stageCleanupPRBranchArtifacts() }
+├── stage('Delete Merged Branch')                   ├── stage('Jenkins Initialization') { stageInitialization() }
+├── stage('Prepare WORKSPACE')                      ├── stage('Install Dependencies') { stageInstallDependencies() }
+├── stage('Install Dependencies')                   ├── stage('Linting') { stageLintJs() }
+├── stage('Linting')                                ├── stage('Unit Testing') { stageUnitTesting() }
+├── stage('Unit Testing')                           ├── stage('Static Analysis') { stageStaticAnalysis() }
+├── stage('Static Analysis')                        ├── stage('Server Build and Deploy') { stageServerBuildAndDeploy() }
+├── stage('Check Build and Deploy Condition')       └── stage('Client Build and Deploy') { stageClientBuildAndDeploy() }
 ├── stage('Server Build and Deploy')
-└── stage('Client Build and Deploy')                             PipelineForJenkins/Jenkinsfile
-                                                                 ├── stage('Jenkins Initialization') { stageInitialization() }
-PipelineForJenkins/Jenkinsfile                                   ├── stage('Lint Groovy Code') { stageLintGroovyJenkinsfile() }
-├── stage('Prepare Workspace')                                   ├── stage('Generate Groovydoc') { stageGenerateGroovydoc() } *
-├── stage('Lint Groovy Code')                                    ├── stage('Run Unit Tests') { stageRunUnitTests() } *
-├── stage('Generate Groovydoc')                                  ├── stage('Publish Test Results') { stagePublishTestResults() } *
-├── stage('Run Unit Tests')                                      └── stage('Static Analysis') { stageStaticAnalysis() }
+└── stage('Client Build and Deploy')                PipelineForJenkins/Jenkinsfile
+                                                    ├── stage('Jenkins Initialization') { stageInitialization() }
+PipelineForJenkins/Jenkinsfile                      ├── stage('Lint Groovy Code') { stageLintGroovyJenkinsfile() }
+├── stage('Prepare Workspace')                      ├── stage('Generate Groovydoc') { stageGenerateGroovydoc() } *
+├── stage('Lint Groovy Code')                       ├── stage('Run Unit Tests') { stageRunUnitTests() } *
+├── stage('Generate Groovydoc')                     ├── stage('Publish Test Results') { stagePublishTestResults() } *
+├── stage('Run Unit Tests')                         └── stage('Static Analysis') { stageStaticAnalysis() }
 ├── stage('Publish Test Results')
-└── stage('Static Analysis')                                     sharedLibraries/vars/
-                                                                 ├── stageInitialization.groovy
-groovy/                                                          ├── stageProjectPrepare.groovy
-├── generalHelper.groovy                                         ├── stageLintUnity.groovy
-├── jsHelper.groovy                                              ├── stageLintGroovyJenkinsfile.groovy
-└── unityHelper.groovy                                           ├── stageStaticAnalysis.groovy
-                                                                 ├── stageUnityExecution.groovy
-                                                                 ├── stageDeployBuild.groovy
-                                                                 ├── stageCleanupPRBranchArtifacts.groovy
-                                                                 ├── stageSendBuildResults.groovy
-                                                                 ├── stageLintJs.groovy *
-                                                                 ├── stageInstallDependencies.groovy *
-                                                                 ├── stageUnitTesting.groovy *
-                                                                 ├── stageGenerateGroovydoc.groovy *
-                                                                 ├── stageRunUnitTests.groovy *
-                                                                 ├── stagePublishTestResults.groovy *
-                                                                 ├── stageServerBuildAndDeploy.groovy *
-                                                                 └── stageClientBuildAndDeploy.groovy *
+└── stage('Static Analysis')                        sharedLibraries/vars/
+                                                    ├── stageInitialization.groovy
+groovy/                                             ├── stageProjectPrepare.groovy
+├── generalHelper.groovy                            ├── stageLintUnity.groovy
+├── jsHelper.groovy                                 ├── stageLintGroovyJenkinsfile.groovy
+└── unityHelper.groovy                              ├── stageStaticAnalysis.groovy
+                                                    ├── stageUnityExecution.groovy
+                                                    ├── stageDeployBuild.groovy
+                                                    ├── stageCleanupPRBranchArtifacts.groovy
+                                                    ├── stageSendBuildResults.groovy
+                                                    ├── stageLintJs.groovy *
+                                                    ├── stageInstallDependencies.groovy *
+                                                    ├── stageUnitTesting.groovy *
+                                                    ├── stageGenerateGroovydoc.groovy *
+                                                    ├── stageRunUnitTests.groovy *
+                                                    ├── stagePublishTestResults.groovy *
+                                                    ├── stageServerBuildAndDeploy.groovy *
+                                                    └── stageClientBuildAndDeploy.groovy *
 ```
 
 > *Not yet developed

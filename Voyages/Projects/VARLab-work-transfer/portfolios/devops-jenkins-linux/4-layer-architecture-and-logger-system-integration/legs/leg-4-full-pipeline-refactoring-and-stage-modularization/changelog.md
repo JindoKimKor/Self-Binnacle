@@ -51,7 +51,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 | 6 | SSH Library and Deployment Feature Completion (2025-05-08) | 12 |
 | 7 | Finalization and Bug Fixes (2025-05-09 ~ 2025-05-12) | 4 |
 
-<details>
+<details markdown>
 <summary><strong>Phase 1: PipelineForJenkins Stage Modularization (8 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -67,7 +67,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 2: DLX Pipeline Webhook Trigger Configuration (40 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -115,7 +115,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 3: DLX-PR-Pipeline Stage Modularization (24 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -147,7 +147,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 4: DLX-Deployment Pipeline Refactoring (22 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -177,7 +177,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 5: Full Jenkinsfile Cleanup and Integration (18 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -203,7 +203,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 6: SSH Library and Deployment Feature Completion (12 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -223,7 +223,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 7: Finalization and Bug Fixes (4 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -241,7 +241,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 ### 3.1 Phase 1: PipelineForJenkins Stage Modularization
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-05 ~ 2025-05-06 early (8 commits)
@@ -271,7 +271,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 ### 3.2 Phase 2: DLX Pipeline Webhook Trigger Configuration
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-06 (40 commits)
@@ -318,7 +318,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 ### 3.3 Phase 3: DLX-PR-Pipeline Stage Modularization
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-07 first half (24 commits)
@@ -364,7 +364,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 ### 3.4 Phase 4: DLX-Deployment Pipeline Refactoring
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-07 middle (22 commits)
@@ -411,7 +411,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 ### 3.5 Phase 5: Full Jenkinsfile Cleanup and Integration
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-07 second half (18 commits)
@@ -459,7 +459,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 ### 3.6 Phase 6: SSH Library and Deployment Feature Completion
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-08 (12 commits)
@@ -489,7 +489,7 @@ Modularize all Stages of 5 pipelines so Jenkinsfiles consist only of Stage calls
 
 ### 3.7 Phase 7: Finalization and Bug Fixes
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-09 ~ 2025-05-12 (4 commits)

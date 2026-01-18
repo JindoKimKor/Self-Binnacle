@@ -57,7 +57,7 @@ Design and implement a 3-level logger system for consistent logging output durin
 
 ### 3.1 Step 1: vars Call Method Test
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Commits**: `aa7c86e` ~ `63abf6b` (3 commits)
@@ -82,7 +82,7 @@ Design and implement a 3-level logger system for consistent logging output durin
 
 ### 3.2 Step 2: Logger Initial Implementation and CPS Issue Resolution
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Commits**: `238838a` ~ `2267005` (5 commits)
@@ -123,7 +123,7 @@ void stageStart(String stageName) {
 
 ### 3.3 Step 3: Logger Completion and Integration
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Commits**: `a4eb7ee` ~ `d699fac` (3 commits)

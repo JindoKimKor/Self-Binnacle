@@ -1,6 +1,13 @@
+---
+analysis_target: "Commit 74fc356 (2025-03-20)"
+github_url: "https://github.com/JindoKimKor/devops-jenkins-linux/tree/74fc3563713df593f070f1c418ef9ee68f2682ed"
+total_code: "2,975 lines across 8 files"
+---
+
 # Problem Analysis: Baseline Code Analysis
 
-> **Analysis Target**: Commit [`74fc356`](https://github.com/JindoKimKor/devops-jenkins-linux/tree/74fc3563713df593f070f1c418ef9ee68f2682ed) (2025-03-20) @ [repos/devops-jenkins-linux](../../repos/devops-jenkins-linux)
+> **Analysis Target**: Commit [`74fc356`](https://github.com/JindoKimKor/devops-jenkins-linux/tree/74fc3563713df593f070f1c418ef9ee68f2682ed) (2025-03-20)
+>
 > **Total Code**: 2,975 lines across 8 files
 
 ---
@@ -40,7 +47,7 @@ devops-jenkins-linux/
 
 ## Detailed Analysis Documents
 
-👉 **[Problem Analysis Summary (README)](problem-analysis/README.md)** - Complete list of 51 issues with severity classification
+👉 **[Problem Analysis Summary](problem-analysis/detailed-analysis.md)** - Complete list of 51 issues with severity classification
 
 ### Per-File Analysis
 
@@ -108,7 +115,7 @@ devops-jenkins-linux/
 
 ---
 
-<details>
+<details markdown>
 <summary>Case Study: cloneOrUpdateRepo() function unable to handle project structure changes</summary>
 
 The `cloneOrUpdateRepo()` function was designed with **the assumption that there's only one project in the root folder**.

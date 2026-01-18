@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)
 
 # JsJenkins/JenkinsfileDeployment (452 lines)
 
@@ -46,7 +46,7 @@
 | 319-392 | `Client-side Build and Deploy` stage | Same **6 reasons** as Server (code copy-paste) |
 | 394-422 | `Static Analysis` stage | **2 reasons**: SonarQube scanner config + Quality Gate check logic |
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Delete Merged Branch</code> (5 change reasons)</summary>
 
 ```groovy
@@ -86,7 +86,7 @@ stage('Delete Merged Branch') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Prepare WORKSPACE</code> (6 change reasons)</summary>
 
 ```groovy
@@ -137,7 +137,7 @@ stage('Prepare WORKSPACE') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Check Build and Deploy Condition</code> (3 change reasons)</summary>
 
 ```groovy
@@ -177,7 +177,7 @@ stage('Check Build and Deploy Condition') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: Server vs Client Build and Deploy (same pattern repeated)</summary>
 
 **Server-side Build and Deploy** (lines 242-317):
@@ -220,7 +220,7 @@ stage('Server-side Build and Deploy') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multiple Responsibility Area: <code>Static Analysis</code> (2 change reasons)</summary>
 
 ```groovy
@@ -280,4 +280,4 @@ stage('Static Analysis') {
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)

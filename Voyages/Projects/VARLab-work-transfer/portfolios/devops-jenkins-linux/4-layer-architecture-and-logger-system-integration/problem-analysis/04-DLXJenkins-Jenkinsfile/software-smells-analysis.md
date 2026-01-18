@@ -1,4 +1,4 @@
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)
 
 # DLXJenkins/Jenkinsfile - Software Smells Analysis
 
@@ -28,7 +28,7 @@
 
 ### 1.1 Change Preventers
 
-<details>
+<details markdown>
 <summary>Divergent Change (6 change reasons)</summary>
 
 **Definition**: A single class/file is frequently changed for several different reasons
@@ -49,7 +49,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Shotgun Surgery (5 locations when Unity Stage name changes)</summary>
 
 **Definition**: A single change requires modifications to multiple classes/functions
@@ -77,7 +77,7 @@
 
 ### 1.2 Dispensables
 
-<details>
+<details markdown>
 <summary>Duplicated Code (stageName/errorMassage pattern repeated 5 times)</summary>
 
 **Definition**: The same code pattern is repeated in multiple places
@@ -124,7 +124,7 @@ unityUtil.runUnityStage(stageConfig.EditMode.name, stageConfig.EditMode.error)
 
 ### 1.3 Bloaters
 
-<details>
+<details markdown>
 <summary>Primitive Obsession</summary>
 
 **Definition**: Using primitive types (strings) instead of objects/constants
@@ -159,7 +159,7 @@ unityUtil.runUnityStage(stageConfig.EditMode.name, stageConfig.EditMode.error)
 
 #### Abstraction Smells
 
-<details>
+<details markdown>
 <summary>Multifaceted Abstraction</summary>
 
 **Definition**: A single abstraction (class/file) expresses multiple concerns (SRP violation)
@@ -182,7 +182,7 @@ unityUtil.runUnityStage(stageConfig.EditMode.name, stageConfig.EditMode.error)
 
 </details>
 
-<details>
+<details markdown>
 <summary>Missing Abstraction</summary>
 
 **Definition**: Concepts are implemented with primitive types or strings instead of dedicated classes/constants
@@ -201,7 +201,7 @@ unityUtil.runUnityStage(stageConfig.EditMode.name, stageConfig.EditMode.error)
 
 </details>
 
-<details>
+<details markdown>
 <summary>Imperative Abstraction</summary>
 
 **Definition**: Abstraction operations are written procedurally rather than object-oriented
@@ -225,7 +225,7 @@ Due to the nature of Jenkins Pipeline DSL, procedural script structure:
 
 #### Encapsulation Smells
 
-<details>
+<details markdown>
 <summary>Missing Encapsulation</summary>
 
 **Definition**: Variations are not encapsulated, causing logic to be scattered
@@ -273,7 +273,7 @@ unityUtil.runUnityStage(UNITY_STAGES.EditMode.name, UNITY_STAGES.EditMode.error)
 
 ### 3.1 Dependency Issues
 
-<details>
+<details markdown>
 <summary>Implicit Cross-module Dependency</summary>
 
 **Definition**: Hidden dependencies cause coupling to external systems without explicit interfaces
@@ -298,4 +298,4 @@ unityUtil.runUnityStage(UNITY_STAGES.EditMode.name, UNITY_STAGES.EditMode.error)
 
 ---
 
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)

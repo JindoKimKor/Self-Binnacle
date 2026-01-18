@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)
 
 # groovy/jsHelper.groovy - SRP Violation Analysis
 
@@ -42,7 +42,7 @@
 
 ## 4. Function Level SRP Violation Analysis - Functions with Multiple Change Reasons
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Function: <code>installNpmInTestingDirs()</code> (3 change reasons)</summary>
 
 ```groovy
@@ -103,4 +103,4 @@ void installNpmInTestingDirs(String testingDirs) {
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)

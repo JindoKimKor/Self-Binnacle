@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)
 
 # groovy/unityHelper.groovy - SRP Violation Analysis
 
@@ -39,7 +39,7 @@
 
 ## 4. Function Level SRP Violation Analysis - Functions with Multiple Change Reasons
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Function: <code>getUnityExecutable()</code> (2 change reasons)</summary>
 
 ```groovy
@@ -84,7 +84,7 @@ String getUnityExecutable(workspace, projectDir) {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Function: <code>runUnityBatchMode()</code> (7+ change reasons)</summary>
 
 ```groovy
@@ -171,4 +171,4 @@ int runUnityBatchMode(String unityExecutable, String projectDirectory, String re
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)

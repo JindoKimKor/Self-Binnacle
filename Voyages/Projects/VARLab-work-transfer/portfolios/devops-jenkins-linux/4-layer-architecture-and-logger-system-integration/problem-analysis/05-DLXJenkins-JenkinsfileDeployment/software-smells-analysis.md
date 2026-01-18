@@ -1,4 +1,4 @@
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)
 
 # DLXJenkins/JenkinsfileDeployment - Software Smells Analysis
 
@@ -28,7 +28,7 @@
 
 ### 1.1 Change Preventers
 
-<details>
+<details markdown>
 <summary>Divergent Change (7 change reasons)</summary>
 
 **Definition**: A single class/file is frequently changed for multiple different reasons
@@ -50,7 +50,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Shotgun Surgery (4 locations to modify when changing Unity Stage names)</summary>
 
 **Definition**: A single change requires modification of multiple classes/functions
@@ -77,7 +77,7 @@
 
 ### 1.2 Dispensables
 
-<details>
+<details markdown>
 <summary>Duplicated Code (deployment pattern repeated 2 times + stageName/errorMassage pattern repeated 4 times)</summary>
 
 **Definition**: Same code pattern repeated in multiple places
@@ -117,7 +117,7 @@ unityUtil.runUnityStage(stageName, errorMassage)
 
 ### 1.3 Bloaters
 
-<details>
+<details markdown>
 <summary>Primitive Obsession</summary>
 
 **Definition**: Primitive types (strings) used instead of objects/constants
@@ -152,7 +152,7 @@ unityUtil.runUnityStage(stageName, errorMassage)
 
 #### Abstraction Smells
 
-<details>
+<details markdown>
 <summary>Multifaceted Abstraction</summary>
 
 **Definition**: A single abstraction (class/file) represents multiple concerns (SRP violation)
@@ -173,7 +173,7 @@ unityUtil.runUnityStage(stageName, errorMassage)
 
 </details>
 
-<details>
+<details markdown>
 <summary>Missing Abstraction</summary>
 
 **Definition**: Concepts implemented with primitive types or strings instead of dedicated classes/constants
@@ -205,7 +205,7 @@ def DEPLOY_SERVERS = [
 
 </details>
 
-<details>
+<details markdown>
 <summary>Imperative Abstraction</summary>
 
 **Definition**: Abstraction operations written procedurally rather than object-oriented
@@ -230,7 +230,7 @@ Procedural script structure due to Jenkins Pipeline DSL characteristics:
 
 #### Encapsulation Smells
 
-<details>
+<details markdown>
 <summary>Missing Encapsulation</summary>
 
 **Definition**: Variations not encapsulated, causing logic to be scattered
@@ -283,7 +283,7 @@ deployToServer(env.DLX_ECONESTOGA_URL, FOLDER_NAME, "${PROJECT_DIR}/Builds")
 
 ### 3.1 Dependency Issues
 
-<details>
+<details markdown>
 <summary>Implicit Cross-module Dependency</summary>
 
 **Definition**: Hidden dependencies causing coupling to external systems without explicit interfaces
@@ -309,4 +309,4 @@ deployToServer(env.DLX_ECONESTOGA_URL, FOLDER_NAME, "${PROJECT_DIR}/Builds")
 
 ---
 
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)

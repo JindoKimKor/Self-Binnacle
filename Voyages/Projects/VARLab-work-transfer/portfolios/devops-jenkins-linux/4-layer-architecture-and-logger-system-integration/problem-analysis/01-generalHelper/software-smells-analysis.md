@@ -28,7 +28,7 @@
 
 ### 1.1 Change Preventers
 
-<details>
+<details markdown>
 <summary>Divergent Change</summary>
 
 **Definition**: A single class/file is frequently changed for several different reasons
@@ -51,7 +51,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Shotgun Surgery (Major Change Triggers)</summary>
 
 **Definition**: A single external change requires modifications to multiple functions
@@ -89,7 +89,7 @@
 
 #### Abstraction Smells
 
-<details>
+<details markdown>
 <summary>Multifaceted Abstraction</summary>
 
 **Definition**: A single abstraction (class/file) expresses multiple concerns
@@ -101,7 +101,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Missing Abstraction</summary>
 
 **Definition**: Concepts are implemented with primitive types or strings instead of dedicated classes/constants
@@ -120,7 +120,7 @@
 
 #### Encapsulation Smells
 
-<details>
+<details markdown>
 <summary>Missing Encapsulation</summary>
 
 **Definition**: Variations are not encapsulated, causing logic to be scattered
@@ -140,7 +140,7 @@
 
 #### Modularization Smells
 
-<details>
+<details markdown>
 <summary>Insufficient Modularization</summary>
 
 **Definition**: A module (class/file) is too large or complex and should be further decomposed (God Class)
@@ -166,7 +166,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Hub-like Modularization</summary>
 
 **Definition**: A single abstraction (class/file) has too many dependencies with other abstractions
@@ -187,7 +187,7 @@
 
 ### 3.1 Dependency Issues
 
-<details>
+<details markdown>
 <summary>Hub-like Dependency</summary>
 
 **Definition**: Too many dependencies are concentrated on a single component
@@ -199,7 +199,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Implicit Cross-module Dependency (Major External Dependencies)</summary>
 
 **Definition**: Hidden dependencies cause coupling to external systems without explicit interfaces

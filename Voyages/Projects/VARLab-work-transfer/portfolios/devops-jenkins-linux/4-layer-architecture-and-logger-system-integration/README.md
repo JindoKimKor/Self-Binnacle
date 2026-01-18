@@ -1,6 +1,29 @@
-# 4-Layer Architecture and Logger System Integration
+# Software Smells Analysis & Architecture Redesign
 
-> Jenkins Pipeline Refactoring Portfolio (14-month Technical Debt → 4-Layer Architecture + Logger System)
+> **Context:** 14-month technical debt resolution at VARLab
+>
+> **Analysis:** Software Smells (Code/Design/Architecture), SRP, DRY violations
+>
+> **Solution:** 4-Layer Architecture, 3-Level Logger System
+>
+> **Keywords:** Jenkins, Groovy, SOLID, Design Patterns
+
+---
+
+## Purpose
+
+This portfolio is a **post-refactoring analysis** of intuitive problem-solving done during VARLab Co-op.
+
+| What I Did | What This Document Does |
+|------------|------------------------|
+| Refactored 5 monolithic pipelines into 4-Layer Architecture | Classify and define those intuitive fixes using industry conventions |
+| Designed 3-Level Logger System | Analyze why the design worked and how it integrates with the architecture |
+
+**Goal:** Transform experience-based understanding into systematic, reusable knowledge
+
+- Learn how problems I "felt" are formally named (Software Smells, Anti-patterns)
+- Validate solutions against established principles (SOLID, Design Patterns)
+- Understand integration points that made the Logger System possible
 
 ---
 
@@ -9,7 +32,7 @@
 | Part | Question | Document | Content |
 |------|----------|----------|---------|
 | **Part 1** | What? | [highlights.md](highlights.md) | Final Architecture, Key Features, Testability |
-| **Part 2** | Why? | [problem-analysis.md](problem-analysis.md) | Problems, Analysis Results |
+| **Part 2** | Why? | [problem-analysis-overview.md](problem-analysis-overview.md) | Problems, Analysis Results |
 | **Part 3** | How? | [legs/README.md](legs/README.md) | Step-by-step Implementation |
 
 ---
@@ -51,8 +74,8 @@
 
 | Document | Content | Volume |
 |----------|---------|--------|
-| [problem-analysis.md](problem-analysis.md) | Problem Summary | Core |
-| [problem-analysis/README.md](problem-analysis/README.md) | Software Smells Analysis by File | In-depth |
+| [problem-analysis-overview.md](problem-analysis-overview.md) | Problem Summary | Core |
+| [problem-analysis/detailed-analysis.md](problem-analysis/detailed-analysis.md) | Software Smells Analysis by File | In-depth |
 | [problem-analysis/baseline-technical-snapshot.md](problem-analysis/baseline-technical-snapshot.md) | Baseline Code Statistics, File Structure (commit `54479b2`) | Detailed |
 
 ### Part 3: How - Implementation Process
@@ -78,9 +101,9 @@
 │   └── pull-request-documentation.pdf   # Pull Request attachment
 │
 ├── Part 2: Why (Problems)
-│   ├── problem-analysis.md      # Problem summary
+│   ├── problem-analysis-overview.md  # Problem summary
 │   └── problem-analysis/        # Detailed analysis
-│       ├── README.md            # Analysis methodology, results summary
+│       ├── detailed-analysis.md      # Analysis methodology, results summary
 │       ├── baseline-technical-snapshot.md  # Code statistics/file structure
 │       ├── DRY-violation-analysis.md       # System-wide DRY violation analysis
 │       │

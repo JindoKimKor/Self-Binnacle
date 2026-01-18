@@ -50,7 +50,7 @@
 | 5 | GitLibrary/ShellLibrary Separation and BitbucketApiService (2025-05-04) | 16 |
 | 6 | Shell Library Cleanup and Completion (2025-05-05) | 6 |
 
-<details>
+<details markdown>
 <summary><strong>Phase 1: Jenkins Environment Test and Bitbucket API Initial Implementation (7 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -65,7 +65,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 2: Bitbucket API HTTP Communication Implementation and Debugging (21 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -94,7 +94,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 3: ShellScript Helper Refactoring (8 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -110,7 +110,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 4: Git Shell Scripts Implementation and stageProjectPrepare (26 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -144,7 +144,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 5: GitLibrary/ShellLibrary Separation and BitbucketApiService (16 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -168,7 +168,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 6: Shell Library Cleanup and Completion (6 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -220,7 +220,7 @@
 
 ### 3.2 Phase 2: Bitbucket API HTTP Communication Implementation and Debugging
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-02 first half (21 commits)
@@ -252,7 +252,7 @@
 
 ### 3.3 Phase 3: ShellScript Helper Refactoring
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-02 second half (8 commits)
@@ -289,7 +289,7 @@ shellScriptHelper.execute([script: 'git fetch', label: 'Fetch'])
 
 ### 3.4 Phase 4: Git Shell Scripts Implementation and stageProjectPrepare
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-03 (26 commits)
@@ -332,7 +332,7 @@ shellScriptHelper.execute([script: 'git fetch', label: 'Fetch'])
 
 ### 3.5 Phase 5: GitLibrary/ShellLibrary Separation and BitbucketApiService
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-04 (16 commits)
@@ -380,7 +380,7 @@ After:   src/utils/GitLibrary.groovy
 
 ### 3.6 Phase 6: Shell Library Cleanup and Completion
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-05 (6 commits)

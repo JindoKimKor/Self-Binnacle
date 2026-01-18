@@ -1,4 +1,4 @@
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)
 
 # DLXJenkins/Jenkinsfile (286 lines)
 
@@ -42,7 +42,7 @@
 | 204-227 | `Code Coverage` stage | **3 reasons**: Unity stage name/error message + report path/type + test report args |
 | 229-258 | `Build Project` stage | **6 reasons**: Assets/Editor path + Builder.cs location + Unity stage name/error message + DEBUG_MODE handling + Python report script + build results path |
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Area: <code>Prepare WORKSPACE</code> stage (5 change reasons)</summary>
 
 ```groovy
@@ -95,7 +95,7 @@ stage('Prepare WORKSPACE') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Area: <code>Linting</code> stage (5 change reasons)</summary>
 
 ```groovy
@@ -136,7 +136,7 @@ stage('Linting') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Area: <code>EditMode Tests</code> stage (3 change reasons)</summary>
 
 ```groovy
@@ -165,7 +165,7 @@ stage('EditMode Tests') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Area: <code>Code Coverage</code> stage (3 change reasons)</summary>
 
 ```groovy
@@ -199,7 +199,7 @@ stage('Code Coverage\nSend Reports') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Multi-responsibility Area: <code>Build Project</code> stage (6 change reasons)</summary>
 
 ```groovy
@@ -251,4 +251,4 @@ stage('Build Project') {
 
 ---
 
-[← Overview](../README.md) | [Software Smells →](./software-smells-analysis.md)
+[← Overview](../detailed-analysis.md) | [Software Smells →](./software-smells-analysis.md)

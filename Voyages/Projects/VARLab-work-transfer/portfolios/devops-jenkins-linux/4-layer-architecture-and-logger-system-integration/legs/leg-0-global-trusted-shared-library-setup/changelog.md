@@ -43,7 +43,7 @@ Build Jenkins Global Trusted Shared Library foundation
 | 4 | Global Library Configuration Test (2025-04-13) | 3 |
 | 5 | Full Implementation (2025-04-21 ~ 2025-04-24) | 22 |
 
-<details>
+<details markdown>
 <summary><strong>Phase 1: Shared Library Folder Structure Exploration (4 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -55,7 +55,7 @@ Build Jenkins Global Trusted Shared Library foundation
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 2: Shared Library Call Test (6 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -69,7 +69,7 @@ Build Jenkins Global Trusted Shared Library foundation
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 3: Service Layer Construction (8 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -85,7 +85,7 @@ Build Jenkins Global Trusted Shared Library foundation
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 4: Global Library Configuration Test (3 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -96,7 +96,7 @@ Build Jenkins Global Trusted Shared Library foundation
 
 </details>
 
-<details>
+<details markdown>
 <summary><strong>Phase 5: Full Implementation (22 commits)</strong></summary>
 
 | Date | Commit | Message |
@@ -132,7 +132,7 @@ Build Jenkins Global Trusted Shared Library foundation
 
 ### 3.1 Phase 1: Shared Library Folder Structure Exploration (CORE-1543)
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-03-21 (4 commits)
@@ -194,7 +194,7 @@ class ResultStatus {
 
 ### 3.2 Phase 2: Shared Library Call Test (CORE-1526)
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-03-27 (6 commits)
@@ -238,7 +238,7 @@ void call() {
 
 ### 3.3 Phase 3: Service Layer Construction (CORE-1547)
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-03-31 ~ 2025-04-01 (8 commits)
@@ -300,7 +300,7 @@ Final:     service/general/PrepareWorkspaceService.groovy
 
 ### 3.4 Phase 4: Global Library Configuration Test
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-04-13 (3 commits)
@@ -326,7 +326,7 @@ Final:     service/general/PrepareWorkspaceService.groovy
 
 ### 3.5 Phase 5: Full Implementation (Implement-Global-Trusted-Shared-Library)
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-04-21 ~ 2025-04-24 (22 commits)

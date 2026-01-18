@@ -1,4 +1,4 @@
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)
 
 # JsJenkins/JenkinsfileDeployment - Software Smells Analysis
 
@@ -31,7 +31,7 @@
 
 ### 1.1 Change Preventers
 
-<details>
+<details markdown>
 <summary>Divergent Change (5 change reasons)</summary>
 
 **Definition**: A single class/file is frequently changed for multiple different reasons
@@ -51,7 +51,7 @@
 
 </details>
 
-<details>
+<details markdown>
 <summary>Shotgun Surgery (4 locations to modify when adding new deployment target)</summary>
 
 **Definition**: A single change requires modification of multiple classes/functions
@@ -80,7 +80,7 @@
 
 ### 1.2 Dispensables
 
-<details>
+<details markdown>
 <summary>Duplicated Code (Server/Client deployment pattern 150 lines repeated)</summary>
 
 **Definition**: Same code pattern repeated in multiple places
@@ -131,7 +131,7 @@ stage('Client-side Build and Deploy') {
 
 ### 1.3 Bloaters
 
-<details>
+<details markdown>
 <summary>Long Method (Server/Client Deploy stages 75 lines each)</summary>
 
 **Definition**: A single method/area has too many responsibilities
@@ -156,7 +156,7 @@ stage('Client-side Build and Deploy') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Primitive Obsession</summary>
 
 **Definition**: Primitive types (strings) used instead of objects/constants
@@ -178,7 +178,7 @@ stage('Client-side Build and Deploy') {
 
 ### 1.4 Implementation Smells
 
-<details>
+<details markdown>
 <summary>Magic String</summary>
 
 **Definition**: Unexplained string literals hardcoded in code
@@ -213,7 +213,7 @@ stage('Client-side Build and Deploy') {
 
 #### Abstraction Smells
 
-<details>
+<details markdown>
 <summary>Multifaceted Abstraction</summary>
 
 **Definition**: A single abstraction (class/file) represents multiple concerns (SRP violation)
@@ -236,7 +236,7 @@ stage('Client-side Build and Deploy') {
 
 </details>
 
-<details>
+<details markdown>
 <summary>Missing Abstraction</summary>
 
 **Definition**: Concepts implemented with primitive types or strings instead of dedicated classes/constants
@@ -277,7 +277,7 @@ def DEPLOY_TARGETS = [
 
 </details>
 
-<details>
+<details markdown>
 <summary>Imperative Abstraction</summary>
 
 **Definition**: Abstraction operations written procedurally rather than object-oriented
@@ -304,7 +304,7 @@ Procedural script structure due to Jenkins Pipeline DSL characteristics:
 
 #### Encapsulation Smells
 
-<details>
+<details markdown>
 <summary>Missing Encapsulation</summary>
 
 **Definition**: Variations not encapsulated, causing logic to be scattered
@@ -353,7 +353,7 @@ deployToAzure(DEPLOY_TARGETS.client)
 
 #### Modularization Smells
 
-<details>
+<details markdown>
 <summary>Insufficient Modularization</summary>
 
 **Definition**: Abstraction is too large or complex (God Class/Method)
@@ -396,7 +396,7 @@ stage('Build and Deploy') {
 
 ### 3.1 Dependency Issues
 
-<details>
+<details markdown>
 <summary>Implicit Cross-module Dependency</summary>
 
 **Definition**: Hidden dependencies causing coupling to external systems without explicit interfaces
@@ -421,4 +421,4 @@ stage('Build and Deploy') {
 
 ---
 
-[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../README.md)
+[← SRP Analysis](./srp-violation-analysis.md) | [← Overview](../detailed-analysis.md)
