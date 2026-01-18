@@ -20,9 +20,23 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 > **Title:** [Software Smells Analysis & Architecture Redesign](https://jindokimkor.github.io/Self-Binnacle/)
 > - Context: 14-month technical debt resolution at VARLab
-> - Analysis: SRP Violation, Code Smells, Design Smells (Symptoms/Principles), Architecture Smells, DRY Violation
+> - Analysis: SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells
 > - Solution: 4-Layer Architecture, 3-Level Logger System
 > - Keywords: Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)
+
+> **Title:** [94.88% CI/CD Infrastructure Cost Reduction](Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/94.88-percent-cost-reduction/README.md)
+> - Context: Unity CI/CD build environment isolation at VARLab
+> - Problem: Unity Editor 100% CPU usage → server crashes on concurrent builds
+> - Solution: Azure Batch + Spot VMs for on-demand execution
+> - Result: 94.88% cost reduction ($618 → $32 for 56 days)
+> - Keywords: Azure Batch, Spot VMs, Docker, Unity, Cost Optimization
+
+> **Title:** [Stabilized Crashed Unity Build Server](Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-windows/stabilized-crashed-build-server/README.md)
+> - Context: Unity CI/CD server stability crisis (June 2024)
+> - Problem: VM crashes when 2-3 pipelines run simultaneously
+> - Solution: Trade-off approach - shared project files + optimization skip
+> - Result: Server stabilized, concurrent pipelines supported
+> - Byproduct: 80% faster builds, 90% CPU reduction
 
 ---
 
@@ -51,27 +65,27 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md)
-> Total: 5.0h | Start: Dec 2025
+> Total: 6.0h | Start: Dec 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 2.5h | □■□■□□□□□□□□□□□□□□ |
+> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
-> Total: 126.8h | Start: Sep 2025
+> Total: 127.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □■□■□□■□□□□□□□■□□□ |
+> | Jan | 7.0h | □■□■□□■□□□□□□□■□□■ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -109,14 +123,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 111.0h | Start: May 2025 | Tracked from Sep 2025
+> Total: 112.5h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□ |
+> | Jan | 1.5h | □□□□□□□□□□□□□□□□□■ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |

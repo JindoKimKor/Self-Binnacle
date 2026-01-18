@@ -8,3 +8,23 @@ portfolios:
       Analysis: "SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells"
       Solution: "4-Layer Architecture, 3-Level Logger System"
       Keywords: "Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)"
+
+  - path: devops-jenkins-linux/94.88-percent-cost-reduction/README.md
+    status: complete
+    title: "94.88% CI/CD Infrastructure Cost Reduction"
+    labels:
+      Context: "Unity CI/CD build environment isolation at VARLab"
+      Problem: "Unity Editor 100% CPU usage → server crashes on concurrent builds"
+      Solution: "Azure Batch + Spot VMs for on-demand execution"
+      Result: "94.88% cost reduction ($618 → $32 for 56 days)"
+      Keywords: "Azure Batch, Spot VMs, Docker, Unity, Cost Optimization"
+
+  - path: devops-jenkins-windows/stabilized-crashed-build-server/README.md
+    status: complete
+    title: "Stabilized Crashed Unity Build Server"
+    labels:
+      Context: "Unity CI/CD server stability crisis (June 2024)"
+      Problem: "VM crashes when 2-3 pipelines run simultaneously"
+      Solution: "Trade-off approach - shared project files + optimization skip"
+      Result: "Server stabilized, concurrent pipelines supported"
+      Byproduct: "80% faster builds, 90% CPU reduction"

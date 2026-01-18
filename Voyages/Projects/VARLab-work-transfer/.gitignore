@@ -1,6 +1,4 @@
 # Repos contain their own .git - not tracked by Self-Binnacle
 repos/
 portfolios/devops-jenkins-linux/4-layer-architecture-and-logger-system-integration-korean-version
-portfolios/devops-jenkins-linux/94.88-percent-cost-reduction
 portfolios/devops-jenkins-windows/docker-web-application-build-optimization
-portfolios/devops-jenkins-windows/stabilizaed-crushed-build-server
