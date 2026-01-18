@@ -188,7 +188,7 @@
 
 ### 3.1 Phase 1: Jenkins Environment Test and Bitbucket API Initial Implementation
 
-<details>
+<details markdown>
 <summary><strong>View Details</strong></summary>
 
 **Duration**: 2025-05-01 (7 commits)
