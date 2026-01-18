@@ -1,5 +1,6 @@
 portfolios:
   - path: devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/README.md
+    url: "https://jindokimkor.github.io/Self-Binnacle/"
     status: complete
     title: "Software Smells Analysis & Architecture Redesign"
     labels:

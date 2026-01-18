@@ -12,13 +12,13 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Dashboard
 
-> Last updated: 2026-01-17
+> Last updated: 2026-01-18
 
 ---
 
 ## Portfolios
 
-> **Title:** [Software Smells Analysis & Architecture Redesign](Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/README.md)
+> **Title:** [Software Smells Analysis & Architecture Redesign](https://jindokimkor.github.io/Self-Binnacle/)
 > - Context: 14-month technical debt resolution at VARLab
 > - Analysis: Software Smells (Code/Design/Architecture), SRP, DRY violations
 > - Solution: 4-Layer Architecture, 3-Level Logger System
@@ -45,7 +45,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□■□□□□□□□□□□□□□ |
+> | Jan | 1.0h | □□□■□□□□□□□□□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -58,7 +58,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 2.5h | □■□■□□□□□□□□□□□□□ |
+> | Jan | 2.5h | □■□■□□□□□□□□□□□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
@@ -71,7 +71,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □■□■□□■□□□□□□□■□□ |
+> | Jan | 6.0h | □■□■□□■□□□□□□□■□□□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -80,14 +80,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md)
-> Total: 54.5h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 55.5h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 5.8h | □□□□■■□□□■□□□□□□□ |
+> | Jan | 6.8h | □□□□■■□□□■□□□□□□■□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -101,7 +101,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.5h | □□□□□■□□□□□□□□□□□ |
+> | Jan | 0.5h | □□□□□■□□□□□□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -109,14 +109,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 111.0h | Start: May 2025 | Tracked from Sep 2025
+> Total: 112.5h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□ |
+> | Jan | 1.5h | □□□□□□□□□□□□□□□□■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -132,7 +132,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 78.0h | □□□□□□□■□■■■■■■■■ |
+> | Jan | 78.0h | □□□□□□□■□■■■■■■■■□ |
 >
 > </details>
 
@@ -152,7 +152,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -167,7 +167,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 56.5h | □□□□□□□□□□■■■■■■■ |
+> | Jan | 56.5h | □□□□□□□□□□■■■■■■■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -186,7 +186,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□■□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□■□□□□ |
 >
 > </details>
 
@@ -198,7 +198,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□□□□□□□□□□□■■□□ |
+> | Jan | 4.0h | □□□□□□□□□□□□□■■□□□ |
 >
 > </details>
 
@@ -210,7 +210,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□■□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□■□□□ |
 >
 > </details>
 
@@ -222,7 +222,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□■■□□□□ |
+> | Jan | 6.0h | □□□□□□□□□□□■■□□□□□ |
 >
 > </details>
 
