@@ -17,6 +17,7 @@
 - [AI Passage Creation](#ai-passage-creation)
 - [AI Passage Evaluation](#ai-passage-evaluation)
 - [AI Raw Processing](#ai-raw-processing)
+- [AI Sailing Orders Management](#ai-sailing-orders-management)
 
 ### 4. Tools
 - [Dashboard Generation](#dashboard-generation)
@@ -47,6 +48,7 @@ I navigate myself as a ship in the ocean of life. Self-Binnacle is a framework t
 | Passage Plan | metacognition/passage-plan.md | Daily forecast (Planning) |
 | Log | log.md | Daily record (Monitoring) |
 | Passage Forecast Review | metacognition/passage-forecast-review.md | Forecast evaluation (Evaluating) |
+| Sailing Orders | Sailing Orders section | Voyage-level future tasks/orders |
 
 ---
 
@@ -124,6 +126,11 @@ Self-Binnacle/
 
 # 3. AI Guidelines
 
+## Git Policy
+
+- **NEVER suggest adding files in `.gitignore` to git.** All items in `.gitignore` are intentionally excluded from version control by design.
+- When committing, only stage files that are NOT in `.gitignore`.
+
 ## Context Management
 
 - When you see a compacting warning or context is running low:
@@ -187,6 +194,24 @@ When user requests to organize a passage file (log.md, passage-plan.md, or passa
 2. Categorize each item into appropriate sections above
 3. Move processed items from Raw to their correct labels
 4. Keep Raw section empty after processing (just `-`)
+
+## AI Sailing Orders Management
+
+When user requests Sailing Orders operations:
+
+1. **Format**: `| Order | Deadline | Created | Purpose |` (one table per Order)
+2. **Subsections**: Plotted (Underway) / Plotted Courses / Plotted (Reached)
+3. **Operations**:
+   - Add new order → Place in appropriate subsection with today's date as Created
+   - Start order → Move from Plotted Courses → Plotted (Underway)
+   - Complete order → Move from Plotted (Underway) → Plotted (Reached)
+   - Delete order → Remove table and details
+4. **Fields**:
+   - Order: Task description (required)
+   - Deadline: Due date or `-` if none (optional)
+   - Created: Date order was added (required)
+   - Purpose: Why this order exists (optional)
+5. **Details**: Free-form content below each table (steps, links, notes, etc.)
 
 ---
 

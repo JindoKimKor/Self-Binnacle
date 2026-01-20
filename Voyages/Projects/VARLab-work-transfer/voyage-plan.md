@@ -42,7 +42,54 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 ---
 
 ## Sailing Orders
--
+
+### Plotted (Underway)
+
+### Plotted Courses
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | - | Jan 15 | Portfolio completeness |
+
+- ACI, ACA, AKS vs Azure Batch comparison
+- Why each was not selected (reasoning)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Research NotebookLM video generation best practices | - | Jan 15 | Content creation workflow |
+
+- Community prompts for customized output
+- Alternative AI tools for video generation
+- Multi-step workflows for better results
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| LinkedIn posting for Software Smells Analysis portfolio | - | Jan 18 | Professional visibility |
+
+- Core message: "Transform experience-based understanding into systematic, reusable knowledge"
+- Motivation: Like a doctor diagnosing - clear diagnosis for future/team
+- Process: Before commit → Analysis → After commit
+- Concepts: What frameworks/principles guided the analysis
+- Design patterns applied in refactored code
+- Attach: Flashcard / Slide Deck from NotebookLM
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | - | Jan 15 | Learning material creation |
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Link YouTube videos (README top / Dashboard / LinkedIn) | - | Jan 15 | Content distribution |
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Interactive Portfolio Website: Git commit-based Timeline UI | - | Jan 15 | Portfolio presentation |
+
+- Calendar background + sailing ship + reef (obstacles) visualization
+- Phase/Step progress shown as voyage journey
+- Leverage achievement data from legs/ folder
+
+### Plotted (Reached)
 
 ---
 
@@ -80,4 +127,4 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 
 ### Raw
-- 나중에 완료하고 나서 수정된 결과물을 가지고 다이어그램으로 Architecture를 만들면 좋을듯 -> 그것도 웹 형태로 그래서 포트폴리오가 될수 있게
+-

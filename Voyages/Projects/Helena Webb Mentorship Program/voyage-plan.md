@@ -52,11 +52,18 @@ Conestoga College's Helena Webb Professional Mentorship Program. Bi-weekly 1-hou
 | [2025-12-23](logbook/2025-12-23/log.md) | Dec 23 | Self-work | PARA setup, reflection |
 | [2026-01-02](logbook/2026-01-02/log.md) | Jan 2 | Self-work | Interview questions review |
 | [2026-01-04](logbook/2026-01-04/log.md) | Jan 4 | Session #2 | First official bi-weekly session |
+| [2026-01-18](logbook/2026-01-18/log.md) | Jan 18 | Session #3 | |
 
 ---
 
 ## Resources
 - Shared Doc (Homework): (Conestoga Outlook - search "Helena Webb mentorship program - Jindo")
+- Interaction Reflection Form: [resources/Interaction-Reflection-Form.pdf](resources/Interaction-Reflection-Form.pdf)
+
+### Interaction Reflection Form Questions (for log.md)
+> 7. What were the topics of discussion during this meeting?
+> 8. What was the most valuable learning that took place? Why?
+> 9. How might you apply the information and insight you gained during this interaction?
 
 ---
 

@@ -32,9 +32,11 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 
 ## Resources
 - Resume:
-  - [Jindo_Kim_Resume_Dec_2025.pdf](resources/documents/Jindo_Kim_Resume_Dec_2025.pdf) (Latest)
-  - [Jindo_Kim_Resume_Nov_2025.pdf](resources/documents/Jindo_Kim_Resume_Nov_2025.pdf)
-  - [Jindo_Kim_Resume_Oct_2025.pdf](resources/documents/Jindo_Kim_Resume_Oct_2025.pdf)
+  - [Jindo_Kim_Resume_2026_Jan_Link_Improved.pdf](resources/documents/Jindo_Kim_Resume_2026_Jan_Link_Improved.pdf) (Latest) - URL 텍스트 표시, Portfolio 링크 추가
+  - [Jindo_Kim_Resume_2026_Jan.pdf](resources/documents/Jindo_Kim_Resume_2026_Jan.pdf) - VARLab Responsibilities 개선
+  - [Jindo_Kim_Resume_2025_Dec.pdf](resources/documents/Jindo_Kim_Resume_2025_Dec.pdf)
+  - [Jindo_Kim_Resume_2025_Nov.pdf](resources/documents/Jindo_Kim_Resume_2025_Nov.pdf)
+  - [Jindo_Kim_Resume_2025_Oct.pdf](resources/documents/Jindo_Kim_Resume_2025_Oct.pdf)
 - Transcript:
   - [Jindo_Kim_Transcript_2025-12-18.pdf](resources/documents/Jindo_Kim_Transcript_2025-12-18.pdf) (Latest)
 - Reference Letter:

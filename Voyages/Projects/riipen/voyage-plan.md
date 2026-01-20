@@ -16,11 +16,21 @@ Riipen experiential learning platform project. Working on real-world projects to
 ---
 
 ## Sailing Orders
-- **[DEADLINE: Jan 22]** Complete Riipen Labs verification (2-step: Proof of Identity + Proof of Enrolment)
-  - Start ASAP (processing can take 24+ hours)
-  - Login/Signup: https://riipenlabs.riipen.com/login
-  - Both steps must show "Completed" status
-  - If verified by Jan 22 → Invitation to join platform on Jan 23
+
+### Plotted (Underway)
+
+### Plotted Courses
+
+### Plotted (Reached)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Complete Riipen Labs verification | Jan 22 | Jan 19 | Platform access requirement |
+
+- 2-step: Proof of Identity + Proof of Enrolment
+- Login/Signup: https://riipenlabs.riipen.com/login
+- Both steps must show "Completed" status
+- Completed on Jan 19
 
 ---
 

@@ -7,6 +7,7 @@ Definition of all Things in the Self-Binnacle system.
 - [Voyage Related](#voyage-related)
   - Voyage
   - Voyage Plan
+  - Sailing Orders
   - Logbook
   - Resources
 - [Passage Related](#passage-related)
@@ -41,7 +42,21 @@ Definition of all Things in the Self-Binnacle system.
 > | Created by | User |
 > | Storage | Self-Binnacle (Source of Truth) + Time Management App (optional, copy) |
 > | Purpose | Provide voyage reference, confirm direction |
-> | Contents | Why (Goal, Expectation), What (Scope, Background, Context), How (Workflow, Process, Schedule), Progress Tracker, Resources, Notes, Reflection |
+> | Contents | Why (Goal, Expectation), What (Scope, Background, Context), How (Workflow, Process, Schedule), Sailing Orders, Progress Tracker, Resources, Notes, Reflection |
+
+> ### Sailing Orders
+>
+> | Property | Value |
+> |----------|-------|
+> | Definition | Voyage-level future tasks/orders |
+> | Created by | User |
+> | Storage | voyage-plan.md Sailing Orders section |
+> | Purpose | Future work management (contrast with Logbook = past records) |
+> | Lifecycle | Plotted Courses → Plotted (Underway) → Plotted (Reached) |
+> | Relationship | 1 Voyage Plan : 1 Sailing Orders section |
+> | Contrast | Logbook = past records, Sailing Orders = future tasks |
+> | Format | `| Order | Deadline | Created | Purpose |` table (per Order) + free-form details (optional) |
+> | Subsections | Plotted (Underway) (in progress) / Plotted Courses (pending) / Plotted (Reached) (completed) |
 
 > ### Logbook (Folder)
 >

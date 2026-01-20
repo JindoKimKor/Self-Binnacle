@@ -10,6 +10,7 @@
 - [7. Past Reference](#7-past-reference)
 - [8. Passage Writing Flow](#8-passage-writing-flow)
 - [9. AI Scan Alerts](#9-ai-scan-alerts)
+- [10. Sailing Orders Management](#10-sailing-orders-management)
 
 ---
 
@@ -213,3 +214,61 @@ Implement VM provisioning. Referring to existing VARLab code.
 - "voyage-plan.md contains an API key. Want to remove it?" (Security Scan)
 - "job-search is classified as Task but has a Logbook. Change to Project?" (Structure Scan)
 - "Reflection contains 'finance management' content, which is outside system scope. Want to manage it separately?" (Scope Scan)
+
+---
+
+## 10. Sailing Orders Management
+
+### Adding a New Order
+
+**User:** "Add cloud benchmarking to VARLab project orders"
+
+**AI:** "What's the purpose and deadline?"
+
+**User:** "For portfolio completeness, no deadline"
+
+**AI:** Added to Plotted Courses in VARLab voyage-plan.md:
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |
+
+"Any details to add below the table?"
+
+**User:** "ACI, ACA, AKS vs Azure Batch comparison"
+
+**AI:** Updated:
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |
+
+- ACI, ACA, AKS vs Azure Batch comparison
+
+---
+
+### Moving Order Status
+
+**User:** "Start working on cloud benchmarking"
+
+**AI:** Moved from Plotted Courses → Plotted (Underway):
+
+### Plotted (Underway)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |
+
+---
+
+### Completing an Order
+
+**User:** "Finished cloud benchmarking"
+
+**AI:** Moved from Plotted (Underway) → Plotted (Reached):
+
+### Plotted (Reached)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |

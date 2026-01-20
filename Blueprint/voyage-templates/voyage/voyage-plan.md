@@ -16,7 +16,18 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 ---
 
 ## Sailing Orders
--
+<!--
+Subsections: Plotted (Underway) / Plotted Courses / Plotted (Reached)
+Format: | Order | Deadline | Created | Purpose | (one table per Order)
+Deadline/Purpose can be empty (use - for no deadline)
+Free-form details can be added below each table
+-->
+
+### Plotted (Underway)
+
+### Plotted Courses
+
+### Plotted (Reached)
 
 ---
 

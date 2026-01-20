@@ -10,12 +10,6 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ---
 
-## Dashboard
-
-> Last updated: 2026-01-18
-
----
-
 ## Portfolios
 
 > **Title:** [Software Smells Analysis & Architecture Redesign](https://jindokimkor.github.io/Self-Binnacle/)
@@ -40,6 +34,20 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ---
 
+## Dashboard
+
+> Version: 1.2.0 | Last updated: 2026-01-20
+
+---
+
+## Underway
+
+| Voyage | Order | Created | Deadline |
+|--------|-------|---------|----------|
+| [Class-PROG3360-software-delivery-and-release-management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | Organize Dockerfile analysis documentation | Jan 19 | - |
+
+---
+
 ## Tasks (2)
 
 | Task | Created | Deadline |
@@ -59,7 +67,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□■□□□□□□□□□□□□□□ |
+> | Jan | 1.0h | □□□■□□□□□□□□□□□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -72,20 +80,20 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■ |
+> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
-> Total: 127.8h | Start: Sep 2025
+> Total: 133.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 7.0h | □■□■□□■□□□□□□□■□□■ |
+> | Jan | 13.0h | □■□■□□■□□□□□□□■□□□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -94,28 +102,28 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md)
-> Total: 55.5h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 59.0h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.8h | □□□□■■□□□■□□□□□□■□ |
+> | Jan | 10.2h | □□□□■■□□□■□□□□□□■■■□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
 > </details>
 
 > ### [Riipen](Voyages/Projects/riipen/voyage-plan.md)
-> Total: 21.8h | Start: Sep 2025 | Tracked from Oct 2025
+> Total: 22.2h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.5h | □□□□□■□□□□□□□□□□□□ |
+> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -123,14 +131,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 112.5h | Start: May 2025 | Tracked from Sep 2025
+> Total: 111.0h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.5h | □□□□□□□□□□□□□□□□□■ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -141,12 +149,21 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md)
 > Total: 83.2h | Start: Jan 2026
 >
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | Jan 15 | - | Plotted |
+> | Research NotebookLM video generation best practices | Jan 15 | - | Plotted |
+> | LinkedIn posting for Software Smells Analysis portfolio | Jan 18 | - | Plotted |
+> | Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | Jan 15 | - | Plotted |
+> | Link YouTube videos (README top / Dashboard / LinkedIn) | Jan 15 | - | Plotted |
+> | Interactive Portfolio Website: Git commit-based Timeline UI | Jan 15 | - | Plotted |
+>
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□ |
+> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□ |
 >
 > </details>
 
@@ -166,7 +183,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -174,14 +191,18 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md)
-> Total: 75.0h | Start: Jan 2025 | Tracked from Oct 2025
+> Total: 76.0h | Start: Jan 2025 | Tracked from Oct 2025
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Write practical design patterns guide based on VARLab Code Debt experience | Jan 19 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 61.8h | □□□□□□□□□□■■■■■■■□ |
+> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -190,9 +211,21 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ---
 
-## Classes (4)
+## Classes (5)
 
 > ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md)
+> Total: 4.0h | Start: Jan 2026
+>
+> <details>
+> <summary>Monthly Activity</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Jan | 4.0h | □□□□□□□□□□□□□■□□□□□■ |
+>
+> </details>
+
+> ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md)
 > Total: 3.0h | Start: Jan 2026
 >
 > <details>
@@ -200,7 +233,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□■□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□■□□□□ |
 >
 > </details>
 
@@ -212,7 +245,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□□□□□□□□□□□■■□□□ |
+> | Jan | 4.0h | □□□□□□□□□□□□□■■□□□□□ |
 >
 > </details>
 
@@ -224,19 +257,23 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□■□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□■□□□□□ |
 >
 > </details>
 
 > ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md)
-> Total: 6.0h | Start: Jan 2026
+> Total: 9.0h | Start: Jan 2026
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Organize Dockerfile analysis documentation | Jan 19 | - | Underway |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□■■□□□□□ |
+> | Jan | 9.0h | □□□□□□□□□□□■■□□□□□■□ |
 >
 > </details>
 

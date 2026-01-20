@@ -11,6 +11,7 @@
 | Passage Plan | passage-plan.md | Daily forecast |
 | Log | log.md | Daily record |
 | Passage Forecast Review | passage-forecast-review.md | Forecast evaluation |
+| Sailing Orders | Sailing Orders section | Voyage-level future tasks/orders |
 
 ### Folder Structure
 ```
