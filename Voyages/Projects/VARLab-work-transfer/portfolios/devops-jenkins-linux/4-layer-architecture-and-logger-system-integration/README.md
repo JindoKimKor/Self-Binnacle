@@ -1,5 +1,7 @@
 # Software Smells Analysis & Architecture Redesign
 
+![Architecture Overview](resources/architecture-overview.png)
+
 > **Context:** 14-month technical debt resolution at VARLab
 >
 > **Analysis:** SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells
