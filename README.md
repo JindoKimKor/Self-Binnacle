@@ -36,7 +36,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Dashboard
 
-> Version: 1.2.0 | Last updated: 2026-01-20
+> Version: 1.2.0 | Last updated: 2026-01-21
 
 ---
 
@@ -44,7 +44,9 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 | Voyage | Order | Created | Deadline |
 |--------|-------|---------|----------|
+| [Class-BUS3140-IT-Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) | Organize Venture Lab materials | 2026-01-20 | - |
 | [Class-PROG3360-software-delivery-and-release-management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | Organize Dockerfile analysis documentation | Jan 19 | - |
+| [job-search](Voyages/Projects/job-search/voyage-plan.md) | Research Coderbyte platform | Jan 20 | - |
 
 ---
 
@@ -67,7 +69,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□■□□□□□□□□□□□□□□□□ |
+> | Jan | 1.0h | □□□■□□□□□□□□□□□□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -80,7 +82,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□ |
+> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
@@ -93,7 +95,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 13.0h | □■□■□□■□□□□□□□■□□□■□ |
+> | Jan | 13.0h | □■□■□□■□□□□□□□■□□□■□□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -102,14 +104,18 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md)
-> Total: 59.0h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 60.0h | Start: Oct 2025 | Tracked from Nov 2025
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Research Coderbyte platform | Jan 20 | - | Underway |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 10.2h | □□□□■■□□□■□□□□□□■■■□ |
+> | Jan | 11.2h | □□□□■■□□□■□□□□□□■■■■□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -123,7 +129,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□ |
+> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -131,18 +137,18 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 111.0h | Start: May 2025 | Tracked from Sep 2025
+> Total: 111.5h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 1.5h | □□□□□□□□□□□□□□□□□□□□■ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
-> | Sep | 3.0h | □□□□□□□□□□□□□□□□□□□□□■□□□□□□□■ |
+> | Sep | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 >
 > </details>
 
@@ -163,7 +169,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□ |
+> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□□ |
 >
 > </details>
 
@@ -183,7 +189,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -202,7 +208,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□ |
+> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -214,14 +220,18 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 ## Classes (5)
 
 > ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md)
-> Total: 4.0h | Start: Jan 2026
+> Total: 10.0h | Start: Jan 2026
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Organize Venture Lab materials | 2026-01-20 | - | Underway |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□□□□□□□□□□□■□□□□□■ |
+> | Jan | 10.0h | □□□□□□□□□□□□□■□□□□□■□ |
 >
 > </details>
 
@@ -233,7 +243,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□■□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□■□□□□□ |
 >
 > </details>
 
@@ -245,7 +255,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□□□□□□□□□□□■■□□□□□ |
+> | Jan | 4.0h | □□□□□□□□□□□□□■■□□□□□□ |
 >
 > </details>
 
@@ -257,12 +267,12 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□■□□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□■□□□□□□ |
 >
 > </details>
 
 > ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md)
-> Total: 9.0h | Start: Jan 2026
+> Total: 12.0h | Start: Jan 2026
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -273,7 +283,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 9.0h | □□□□□□□□□□□■■□□□□□■□ |
+> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□ |
 >
 > </details>
 
