@@ -46,6 +46,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 |--------|-------|---------|----------|
 | [Class-BUS3140-IT-Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) | Organize Venture Lab materials | 2026-01-20 | - |
 | [Class-PROG3360-software-delivery-and-release-management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | Organize Dockerfile analysis documentation | Jan 19 | - |
+| [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Submit Session 1 Interaction Reflection Form | 2026-01-18 | - |
 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | Research Coderbyte platform | Jan 20 | - |
 
 ---
@@ -76,6 +77,10 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 > ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md)
 > Total: 6.0h | Start: Dec 2025
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Submit Session 1 Interaction Reflection Form | 2026-01-18 | - | Underway |
 >
 > <details>
 > <summary>Monthly Activity</summary>

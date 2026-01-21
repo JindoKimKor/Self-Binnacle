@@ -40,7 +40,22 @@ Conestoga College's Helena Webb Professional Mentorship Program. Bi-weekly 1-hou
 ---
 
 ## Sailing Orders
--
+<!--
+Subsections: Plotted (Underway) / Plotted Courses / Plotted (Reached)
+Format: | Order | Deadline | Created | Purpose | (one table per Order)
+Deadline/Purpose can be empty (use - for no deadline)
+Free-form details can be added below each table
+-->
+
+### Plotted (Underway)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Submit Session 1 Interaction Reflection Form | - | 2026-01-18 | Forgot to submit |
+
+### Plotted Courses
+
+### Plotted (Reached)
 
 ---
 
