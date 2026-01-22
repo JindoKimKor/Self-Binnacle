@@ -46,6 +46,15 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ---
 
+## Dormant Voyages
+
+| Voyage | Last Activity | Days |
+|--------|---------------|------|
+| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 59 |
+| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 30 |
+
+---
+
 ## Underway
 
 | Voyage | Order | Created | Deadline |
@@ -72,7 +81,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 ## Projects (8)
 
 > ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md)
-> Total: 7.8h | Start: Dec 2025
+> Total: 10.8h | Start: Dec 2025
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -91,7 +100,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□■□□□□□□□□□□□□□□□□□□ |
+> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -206,8 +215,16 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Year-End Knowledge Cleanup](Voyages/Projects/year-end-cleanup/voyage-plan.md)
-> Total: 0h | Start: Dec 2025
+> Total: 3.0h | Start: Dec 2025 | Tracked from Jan 2026
 >
+> <details>
+> <summary>Monthly Activity</summary>
+>
+> | Month | Hours | Activity |
+> |-------|-------|----------|
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□ |
+>
+> </details>
 
 ---
 

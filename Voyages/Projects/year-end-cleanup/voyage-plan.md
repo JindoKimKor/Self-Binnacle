@@ -18,6 +18,8 @@ Knowledge, files, and folders are unmanaged across multiple workspaces. Needs or
 - Browser tab groups
 - GitHub repos
 - Google Docs
+- Google Sheet
+- NotebookLM
 - Download folder
 - Desktop
 - Confluence
@@ -43,6 +45,7 @@ Steps:
 ## Progress Tracker
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
+| [2026-01-20](logbook/2026-01-20/log.md) | 2026-01-20 | Google Docs Cleanup (partial) | Started cleanup, found GBL-Square Venture Lab materials |
 
 ---
 
