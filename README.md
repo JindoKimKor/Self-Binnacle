@@ -101,6 +101,11 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
 > Total: 133.8h | Start: Sep 2025
 >
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Upload CodePipeline Demo video to YouTube and replace mp4 link | Jan 21 | - | Plotted |
+> | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | Jan 21 | - | Plotted |
+>
 > <details>
 > <summary>Monthly Activity</summary>
 >
