@@ -12,6 +12,12 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Portfolios
 
+> **Title:** [Led Team's First Successful SDLC at Helprr.ai](Voyages/Projects/Helprr.ai/README.md)
+> - Context: Startup with no SDLC infrastructure, part-time student team
+> - Problem: Backend development blocked by missing requirements workflow, testing environment, and CI/CD access
+> - Solution: Unified Feature Specification format, GitHub Ruleset, AWS IAM/CodePipeline configuration
+> - Keywords: SDLC, API Contracts, GitHub Ruleset, AWS IAM, CodePipeline, Django
+
 > **Title:** [Software Smells Analysis & Architecture Redesign](https://jindokimkor.github.io/Self-Binnacle/)
 > - Context: 14-month technical debt resolution at VARLab
 > - Analysis: SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells
@@ -142,14 +148,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 111.5h | Start: May 2025 | Tracked from Sep 2025
+> Total: 110.0h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.5h | □□□□□□□□□□□□□□□□□□□□■ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -168,6 +174,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > | Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | Jan 15 | - | Plotted |
 > | Link YouTube videos (README top / Dashboard / LinkedIn) | Jan 15 | - | Plotted |
 > | Interactive Portfolio Website: Git commit-based Timeline UI | Jan 15 | - | Plotted |
+> | Explain how refactored Jenkins follows Domain-Driven Architecture | 2026-01-21 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
@@ -207,6 +214,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
 > | Write practical design patterns guide based on VARLab Code Debt experience | Jan 19 | - | Plotted |
+> | Skim "Domain-Driven Design" by Eric Evans | 2026-01-21 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
@@ -225,7 +233,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 ## Classes (5)
 
 > ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md)
-> Total: 10.0h | Start: Jan 2026
+> Total: 13.0h | Start: Jan 2026
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -236,7 +244,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 10.0h | □□□□□□□□□□□□□■□□□□□■□ |
+> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■ |
 >
 > </details>
 
@@ -253,14 +261,20 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md)
-> Total: 4.0h | Start: Jan 2026
+> Total: 6.0h | Start: Jan 2026
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Clarify the relationship between Microservice vs Clean-Architecture vs Domain-Driven Architecture | 2026-01-21 | - | Plotted |
+> | Understand the disadvantages of microservices | 2026-01-21 | - | Plotted |
+> | Passage | Topic | Date | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□□□□□□□□□□□■■□□□□□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□■■□□□□□■ |
 >
 > </details>
 
