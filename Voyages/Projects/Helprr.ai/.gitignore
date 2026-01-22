@@ -1,8 +1,15 @@
 # NDA - Confidential information
 logbook/*
-resources/
+resources/*
 
 # Not affected by NDA
+!logbook/2025-12-23/
+logbook/2025-12-23/*
+!logbook/2025-12-23/resources/
+logbook/2025-12-23/resources/*
+!logbook/2025-12-23/resources/api-contract-template.pdf
+
 !logbook/2025-12-29/
+!logbook/2026-01-02/
 !logbook/2026-01-06/
 !logbook/2026-01-19/
