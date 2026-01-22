@@ -25,7 +25,7 @@ Riipen experiential learning platform project. Working on real-world projects to
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Complete Riipen Labs verification | Jan 22 | Jan 19 | Platform access requirement |
+| Complete Riipen Labs verification | 2026-01-22 | 2026-01-19 | Platform access requirement |
 
 - 2-step: Proof of Identity + Proof of Enrolment
 - Login/Signup: https://riipenlabs.riipen.com/login

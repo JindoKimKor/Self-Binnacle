@@ -23,13 +23,19 @@ Continuous study of software design patterns for writing maintainable, scalable,
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Write practical design patterns guide based on VARLab Code Debt experience | - | Jan 19 | Transform hands-on experience into systematic knowledge |
+| Write practical design patterns guide based on VARLab Code Debt experience | - | 2026-01-19 | Transform hands-on experience into systematic knowledge |
 
 - Phase 1: Decision Tree - Business logic type → Pattern selection flowchart
 - Phase 2: Pattern Catalog - Details for each pattern (When to use + OOP implementation + Layer location)
 - Phase 3: Case Study - Map VARLab 51 issues → Real application cases
 - Scope: VARLab 5 patterns (Command, Facade, Service Layer, Builder, Strategy) → Gradual expansion
 - Reference: `Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/`
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Skim "Domain-Driven Design" by Eric Evans | - | 2026-01-21 | DDD foundational understanding |
+
+- Domain-Driven Design: Tackling Complexity in the Heart of Software (O'REILLY)
 
 ### Plotted (Reached)
 

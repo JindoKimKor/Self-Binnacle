@@ -35,14 +35,14 @@ Backend Development Lead (Part-time Contract) at Helprr.ai - a mental wellness a
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Upload CodePipeline Demo video to YouTube and replace mp4 link | - | Jan 21 | GitHub doesn't support video playback |
-| Plan how to present Helprr.ai portfolio on LinkedIn/Resume | - | Jan 21 | Portfolio external sharing strategy |
+| Upload CodePipeline Demo video to YouTube and replace mp4 link | - | 2026-01-21 | GitHub doesn't support video playback |
+| Plan how to present Helprr.ai portfolio on LinkedIn/Resume | - | 2026-01-21 | Portfolio external sharing strategy |
 
 ### Plotted (Reached)
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| GitHub Branch Protection documentation | - | Jan 19 | Team onboarding support |
+| GitHub Branch Protection documentation | - | 2026-01-19 | Team onboarding support |
 
 ---
 

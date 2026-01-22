@@ -208,8 +208,8 @@ When user requests Sailing Orders operations:
    - Delete order → Remove table and details
 4. **Fields**:
    - Order: Task description (required)
-   - Deadline: Due date or `-` if none (optional)
-   - Created: Date order was added (required)
+   - Deadline: Due date or `-` if none - Format: `YYYY-MM-DD`
+   - Created: Date order was added (required) - Format: `YYYY-MM-DD`
    - Purpose: Why this order exists (optional)
 5. **Details**: Free-form content below each table (steps, links, notes, etc.)
 

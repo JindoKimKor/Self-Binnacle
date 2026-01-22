@@ -21,7 +21,16 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 ---
 
 ## Sailing Orders
--
+
+### Plotted (Underway)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Research Coderbyte platform | - | 2026-01-20 | Prepare for coding test |
+
+### Plotted Courses
+
+### Plotted (Reached)
 
 ---
 

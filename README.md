@@ -51,12 +51,12 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 | Voyage | Order | Created | Deadline |
 |--------|-------|---------|----------|
 | [Class-BUS3140-IT-Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) | Organize Venture Lab materials | 2026-01-20 | - |
-| [Class-PROG3360-software-delivery-and-release-management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | Organize Dockerfile analysis documentation | Jan 19 | - |
+| [Class-PROG3360-software-delivery-and-release-management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | Organize Dockerfile analysis documentation | 2026-01-19 | - |
 | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Workshop 1 Content Preparation | 2026-01-21 | 2026-02-03 |
 | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Workshop 2 Content Preparation | 2026-01-21 | 2026-03-01 |
 | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Workshop 3 Content Preparation | 2026-01-21 | 2026-03-06 |
 | [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Submit Session 1 Interaction Reflection Form | 2026-01-18 | - |
-| [job-search](Voyages/Projects/job-search/voyage-plan.md) | Research Coderbyte platform | Jan 20 | - |
+| [job-search](Voyages/Projects/job-search/voyage-plan.md) | Research Coderbyte platform | 2026-01-20 | - |
 
 ---
 
@@ -118,8 +118,8 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
-> | Upload CodePipeline Demo video to YouTube and replace mp4 link | Jan 21 | - | Plotted |
-> | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | Jan 21 | - | Plotted |
+> | Upload CodePipeline Demo video to YouTube and replace mp4 link | 2026-01-21 | - | Plotted |
+> | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | 2026-01-21 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
@@ -139,7 +139,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
-> | Research Coderbyte platform | Jan 20 | - | Underway |
+> | Research Coderbyte platform | 2026-01-20 | - | Underway |
 >
 > <details>
 > <summary>Monthly Activity</summary>
@@ -188,12 +188,12 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
-> | Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | Jan 15 | - | Plotted |
-> | Research NotebookLM video generation best practices | Jan 15 | - | Plotted |
-> | LinkedIn posting for Software Smells Analysis portfolio | Jan 18 | - | Plotted |
-> | Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | Jan 15 | - | Plotted |
-> | Link YouTube videos (README top / Dashboard / LinkedIn) | Jan 15 | - | Plotted |
-> | Interactive Portfolio Website: Git commit-based Timeline UI | Jan 15 | - | Plotted |
+> | Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | 2026-01-15 | - | Plotted |
+> | Research NotebookLM video generation best practices | 2026-01-15 | - | Plotted |
+> | LinkedIn posting for Software Smells Analysis portfolio | 2026-01-18 | - | Plotted |
+> | Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | 2026-01-15 | - | Plotted |
+> | Link YouTube videos (README top / Dashboard / LinkedIn) | 2026-01-15 | - | Plotted |
+> | Interactive Portfolio Website: Git commit-based Timeline UI | 2026-01-15 | - | Plotted |
 > | Explain how refactored Jenkins follows Domain-Driven Architecture | 2026-01-21 | - | Plotted |
 >
 > <details>
@@ -233,7 +233,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
-> | Write practical design patterns guide based on VARLab Code Debt experience | Jan 19 | - | Plotted |
+> | Write practical design patterns guide based on VARLab Code Debt experience | 2026-01-19 | - | Plotted |
 > | Skim "Domain-Driven Design" by Eric Evans | 2026-01-21 | - | Plotted |
 >
 > <details>
@@ -315,7 +315,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
-> | Organize Dockerfile analysis documentation | Jan 19 | - | Underway |
+> | Organize Dockerfile analysis documentation | 2026-01-19 | - | Underway |
 >
 > <details>
 > <summary>Monthly Activity</summary>

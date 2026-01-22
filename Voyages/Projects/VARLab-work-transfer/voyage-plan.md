@@ -49,14 +49,14 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | - | Jan 15 | Portfolio completeness |
+| Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | - | 2026-01-15 | Portfolio completeness |
 
 - ACI, ACA, AKS vs Azure Batch comparison
 - Why each was not selected (reasoning)
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Research NotebookLM video generation best practices | - | Jan 15 | Content creation workflow |
+| Research NotebookLM video generation best practices | - | 2026-01-15 | Content creation workflow |
 
 - Community prompts for customized output
 - Alternative AI tools for video generation
@@ -64,7 +64,7 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| LinkedIn posting for Software Smells Analysis portfolio | - | Jan 18 | Professional visibility |
+| LinkedIn posting for Software Smells Analysis portfolio | - | 2026-01-18 | Professional visibility |
 
 - Core message: "Transform experience-based understanding into systematic, reusable knowledge"
 - Motivation: Like a doctor diagnosing - clear diagnosis for future/team
@@ -75,19 +75,29 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | - | Jan 15 | Learning material creation |
+| Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | - | 2026-01-15 | Learning material creation |
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Link YouTube videos (README top / Dashboard / LinkedIn) | - | Jan 15 | Content distribution |
+| Link YouTube videos (README top / Dashboard / LinkedIn) | - | 2026-01-15 | Content distribution |
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Interactive Portfolio Website: Git commit-based Timeline UI | - | Jan 15 | Portfolio presentation |
+| Interactive Portfolio Website: Git commit-based Timeline UI | - | 2026-01-15 | Portfolio presentation |
 
 - Calendar background + sailing ship + reef (obstacles) visualization
 - Phase/Step progress shown as voyage journey
 - Leverage achievement data from legs/ folder
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Explain how refactored Jenkins follows Domain-Driven Architecture | - | 2026-01-21 | DDD understanding & portfolio narrative |
+
+- Try breaking down the combined structure by Domain to see it more clearly
+- DDD core concepts to address:
+  - Ubiquitous Language: Shared language used by developers and domain experts
+  - Entities & Value Objects: Core business objects and values
+  - Bounded Context: Clear boundaries where a model applies
 
 ### Plotted (Reached)
 
