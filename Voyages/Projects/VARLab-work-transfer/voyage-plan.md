@@ -99,6 +99,15 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
   - Entities & Value Objects: Core business objects and values
   - Bounded Context: Clear boundaries where a model applies
 
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Update Software Smells portfolio README layout & fix TOC | - | 2026-01-23 | Better first impression |
+
+- Move Purpose section immediately below thumbnail image
+- Fix broken TOC links (`legs/` → `legs/README.md`)
+- Fix broken anchor links (build warnings)
+- Rebuild docs for GitHub Pages
+
 ### Plotted (Reached)
 
 ---

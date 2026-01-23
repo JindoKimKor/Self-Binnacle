@@ -50,6 +50,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 | Voyage | Last Activity | Days |
 |--------|---------------|------|
+| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 60 |
 | [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 31 |
 
 ---
@@ -70,6 +71,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 | [Class-PROG3360-software-delivery-and-release-management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | Organize Dockerfile analysis documentation | 2026-01-19 | - |
 | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Workshop 1 Content Preparation | 2026-01-21 | 2026-02-03 |
 | [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Submit Session 1 Interaction Reflection Form | 2026-01-18 | - |
+| [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) | Enhance "What I Did" section using cover letter and job application content | 2026-01-23 | - |
 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | Research Coderbyte platform | 2026-01-20 | - |
 
 ---
@@ -125,8 +127,8 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
+> | Enhance "What I Did" section using cover letter and job application content | 2026-01-23 | - | Underway |
 > | Upload CodePipeline Demo video to YouTube and replace mp4 link | 2026-01-21 | - | Plotted |
-> | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | 2026-01-21 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
@@ -142,7 +144,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md)
-> Total: 63.5h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 68.5h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -153,7 +155,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 14.8h | □□□□■■□□□■□□□□□□■■■■□■□ |
+> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -175,14 +177,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 111.5h | Start: May 2025 | Tracked from Sep 2025
+> Total: 110.0h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.5h | □□□□□□□□□□□□□□□□□□□□□■□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -202,6 +204,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > | Link YouTube videos (README top / Dashboard / LinkedIn) | 2026-01-15 | - | Plotted |
 > | Interactive Portfolio Website: Git commit-based Timeline UI | 2026-01-15 | - | Plotted |
 > | Explain how refactored Jenkins follows Domain-Driven Architecture | 2026-01-21 | - | Plotted |
+> | Update Software Smells portfolio README layout & fix TOC | 2026-01-23 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>

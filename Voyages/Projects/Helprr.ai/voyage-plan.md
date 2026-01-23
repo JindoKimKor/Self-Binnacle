@@ -31,12 +31,27 @@ Backend Development Lead (Part-time Contract) at Helprr.ai - a mental wellness a
 
 ### Plotted (Underway)
 
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Enhance "What I Did" section using cover letter and job application content | - | 2026-01-23 | Strengthen "Took ownership to build foundation" narrative |
+
+- Reference: cover letter, job application form content
+
+---
+
 ### Plotted Courses
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
 | Upload CodePipeline Demo video to YouTube and replace mp4 link | - | 2026-01-21 | GitHub doesn't support video playback |
+
+---
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
 | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | - | 2026-01-21 | Portfolio external sharing strategy |
+
+---
 
 ### Plotted (Reached)
 
