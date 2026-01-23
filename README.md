@@ -42,16 +42,15 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ## Dashboard
 
-> Version: 1.2.0 | Last updated: 2026-01-22
+> Version: 1.2.0 | Last updated: 2026-01-23
 
 ---
 
-## Dormant Voyages
+## Becalmed
 
 | Voyage | Last Activity | Days |
 |--------|---------------|------|
-| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 59 |
-| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 30 |
+| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 31 |
 
 ---
 
@@ -60,10 +59,16 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 | Voyage | Order | Created | Deadline |
 |--------|-------|---------|----------|
 | [Class-BUS3140-IT-Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) | Organize Venture Lab materials | 2026-01-20 | - |
+| [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | Weekly Submission | 2026-01-22 | Weekly |
+| [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | [Idea] Visualize Capstone as Full-Stack BI Engineer pipeline | 2026-01-22 | - |
+| [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | [Idea] Propose documentation culture to team | 2026-01-22 | - |
+| [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | Assignment 1: Project Plan | 2026-01-22 | 2026-02-01 |
+| [Class-PROG3240-business-intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) | Document full BI architecture flow | 2026-01-22 | - |
+| [Class-PROG3240-business-intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) | Document Data → Information → Knowledge transformation | 2026-01-22 | - |
+| [Class-PROG3240-business-intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) | Compare Structured vs Semi-structured vs Unstructured | 2026-01-22 | - |
+| [Class-PROG3240-business-intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) | Resolve questions | 2026-01-22 | - |
 | [Class-PROG3360-software-delivery-and-release-management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | Organize Dockerfile analysis documentation | 2026-01-19 | - |
 | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Workshop 1 Content Preparation | 2026-01-21 | 2026-02-03 |
-| [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Workshop 2 Content Preparation | 2026-01-21 | 2026-03-01 |
-| [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | Workshop 3 Content Preparation | 2026-01-21 | 2026-03-06 |
 | [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Submit Session 1 Interaction Reflection Form | 2026-01-18 | - |
 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | Research Coderbyte platform | 2026-01-20 | - |
 
@@ -86,21 +91,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
 > | Workshop 1 Content Preparation | 2026-01-21 | 2026-02-03 | Underway |
-> | Workshop 2 Content Preparation | 2026-01-21 | 2026-03-01 | Underway |
-> | Workshop 3 Content Preparation | 2026-01-21 | 2026-03-06 | Underway |
 > | Workshop 1 Posting Content Delivery | 2026-01-21 | 2026-02-06 | Plotted |
-> | Workshop 1 Delivery | 2026-01-21 | 2026-02-13 | Plotted |
-> | Workshop 2 Posting Content Delivery | 2026-01-21 | 2026-03-04 | Plotted |
-> | Workshop 2 Delivery | 2026-01-21 | 2026-03-11 | Plotted |
-> | Workshop 3 Posting Content Delivery | 2026-01-21 | 2026-03-09 | Plotted |
-> | Workshop 3 Delivery | 2026-01-21 | 2026-03-16 | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□ |
+> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -117,13 +115,13 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□ |
+> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
-> Total: 133.8h | Start: Sep 2025
+> Total: 134.8h | Start: Sep 2025
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -135,7 +133,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 13.0h | □■□■□□■□□□□□□□■□□□■□□□ |
+> | Jan | 14.0h | □■□■□□■□□□□□□□■□□□■□□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -144,7 +142,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md)
-> Total: 60.0h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 63.5h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -155,7 +153,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 11.2h | □□□□■■□□□■□□□□□□■■■■□□ |
+> | Jan | 14.8h | □□□□■■□□□■□□□□□□■■■■□■□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -169,7 +167,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□ |
+> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -177,14 +175,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 110.0h | Start: May 2025 | Tracked from Sep 2025
+> Total: 111.5h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 1.5h | □□□□□□□□□□□□□□□□□□□□□■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -210,7 +208,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□□□ |
+> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□□□□ |
 >
 > </details>
 
@@ -222,7 +220,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□ |
 >
 > </details>
 
@@ -238,7 +236,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -258,7 +256,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□ |
+> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -281,49 +279,69 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□ |
+> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□□ |
 >
 > </details>
 
 > ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md)
 > Total: 3.0h | Start: Jan 2026
 >
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Weekly Submission | 2026-01-22 | Weekly | Underway |
+> | [Idea] Visualize Capstone as Full-Stack BI Engineer pipeline | 2026-01-22 | - | Underway |
+> | [Idea] Propose documentation culture to team | 2026-01-22 | - | Underway |
+> | Assignment 1: Project Plan | 2026-01-22 | 2026-02-01 | Underway |
+> | Checkpoint 1: Back-End Prototype | 2026-01-22 | 2026-03-01 | Plotted |
+> | Assignment 2: QA Strategy | 2026-01-22 | 2026-03-29 | Plotted |
+> | Checkpoint 2: Alpha Release | 2026-01-22 | 2026-03-29 | Plotted |
+> | Assignment 3: Documentation | 2026-01-22 | 2026-04-05 | Plotted |
+> | Checkpoint 3: Production Release | 2026-01-22 | 2026-04-05 | Plotted |
+> | Presentation: Live Demo | 2026-01-22 | 2026-04-12 | Plotted |
+>
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□■□□□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□■□□□□□□□ |
 >
 > </details>
 
 > ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md)
-> Total: 6.0h | Start: Jan 2026
+> Total: 8.0h | Start: Jan 2026
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
 > | Clarify the relationship between Microservice vs Clean-Architecture vs Domain-Driven Architecture | 2026-01-21 | - | Plotted |
 > | Understand the disadvantages of microservices | 2026-01-21 | - | Plotted |
-> | Passage | Topic | Date | Plotted |
+> | Review Lab1 (Car Rental) with diagrams | 2026-01-22 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□□□■■□□□□□■□ |
+> | Jan | 8.0h | □□□□□□□□□□□□□■■□□□□□■■□ |
 >
 > </details>
 
 > ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md)
-> Total: 3.0h | Start: Jan 2026
+> Total: 6.0h | Start: Jan 2026
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Document full BI architecture flow | 2026-01-22 | - | Underway |
+> | Document Data → Information → Knowledge transformation | 2026-01-22 | - | Underway |
+> | Compare Structured vs Semi-structured vs Unstructured | 2026-01-22 | - | Underway |
+> | Resolve questions | 2026-01-22 | - | Underway |
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□■□□□□□□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□■□□□□□□■□ |
 >
 > </details>
 
@@ -339,7 +357,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□□ |
+> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□□□ |
 >
 > </details>
 
