@@ -38,11 +38,14 @@ Riipen experiential learning platform project. Working on real-world projects to
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
 | 3 | 2026-01-19 | Verification | Completed 2-step verification (ID + Enrolment) |
+| 4 | 2026-01-23 | Project Assigned | Team 48 - Jill Hewlett Inc. Growth Strategy |
 
 ---
 
 ## Resources
 - FuturePath Program: https://futurepath.riipen.com/lrn/dashboard
+- Project Page: https://riipenlabs.riipen.com/teams/pOR4P26L/project
+- Template: `resources/growth-strategy-report-template.pdf`
 
 ---
 
