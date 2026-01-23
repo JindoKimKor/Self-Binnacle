@@ -37,6 +37,14 @@ Continuous study of software design patterns for writing maintainable, scalable,
 
 - Domain-Driven Design: Tackling Complexity in the Heart of Software (O'REILLY)
 
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Map VARLab 4-Layer Architecture to DDD concepts | - | 2026-01-23 | Clarify DDD understanding through hands-on experience |
+
+- VARLab Jenkins Library used Domain-Driven 4-Layer Architecture internally
+- Goal: Understand which DDD concepts were applied and how
+- Reference: `Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/highlights.md`
+
 ### Plotted (Reached)
 
 ---
@@ -45,6 +53,7 @@ Continuous study of software design patterns for writing maintainable, scalable,
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
 | [2026-01-11](logbook/2026-01-11/log.md) | 2026-01-11~17 | SRP & Smells analysis | Jenkins pipeline analysis, 51 issues identified |
+| [2026-01-19](logbook/2026-01-19/log.md) | 2026-01-19 | Polymorphism | Interface vs Abstract Class vs Virtual/Override decision tree |
 
 ---
 

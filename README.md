@@ -253,6 +253,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > |-------|---------|----------|--------|
 > | Write practical design patterns guide based on VARLab Code Debt experience | 2026-01-19 | - | Plotted |
 > | Skim "Domain-Driven Design" by Eric Evans | 2026-01-21 | - | Plotted |
+> | Map VARLab 4-Layer Architecture to DDD concepts | 2026-01-23 | - | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
