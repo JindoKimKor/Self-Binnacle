@@ -83,6 +83,14 @@
 
 ---
 
+## Urgent Sailing Orders
+
+| Order | Voyage | Deadline | Status |
+|-------|--------|----------|--------|
+| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | ⏰ 7일 후 |
+
+---
+
 ## Tasks (2)
 
 | Task | Created | Deadline |
@@ -156,6 +164,16 @@
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
 > | Research Coderbyte platform | 2026-01-20 | - | Underway |
+> | Attend Waterloo Entry-Level Virtual Job Fair | 2026-01-23 | 2026-01-30 | Plotted |
+> | Attend P4E Job Fair Winter 2026 | 2026-01-23 | 2026-02-04 | Plotted |
+> | Attend Toronto Diversity Virtual Job Fair | 2026-01-23 | 2026-02-11 | Plotted |
+> | Attend Toronto Technology Virtual Job Fair | 2026-01-23 | 2026-02-19 | Plotted |
+> | Attend Waterloo Technology Virtual Job Fair | 2026-01-23 | 2026-02-26 | Plotted |
+> | Attend Toronto Entry-Level Virtual Job Fair | 2026-01-23 | 2026-02-27 | Plotted |
+> | Attend Waterloo Entry-Level Virtual Job Fair | 2026-01-23 | 2026-03-06 | Plotted |
+> | Attend Hire Canada Job Fair | 2026-01-23 | 2026-03-25 | Plotted |
+> | Attend Waterloo Technology Virtual Job Fair | 2026-01-23 | 2026-04-02 | Plotted |
+> | Attend Toronto Career Fair | 2026-01-23 | 2026-04-03 | Plotted |
 >
 > <details>
 > <summary>Monthly Activity</summary>
