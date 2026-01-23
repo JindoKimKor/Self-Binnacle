@@ -1,12 +1,15 @@
 # Self-Binnacle
 
-Personal framework for metacognition, time management, and growth mindset using PARA method.
+**What is this?** AI-integrated personal life management framework built on nautical philosophy.
 
-- **Tasks**: One-off to-dos with deadlines
-- **Projects**: Goals with defined outcomes
-- **Areas**: Ongoing responsibilities and interests
+**Core concept?** I navigate myself as a ship in the ocean of life—where I am both the captain and the ship. Self-Binnacle is the binnacle that holds my compass (direction) and logbook (voyage records).
 
-Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluating**
+**How it works?** This framework integrates self-management methodologies with AI tooling for systematic implementation.
+
+**What methodologies are integrated?**
+- PARA method (Tasks, Projects, Areas)
+- Metacognition cycle (Planning → Monitoring → Evaluating)
+
 
 ---
 
@@ -50,6 +53,8 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 | Voyage | Last Activity | Days |
 |--------|---------------|------|
+| [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
+| [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
 | [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 60 |
 | [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 31 |
 
@@ -73,6 +78,8 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 | [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | Submit Session 1 Interaction Reflection Form | 2026-01-18 | - |
 | [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) | Enhance "What I Did" section using cover letter and job application content | 2026-01-23 | - |
 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | Research Coderbyte platform | 2026-01-20 | - |
+| [programming-languages](Voyages/Areas/programming-languages/voyage-plan.md) | Consolidate distributed programming language study materials | 2026-01-23 | - |
+| [system-fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | Consolidate distributed CS study materials | 2026-01-23 | - |
 
 ---
 
@@ -123,7 +130,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md)
-> Total: 134.8h | Start: Sep 2025
+> Total: 133.8h | Start: Sep 2025
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -139,7 +146,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
-> | Sep | 7.0h | □□□□□□□□□□□□□□□□□□□□□□□□■□□□□■ |
+> | Sep | 6.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 >
 > </details>
 
@@ -229,7 +236,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 
 ---
 
-## Areas (2)
+## Areas (4)
 
 > ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md)
 > Total: 18.2h | Start: Jul 2024 | Tracked from Oct 2025
@@ -245,6 +252,15 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
 >
 > </details>
+
+> ### [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md)
+> Total: 0h | Start: Jan 2026
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Consolidate distributed programming language study materials | 2026-01-23 | - | Underway |
+> | Research "Why Different?" questions in data-types-comparison | 2026-01-23 | - | Plotted |
+>
 
 > ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md)
 > Total: 76.0h | Start: Jan 2025 | Tracked from Oct 2025
@@ -267,6 +283,14 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > </details>
 
+> ### [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md)
+> Total: 0h | Start: Jan 2026
+>
+> | Order | Created | Deadline | Status |
+> |-------|---------|----------|--------|
+> | Consolidate distributed CS study materials | 2026-01-23 | - | Underway |
+>
+
 ---
 
 ## Classes (5)
@@ -288,7 +312,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 > </details>
 
 > ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md)
-> Total: 3.0h | Start: Jan 2026
+> Total: 6.0h | Start: Jan 2026
 >
 > | Order | Created | Deadline | Status |
 > |-------|---------|----------|--------|
@@ -308,7 +332,7 @@ Each voyage follows a metacognition cycle: **Planning → Monitoring → Evaluat
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□■□□□□□□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□□■□□□□□□■ |
 >
 > </details>
 
