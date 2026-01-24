@@ -1,6 +1,6 @@
 portfolios:
   - path: ../README.md
-    url: Voyages/Projects/Helprr.ai/README.md
+    url: https://github.com/JindoKimKor/Self-Binnacle/blob/main/Voyages/Projects/Helprr.ai/README.md
     status: complete
     title: "Led Team's First Successful SDLC at Helprr.ai"
     labels:

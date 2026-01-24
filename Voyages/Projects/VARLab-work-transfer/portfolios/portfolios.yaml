@@ -10,6 +10,7 @@ portfolios:
       Keywords: "Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)"
 
   - path: devops-jenkins-linux/94.88-percent-cost-reduction/README.md
+    url: "https://github.com/JindoKimKor/Self-Binnacle/blob/main/Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/94.88-percent-cost-reduction/README.md"
     status: complete
     title: "94.88% CI/CD Infrastructure Cost Reduction"
     labels:
@@ -20,6 +21,7 @@ portfolios:
       Keywords: "Azure Batch, Spot VMs, Docker, Unity, Cost Optimization"
 
   - path: devops-jenkins-windows/stabilized-crashed-build-server/README.md
+    url: "https://github.com/JindoKimKor/Self-Binnacle/blob/main/Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-windows/stabilized-crashed-build-server/README.md"
     status: complete
     title: "Stabilized Crashed Unity Build Server"
     labels:
