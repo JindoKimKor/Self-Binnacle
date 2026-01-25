@@ -2,9 +2,9 @@ portfolios:
   - path: ../README.md
     url: https://github.com/JindoKimKor/Self-Binnacle/blob/main/Voyages/Projects/Helprr.ai/README.md
     status: complete
-    title: "Led Team's First Successful SDLC at Helprr.ai"
+    title: "Joined as Backend Developer, Led Team's First Successful SDLC"
     labels:
-      Context: "Startup with no SDLC infrastructure, part-time student team"
-      Problem: "Backend development blocked by missing requirements workflow, testing environment, and CI/CD access"
-      Solution: "Unified Feature Specification format, GitHub Ruleset, AWS IAM/CodePipeline configuration"
-      Keywords: "SDLC, API Contracts, GitHub Ruleset, AWS IAM, CodePipeline, Django"
+      Context: "Challenging Situations (Part-time startup team, no development process, limited real-time communication)"
+      Problem: "No requirements-to-code workflow, isolated dev environment, no CI/CD feedback loop"
+      Solution: "Unified Feature Specification for cross-functional workflow, GitHub Ruleset + AWS CodePipeline for code-to-staging infrastructure"
+      Keywords: "SDLC, Feature Specification, GitHub Ruleset, AWS IAM, CodePipeline, Django"

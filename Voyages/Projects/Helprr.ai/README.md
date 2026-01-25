@@ -14,48 +14,26 @@ Joined as backend developer, but discovered multiple blockers:
    - No documentation system to translate CEO/PM requirements into implementable specs
    - Developers couldn't design code or database without clear specifications
 
-2. **No Safe Testing Environment**
-   - CEO/PM hesitant to give developers access to production repo
-   - Main branch directly affects production - no protection against human error
+2. **Isolated Development Environment**
+   - Production branch exposed to human error, causing CEO/PM hesitant to give developer access to base repo
    - Had to work on forked repo, but no third-party credentials, environment config, or mock database existed
 
-3. **No CI/CD Access Control**
-   - Developers couldn't verify their code changes in staging environment
+3. **No CI/CD Feedback Loop**
+   - Developers couldn't see if integration succeeded, failed, or why it failed on the pipeline
 
 ## What I Did
 
-Took ownership to build the foundation before feature implementation could begin.
-
-```mermaid
-flowchart LR
-    subgraph Problem["No SDLC Infrastructure"]
-        A[Joined as Backend Dev]
-    end
-
-    subgraph Initiative["Led SDLC Foundation"]
-        B[CEO/PM Requirements] --> C[Use Case Flow Diagram]
-        C --> D[Unified API Contract Doc]
-        C --> E[Database Design]
-        D --> F[Frontend Agreement]
-        E --> F
-    end
-
-    subgraph Parallel["Parallel Work"]
-        G[Mentor Junior Dev]
-        H[CI/CD Infrastructure]
-    end
-
-    A --> B
-    F --> I[Feature Implementation Ready]
-    G --> I
-    H --> I
-```
+> I didn't limit myself to my position title.
+>
+> The situation was challenging: **part-time schedules** across the team, **no development process**, **limited real-time communication**. Development couldn't move forward.
+>
+> To unblock my own development and set up future developers, I designed and led the adoption of a workflow system that guides each role naturally through the SDLC. That system is now the team's standard reference.
 
 ## The Result
 
-- Led team's first successful SDLC by establishing development infrastructure
-- Unblocked stalled development by designing unified feature specification format combining user stories, wireframes, and API contracts, and leading cross-functional team to adopt it as standard reference
-- Resolved bottlenecked backend code integration workflow by configuring GitHub Ruleset and AWS IAM policies on CodePipeline, enabling developer-owned code-to-staging feedback loop
+- Led team's first successful SDLC by establishing development infrastructure and workflow
+    - **Workflow:** Unblocked stalled development by designing unified feature specification format combining user stories, wireframes, and API contracts, and leading cross-functional team to adopt it as standard reference
+    - **Infrastructure:** Resolved bottlenecked backend code integration workflow by configuring GitHub Ruleset and AWS IAM policies on CodePipeline, enabling developer-owned code-to-staging feedback loop
 
 **Role changed: Backend Developer → Backend Development Lead**
 
@@ -73,7 +51,6 @@ flowchart LR
 ## Responsibilities
 
 - Lead backend development for mental wellness application adding mood-based care features
-- Ramped up on Django codebase
 - Mentored junior backend developer through database schema design and API implementation
 
 ---
@@ -82,6 +59,7 @@ flowchart LR
 
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
+| - | Sep-Nov 2025 | Discovery & Design | Codebase analysis, feature specification, backend design (database, API, logic), implementation roadmap |
 | 1 | 2025-12-23 | Documentation Restructure | 3 categories: Backend Onboarding, API-Contract, Implementation |
 | 2 | 2025-12-29 | AWS IAM Setup | CodePipeline permissions, IAM Policy/User/Group, Confluence docs |
 | 3 | 2026-01-02 | CodePipeline PR Merge Demo | Synced fork, verified pipeline, recorded demo video |
@@ -96,30 +74,36 @@ flowchart LR
 *Context: Part-time team, Students with limited SDLC experience, Startup environment*
 
 ### Unified Feature Specification (SDLC: Planning & Analysis, Design Phases)
-- API Contract Instruction - *Not available due to NDA*
-- [API Contract Template](logbook/2025-12-23/resources/api-contract-template.pdf) - Instruction included
+- Instruction Document - *Not available due to NDA*
+- [Unified Feature Specification Template](logbook/2025-12-23/resources/unified-feature-specification-template.pdf)
+  - User Story
+  - Wireframe & User Action
+  - Frontend Requirements (UI Components, State Management)
+  - Backend Requirements (Business Logic, Validation Rules)
+  - API Contract (Endpoint, Request, Response)
+  - Discussion Points
 - Database Design - *Not available due to NDA*
-- API Contracts (Feature Implementation) - *Not available due to NDA*
+- Feature Specifications - *Not available due to NDA*
 
 ```mermaid
 sequenceDiagram
     participant PM as 📋 CEO/PM
     participant DF as 🎨 Designer/Frontend
-    participant Doc as 📄 API Contract
+    participant Spec as 📄 Feature Spec
     participant FE as 💻 Frontend Dev
     participant BE as 🔧 Backend Dev
     participant Next as ➡️ Code-to-Staging
 
     rect rgb(55, 105, 150)
         Note over PM,Next: Planning & Design Phase
-        PM->>Doc: User Story
-        DF->>Doc: Wireframe
-        loop UNTIL API CONTRACT COMPLETE
-            DF->>Doc: Map User Interaction
-            FE->>Doc: State Management
-            BE->>Doc: DB Design, Logic, Error Handling
+        PM->>Spec: User Story
+        DF->>Spec: Wireframe
+        loop UNTIL SPECIFICATION COMPLETE
+            DF->>Spec: Map User Interaction
+            FE->>Spec: State Management
+            BE->>Spec: DB Design, Logic, Error Handling
         end
-        Doc->>Next: API Contract Complete
+        Spec->>Next: Specification Complete
     end
 ```
 

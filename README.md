@@ -16,14 +16,14 @@
 
 ## Portfolios
 
-> **Achievement:** Led Team's First Successful SDLC at Helprr.ai
+> **Achievement:** Joined as Backend Developer, Led Team's First Successful SDLC
 > <details>
 > <summary>Click to view details</summary>
 > 
-> - Context: Startup with no SDLC infrastructure, part-time student team
-> - Problem: Backend development blocked by missing requirements workflow, testing environment, and CI/CD access
-> - Solution: Unified Feature Specification format, GitHub Ruleset, AWS IAM/CodePipeline configuration
-> - Keywords: SDLC, API Contracts, GitHub Ruleset, AWS IAM, CodePipeline, Django
+> - Context: Challenging Situations (Part-time startup team, no development process, limited real-time communication)
+> - Problem: No requirements-to-code workflow, isolated dev environment, no CI/CD feedback loop
+> - Solution: Unified Feature Specification for cross-functional workflow, GitHub Ruleset + AWS CodePipeline for code-to-staging infrastructure
+> - Keywords: SDLC, Feature Specification, GitHub Ruleset, AWS IAM, CodePipeline, Django
 > - Link: https://github.com/JindoKimKor/Self-Binnacle/blob/main/Voyages/Projects/Helprr.ai/README.md
 > 
 > </details>
@@ -85,6 +85,7 @@
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
 | [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 61 |
+| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 32 |
 
 ---
 
@@ -149,15 +150,15 @@
 >
 > </details>
 
-> ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 1 Underway, 1 Plotted
-> Total: 133.8h | Start: Sep 2025
+> ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 1 Underway
+> Total: 136.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Enhance "What I Did" section using cover letter and job application content | 2026-01-23 | - |
+> | Upload CodePipeline Demo video to YouTube and replace mp4 link | 2026-01-21 | - |
 >
 > </details>
 > <details>
@@ -165,7 +166,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 14.0h | □■□■□□■□□□□□□□■□□□■□□■□□ |
+> | Jan | 17.0h | □■□■□□■□□□□□□□■□□□■□□■□■ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -255,14 +256,14 @@
 ## Areas (4)
 
 > ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md)
-> Total: 19.2h | Start: Jul 2024 | Tracked from Oct 2025
+> Total: 18.2h | Start: Jul 2024 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□□□□□□□□□□□□□□□□□□□■ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |

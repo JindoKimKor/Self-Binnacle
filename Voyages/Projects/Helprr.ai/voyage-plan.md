@@ -33,16 +33,6 @@ Backend Development Lead (Part-time Contract) at Helprr.ai - a mental wellness a
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Enhance "What I Did" section using cover letter and job application content | - | 2026-01-23 | Strengthen "Took ownership to build foundation" narrative |
-
-- Reference: cover letter, job application form content
-
----
-
-### Plotted Courses
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
 | Upload CodePipeline Demo video to YouTube and replace mp4 link | - | 2026-01-21 | GitHub doesn't support video playback |
 
 ---
@@ -53,7 +43,15 @@ Backend Development Lead (Part-time Contract) at Helprr.ai - a mental wellness a
 
 ---
 
+### Plotted Courses
+
 ### Plotted (Reached)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Enhance "What I Did" section using cover letter content | - | 2026-01-23 | Strengthen portfolio narrative |
+
+---
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
@@ -65,12 +63,13 @@ Backend Development Lead (Part-time Contract) at Helprr.ai - a mental wellness a
 
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
-| 1 | 2025-12-23 | Documentation Restructure | 3 categories: Backend Onboarding, API-Contract, Implementation |
+| 1 | 2025-12-23 | Documentation Restructure | 3 categories: Backend Onboarding, Unified Feature Specification, Implementation |
 | 2 | 2025-12-29 | AWS IAM Setup | CodePipeline permissions, IAM Policy/User/Group, Confluence docs |
 | 3 | 2026-01-02 | CodePipeline PR Merge Demo | Synced fork, verified pipeline, recorded demo video |
 | 4 | 2026-01-04 | New Backend Developer Onboarding | Full workflow demo, PR→Merge→CI/CD, documentation walkthrough |
 | 5 | 2026-01-06 | S3 & CodePipeline IAM | Created S3 buckets, CodePipelines, IAM Policy documentation |
 | 6 | 2026-01-19 | GitHub Branch Protection | Ruleset setup guide, Confluence docs, shared with PM |
+| 7 | 2026-01-24 | Portfolio Enhancement | What I Did section, terminology update (API Contract → Unified Feature Specification) |
 
 ---
 
