@@ -29,14 +29,14 @@
 > </details>
 <br>
 
-> **Achievement:** Software Smells Analysis & Architecture Redesign
+> **Achievement:** Domain-Driven Architecture Refactoring
 > <details>
 > <summary>Click to view details</summary>
 > 
-> - Context: 14-month technical debt resolution at VARLab
-> - Analysis: SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells
-> - Solution: 4-Layer Architecture, 3-Level Logger System
-> - Keywords: Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)
+> - What I did: Transformed 5 monolithic pipelines (37% duplication) into 4-layer architecture with centralized libraries
+> - How it emerged: Felt the pain → organized by domain naturally → patterns emerged
+> - Post-analysis: Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns)
+> - Documentation: Problem analysis, pattern identification, architecture rationale
 > - Link: https://jindokimkor.github.io/Self-Binnacle/
 > 
 > </details>
@@ -74,7 +74,7 @@
 
 ## Dashboard
 
-> Last updated: 2026-01-24
+> Last updated: 2026-01-25
 
 ---
 
@@ -84,8 +84,8 @@
 |--------|---------------|------|
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
-| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 61 |
-| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 32 |
+| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 62 |
+| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 33 |
 
 ---
 
@@ -93,7 +93,8 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | ⏰ 6 days |
+| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | ⏰ 5 days |
+| Assignment 1: Project Plan | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-01 | ⏰ 7 days |
 
 ---
 
@@ -124,7 +125,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□ |
+> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -145,7 +146,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□□ |
+> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
@@ -166,7 +167,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 17.0h | □■□■□□■□□□□□□□■□□□■□□■□■ |
+> | Jan | 17.0h | □■□■□□■□□□□□□□■□□□■□□■□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -190,7 +191,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□ |
+> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -204,7 +205,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□ |
+> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -219,7 +220,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -227,15 +228,24 @@
 >
 > </details>
 
-> ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 8 Plotted
+> ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 2 Underway, 6 Plotted
 > Total: 83.2h | Start: Jan 2026
 >
+> <details>
+> <summary>Sailing Orders</summary>
+>
+> | Order | Created | Deadline |
+> |-------|---------|----------|
+> | Update Software Smells portfolio README layout & fix TOC | 2026-01-23 | - |
+> | Restructure 4-layer architecture portfolio for visitor navigation | 2026-01-25 | - |
+>
+> </details>
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□□□□□ |
+> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□□□□□□ |
 >
 > </details>
 
@@ -247,7 +257,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□ |
 >
 > </details>
 
@@ -263,7 +273,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -290,7 +300,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□□ |
+> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -329,7 +339,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□□□ |
+> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□□□□ |
 >
 > </details>
 
@@ -352,7 +362,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□□□□□■□□□□□□■□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□□■□□□□□□■□□ |
 >
 > </details>
 
@@ -364,7 +374,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 8.0h | □□□□□□□□□□□□□■■□□□□□■■□□ |
+> | Jan | 8.0h | □□□□□□□□□□□□□■■□□□□□■■□□□ |
 >
 > </details>
 
@@ -387,7 +397,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□□□□■□□□□□□■□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□■□□□□□□■□□□ |
 >
 > </details>
 
@@ -407,7 +417,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□□□□ |
+> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□□□□□ |
 >
 > </details>
 
