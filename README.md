@@ -29,7 +29,7 @@
 > </details>
 <br>
 
-> **Achievement:** Domain-Driven Architecture Refactoring
+> **Achievement:** Retrospective Analysis: From 5 Monolithic pipeline to 4-Layer Pipeline
 > <details>
 > <summary>Click to view details</summary>
 > 
@@ -74,7 +74,7 @@
 
 ## Dashboard
 
-> Last updated: 2026-01-25
+> Last updated: 2026-01-26
 
 ---
 
@@ -82,10 +82,11 @@
 
 | Voyage | Last Activity | Days |
 |--------|---------------|------|
+| [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) | - | Never |
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
-| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 62 |
-| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 33 |
+| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 63 |
+| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 34 |
 
 ---
 
@@ -93,8 +94,8 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | ⏰ 5 days |
-| Assignment 1: Project Plan | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-01 | ⏰ 7 days |
+| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | ⏰ 4 days |
+| Assignment 1: Project Plan | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-01 | ⏰ 6 days |
 
 ---
 
@@ -107,7 +108,7 @@
 
 ---
 
-## Projects (8)
+## Projects (9)
 
 > ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) — 1 Underway, 1 Plotted
 > Total: 10.8h | Start: Dec 2025
@@ -125,7 +126,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□ |
+> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -146,7 +147,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□□□ |
+> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
@@ -167,7 +168,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 17.0h | □■□■□□■□□□□□□□■□□□■□□■□■□ |
+> | Jan | 17.0h | □■□■□□■□□□□□□□■□□□■□□■□■□□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -191,11 +192,15 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□ |
+> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
 > </details>
+
+> ### [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) — 2 Plotted
+> Total: 0h | Start: Jan 2026
+>
 
 > ### [Riipen](Voyages/Projects/riipen/voyage-plan.md)
 > Total: 22.2h | Start: Sep 2025 | Tracked from Oct 2025
@@ -205,7 +210,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□ |
+> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -220,7 +225,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -228,8 +233,8 @@
 >
 > </details>
 
-> ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 2 Underway, 6 Plotted
-> Total: 83.2h | Start: Jan 2026
+> ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 18 Underway, 6 Plotted
+> Total: 108.8h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -238,6 +243,36 @@
 > |-------|---------|----------|
 > | Update Software Smells portfolio README layout & fix TOC | 2026-01-23 | - |
 > | Restructure 4-layer architecture portfolio for visitor navigation | 2026-01-25 | - |
+> | 파일 | 목적 | 라인수 |
+> | Entry point, 네비게이션 허브 | highlights.md | - |
+> |  | 153 | problem-analysis-overview.md |
+> | logger-system-design-integration.md | Logger 설계 상세 | 514 |
+> | 448 |  | DDD 분석 (supplement) |
+> | CPS 제약 설명 | 중복 영역 | **발견된 중복/겹침**: |
+> | 해결 방안 | ---------- | - |
+> | highlights에서 요약 + 링크 | Architecture Snapshot | - |
+> | 역할 명확화 필요 | 현재 이름 | **문서 의존성 구조**:
+```
+README.md (hub)
+├── highlights.md (what)
+├── problem-analysis-overview.md (why)
+├── legs/README.md (how)
+└── domain-driven-analysis.md (supplement)
+```
+
+</details>
+
+<details>
+<summary><strong>파일명 검토</strong></summary>
+
+**Root Level**: |
+> | `highlights.md` |  | "what" 역할인데 이름이 모호? |
+> | 길다 |  | - |
+> |  | 현재 이름 | **legs/ 폴더**: |
+> | `refactoring-result-snapshot.md` |  | legs/ 안에 있어야 하나? root로 이동? |
+> | 폴더명 길다 |  | - |
+> |  | `leg-3-bitbucket-api-and-shell-library-integration/` | - |
+> |  | 폴더명 길다 | `leg-4-full-pipeline-refactoring-and-stage-modularization/` |
 >
 > </details>
 > <details>
@@ -245,7 +280,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 83.2h | □□□□□□□■□■■■■■■■■□□□□□□□□ |
+> | Jan | 108.8h | □□□□□□□■□■■■■■■■■□□□□□□■■■ |
 >
 > </details>
 
@@ -257,7 +292,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□ |
 >
 > </details>
 
@@ -273,7 +308,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -300,7 +335,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□□□ |
+> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -339,7 +374,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□□□□ |
+> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□ |
 >
 > </details>
 
@@ -362,7 +397,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□□□□□■□□□□□□■□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□□■□□□□□□■□□□ |
 >
 > </details>
 
@@ -374,7 +409,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 8.0h | □□□□□□□□□□□□□■■□□□□□■■□□□ |
+> | Jan | 8.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□ |
 >
 > </details>
 
@@ -397,7 +432,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□□□□■□□□□□□■□□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□■□□□□□□■□□□□ |
 >
 > </details>
 
@@ -417,7 +452,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□□□□□ |
+> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□□□□□□ |
 >
 > </details>
 
