@@ -47,15 +47,15 @@ This document provides a comprehensive analysis of the codebase after the refact
 | Category | Files | Lines (approx) | Status |
 |----------|-------|----------------|--------|
 | **sharedLibraries/vars/** | 13 | 1,104 | NEW - Pipeline stages |
-| **sharedLibraries/src/** | 7 | 1,126 | NEW - Core business logic |
+| **sharedLibraries/src/** | 5 | 1,047 | NEW - Core business logic |
 | **groovy/** | 3 | 1,824 | Legacy (being migrated) |
 | **DLXJenkins/** | 2 | 286 | Refactored |
 | **JsJenkins/** | 2 | 743 | Being Refactored |
 | **PipelineForJenkins/** | 1 | 185 | Being Refactored |
 | **python/** | 15 | 2,069 | Legacy (to be eliminated) |
 | **Bash/** | 2 | 330 | Shell scripts |
-| **tests/** | 6 | 243 | NEW - Unit tests |
-| **TOTAL** | 51 | 7,910 | |
+| **tests/** | 5 | 200 | NEW - Unit tests |
+| **TOTAL** | 48 | 7,788 | |
 
 ### 1.2 Architecture Summary
 
@@ -69,34 +69,38 @@ flowchart TB
 
     subgraph Layer2["Layer 2: Orchestration (vars/)"]
         STAGES[Stage Functions]
-        LOGGER[logger.groovy]
-        SSH[shellScriptHelper.groovy]
-        BAH[bitbucketApiHelper.groovy]
     end
 
-    subgraph Layer3["Layer 3: Services (src/service/)"]
-        HTTP[HttpApiService]
-        PWS[PrepareWorkspaceService]
-        BPS[BuildProjectService]
+    subgraph Layer3["Layer 3: Services"]
+        subgraph L3_SRC["src/service/"]
+            HTTP[HttpApiService]
+        end
+        subgraph L3_VARS["vars/ (CPS Constraint)"]
+            SSH[shellScriptHelper]
+            BAH[bitbucketApiHelper]
+        end
     end
 
-    subgraph Layer4["Layer 4: Utilities (src/utils/)"]
+    subgraph Layer4["Layer 4: Utilities (src/utils/ + src/resource/)"]
         GIT[GitLibrary]
         SHELL[ShellLibrary]
         SSHLIB[SSHShellLibrary]
-    end
-
-    subgraph Layer5["Layer 5: Resources (src/resource/)"]
         STATUS[Status Constants]
+        subgraph L4_CC["Cross-Cutting (vars/)"]
+            LOGGER[logger]
+            BAL[bitbucketApiLibrary]
+        end
     end
 
     JF --> STAGES
-    STAGES --> LOGGER
     STAGES --> SSH
     STAGES --> BAH
+    STAGES -.-> LOGGER
     SSH --> GIT
     SSH --> SHELL
     SSH --> SSHLIB
+    SSH -.-> LOGGER
+    BAH --> BAL
     BAH --> HTTP
     STAGES --> STATUS
     HTTP --> STATUS
@@ -125,17 +129,13 @@ devops-linux-jenkins/
 │   │   ├── stageDeployBuild.groovy                         - Build deployment
 │   │   └── stageCleanupPRBranchArtifacts.groovy            - PR cleanup
 │   │
-│   └── src/                                            [7 files - Library Source]
+│   └── src/                                            [5 files - Library Source]
 │       ├── resource/
 │       │   └── Status.groovy                               - Status constants
 │       │
 │       ├── service/
-│       │   ├── general/
-│       │   │   ├── HttpApiService.groovy                   - HTTP client
-│       │   │   └── PrepareWorkspaceService.groovy
-│       │   │
-│       │   └── unity/
-│       │       └── BuildProjectService.groovy
+│       │   └── general/
+│       │       └── HttpApiService.groovy                   - HTTP client
 │       │
 │       └── utils/
 │           ├── GitLibrary.groovy                           - Git operations
@@ -179,18 +179,14 @@ devops-linux-jenkins/
 │   ├── .editorconfig
 │   └── Linting.bash
 │
-├── tests/                                              [6 files - Unit Tests]
+├── tests/                                              [5 files - Unit Tests]
 │   ├── GeneralHelperSpec.groovy
 │   └── src/
 │       ├── resource/
 │       │   ├── JenkinsFile.groovy                          - Mock interface
 │       │   └── StatusSpec.groovy
-│       └── service/
-│           ├── MyPipelineTest.groovy
-│           ├── general/
-│           │   └── PrepareWorkspaceServiceSpec.groovy
-│           └── unity/
-│               └── BuildProjectServiceSpec.groovy
+│       └── utils/
+│           └── GitLibrarySpec.groovy                       - Git closure tests
 │
 └── Configuration Files
     ├── build.gradle
@@ -317,7 +313,7 @@ flowchart LR
 
 #### 3.2.1 utils/ - Command Libraries
 
-##### GitLibrary.groovy (480 lines, 31 operations)
+##### GitLibrary.groovy (480 lines, 23 operations)
 
 | Category | Operations |
 |----------|------------|
@@ -414,16 +410,6 @@ flowchart TB
 - Bearer Token authentication
 - 6 exception types handled
 - Automatic resource cleanup
-
-##### PrepareWorkspaceService.groovy (34 lines)
-
-- Git LFS file management
-- Untracked LFS file detection and pull
-
-##### BuildProjectService.groovy (45 lines)
-
-- Unity build asset validation
-- LightingData.asset, ReflectionProbe verification
 
 #### 3.2.3 resource/ - Constants
 
@@ -549,21 +535,18 @@ flowchart TB
 
     subgraph Tests["Test Suites"]
         SS[StatusSpec.groovy]
-        PWSS[PrepareWorkspaceServiceSpec.groovy]
-        BPSS[BuildProjectServiceSpec.groovy]
+        GLTS[GitLibrarySpec.groovy]
     end
 
     SPEC --> Tests
-    JF --> PWSS
-    JF --> BPSS
+    JF --> GLTS
 ```
 
 **Test Coverage:**
 - `GeneralHelperSpec.groovy`: General helper function tests
 - `StatusSpec.groovy`: Status constants verification
 - `MyPipelineTest.groovy`: Pipeline test framework setup
-- `PrepareWorkspaceServiceSpec.groovy`: Workspace preparation logic
-- `BuildProjectServiceSpec.groovy`: Unity build validation logic
+- `GitLibrarySpec.groovy`: Git command closure verification
 - `JenkinsFile.groovy`: Jenkins method mocking interface
 
 ---
@@ -632,7 +615,7 @@ flowchart TB
 
 ### 4.3 Service Layer Pattern
 
-**Where:** HttpApiService, PrepareWorkspaceService, BuildProjectService
+**Where:** HttpApiService
 
 **Benefits:**
 - Business logic encapsulation
@@ -742,7 +725,7 @@ sequenceDiagram
 | **Code Location** | Centralized in sharedLibraries |
 | **Logging** | 3-Level hierarchical logger (15+ methods) |
 | **Shell Execution** | Validated shellScriptHelper with Command Pattern |
-| **Git Operations** | 31 reusable closures in GitLibrary |
+| **Git Operations** | 23 reusable closures in GitLibrary |
 | **API Calls** | Native HttpApiService (Apache HttpClient) |
 | **Error Handling** | Centralized with automatic stack traces |
 | **Test Infrastructure** | Spock framework + Mock interface |
@@ -752,15 +735,15 @@ sequenceDiagram
 
 | Metric | Count |
 |--------|-------|
-| Total files | 51 |
-| Total lines | 7,910 |
+| Total files | 48 |
+| Total lines | 7,788 |
 | vars/ functions | 13 |
-| Service classes | 3 |
+| Service classes | 1 |
 | Utility libraries | 3 |
-| Shell command closures | 54 |
+| Shell command closures | 46 |
 | Logger methods | 15+ |
-| Test specs | 5 |
-| Test lines | 243 |
+| Test specs | 4 |
+| Test lines | 200 |
 
 ### 6.3 Architectural Principles Applied
 
@@ -772,7 +755,7 @@ sequenceDiagram
 
 2. **Reusability**
    - Stage functions designed to be used across multiple Jenkinsfiles
-   - 54 shell commands available to all stages
+   - 46 shell commands available to all stages
    - Single logger instance used everywhere
 
 3. **Maintainability**
@@ -797,27 +780,25 @@ flowchart TB
         PFJ[PipelineForJenkins/Jenkinsfile]
     end
 
-    subgraph VarsLayer["vars/ Layer"]
+    subgraph VarsLayer["vars/ - Orchestration + Services (CPS)"]
         STAGES[stage*.groovy]
-        LOG[logger.groovy]
-        SSH[shellScriptHelper.groovy]
-        BAH[bitbucketApiHelper.groovy]
-        BAL[bitbucketApiLibrary.groovy]
+        SSH[shellScriptHelper]
+        BAH[bitbucketApiHelper]
+        BAL[bitbucketApiLibrary]
+        LOG[logger]
     end
 
-    subgraph ServiceLayer["service/ Layer"]
+    subgraph ServiceLayer["src/service/"]
         HTTP[HttpApiService]
-        PWS[PrepareWorkspaceService]
-        BPS[BuildProjectService]
     end
 
-    subgraph UtilsLayer["utils/ Layer"]
+    subgraph UtilsLayer["src/utils/"]
         GIT[GitLibrary]
         SHELL[ShellLibrary]
         SSHLIB[SSHShellLibrary]
     end
 
-    subgraph ResourceLayer["resource/ Layer"]
+    subgraph ResourceLayer["src/resource/"]
         STATUS[Status]
     end
 
@@ -825,15 +806,16 @@ flowchart TB
     JS --> STAGES
     PFJ --> STAGES
 
-    STAGES --> LOG
     STAGES --> SSH
     STAGES --> BAH
-    STAGES --> BAL
+    STAGES -.-> LOG
 
     SSH --> GIT
     SSH --> SHELL
     SSH --> SSHLIB
+    SSH -.-> LOG
 
+    BAH --> BAL
     BAH --> HTTP
     BAL --> STATUS
 
@@ -1000,7 +982,7 @@ This commit (`12910c1`) represents a well-structured, modular Jenkins CI/CD pipe
 
 **Architecture Characteristics:**
 - 4-Layer Architecture with clear separation of concerns
-- Command Pattern for 54 shell operations
+- Command Pattern for 46 shell operations
 - Facade Pattern for simplified interfaces (logger, shellScriptHelper, bitbucketApiHelper)
 - Service Layer for testable business logic
 - 3-Level hierarchical logging system

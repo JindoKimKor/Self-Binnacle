@@ -508,6 +508,6 @@ sequenceDiagram
 
 ## Reference
 
-- [Leg 2 Changelog](legs/leg-2-3-level-logger-system-implementation/changelog.md) - Detailed implementation process record
+- [Phase 2 Changelog](phase-2-3-level-logger-system-implementation/changelog.md) - Detailed implementation process record
 - [highlights.md](highlights.md) - Logger System Integration section
-- [refactoring-result-snapshot.md](legs/refactoring-result-snapshot.md) - Facade Pattern explanation
+- [refactoring-result-snapshot.md](refactoring-result-snapshot.md) - Facade Pattern explanation

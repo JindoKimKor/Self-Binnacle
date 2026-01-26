@@ -1,4 +1,4 @@
-# Leg 0: Global Trusted Shared Library Setup
+# Phase 0: Global Trusted Shared Library Setup
 
 ## Basic Information
 
@@ -459,7 +459,7 @@ Before                              After
 
 ### 5.2 Why Trusted is Needed
 
-Features to be implemented in subsequent Legs:
+Features to be implemented in subsequent Phases:
 - `@NonCPS` annotation usage (CPS transformation bypass)
 - File I/O operations
 - Direct Apache HttpClient usage
@@ -480,4 +480,4 @@ Branch/tag specification enables per-pipeline Library version management.
 
 ## 6. Next Steps
 
-→ Leg 1: ShellScript Modularization & Initialization Stage
+→ Phase 1: ShellScript Modularization & Initialization Stage

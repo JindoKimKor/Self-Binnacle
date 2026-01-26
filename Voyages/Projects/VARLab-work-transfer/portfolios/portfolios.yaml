@@ -2,12 +2,12 @@ portfolios:
   - path: devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/README.md
     url: "https://jindokimkor.github.io/Self-Binnacle/"
     status: complete
-    title: "Software Smells Analysis & Architecture Redesign"
+    title: "Retrospective Analysis: From 5 Monolithic pipeline to 4-Layer Pipeline"
     labels:
-      Context: "14-month technical debt resolution at VARLab"
-      Analysis: "SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells"
-      Solution: "4-Layer Architecture, 3-Level Logger System"
-      Keywords: "Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)"
+      What I did: "Transformed 5 monolithic pipelines (37% duplication) into 4-layer architecture with centralized libraries"
+      How it emerged: "Felt the pain → organized by domain naturally → patterns emerged"
+      Post-analysis: "Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns)"
+      Documentation: "Problem analysis, pattern identification, architecture rationale"
 
   - path: devops-jenkins-linux/94.88-percent-cost-reduction/README.md
     url: "https://github.com/JindoKimKor/Self-Binnacle/blob/main/Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/94.88-percent-cost-reduction/README.md"

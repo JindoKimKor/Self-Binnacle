@@ -1,10 +1,10 @@
-# Leg 1: ShellScript Modularization & Initialization Stage
+# Phase 1: ShellScript Modularization & Initialization Stage
 
 ## Basic Information
 
 | Item | Value |
 |------|-------|
-| **Start** | `3c6422c` (2025-04-24, Leg 0 ended) |
+| **Start** | `3c6422c` (2025-04-24, Phase 0 ended) |
 | **Final** | `d699fac` (2025-04-26) |
 | **Total Commits** | 12 |
 | **Duration** | 2025-04-25 (1 day) |
@@ -284,4 +284,4 @@ stage('Initialization') {
 
 ## 8. Next Steps
 
-→ Leg 2: 3-Level Logger System Implementation
+→ Phase 2: 3-Level Logger System Implementation

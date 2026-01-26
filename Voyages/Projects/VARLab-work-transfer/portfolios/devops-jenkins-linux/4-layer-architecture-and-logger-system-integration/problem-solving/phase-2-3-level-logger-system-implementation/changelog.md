@@ -1,10 +1,10 @@
-# Leg 2: 3-Level Logger System Implementation
+# Phase 2: 3-Level Logger System Implementation
 
 ## Basic Information
 
 | Item | Value |
 |------|-------|
-| **Start** | `d699fac` (2025-04-26, Leg 1 ended) |
+| **Start** | `d699fac` (2025-04-26, Phase 1 ended) |
 | **Final** | `9c245c1` (2025-04-27) |
 | **Total Commits** | 11 |
 | **Duration** | 2025-04-26 (1 day) |
@@ -295,10 +295,10 @@ Step-by-step logging makes progress tracking easier in Blue Ocean UI
 
 ## 10. Next Steps
 
-→ Leg 3: Bitbucket API & Shell Library Integration
+→ Phase 3: Bitbucket API & Shell Library Integration
 
 ---
 
 ## Reference
 
-- [logger-system-design-integration.md](../../logger-system-design-integration.md) - Logger System design document (Problem analysis → Solution → Implementation)
+- [logger-system-design-integration.md](../logger-system-design-integration.md) - Logger System design document (Problem analysis → Solution → Implementation)

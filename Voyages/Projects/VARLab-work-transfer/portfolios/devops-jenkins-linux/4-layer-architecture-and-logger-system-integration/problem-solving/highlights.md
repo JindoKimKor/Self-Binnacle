@@ -92,10 +92,14 @@
                │
                ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                      Layer 3: Services (src/service/)                       │
+│                      Layer 3: Services                                      │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│  BitbucketApiService.groovy                                                 │
-│  BuildProjectService.groovy                                                 │
+│  Physical: src/service/                                                     │
+│  └── HttpApiService.groovy - HTTP communication (Apache HttpClient)         │
+│                                                                             │
+│  Physical: vars/ (CPS Constraint)                                           │
+│  ├── shellScriptHelper.groovy - Library execution + Logger integration     │
+│  └── bitbucketApiHelper.groovy - Credentials + API orchestration           │
 └──────────────┬──────────────────────────────────────────────────────────────┘
                │
                ▼
@@ -103,8 +107,8 @@
 │                      Layer 4: Utilities (src/utils/ + src/resource/)        │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  Libraries (src/utils/)                     Constants (src/resource/)       │
-│  ├── GitLibrary.groovy (18 Closures)        └── Status.groovy               │
-│  ├── ShellLibrary.groovy (13 Closures)          (COMMIT_STATUS,             │
+│  ├── GitLibrary.groovy (23 Closures)        └── Status.groovy               │
+│  ├── ShellLibrary.groovy (15 Closures)          (COMMIT_STATUS,             │
 │  └── SSHShellLibrary.groovy (8 Closures)         BUILD_STATUS,              │
 │                                                  STAGE_STATUS)              │
 │  ─────────────────────────────────────────────────────────────────────────  │
@@ -153,27 +157,29 @@ flowchart TD
     end
 
     subgraph L2["Layer 2: Orchestration"]
-        direction LR
         STAGE["stage*.groovy (9)"]
-        SSH["shellScriptHelper"]
-        BAH["bitbucketApiHelper"]
     end
 
     subgraph L3["Layer 3: Services"]
         direction LR
-        BAS["BitbucketApiService"]
-        BPS["BuildProjectService"]
+        subgraph L3_SRC["src/service/"]
+            HTTP["HttpApiService"]
+        end
+        subgraph L3_VARS["vars/ (CPS Constraint)"]
+            SSH["shellScriptHelper"]
+            BAH["bitbucketApiHelper"]
+        end
     end
 
     subgraph L4["Layer 4: Utilities"]
         direction LR
-        subgraph L4_LIB["Libraries"]
+        subgraph L4_LIB["Libraries (src/utils/)"]
             GIT["GitLibrary"]
             SHL["ShellLibrary"]
             SSHL["SSHShellLibrary"]
         end
         STS["Status"]
-        subgraph L4_CC["Cross-Cutting"]
+        subgraph L4_CC["Cross-Cutting (vars/)"]
             LOG["logger"]
             BAL["bitbucketApiLibrary"]
         end
@@ -182,15 +188,14 @@ flowchart TD
     JF --> STAGE
     STAGE --> SSH
     STAGE --> BAH
-    STAGE --> BPS
     STAGE -.-> LOG
     SSH --> GIT
     SSH --> SHL
     SSH --> SSHL
     SSH -.-> LOG
     BAH --> BAL
-    BAH --> BAS
-    BAS --> STS
+    BAH --> HTTP
+    HTTP --> STS
     STAGE --> STS
 ```
 
@@ -507,8 +512,8 @@ sharedLibraries/
 │       └── executeReturnVoid(Map)
 │
 └── src/utils/
-    ├── GitLibrary.groovy (258 lines)     ← Git command Closures (18)
-    ├── ShellLibrary.groovy (210 lines)   ← General shell command Closures (13)
+    ├── GitLibrary.groovy (258 lines)     ← Git command Closures (23)
+    ├── ShellLibrary.groovy (210 lines)   ← General shell command Closures (15)
     └── SSHShellLibrary.groovy (99 lines) ← SSH/SCP remote command Closures (8)
 ```
 
@@ -532,7 +537,7 @@ classDiagram
         +Closure CheckoutBranch
         +Closure MergeOriginBranch
         +Closure LfsFetchAndCheckout
-        ... (18 Closures)
+        ... (23 Closures)
     }
 
     class ShellLibrary {
@@ -542,7 +547,7 @@ classDiagram
         +Closure LintUnity
         +Closure GetUnityExecutable
         +Closure CreateBitbucketBuildReport
-        ... (13 Closures)
+        ... (15 Closures)
     }
 
     class SSHShellLibrary {
@@ -615,7 +620,7 @@ sequenceDiagram
 
 #### 4.2.5 Closure List by Library
 
-##### GitLibrary (18 Closures) - Git Version Control
+##### GitLibrary (23 Closures) - Git Version Control
 
 | Closure | Parameters | Return Type | Purpose |
 |---------|------------|-------------|---------|
@@ -638,7 +643,7 @@ sequenceDiagram
 | `MergeOriginBranch` | branchToMerge | status | Merge remote branch |
 | `LfsFetchAndCheckout` | - | status | LFS file fetch & checkout |
 
-##### ShellLibrary (13 Closures) - General Shell Commands
+##### ShellLibrary (15 Closures) - General Shell Commands
 
 | Closure | Parameters | Return Type | Purpose |
 |---------|------------|-------------|---------|
@@ -1076,31 +1081,34 @@ class GitLibrarySpec extends Specification {
 }
 ```
 
-**4.4.3.2 Service Test** - Behavior verification through mocks:
+**4.4.3.2 Service Test** - Behavior verification through dependency injection:
 
 ```groovy
-// PrepareWorkspaceServiceSpec.groovy
-class PrepareWorkspaceServiceSpec extends Specification {
+// HttpApiServiceSpec.groovy
+class HttpApiServiceSpec extends Specification {
 
-    def "checkAndPullUntrackedLFSFiles - executes git lfs pull when untracked files exist"() {
-        given: 'Mocked Jenkinsfile'
+    def "post - sends HTTP POST request with Bearer token"() {
+        given: 'Mocked Jenkinsfile with logger'
         def jenkinsfile = Mock(JenkinsFile)
-        jenkinsfile.sh(_) >> { Map args ->
-            if (args.script.contains("git lfs ls-files")) {
-                return 'untracked_file_1\nuntracked_file_2'
-            }
-        }
-        def service = new PrepareWorkspaceService(jenkinsfile)
+        def mockLogger = Mock(Object)
+        jenkinsfile.logger >> mockLogger
+        def service = new HttpApiService(jenkinsfile)
 
-        when: 'Method called'
-        service.checkAndPullUntrackedLFSFiles()
+        when: 'POST request made'
+        def result = service.post(
+            "https://api.bitbucket.org/2.0/repositories/test/commit/abc123/statuses/build",
+            '{"state": "SUCCESSFUL"}',
+            "test-bearer-token"
+        )
 
-        then: 'Verify git lfs pull execution'
-        1 * jenkinsfile.echo('Untracked large files detected: untracked_file_1\nuntracked_file_2')
-        1 * jenkinsfile.sh(script: 'git lfs pull', returnStdout: true)
+        then: 'Returns response with status code'
+        result.statusCode != null
+        result.success != null
     }
 }
 ```
+
+> **Note**: `HttpApiService` uses Apache HttpClient internally, so full integration tests can use WireMock for HTTP mocking.
 
 #### 4.4.4 Before vs After: API Testability Comparison
 
@@ -1166,5 +1174,5 @@ After:  bitbucketApiLibrary ──→ Map { apiUrlString, requestBody, method }
 
 ### Related Documents
 
-- [legs/](legs/) - Step-by-step change records
+- [problem-solving/](problem-solving/) - Step-by-step change records
 - [logger-system-design-integration.md](logger-system-design-integration.md) - Logger System design details

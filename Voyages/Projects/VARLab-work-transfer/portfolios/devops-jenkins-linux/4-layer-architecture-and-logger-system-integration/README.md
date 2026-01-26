@@ -1,14 +1,16 @@
-# Software Smells Analysis & Architecture Redesign
+# Retrospective Analysis: From 5 Monolithic Pipelines to 4-Layer Architecture
 
 ![Architecture Overview](resources/architecture-overview.png)
 
-> **Context:** 14-month technical debt resolution at VARLab
+> **What I did:** Transformed 5 monolithic pipelines (41% duplication) into 4-layer architecture with centralized libraries
 >
-> **Analysis:** SRP/DRY Violation & Code, Design (Symptoms/Principles), Architecture Smells
+> **How it emerged:** Felt the pain → organized by domain naturally → patterns emerged
 >
-> **Solution:** 4-Layer Architecture, 3-Level Logger System
+> **Post-analysis:** Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns)
 >
-> **Keywords:** Jenkins, Groovy, Design Patterns (Command/Facade/Builder/Strategy)
+> **Documentation:** Problem analysis, pattern identification, architecture rationale
+
+> **Note on 37% vs 41%:** If you came from my resume, you may have seen "37% duplication." That figure was from an earlier baseline (`54479b2`, 2025-02-21). After detailed commit history analysis, `74fc356` (2025-03-20) was identified as the accurate "before refactoring" state, showing **41% duplication**. The increase itself demonstrates the architecture's High Viscosity problem.
 
 ---
 
@@ -29,13 +31,45 @@ This portfolio is a **post-refactoring analysis** of intuitive problem-solving d
 
 ---
 
+## If I Had This Analysis Then...
+
+### Before (During Refactoring)
+
+When I proposed this refactoring to my supervisor, I could only say:
+
+> "The code is messy. There's a lot of copy-paste. It's hard to maintain. I think we should restructure it."
+
+I knew something was wrong. I felt the pain every time I had to modify multiple files for a single change. But I couldn't articulate **why** it was problematic or **how bad** it actually was.
+
+### After (With This Analysis)
+
+If I had this analysis back then, I could have presented:
+
+> "We have **41% code duplication** across 5 pipelines. A single change to `sendBuildStatus` requires modifications in **18 locations across 6 files**. We're making **113 external calls** to 12 different systems with no abstraction layer, making the code untestable. In the past month alone, duplication increased from 37% to 41%, showing the architecture's **High Viscosity** is causing duplication to grow naturally."
+
+Instead of "it feels messy," I could have shown concrete numbers. Instead of "it's hard to maintain," I could have explained **Shotgun Surgery** with specific examples. Instead of "we should fix it," I could have demonstrated the **ROI degradation** where 10-minute tasks were taking hours.
+
+### The Difference
+
+| Aspect | Before | After |
+|--------|--------|-------|
+| Problem Description | "Code is messy" | "41% duplication, 18-location Shotgun Surgery" |
+| Justification | "I feel it's hard to maintain" | "Duplication increased 4% in 1 month (High Viscosity)" |
+| Scope | "A lot of copy-paste" | "113 external calls, 12 types, untestable" |
+| Urgency | "We should fix it sometime" | "10-20 min tasks → hours, ROI degradation" |
+
+This analysis transforms intuition into evidence. It provides the vocabulary and metrics needed to communicate technical debt to stakeholders who may not see the code daily.
+
+---
+
 ## Quick Navigation
 
 | Part | Question | Document | Content |
 |------|----------|----------|---------|
-| **Part 1** | What? | [highlights.md](highlights.md) | Final Architecture, Key Features, Testability |
-| **Part 2** | Why? | [problem-analysis-overview.md](problem-analysis-overview.md) | Problems, Analysis Results |
-| **Part 3** | How? | [legs/README.md](legs/README.md) | Step-by-step Implementation |
+| **Part 1** | What? | [highlights.md](problem-solving/highlights.md) | Final Architecture, Key Features, Testability |
+| **Part 2** | Why? | [problem-analysis-overview.md](problem-analysis/problem-analysis-overview.md) | Problems, Analysis Results |
+| **Part 3** | How? | [problem-solving/README.md](problem-solving/README.md) | Step-by-step Implementation |
+| **Supplement** | DDD? | [domain-driven-analysis.md](problem-solving/domain-driven-analysis.md) | Strategic DDD Analysis |
 
 ---
 
@@ -44,7 +78,7 @@ This portfolio is a **post-refactoring analysis** of intuitive problem-solving d
 ### Background
 
 - 14 months of accumulated Technical Debt
-- 5 monolithic pipelines (37% duplication, untestable)
+- 5 monolithic pipelines (41% duplication, untestable)
 - Discovered Jenkins Global Trusted Shared Library feature at month 13
 - Performed refactoring over 54 days (Library setup 35 days, Core refactoring ~2 weeks)
 
@@ -69,25 +103,27 @@ This portfolio is a **post-refactoring analysis** of intuitive problem-solving d
 
 | Document | Content | Volume |
 |----------|---------|--------|
-| [highlights.md](highlights.md) | 4-Layer Architecture, Logger, Shell Libraries, Testability | Core |
-| [pull-request-documentation.pdf](pull-request-documentation.pdf) | Documentation attached to Pull Request | Detailed |
+| [highlights.md](problem-solving/highlights.md) | 4-Layer Architecture, Logger, Shell Libraries, Testability | Core |
+| [pull-request-documentation.pdf](problem-solving/pull-request-documentation.pdf) | Documentation attached to Pull Request | Detailed |
 
 ### Part 2: Why - Problem Analysis
 
 | Document | Content | Volume |
 |----------|---------|--------|
-| [problem-analysis-overview.md](problem-analysis-overview.md) | Problem Summary | Core |
-| [problem-analysis/detailed-analysis.md](problem-analysis/detailed-analysis.md) | Software Smells Analysis by File | In-depth |
-| [problem-analysis/baseline-technical-snapshot.md](problem-analysis/baseline-technical-snapshot.md) | Baseline Code Statistics, File Structure (commit `54479b2`) | Detailed |
+| [problem-analysis/problem-analysis-overview.md](problem-analysis/problem-analysis-overview.md) | Problem Summary, Key Findings, Document Links | Core |
+| [problem-analysis/detailed-analysis.md](problem-analysis/detailed-analysis.md) | Synthesized Analysis (Symptoms, Patterns, Duplication) | In-depth |
+| [problem-analysis/architecture-smells-analysis.md](problem-analysis/architecture-smells-analysis.md) | System-level Analysis (Hub-like, Scattered, Implicit Dependencies) | In-depth |
+| [problem-analysis/DRY-violation-analysis.md](problem-analysis/DRY-violation-analysis.md) | Cross-file Duplication Patterns | In-depth |
 
 ### Part 3: How - Implementation Process
 
 | Document | Content | Volume |
 |----------|---------|--------|
-| [legs/README.md](legs/README.md) | 5-stage Leg Overview | Core |
-| [legs/leg-0~4/changelog.md](legs/) | Detailed Records by Commit | Detailed |
-| [legs/refactoring-result-snapshot.md](legs/refactoring-result-snapshot.md) | Architecture Details, Design Patterns (commit `12910c1`) | Detailed |
-| [logger-system-design-integration.md](logger-system-design-integration.md) | 3-Level Logger Design (Problem Analysis → Solution → Implementation) | Detailed |
+| [problem-solving/README.md](problem-solving/README.md) | 5-stage Phase Overview | Core |
+| [problem-solving/phase-0~4/changelog.md](problem-solving/) | Detailed Records by Commit | Detailed |
+| [problem-solving/refactoring-result-snapshot.md](problem-solving/refactoring-result-snapshot.md) | Architecture Details, Design Patterns (commit `12910c1`) | Detailed |
+| [logger-system-design-integration.md](problem-solving/logger-system-design-integration.md) | 3-Level Logger Design (Problem Analysis → Solution → Implementation) | Detailed |
+| [domain-driven-analysis.md](problem-solving/domain-driven-analysis.md) | Strategic DDD Analysis | Supplement |
 
 ---
 
@@ -96,51 +132,37 @@ This portfolio is a **post-refactoring analysis** of intuitive problem-solving d
 ```
 4-layer-architecture-and-logger-system-integration/
 │
-├── README.md                    # ← This document (entry point)
+├── README.md                           # ← This document (entry point)
 │
-├── Part 1: What (Results)
-│   ├── highlights.md            # Final architecture highlights
+├── problem-analysis/                   # Part 2: Why (Problems)
+│   ├── problem-analysis-overview.md    # Problem summary (★ Start here)
+│   ├── detailed-analysis.md            # Synthesized findings
+│   ├── architecture-smells-analysis.md # System-level analysis
+│   ├── DRY-violation-analysis.md       # Cross-file duplication
+│   │
+│   ├── 01-generalHelper/               # Per-file analysis
+│   │   ├── 01-srp-violation-analysis.md
+│   │   ├── 02-software-smells-analysis.md
+│   │   └── 03-design-smells-symptoms.md
+│   ├── 02-jsHelper/
+│   ├── 03-unityHelper/
+│   ├── 04~08-Jenkinsfiles/
+│   │
+│   └── pipeline-sequence-diagrams/     # Pipeline flow analysis
+│       ├── domain-mapping.md
+│       └── dlx-ci.md, dlx-cd.md, js-ci.md, js-cd.md, jenkins-ci.md
+│
+├── problem-solving/                      # Part 1 (What) + Part 3 (How)
+│   ├── README.md                       # Implementation process hub
+│   ├── highlights.md                   # Final architecture highlights
 │   ├── logger-system-design-integration.md  # Logger design document
-│   └── pull-request-documentation.pdf   # Pull Request attachment
+│   ├── domain-driven-analysis.md       # DDD analysis (supplement)
+│   ├── pull-request-documentation.pdf  # PR attachment
+│   ├── refactoring-result-snapshot.md  # Architecture details
+│   └── phase-0~4/                        # Step-by-step changelogs
 │
-├── Part 2: Why (Problems)
-│   ├── problem-analysis-overview.md  # Problem summary
-│   └── problem-analysis/        # Detailed analysis
-│       ├── detailed-analysis.md      # Analysis methodology, results summary
-│       ├── baseline-technical-snapshot.md  # Code statistics/file structure
-│       ├── DRY-violation-analysis.md       # System-wide DRY violation analysis
-│       │
-│       ├── 01-generalHelper/               # Per-file analysis
-│       │   ├── srp-violation-analysis.md
-│       │   ├── software-smells-analysis.md
-│       │   └── design-smells-symptoms.md
-│       ├── 02-jsHelper/
-│       ├── 03-unityHelper/
-│       ├── 04-DLXJenkins-Jenkinsfile/
-│       ├── ...                             # (05~08 same structure)
-│       │
-│       ├── pipeline-sequence-diagrams/
-│       │
-│       └── reference/                      # Smells Taxonomy reference documents
-│           ├── 01-code-smells-taxonomy.md
-│           ├── 02a-design-smells-symptoms.md
-│           ├── 02b-design-smells-principles.md
-│           ├── 03-architecture-smells-taxonomy.md
-│           └── ...
-│
-├── Part 3: How (Process)
-│   └── legs/                    # Step-by-step implementation
-│       ├── README.md
-│       ├── refactoring-result-snapshot.md  # Architecture/patterns detailed
-│       ├── leg-0-global-trusted-shared-library-setup/
-│       ├── leg-1-shellscript-modularization-and-initialization-stage/
-│       ├── leg-2-3-level-logger-system-implementation/
-│       ├── leg-3-bitbucket-api-and-shell-library-integration/
-│       └── leg-4-full-pipeline-refactoring-and-stage-modularization/
-│
-└── resources/                   # Images
-    ├── stage-logger-before.png
-    └── stage-logger-after.png
+└── resources/                          # Images
+    └── architecture-overview.png, stage-logger-*.png
 ```
 
 ---

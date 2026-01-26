@@ -1,10 +1,10 @@
-# Leg 3: Bitbucket API & Shell Library Integration
+# Phase 3: Bitbucket API & Shell Library Integration
 
 ## Basic Information
 
 | Item | Value |
 |------|-------|
-| **Start** | `9c245c1` (2025-04-27, Leg 2 ended) |
+| **Start** | `9c245c1` (2025-04-27, Phase 2 ended) |
 | **Final** | `48f4295` (2025-05-05) |
 | **Total Commits** | 84 |
 | **Duration** | 2025-05-01 ~ 2025-05-05 (5 days) |
@@ -617,4 +617,4 @@ bitbucketApiHelper.sendBuildStatus('FAILED', 'Build failed')
 
 ## 9. Next Steps
 
-→ Leg 4: Full Pipeline Refactoring and Stage Modularization
+→ Phase 4: Full Pipeline Refactoring and Stage Modularization

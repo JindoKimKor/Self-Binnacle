@@ -1,10 +1,10 @@
-# Leg 4: Full Pipeline Refactoring & Stage Modularization
+# Phase 4: Full Pipeline Refactoring & Stage Modularization
 
 ## Basic Information
 
 | Item | Value |
 |------|-------|
-| **Start** | `48f4295` (2025-05-05, Leg 3 ended) |
+| **Start** | `48f4295` (2025-05-05, Phase 3 ended) |
 | **Final** | `ff74ac8` (2025-05-12) |
 | **Total Commits** | 128 |
 | **Duration** | 2025-05-06 ~ 2025-05-12 (7 days) |
