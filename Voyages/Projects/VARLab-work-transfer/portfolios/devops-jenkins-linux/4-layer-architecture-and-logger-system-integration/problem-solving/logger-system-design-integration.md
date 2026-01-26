@@ -78,7 +78,7 @@ Different logging methods in each file:
 
 | Stage View (actual screenshot) | Console Output (example) |
 |:-----------------------------:|:------------------------:|
-| ![Stage View - scattered echo](resources/stage-logger-before.png) | ![Console Output](resources/console-log-view-example.png) |
+| ![Stage View - scattered echo](../resources/stage-logger-before.png) | ![Console Output](../resources/console-log-view-example.png) |
 | Log visible in Pipeline Stage UI | Same log example visible in Console Log |
 
 > **Core Problem**: A single `echo` call outputs to **both** Stage View and Console Output, and **neither can customize the format**
@@ -459,7 +459,7 @@ sequenceDiagram
 
 | Before | After |
 |--------|-------|
-| ![Before - scattered echo](resources/stage-logger-before.png) | ![After - 3-Level logging](resources/stage-logger-after.png) |
+| ![Before - scattered echo](../resources/stage-logger-before.png) | ![After - 3-Level logging](../resources/stage-logger-after.png) |
 
 ---
 

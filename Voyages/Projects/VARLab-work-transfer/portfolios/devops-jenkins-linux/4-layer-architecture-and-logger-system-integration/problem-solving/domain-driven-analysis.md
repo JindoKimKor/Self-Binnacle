@@ -423,7 +423,7 @@ manifestations such as code bases and database schemas."
 | **Context Mapping** | DDD Strategic Design | No multiple contexts to integrate |
 
 ---
-
+<!--
 ## Interview Talking Point
 
 > "I refactored 5 monolithic Jenkins pipelines into a modular 4-layer architecture. After completing the refactoring, I analyzed the structure and found it aligns with several DDD concepts:
@@ -435,10 +435,8 @@ manifestations such as code bases and database schemas."
 > For the Infrastructure layer, I used the **Facade pattern** to simplify complex operations like API calls and shell execution with logging.
 >
 > I didn't implement DDD's tactical patterns like Entities and Aggregates because they require stateful domain objects with identity and lifecycle management. Jenkins pipelines are stateless by nature—each execution is independent, and external systems like Bitbucket manage the actual state.
->
-> The result was 37% code duplication eliminated and a testable, maintainable structure."
 
----
+!-->
 
 ## References
 
