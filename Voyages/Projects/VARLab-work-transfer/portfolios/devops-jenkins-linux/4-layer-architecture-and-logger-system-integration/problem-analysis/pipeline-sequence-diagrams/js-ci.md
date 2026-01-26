@@ -3,48 +3,61 @@
 > **Analysis Target**: `JsJenkins/Jenkinsfile` (JavaScript CI Pipeline)
 >
 > **Trigger**: Runs when PR is `OPEN`
+>
+> **Related**: [Domain Mapping Summary](domain-mapping.md)
 
 ---
 
-## Domain Summary by Function
+## Why Sequence Diagrams?
 
-| Domain | Function | Used Stage | Helper Location |
-|--------|----------|------------|-----------------|
-| **Git Management** | clone, fetch, checkout, reset, clean, merge | Prepare WORKSPACE, Post | generalHelper |
-| **Bitbucket API** | send build status, get commit hash, send coverage report | Prepare WORKSPACE, Unit Testing, Post | generalHelper + Python |
-| **Node.js (npm)** | version check, npm install, run tests, linting | Install Dependencies, Linting, Unit Testing | jsHelper |
-| **Web Server (SSH/SCP)** | deploy coverage report HTML | Unit Testing | generalHelper |
-| **SonarQube** | static code analysis, Quality Gate check | Static Analysis | generalHelper + sonar-scanner |
-| **Environment Setup** | parseJson, parseTicketNumber, findTestingDirs | Prepare WORKSPACE | generalHelper + jsHelper |
+> **Q: Why use Sequence Diagrams for Jenkins Pipeline analysis?**
+>
+> A: Jenkins Pipeline is **procedural code**. Unlike OOP where classes naturally define domain boundaries, procedural code mixes multiple domains within sequential execution flow. Sequence Diagrams visualize the **call flow** between components, making it easier to identify which domains are involved at each stage.
+
+> **Q: What is the goal of this analysis?**
+>
+> A: To **identify domains by function**. By tracing "who calls what", I can classify each function into its domain (Git, Bitbucket, Unity, etc.) and detect where domain boundaries are violated (e.g., one function mixing multiple domains).
+
+---
+
+## Domain Summary
+
+### Helper Domains Used
+
+| Helper | Domain | Functions Called | Used Stage |
+|--------|--------|------------------|------------|
+| generalHelper | Git | `cloneOrUpdateRepo`, `mergeBranchIfNeeded`, `isBranchUpToDateWithRemote`, `checkoutBranch` | Prepare WORKSPACE, Post |
+| generalHelper | Bitbucket | `getFullCommitHash`, `sendBuildStatus` | Prepare WORKSPACE, Post |
+| generalHelper | Web Server | `publishTestResultsHtmlToWebServer` | Unit Testing |
+| generalHelper | SonarQube | `checkQualityGateStatus` | Static Analysis |
+| generalHelper | Parsing | `parseJson` | Prepare WORKSPACE |
+| generalHelper | Mixed (Bitbucket + Parsing) | `initializeEnvironment` | Prepare WORKSPACE |
+| jsHelper | Node.js/npm | `checkNodeVersion`, `installNpmInTestingDirs`, `executeLintingInTestingDirs`, `runUnitTestsInTestingDirs` | Install Dependencies, Linting, Unit Testing |
+| jsHelper | File System | `findTestingDirs`, `retrieveReportSummaryDirs` | Prepare WORKSPACE, Unit Testing |
+
+### Jenkinsfile Direct Calls
+
+| Domain | Direct Call | Used Stage |
+|--------|-------------|------------|
+| Jenkins Pipeline DSL | `pipeline`, `stages`, `post`, `script`, `dir`, `credentials`, `tool`, `withSonarQubeEnv`, `withCredentials` | All |
+| File System | `mkdir -p` | Linting |
+| SonarQube | `sonar-scanner` | Static Analysis |
+| Bitbucket (Python) | `create_bitbucket_coverage_report.py` | Unit Testing |
 
 ### Domain Mapping by Stage
 
-| Stage | Git | Bitbucket | Node.js | Web Server | SonarQube | Environment Setup |
-|-------|:---:|:---------:|:-------:|:----------:|:---------:|:-----------------:|
-| Prepare WORKSPACE | ✓ | ✓ | | | | ✓ |
-| Install Dependencies | | | ✓ | | | |
-| Linting | | | ✓ | | | |
-| Unit Testing | | ✓ | ✓ | ✓ | | |
-| Static Analysis | | | | | ✓ | |
-| Post | ✓ | ✓ | | | | |
-
-### DLX CI vs JS CI Comparison
-
-| Item | DLX CI | JS CI |
-|------|--------|-------|
-| Tool | Unity CLI | Node.js (npm) |
-| Helper | unityHelper | jsHelper |
-| Install Dependencies | No | Yes (npm install) |
-| Linting | Bash Script (C#) | jsHelper (ESLint) |
-| Test Type | EditMode/PlayMode | Unit Testing (Jest) |
-| Code Coverage | Unity Code Coverage | lcov-report |
-| Static Analysis | No | Yes (SonarQube) |
-| Build Project | Yes (WebGL) | No |
+| Stage | Git | Bitbucket | Node.js | Web Server | SonarQube | Parsing | File System |
+|-------|:---:|:---------:|:-------:|:----------:|:---------:|:-------:|:-----------:|
+| Prepare WORKSPACE | ✓ | ✓ | | | | ✓ | ✓ |
+| Install Dependencies | | | ✓ | | | | |
+| Linting | | | ✓ | | | | ✓ |
+| Unit Testing | | ✓ | ✓ | ✓ | | | ✓ |
+| Static Analysis | | | | | ✓ | | |
+| Post | ✓ | ✓ | | | | | |
 
 ---
 
 ## Overall Pipeline Overview
-
 ```mermaid
 flowchart LR
     subgraph Stages
@@ -63,7 +76,6 @@ flowchart LR
 ---
 
 ## Stage 1: Prepare WORKSPACE
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -82,9 +94,11 @@ sequenceDiagram
     JF->>JSH: load("jsHelper.groovy")
 
     JF->>GH: parseJson()
+    Note over GH: Domain: Parsing
     GH-->>JF: buildResults, stageResults
 
     JF->>GH: isBranchUpToDateWithRemote(PR_BRANCH)
+    Note over GH: Domain: Git
     GH->>Git: git fetch origin
     GH->>Git: git rev-parse HEAD
     GH->>Git: git rev-parse origin/{branch}
@@ -92,6 +106,7 @@ sequenceDiagram
     GH-->>JF: true/false
 
     JF->>GH: getFullCommitHash(workspace, PR_COMMIT)
+    Note over GH: Domain: Bitbucket
     GH->>Python: get_bitbucket_commit_hash.py
     Python->>BB: GET /commits
     BB-->>Python: commit hash
@@ -99,6 +114,7 @@ sequenceDiagram
     GH-->>JF: COMMIT_HASH
 
     JF->>GH: initializeEnvironment(workspace, commitHash, prBranch)
+    Note over GH: Mixed: Bitbucket + Parsing
     GH->>GH: sendBuildStatus('INPROGRESS')
     GH->>Python: send_bitbucket_build_status.py
     Python->>BB: POST /statuses/build
@@ -106,6 +122,7 @@ sequenceDiagram
     GH-->>JF: TICKET_NUMBER, FOLDER_NAME
 
     JF->>GH: cloneOrUpdateRepo(workspace, projectDir, prBranch)
+    Note over GH: Domain: Git
     GH->>Git: git clone / git fetch
     GH->>Git: git checkout
     GH->>Git: git reset --hard
@@ -114,6 +131,7 @@ sequenceDiagram
     GH-->>JF: OK
 
     JF->>GH: mergeBranchIfNeeded(prBranch)
+    Note over GH: Domain: Git
     GH->>GH: getDefaultBranch()
     GH->>Git: git remote show origin
     Git-->>GH: default branch
@@ -125,13 +143,13 @@ sequenceDiagram
     GH-->>JF: OK
 
     JF->>JSH: findTestingDirs(PROJECT_DIR)
+    Note over JSH: Domain: File System
     JSH-->>JF: TEST_DIRECTORIES
 ```
 
 ---
 
 ## Stage 2: Install Dependencies
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -143,13 +161,16 @@ sequenceDiagram
     Note over JF: Stage: Install Dependencies
 
     JF->>JSH: checkNodeVersion()
+    Note over JSH: Domain: Node.js/npm
     JSH->>NPM: node -v
     NPM-->>JSH: version
     JSH->>NPM: npm -v
     NPM-->>JSH: version
 
     JF->>JSH: installNpmInTestingDirs(TEST_DIRECTORIES)
+    Note over JSH: Domain: Node.js/npm
     loop for each testDir
+        JSH->>NPM: npm audit
         JSH->>NPM: npm install
         NPM-->>JSH: OK
     end
@@ -159,20 +180,21 @@ sequenceDiagram
 ---
 
 ## Stage 3: Linting
-
 ```mermaid
 sequenceDiagram
     autonumber
 
     participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant FS as File System
     participant JSH as jsHelper
     participant NPM as npm CLI
 
     Note over JF: Stage: Linting
 
-    JF->>JF: mkdir -p linting_results
+    JF->>FS: mkdir -p linting_results
 
     JF->>JSH: executeLintingInTestingDirs(TEST_DIRECTORIES, false)
+    Note over JSH: Domain: Node.js/npm
     loop for each testDir
         JSH->>NPM: npm run lint
         NPM-->>JSH: exitCode
@@ -183,7 +205,6 @@ sequenceDiagram
 ---
 
 ## Stage 4: Unit Testing
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -199,14 +220,16 @@ sequenceDiagram
     Note over JF: Stage: Unit Testing
 
     JF->>JSH: runUnitTestsInTestingDirs(TEST_DIRECTORIES, false)
+    Note over JSH: Domain: Node.js/npm
     loop for each testDir
-        JSH->>NPM: npm test --coverage
+        JSH->>NPM: npm test
         NPM-->>JSH: coverage-summary.json, test-results.json
     end
     JSH-->>JF: OK/FAIL
 
     Note over JF,WS: Publish coverage HTML to Web Server
     JF->>GH: publishTestResultsHtmlToWebServer(FOLDER_NAME, TICKET_NUMBER, lcov-report, 'server')
+    Note over GH: Domain: Web Server
     GH->>WS: ssh mkdir -p /var/www/html/{folder}/{ticket}/server
     GH->>WS: scp -r lcov-report/*
     WS-->>GH: OK
@@ -219,8 +242,10 @@ sequenceDiagram
     Note over JF,BB: Send coverage reports to Bitbucket
     alt params.SERVER_SOURCE_FOLDER exists
         JF->>JSH: retrieveReportSummaryDirs(serverDir)
+        Note over JSH: Domain: File System
         JSH-->>JF: coverageSummaryDir, testSummaryDir
         JF->>Python: create_bitbucket_coverage_report.py --server
+        Note over JF: Jenkinsfile Direct: Bitbucket (Python)
         Python->>BB: POST /reports
         BB-->>Python: OK
     end
@@ -237,7 +262,6 @@ sequenceDiagram
 ---
 
 ## Stage 5: Static Analysis
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -249,9 +273,11 @@ sequenceDiagram
     Note over JF: Stage: Static Analysis
 
     JF->>SQ: sonar-scanner -Dsonar.projectKey={key} -Dsonar.sources=.
+    Note over JF: Jenkinsfile Direct: SonarQube
     SQ-->>JF: analysis queued
 
     JF->>GH: checkQualityGateStatus(SONAR_PROJECT_KEY, token)
+    Note over GH: Domain: SonarQube
     loop retry (max 5)
         GH->>SQ: GET /api/ce/component
         SQ-->>GH: queue status
@@ -272,7 +298,6 @@ sequenceDiagram
 ---
 
 ## Post: always/success/failure/aborted
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -288,6 +313,7 @@ sequenceDiagram
     Note over JF,GH: always block
     JF->>JF: currentBuild.description = PR_BRANCH
     JF->>GH: checkoutBranch(PROJECT_DIR, DESTINATION_BRANCH)
+    Note over GH: Domain: Git
     GH->>Git: git reset --hard
     GH->>Git: git clean -fd
     GH->>Git: git checkout {destination}
@@ -303,8 +329,48 @@ sequenceDiagram
     else aborted
         JF->>GH: sendBuildStatus(workspace, 'STOPPED', commitHash, false)
     end
+    Note over GH: Domain: Bitbucket
     GH->>Python: send_bitbucket_build_status.py
     Python->>BB: POST /statuses/build
     BB-->>Python: OK
     GH-->>JF: OK
 ```
+
+---
+
+## Observations
+
+### Delegation Pattern
+
+| Pattern | Example | Count |
+|---------|---------|:-----:|
+| Jenkinsfile → generalHelper → External | `sendBuildStatus` → Python → Bitbucket API | 6 |
+| Jenkinsfile → jsHelper → External | `installNpmInTestingDirs` → npm CLI | 4 |
+| Jenkinsfile → Python direct | `create_bitbucket_coverage_report.py` | 2 |
+| Jenkinsfile → SonarQube direct | `sonar-scanner` | 1 |
+
+### DLX CI vs JS CI Comparison
+
+| Item | DLX CI | JS CI |
+|------|--------|-------|
+| Build Tool | Unity CLI | Node.js (npm) |
+| Helper | unityHelper | jsHelper |
+| Install Dependencies | No | Yes (`installNpmInTestingDirs`) |
+| Linting | Bash Script (C#) | jsHelper (`executeLintingInTestingDirs`) |
+| Test Type | EditMode/PlayMode | Jest (`runUnitTestsInTestingDirs`) |
+| Code Coverage | Unity Code Coverage | lcov-report |
+| Static Analysis | No | SonarQube |
+| Build Project | WebGL | No |
+| `initializeEnvironment` | ✓ | ✓ |
+
+### Inconsistencies
+
+| Issue | Description |
+|-------|-------------|
+| Mixed domain function | `initializeEnvironment` combines Bitbucket + Parsing (SRP violation) |
+| Direct Python calls | `create_bitbucket_coverage_report.py` bypasses Helper |
+| Direct SonarQube call | `sonar-scanner` called directly, but `checkQualityGateStatus` via generalHelper |
+
+---
+
+[← Domain Mapping Summary](domain-mapping.md) | [JS CD →](js-cd.md)

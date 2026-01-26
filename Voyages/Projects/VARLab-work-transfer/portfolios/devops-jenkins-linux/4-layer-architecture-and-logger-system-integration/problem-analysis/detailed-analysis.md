@@ -113,9 +113,9 @@ problem-analysis/
 ├── DRY-violation-analysis.md           # System-wide DRY violation analysis
 │
 ├── 01-generalHelper/                   # Per-file analysis folder (example)
-│   ├── srp-violation-analysis.md       # SRP violation analysis
-│   ├── software-smells-analysis.md     # Code/Design/Architecture Smells
-│   └── design-smells-symptoms.md       # Martin's 7 Symptoms detail
+│   ├── 01-srp-violation-analysis.md    # SRP violation analysis
+│   ├── 02-software-smells-analysis.md  # Code/Design/Architecture Smells
+│   └── 03-design-smells-symptoms.md    # Martin's 7 Symptoms detail
 ├── 02-jsHelper/                        # (Same structure)
 ├── ...
 ├── 08-PipelineForJenkins-Jenkinsfile/  # (Same structure)
@@ -401,14 +401,14 @@ Refactoring directions derived from analysis results:
 
 | # | Analysis Target | SRP Analysis | Software Smells | Design Symptoms |
 |---|----------|----------|-----------------|-----------------|
-| 01 | generalHelper.groovy | [srp-violation-analysis.md](01-generalHelper/srp-violation-analysis.md) | [software-smells-analysis.md](01-generalHelper/software-smells-analysis.md) | [design-smells-symptoms.md](01-generalHelper/design-smells-symptoms.md) |
-| 02 | jsHelper.groovy | [srp-violation-analysis.md](02-jsHelper/srp-violation-analysis.md) | [software-smells-analysis.md](02-jsHelper/software-smells-analysis.md) | [design-smells-symptoms.md](02-jsHelper/design-smells-symptoms.md) |
-| 03 | unityHelper.groovy | [srp-violation-analysis.md](03-unityHelper/srp-violation-analysis.md) | [software-smells-analysis.md](03-unityHelper/software-smells-analysis.md) | [design-smells-symptoms.md](03-unityHelper/design-smells-symptoms.md) |
-| 04 | DLXJenkins/Jenkinsfile | [srp-violation-analysis.md](04-DLXJenkins-Jenkinsfile/srp-violation-analysis.md) | [software-smells-analysis.md](04-DLXJenkins-Jenkinsfile/software-smells-analysis.md) | [design-smells-symptoms.md](04-DLXJenkins-Jenkinsfile/design-smells-symptoms.md) |
-| 05 | DLXJenkins/JenkinsfileDeployment | [srp-violation-analysis.md](05-DLXJenkins-JenkinsfileDeployment/srp-violation-analysis.md) | [software-smells-analysis.md](05-DLXJenkins-JenkinsfileDeployment/software-smells-analysis.md) | [design-smells-symptoms.md](05-DLXJenkins-JenkinsfileDeployment/design-smells-symptoms.md) |
-| 06 | JsJenkins/Jenkinsfile | [srp-violation-analysis.md](06-JsJenkins-Jenkinsfile/srp-violation-analysis.md) | [software-smells-analysis.md](06-JsJenkins-Jenkinsfile/software-smells-analysis.md) | [design-smells-symptoms.md](06-JsJenkins-Jenkinsfile/design-smells-symptoms.md) |
-| 07 | JsJenkins/JenkinsfileDeployment | [srp-violation-analysis.md](07-JsJenkins-JenkinsfileDeployment/srp-violation-analysis.md) | [software-smells-analysis.md](07-JsJenkins-JenkinsfileDeployment/software-smells-analysis.md) | [design-smells-symptoms.md](07-JsJenkins-JenkinsfileDeployment/design-smells-symptoms.md) |
-| 08 | PipelineForJenkins/Jenkinsfile | [srp-violation-analysis.md](08-PipelineForJenkins-Jenkinsfile/srp-violation-analysis.md) | [software-smells-analysis.md](08-PipelineForJenkins-Jenkinsfile/software-smells-analysis.md) | [design-smells-symptoms.md](08-PipelineForJenkins-Jenkinsfile/design-smells-symptoms.md) |
+| 01 | generalHelper.groovy | [01-srp-violation-analysis.md](01-generalHelper/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](01-generalHelper/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](01-generalHelper/03-design-smells-symptoms.md) |
+| 02 | jsHelper.groovy | [01-srp-violation-analysis.md](02-jsHelper/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](02-jsHelper/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](02-jsHelper/03-design-smells-symptoms.md) |
+| 03 | unityHelper.groovy | [01-srp-violation-analysis.md](03-unityHelper/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](03-unityHelper/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](03-unityHelper/03-design-smells-symptoms.md) |
+| 04 | DLXJenkins/Jenkinsfile | [01-srp-violation-analysis.md](04-DLXJenkins-Jenkinsfile/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](04-DLXJenkins-Jenkinsfile/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](04-DLXJenkins-Jenkinsfile/03-design-smells-symptoms.md) |
+| 05 | DLXJenkins/JenkinsfileDeployment | [01-srp-violation-analysis.md](05-DLXJenkins-JenkinsfileDeployment/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](05-DLXJenkins-JenkinsfileDeployment/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](05-DLXJenkins-JenkinsfileDeployment/03-design-smells-symptoms.md) |
+| 06 | JsJenkins/Jenkinsfile | [01-srp-violation-analysis.md](06-JsJenkins-Jenkinsfile/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](06-JsJenkins-Jenkinsfile/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](06-JsJenkins-Jenkinsfile/03-design-smells-symptoms.md) |
+| 07 | JsJenkins/JenkinsfileDeployment | [01-srp-violation-analysis.md](07-JsJenkins-JenkinsfileDeployment/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](07-JsJenkins-JenkinsfileDeployment/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](07-JsJenkins-JenkinsfileDeployment/03-design-smells-symptoms.md) |
+| 08 | PipelineForJenkins/Jenkinsfile | [01-srp-violation-analysis.md](08-PipelineForJenkins-Jenkinsfile/01-srp-violation-analysis.md) | [02-software-smells-analysis.md](08-PipelineForJenkins-Jenkinsfile/02-software-smells-analysis.md) | [03-design-smells-symptoms.md](08-PipelineForJenkins-Jenkinsfile/03-design-smells-symptoms.md) |
 
 ---
 

@@ -1,36 +1,63 @@
 # DLX CI Pipeline Sequence Diagrams
 
 > **Analysis Target**: `DLXJenkins/Jenkinsfile` (DLX Unity CI Pipeline)
+>
+> **Related**: [Domain Mapping Summary](domain-mapping.md)
 
 ---
 
-## Domain Summary by Function
+## Why Sequence Diagrams?
 
-| Domain | Function | Used Stage | Helper Location |
-|--------|----------|------------|-----------------|
-| **Git Management** | clone, fetch, checkout, reset, clean, merge | Prepare WORKSPACE, Post | generalHelper |
-| **Bitbucket API** | send build status, get commit hash, send report | Prepare WORKSPACE, Linting, Code Coverage, Build Project, Post | generalHelper + Python |
-| **Unity CLI** | run tests, generate coverage, WebGL build, Rider Sync | Prepare WORKSPACE, EditMode, PlayMode, Code Coverage, Build Project | unityHelper |
-| **Web Server (SSH/SCP)** | deploy report/build results | Code Coverage, Build Project | generalHelper |
-| **Linting (Bash)** | C# code style check | Linting | Bash Script |
-| **Environment Setup** | parseJson, parseTicketNumber, env settings | Prepare WORKSPACE | generalHelper |
+> **Q: Why use Sequence Diagrams for Jenkins Pipeline analysis?**
+>
+> A: Jenkins Pipeline is **procedural code**. Unlike OOP where classes naturally define domain boundaries, procedural code mixes multiple domains within sequential execution flow. Sequence Diagrams visualize the **call flow** between components, making it easier to identify which domains are involved at each stage.
+
+> **Q: What is the goal of this analysis?**
+>
+> A: To **identify domains by function**. By tracing "who calls what", I can classify each function into its domain (Git, Bitbucket, Unity, etc.) and detect where domain boundaries are violated (e.g., one function mixing multiple domains).
+
+
+---
+
+## Domain Summary
+
+### Helper Domains Used
+
+| Helper | Domain | Functions Called | Used Stage |
+|--------|--------|------------------|------------|
+| generalHelper | Git | `cloneOrUpdateRepo`, `mergeBranchIfNeeded`, `isBranchUpToDateWithRemote`, `checkoutBranch` | Prepare WORKSPACE, Post |
+| generalHelper | Bitbucket | `getFullCommitHash`, `sendBuildStatus` | Prepare WORKSPACE, Post |
+| generalHelper | Web Server | `publishTestResultsHtmlToWebServer`, `publishBuildResultsToWebServer` | Code Coverage, Build Project |
+| generalHelper | Parsing | `parseJson` | Prepare WORKSPACE |
+| generalHelper | Mixed (Bitbucket + Parsing) | `initializeEnvironment` | Prepare WORKSPACE |
+| unityHelper | Unity CLI | `runUnityStage` | Prepare WORKSPACE, EditMode, PlayMode, Code Coverage, Build Project |
+| unityHelper | Unity Installation | `getUnityExecutable` | Prepare WORKSPACE |
+| unityHelper | Bitbucket | `sendTestReport` | Code Coverage |
+
+### Jenkinsfile Direct Calls
+
+| Domain | Direct Call | Used Stage |
+|--------|-------------|------------|
+| Jenkins Pipeline DSL | `pipeline`, `stages`, `post`, `script`, `dir`, `credentials` | All |
+| File System | `mkdir -p`, `cp` | Linting, EditMode, Build Project |
+| Linting (Bash) | `sh Linting.bash` | Linting |
+| Bitbucket (Python) | `linting_error_report.py`, `create_bitbucket_webgl_build_report.py` | Linting, Build Project |
 
 ### Domain Mapping by Stage
 
-| Stage | Git | Bitbucket | Unity | Web Server | Linting | Environment Setup |
-|-------|:---:|:---------:|:-----:|:----------:|:-------:|:-----------------:|
-| Prepare WORKSPACE | ✓ | ✓ | ✓ | | | ✓ |
-| Linting | | ✓ | | | ✓ | |
-| EditMode Tests | | | ✓ | | | |
-| PlayMode Tests | | | ✓ | | | |
-| Code Coverage | | ✓ | ✓ | ✓ | | |
-| Build Project | | ✓ | ✓ | ✓ | | |
-| Post | ✓ | ✓ | | | | |
+| Stage | Git | Bitbucket | Unity CLI | Unity Install | Web Server | Parsing | File System | Linting |
+|-------|:---:|:---------:|:---------:|:-------------:|:----------:|:-------:|:-----------:|:-------:|
+| Prepare WORKSPACE | ✓ | ✓ | ✓ | ✓ | | ✓ | | |
+| Linting | | ✓ | | | | | ✓ | ✓ |
+| EditMode Tests | | | ✓ | | | | ✓ | |
+| PlayMode Tests | | | ✓ | | | | | |
+| Code Coverage | | ✓ | ✓ | | ✓ | | | |
+| Build Project | | ✓ | ✓ | | ✓ | | ✓ | |
+| Post | ✓ | ✓ | | | | | | |
 
 ---
 
 ## Overall Pipeline Overview
-
 ```mermaid
 flowchart LR
     subgraph Stages
@@ -50,7 +77,6 @@ flowchart LR
 ---
 
 ## Stage 1: Prepare WORKSPACE
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -87,6 +113,7 @@ sequenceDiagram
     GH-->>JF: COMMIT_HASH
 
     JF->>GH: initializeEnvironment(workspace, commitHash, prBranch)
+    Note over GH: Mixed: Bitbucket + Parsing
     GH->>GH: sendBuildStatus('INPROGRESS')
     GH->>Python: send_bitbucket_build_status.py
     Python->>BB: POST /statuses/build
@@ -127,20 +154,20 @@ sequenceDiagram
 ---
 
 ## Stage 2: Linting
-
 ```mermaid
 sequenceDiagram
     autonumber
 
     participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant FS as File System
     participant Bash as Bash Scripts
     participant Python as Python Scripts
     participant BB as Bitbucket API
 
     Note over JF: Stage: Linting
 
-    JF->>JF: mkdir -p linting_results
-    JF->>JF: cp .editorconfig
+    JF->>FS: mkdir -p linting_results
+    JF->>FS: cp .editorconfig
     JF->>Bash: sh Linting.bash
     Bash-->>JF: exitCode
 
@@ -156,19 +183,19 @@ sequenceDiagram
 ---
 
 ## Stage 3: EditMode Tests
-
 ```mermaid
 sequenceDiagram
     autonumber
 
     participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant FS as File System
     participant UH as unityHelper
     participant Unity as Unity CLI
 
     Note over JF: Stage: EditMode Tests
 
-    JF->>JF: mkdir -p test_results
-    JF->>JF: mkdir -p coverage_results
+    JF->>FS: mkdir -p test_results
+    JF->>FS: mkdir -p coverage_results
 
     JF->>UH: runUnityStage('EditMode', errorMsg)
     UH->>UH: runUnityBatchMode('EditMode')
@@ -183,7 +210,6 @@ sequenceDiagram
 ---
 
 ## Stage 4: PlayMode Tests
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -204,7 +230,6 @@ sequenceDiagram
 ---
 
 ## Stage 5: Code Coverage & Send Reports
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -246,12 +271,12 @@ sequenceDiagram
 ---
 
 ## Stage 6: Build Project
-
 ```mermaid
 sequenceDiagram
     autonumber
 
     participant JF as Jenkinsfile<br/>(Orchestrator)
+    participant FS as File System
     participant GH as generalHelper
     participant UH as unityHelper
     participant Unity as Unity CLI
@@ -261,8 +286,8 @@ sequenceDiagram
 
     Note over JF: Stage: Build Project
 
-    JF->>JF: mkdir -p Assets/Editor
-    JF->>JF: cp Builder.cs Assets/Editor/
+    JF->>FS: mkdir -p Assets/Editor
+    JF->>FS: cp Builder.cs Assets/Editor/
 
     JF->>UH: runUnityStage('Webgl', errorMsg)
     UH->>UH: runUnityBatchMode('Webgl')
@@ -286,7 +311,6 @@ sequenceDiagram
 ---
 
 ## Post: always/success/failure/aborted
-
 ```mermaid
 sequenceDiagram
     autonumber
@@ -322,3 +346,28 @@ sequenceDiagram
     BB-->>Python: OK
     GH-->>JF: OK
 ```
+
+---
+
+## Observations
+
+### Delegation Pattern
+
+| Pattern | Example | Count |
+|---------|---------|:-----:|
+| Jenkinsfile → generalHelper → External | `sendBuildStatus` → Python → Bitbucket API | 5 |
+| Jenkinsfile → unityHelper → External | `runUnityStage` → Unity CLI | 5 |
+| Jenkinsfile → Python direct | `linting_error_report.py` | 2 |
+| Jenkinsfile → Bash direct | `Linting.bash` | 1 |
+
+### Inconsistencies
+
+| Issue | Description |
+|-------|-------------|
+| Direct Python calls | `linting_error_report.py`, `create_bitbucket_webgl_build_report.py` bypass Helper |
+| Mixed domain function | `initializeEnvironment` combines Bitbucket + Parsing (SRP violation) |
+| Inconsistent Bitbucket reporting | `sendTestReport` in unityHelper, but linting/build reports called directly |
+
+---
+
+[← Domain Mapping Summary](domain-mapping.md)
