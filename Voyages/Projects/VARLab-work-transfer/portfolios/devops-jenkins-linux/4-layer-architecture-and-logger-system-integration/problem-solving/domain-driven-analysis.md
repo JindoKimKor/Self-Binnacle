@@ -16,7 +16,6 @@ While researching how to articulate the refactored structure, I discovered Domai
 
 - **Layered Architecture**: My 4-layer separation matched DDD's isolation principle
 - **Modules**: My domain-based libraries matched DDD's cohesive concept grouping
-- **Intention-Revealing Interfaces**: My operation naming matched DDD's supple design
 
 ### What's Missing from Full DDD
 
@@ -50,12 +49,12 @@ Source: DDD Reference, Table of Contents (p.ii-iii)
 
 ### Patterns Identified in This Architecture
 
-| DDD Pattern | Category | Present? | Notes |
-|-------------|----------|----------|-------|
-| **Layered Architecture** | Building Blocks | ✓ Yes | 4-layer separation of concerns |
-| **Modules** | Building Blocks | ✓ Yes | Git/Shell/SSH libraries as cohesive units |
-| **Infrastructure Service** | Building Blocks | ✓ Yes | shellScriptHelper, bitbucketApiHelper (as Facade) |
-| **Intention-Revealing Interfaces** | Supple Design | ✓ Yes | Clear operation names (checkout, merge, etc.) |
+| DDD Pattern | Category | Alignment | Notes |
+|-------------|----------|-----------|-------|
+| **Layered Architecture** | Building Blocks | ✓ Applied | 4-layer separation of concerns |
+| **Modules** | Building Blocks | ✓ Applied | Git/Shell/SSH libraries as cohesive units |
+| **Infrastructure Service** | Building Blocks | Partial | Concept exists, implemented as GoF Facade |
+| **Intention-Revealing Interfaces** | Supple Design | ✗ No | Names expose implementation (git commands) |
 | **Entities/Aggregates** | Building Blocks | ✗ No | Not applicable to stateless pipeline scripts |
 | **Domain Services** | Building Blocks | ✗ No | No domain logic to coordinate |
 | **Bounded Contexts** | Strategic Design | ✗ No | Single team, single codebase |
@@ -277,7 +276,7 @@ def call(Map bitbucketApiMap) {
 
 ---
 
-### 4. Intention-Revealing Interfaces ✓
+### 4. Intention-Revealing Interfaces (Analysis)
 
 <!--
 Source: DDD Reference, p.20 - Intention-Revealing Interfaces (Part III: Supple Design)
@@ -288,14 +287,30 @@ to understand the internals. These names should conform to the ubiquitous langua
 that team members can quickly infer their meaning."
 -->
 
-Operations are named to describe **effect and purpose**, not implementation:
+**DDD Definition:** Names should describe effect and purpose, **without reference to the means** by which they do what they promise.
 
-| Operation Name | Reveals Intent | Hides Implementation |
-|----------------|----------------|---------------------|
-| `GitLibrary.CheckoutBranch` | Switch to branch | Git command details |
-| `GitLibrary.MergeOriginBranch` | Combine branches | Merge strategy |
-| `ShellLibrary.PrintJenkinsEnv` | Display environment | Shell execution details |
-| `SSHShellLibrary.CopyBuildToHostServer` | Deploy build | SCP connection details |
+**Analysis of current naming:**
+
+| Operation Name | What It Reveals | Issue |
+|----------------|-----------------|-------|
+| `GitLibrary.CheckoutBranch` | `git checkout` command | Exposes implementation |
+| `GitLibrary.MergeOriginBranch` | `git merge origin/` command | Exposes implementation |
+| `GitLibrary.ResetHardHead` | `git reset --hard` command | Exposes implementation |
+| `ShellLibrary.PrintJenkinsEnv` | Prints environment | Descriptive, but technical |
+| `SSHShellLibrary.CopyBuildToHostServer` | SCP operation | Exposes implementation |
+
+**Why this doesn't meet DDD criteria:**
+
+The current names directly expose the underlying git/shell commands rather than describing the business intent. True Intention-Revealing names would be:
+
+| Current | Intention-Revealing Alternative |
+|---------|--------------------------------|
+| `CheckoutBranch` | `SwitchToBranch` or `ActivateBranch` |
+| `MergeOriginBranch` | `IntegrateRemoteChanges` |
+| `ResetHardHead` | `DiscardAllLocalChanges` |
+| `CopyBuildToHostServer` | `DeployBuildArtifacts` |
+
+**Conclusion:** The current naming is **descriptive** but not **intention-revealing** by DDD standards. Names follow git/shell command conventions rather than domain language.
 
 ---
 
@@ -404,39 +419,54 @@ manifestations such as code bases and database schemas."
 
 ## Summary
 
-### Patterns Identified
+### Patterns Applied
 
 | Pattern | Category | Implementation |
 |---------|----------|----------------|
 | **Layered Architecture** | DDD Building Blocks | 4-layer: Entry → Orchestration → Infrastructure → Module |
 | **Modules** | DDD Building Blocks | GitLibrary, ShellLibrary, SSHShellLibrary, bitbucketApiLibrary |
-| **Intention-Revealing Interfaces** | DDD Supple Design | Clear operation names throughout |
-| **Infrastructure Service** | DDD Building Blocks | shellScriptHelper, bitbucketApiHelper (implemented as Facade pattern) |
+
+### Patterns Partially Aligned
+
+| Pattern | Category | Notes |
+|---------|----------|-------|
+| **Infrastructure Service** | DDD Building Blocks | Concept exists, implemented as GoF Facade pattern |
 
 ### Patterns Not Applied
 
 | Pattern | Category | Reason |
 |---------|----------|--------|
+| **Intention-Revealing Interfaces** | DDD Supple Design | Names expose implementation (git commands) |
 | **Entities, Aggregates** | DDD Building Blocks | Stateless pipeline environment |
 | **Domain Services** | DDD Building Blocks | No domain logic requiring coordination between Entities/Value Objects |
 | **Bounded Contexts** | DDD Strategic Design | Single team, single codebase |
 | **Context Mapping** | DDD Strategic Design | No multiple contexts to integrate |
 
 ---
+
 <!--
 ## Interview Talking Point
 
-> "I refactored 5 monolithic Jenkins pipelines into a modular 4-layer architecture. After completing the refactoring, I analyzed the structure and found it aligns with several DDD concepts:
->
-> - **Layered Architecture**: Clear separation with Entry, Orchestration, Infrastructure, and Module layers
-> - **Modules**: Git, Shell, and SSH libraries each contain a cohesive set of concepts with clear boundaries
-> - **Intention-Revealing Interfaces**: Operations named for their effect, not implementation
->
-> For the Infrastructure layer, I used the **Facade pattern** to simplify complex operations like API calls and shell execution with logging.
->
-> I didn't implement DDD's tactical patterns like Entities and Aggregates because they require stateful domain objects with identity and lifecycle management. Jenkins pipelines are stateless by nature—each execution is independent, and external systems like Bitbucket manage the actual state.
+**Q: Why did you use "domain-driven" in your resume?**
 
-!-->
+> "The original purpose of DDD is to design complex domain logic with domain experts and developers communicating in the same language, centered around a domain model.
+>
+> In my case, it wasn't to that level. I used 'domain-driven' to mean that I separated the previously mixed code by functional domains: Git operations, Shell scripting, Bitbucket API, and Secure Shell operations.
+>
+> After the refactoring, I analyzed it against Eric Evans' DDD. I found similarities with some organizational principles like Layered Architecture and Modules, but I didn't apply DDD as a whole."
+
+**Q: What is DDD's main purpose?**
+
+> "DDD's core purpose is handling complex business domains by having developers and domain experts communicate using a Ubiquitous Language, with the domain model directly reflected in code.
+>
+> Jenkins pipelines don't really fit this - they're stateless, mostly external system calls, no complex domain logic. What I did was domain-based code organization, not full DDD implementation."
+
+**Q: What about Intention-Revealing Interfaces?**
+
+> "That's one I could have applied but didn't. I used implementation names like git commands instead of domain-intent names.
+>
+> If I had done this, it would have been closer to DDD's core concept of Ubiquitous Language - where the code reflects domain intent rather than implementation details."
+-->
 
 ## References
 
