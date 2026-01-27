@@ -94,11 +94,13 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 > **Q: Want to know which design principles were applied?**
 >
 > → [solution-by-layer.md](problem-solving/solution-by-layer.md) - 4-Layer Architecture analysis
+>
 > → [solution-by-feature.md](problem-solving/solution-by-feature.md) - Logger System, Shell Libraries analysis
 
 > **Q: Want the step-by-step implementation process?**
 >
 > → [solution-overview.md](problem-solving/solution-overview.md) - Phase 0~4 overview with links
+>
 > → [phase-0~4/](problem-solving/) - Detailed changelogs by commit
 
 ### 📄 Supplement
