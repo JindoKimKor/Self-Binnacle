@@ -68,6 +68,7 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 > **Q: Want to see how I analyzed a single file?**
 >
 > Example: [generalHelper Analysis](problem-analysis/01-generalHelper/)
+>
 > - [SRP Violation Analysis](problem-analysis/01-generalHelper/01-srp-violation-analysis.md)
 > - [Software Smells Analysis](problem-analysis/01-generalHelper/02-software-smells-analysis.md)
 > - [Design Smells Analysis](problem-analysis/01-generalHelper/03-design-smells-symptoms.md)
