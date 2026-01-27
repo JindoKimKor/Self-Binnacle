@@ -29,7 +29,7 @@ Continuous study of software design patterns for writing maintainable, scalable,
 - Phase 2: Pattern Catalog - Details for each pattern (When to use + OOP implementation + Layer location)
 - Phase 3: Case Study - Map VARLab 51 issues → Real application cases
 - Scope: VARLab 5 patterns (Command, Facade, Service Layer, Builder, Strategy) → Gradual expansion
-- Reference: `Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/`
+- Reference: `Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/retrospective-analysis-from-5-monolithic-pipelines-to-4-layer-architecture/`
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
@@ -37,15 +37,16 @@ Continuous study of software design patterns for writing maintainable, scalable,
 
 - Domain-Driven Design: Tackling Complexity in the Heart of Software (O'REILLY)
 
+### Plotted (Reached)
+
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
 | Map VARLab 4-Layer Architecture to DDD concepts | - | 2026-01-23 | Clarify DDD understanding through hands-on experience |
 
-- VARLab Jenkins Library used Domain-Driven 4-Layer Architecture internally
-- Goal: Understand which DDD concepts were applied and how
-- Reference: `Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/highlights.md`
-
-### Plotted (Reached)
+- Result: Created `domain-driven-analysis.md` analyzing DDD pattern applicability
+- Key learning: Intention-Revealing Interfaces - descriptive ≠ intention-revealing
+- Strategic DDD (Layered Architecture, Modules) applicable; Tactical DDD (Entities, Aggregates) not applicable to stateless pipelines
+- Reference: `Voyages/Projects/VARLab-work-transfer/portfolios/devops-jenkins-linux/retrospective-analysis-from-5-monolithic-pipelines-to-4-layer-architecture/problem-solving/domain-driven-analysis.md`
 
 ---
 
@@ -54,6 +55,7 @@ Continuous study of software design patterns for writing maintainable, scalable,
 |---------|------|-------|------|
 | [2026-01-11](logbook/2026-01-11/log.md) | 2026-01-11~17 | SRP & Smells analysis | Jenkins pipeline analysis, 51 issues identified |
 | [2026-01-19](logbook/2026-01-19/log.md) | 2026-01-19 | Polymorphism | Interface vs Abstract Class vs Virtual/Override decision tree |
+| [2026-01-24](logbook/2026-01-24/log.md) | 2026-01-24~26 | DDD & GoF Patterns | DDD concepts analysis, Command/Facade/Adapter patterns, Intention-Revealing Interfaces |
 
 ---
 
