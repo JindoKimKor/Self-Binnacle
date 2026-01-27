@@ -153,7 +153,7 @@
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 1 Underway
-> Total: 136.8h | Start: Sep 2025
+> Total: 137.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -168,7 +168,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 17.0h | □■□■□□■□□□□□□□■□□□■□□■□■□□ |
+> | Jan | 18.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -233,54 +233,15 @@
 >
 > </details>
 
-> ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 18 Underway, 6 Plotted
-> Total: 108.8h | Start: Jan 2026
+> ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 6 Plotted
+> Total: 114.8h | Start: Jan 2026
 >
-> <details>
-> <summary>Sailing Orders</summary>
->
-> | Order | Created | Deadline |
-> |-------|---------|----------|
-> | Update Software Smells portfolio README layout & fix TOC | 2026-01-23 | - |
-> | Restructure 4-layer architecture portfolio for visitor navigation | 2026-01-25 | - |
-> | 파일 | 목적 | 라인수 |
-> | Entry point, 네비게이션 허브 | highlights.md | - |
-> |  | 153 | problem-analysis-overview.md |
-> | logger-system-design-integration.md | Logger 설계 상세 | 514 |
-> | 448 |  | DDD 분석 (supplement) |
-> | CPS 제약 설명 | 중복 영역 | **발견된 중복/겹침**: |
-> | 해결 방안 | ---------- | - |
-> | highlights에서 요약 + 링크 | Architecture Snapshot | - |
-> | 역할 명확화 필요 | 현재 이름 | **문서 의존성 구조**:
-```
-README.md (hub)
-├── highlights.md (what)
-├── problem-analysis-overview.md (why)
-├── legs/README.md (how)
-└── domain-driven-analysis.md (supplement)
-```
-
-</details>
-
-<details>
-<summary><strong>파일명 검토</strong></summary>
-
-**Root Level**: |
-> | `highlights.md` |  | "what" 역할인데 이름이 모호? |
-> | 길다 |  | - |
-> |  | 현재 이름 | **legs/ 폴더**: |
-> | `refactoring-result-snapshot.md` |  | legs/ 안에 있어야 하나? root로 이동? |
-> | 폴더명 길다 |  | - |
-> |  | `leg-3-bitbucket-api-and-shell-library-integration/` | - |
-> |  | 폴더명 길다 | `leg-4-full-pipeline-refactoring-and-stage-modularization/` |
->
-> </details>
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 108.8h | □□□□□□□■□■■■■■■■■□□□□□□■■■ |
+> | Jan | 114.8h | □□□□□□□■□■■■■■■■■□□□□□□■■■ |
 >
 > </details>
 
@@ -437,7 +398,7 @@ README.md (hub)
 > </details>
 
 > ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 1 Underway
-> Total: 12.0h | Start: Jan 2026
+> Total: 15.0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -452,7 +413,7 @@ README.md (hub)
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 12.0h | □□□□□□□□□□□■■□□□□□■■□□□□□□ |
+> | Jan | 15.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■ |
 >
 > </details>
 
