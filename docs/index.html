@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Post-refactoring analysis - Transform intuitive problem-solving into systematic knowledge">
+        <meta name="description" content="Jenkins refactoring, CI/CD architecture, technical debt, software smells, design patterns, 4-layer architecture, shared library">
       
       
         <meta name="author" content="Jindo Kim">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Software Smells Analysis & Architecture Redesign</title>
+        <title>Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Software Smells Analysis &amp; Architecture Redesign" class="md-header__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+    <a href="." title="Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns" class="md-header__button md-logo" aria-label="Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Software Smells Analysis & Architecture Redesign
+            Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -192,13 +192,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Software Smells Analysis &amp; Architecture Redesign" class="md-nav__button md-logo" aria-label="Software Smells Analysis & Architecture Redesign" data-md-component="logo">
+    <a href="." title="Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns" class="md-nav__button md-logo" aria-label="Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Software Smells Analysis & Architecture Redesign
+    Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2502,12 +2502,34 @@
 
 
 <h1 id="retrospective-analysis-from-5-monolithic-pipelines-to-4-layer-architecture">Retrospective Analysis: From 5 Monolithic Pipelines to 4-Layer Architecture</h1>
-<p><img alt="Architecture Overview" src="resources/architecture-overview.png" /></p>
+<p><img alt="Refactoring Before After" src="resources/refactoring-before-after.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What I did</strong></td>
+<td>Transformed 5 monolithic pipelines (41% duplication) into 4-layer architecture with centralized libraries</td>
+</tr>
+<tr>
+<td><strong>How it emerged</strong></td>
+<td>Felt the pain → organized by domain naturally → patterns emerged</td>
+</tr>
+<tr>
+<td><strong>Post-analysis</strong></td>
+<td>Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns)</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>Problem analysis, pattern identification, architecture rationale</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
-<p><strong>What I did:</strong> Transformed 5 monolithic pipelines (41% duplication) into 4-layer architecture with centralized libraries</p>
-<p><strong>How it emerged:</strong> Felt the pain → organized by domain naturally → patterns emerged</p>
-<p><strong>Post-analysis:</strong> Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns)</p>
-<p><strong>Documentation:</strong> Problem analysis, pattern identification, architecture rationale</p>
 <p><strong>Note on 37% vs 41%:</strong> If you came from my resume, you may have seen "37% duplication." That figure was from an earlier baseline (<code>54479b2</code>, 2025-02-21). After detailed commit history analysis, <code>74fc356</code> (2025-03-20) was identified as the accurate "before refactoring" state, showing <strong>41% duplication</strong>. The increase itself demonstrates the architecture's High Viscosity problem.</p>
 </blockquote>
 <hr />

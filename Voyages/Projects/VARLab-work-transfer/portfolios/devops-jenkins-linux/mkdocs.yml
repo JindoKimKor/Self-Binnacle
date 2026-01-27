@@ -1,5 +1,5 @@
-site_name: Software Smells Analysis & Architecture Redesign
-site_description: Post-refactoring analysis - Transform intuitive problem-solving into systematic knowledge
+site_name: Post-Refactoring Analysis - Intuitive Fixes to Industry Patterns
+site_description: Jenkins refactoring, CI/CD architecture, technical debt, software smells, design patterns, 4-layer architecture, shared library
 site_author: Jindo Kim
 docs_dir: retrospective-analysis-from-5-monolithic-pipelines-to-4-layer-architecture
 site_dir: site

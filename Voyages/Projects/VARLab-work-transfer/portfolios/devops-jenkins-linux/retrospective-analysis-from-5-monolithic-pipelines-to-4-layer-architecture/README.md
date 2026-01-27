@@ -1,14 +1,13 @@
 # Retrospective Analysis: From 5 Monolithic Pipelines to 4-Layer Architecture
 
-![Architecture Overview](resources/architecture-overview.png)
+![Refactoring Before After](resources/refactoring-before-after.png)
 
-> **What I did:** Transformed 5 monolithic pipelines (41% duplication) into 4-layer architecture with centralized libraries
->
-> **How it emerged:** Felt the pain → organized by domain naturally → patterns emerged
->
-> **Post-analysis:** Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns)
->
-> **Documentation:** Problem analysis, pattern identification, architecture rationale
+| | |
+|---|---|
+| **What I did** | Transformed 5 monolithic pipelines (41% duplication) into 4-layer architecture with centralized libraries |
+| **How it emerged** | Felt the pain → organized by domain naturally → patterns emerged |
+| **Post-analysis** | Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns) |
+| **Documentation** | Problem analysis, pattern identification, architecture rationale |
 
 > **Note on 37% vs 41%:** If you came from my resume, you may have seen "37% duplication." That figure was from an earlier baseline (`54479b2`, 2025-02-21). After detailed commit history analysis, `74fc356` (2025-03-20) was identified as the accurate "before refactoring" state, showing **41% duplication**. The increase itself demonstrates the architecture's High Viscosity problem.
 

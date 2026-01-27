@@ -5,6 +5,8 @@ github_url: "https://github.com/JindoKimKor/devops-jenkins-linux/tree/74fc356371
 
 # Problem Analysis Overview
 
+![Architecture Decay Overview](../resources/architecture-decay-overview.png)
+
 ## Table of Contents
 
 - [Background](#1-background)

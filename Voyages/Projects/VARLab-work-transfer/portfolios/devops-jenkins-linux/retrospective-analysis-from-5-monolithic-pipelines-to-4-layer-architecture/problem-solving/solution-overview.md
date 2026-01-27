@@ -6,6 +6,8 @@
 
 ---
 
+![Solution Overview](../resources/solution-overview.png)
+
 ## Table of Contents
 
 - [Background](#1-background)
