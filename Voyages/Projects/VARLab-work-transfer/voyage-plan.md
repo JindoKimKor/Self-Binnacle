@@ -124,6 +124,7 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 |---------|------|-------|------|
 | [2026-01-08](logbook/2026-01-08/log.md) | 2026-01-08 | README verification | Fixed commit counts, identified squash-merged branches |
 | [2026-01-11](logbook/2026-01-11/log.md) | 2026-01-11~17 | Portfolio documentation | 65.5h, 4-layer architecture portfolio complete |
+| [2026-01-24](logbook/2026-01-24/log.md) | 2026-01-24~26 | Portfolio restructure | Folder rename, mkdocs navigation, DDD/GoF documentation |
 
 ---
 

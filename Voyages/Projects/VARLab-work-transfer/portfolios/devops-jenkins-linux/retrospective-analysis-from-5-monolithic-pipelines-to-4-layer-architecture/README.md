@@ -77,7 +77,7 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 
 > **Q: Want the overall problem analysis summary?**
 >
-> → [problem-analysis-overview.md](problem-analysis/problem-analysis-overview.md)
+> - → [problem-analysis-overview.md](problem-analysis/problem-analysis-overview.md)
 
 > **Q: Want the detailed analysis?**
 >
@@ -89,29 +89,29 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 
 > **Q: Want to see the final architecture and solution overview?**
 >
-> → [solution-overview.md](problem-solving/solution-overview.md)
+> - → [solution-overview.md](problem-solving/solution-overview.md)
 
 > **Q: Want to know which design principles were applied?**
 >
-> → [solution-by-layer.md](problem-solving/solution-by-layer.md) - 4-Layer Architecture analysis
+> - → [solution-by-layer.md](problem-solving/solution-by-layer.md) - 4-Layer Architecture analysis
 >
-> → [solution-by-feature.md](problem-solving/solution-by-feature.md) - Logger System, Shell Libraries analysis
+> - → [solution-by-feature.md](problem-solving/solution-by-feature.md) - Logger System, Shell Libraries analysis
 
 > **Q: Want the step-by-step implementation process?**
 >
-> → [solution-overview.md](problem-solving/solution-overview.md) - Phase 0~4 overview with links
+> - → [solution-overview.md](problem-solving/solution-overview.md) - Phase 0~4 overview with links
 >
-> → [phase-0~4/](problem-solving/) - Detailed changelogs by commit
+> - → [phase-0~4/](problem-solving/) - Detailed changelogs by commit
 
 ### 📄 Supplement
 
 > **Q: Want the DDD perspective analysis?**
 >
-> → [domain-driven-analysis.md](problem-solving/domain-driven-analysis.md)
+> - → [domain-driven-analysis.md](problem-solving/domain-driven-analysis.md)
 
 > **Q: Want to see the Pull Request documentation?**
 >
-> → [pull-request-documentation.pdf](problem-solving/pull-request-documentation.pdf)
+> - → [pull-request-documentation.pdf](problem-solving/pull-request-documentation.pdf)
 
 ---
 
