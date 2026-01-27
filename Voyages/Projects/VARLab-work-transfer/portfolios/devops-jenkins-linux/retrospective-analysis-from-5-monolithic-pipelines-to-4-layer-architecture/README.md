@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **What I did** | Transformed 5 monolithic pipelines (41% duplication) into 4-layer architecture with centralized libraries |
-| **How it emerged** | Felt the pain → organized by domain naturally → patterns emerged |
+| **How it emerged** | Felt the pain - organized by domain naturally - patterns emerged |
 | **Post-analysis** | Mapped my solution to industry concepts (Software Smells, DDD patterns, GoF Design Patterns) |
 | **Documentation** | Problem analysis, pattern identification, architecture rationale |
 
@@ -55,7 +55,7 @@ Instead of "it feels messy," I could have shown concrete numbers. Instead of "it
 | Problem Description | "Code is messy" | "41% duplication, 18-location Shotgun Surgery" |
 | Justification | "I feel it's hard to maintain" | "Duplication increased 4% in 1 month (High Viscosity)" |
 | Scope | "A lot of copy-paste" | "113 external calls, 12 types, untestable" |
-| Urgency | "We should fix it sometime" | "10-20 min tasks → hours, ROI degradation" |
+| Urgency | "We should fix it sometime" | "10-20 min tasks - hours, ROI degradation" |
 
 This analysis transforms intuition into evidence. It provides the vocabulary and metrics needed to communicate technical debt to stakeholders who may not see the code daily.
 
@@ -73,11 +73,11 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 > - [Software Smells Analysis](problem-analysis/01-generalHelper/02-software-smells-analysis.md)
 > - [Design Smells Analysis](problem-analysis/01-generalHelper/03-design-smells-symptoms.md)
 >
-> Analysis flow: Define SRP criteria → Analyze responsibility per function/module → Identify Software Smells
+> Analysis flow: Define SRP criteria - Analyze responsibility per function/module - Identify Software Smells
 
 > **Q: Want the overall problem analysis summary?**
 >
-> - → [problem-analysis-overview.md](problem-analysis/problem-analysis-overview.md)
+> - [problem-analysis-overview.md](problem-analysis/problem-analysis-overview.md)
 
 > **Q: Want the detailed analysis?**
 >
@@ -89,29 +89,27 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 
 > **Q: Want to see the final architecture and solution overview?**
 >
-> - → [solution-overview.md](problem-solving/solution-overview.md)
+> - [solution-overview.md](problem-solving/solution-overview.md)
 
 > **Q: Want to know which design principles were applied?**
 >
-> - → [solution-by-layer.md](problem-solving/solution-by-layer.md) - 4-Layer Architecture analysis
->
-> - → [solution-by-feature.md](problem-solving/solution-by-feature.md) - Logger System, Shell Libraries analysis
+> - [solution-by-layer.md](problem-solving/solution-by-layer.md) - 4-Layer Architecture analysis
+> - [solution-by-feature.md](problem-solving/solution-by-feature.md) - Logger System, Shell Libraries analysis
 
 > **Q: Want the step-by-step implementation process?**
 >
-> - → [solution-overview.md](problem-solving/solution-overview.md) - Phase 0~4 overview with links
->
-> - → [phase-0~4/](problem-solving/) - Detailed changelogs by commit
+> - [solution-overview.md](problem-solving/solution-overview.md) - Phase 0~4 overview with links
+> - [phase-0~4/](problem-solving/) - Detailed changelogs by commit
 
 ### 📄 Supplement
 
 > **Q: Want the DDD perspective analysis?**
 >
-> - → [domain-driven-analysis.md](problem-solving/domain-driven-analysis.md)
+> - [domain-driven-analysis.md](problem-solving/domain-driven-analysis.md)
 
 > **Q: Want to see the Pull Request documentation?**
 >
-> - → [pull-request-documentation.pdf](problem-solving/pull-request-documentation.pdf)
+> - [pull-request-documentation.pdf](problem-solving/pull-request-documentation.pdf)
 
 ---
 
@@ -135,7 +133,7 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 | Refactoring complete | 2025-05-12 | `ff74ac8` | devops-jenkins-linux |
 
 > Repository started in Windows environment and migrated to Linux.
-> Initial commit (2023-12-17) → Baseline (2025-03-20) = ~14 months of accumulated Technical Debt
+> Initial commit (2023-12-17) - Baseline (2025-03-20) = ~14 months of accumulated Technical Debt
 
 ---
 
