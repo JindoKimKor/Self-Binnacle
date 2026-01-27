@@ -1,5 +1,5 @@
 portfolios:
-  - path: devops-jenkins-linux/4-layer-architecture-and-logger-system-integration/README.md
+  - path: devops-jenkins-linux/retrospective-analysis-from-5-monolithic-pipelines-to-4-layer-architecture/README.md
     url: "https://jindokimkor.github.io/Self-Binnacle/"
     status: complete
     title: "Retrospective Analysis: From 5 Monolithic pipeline to 4-Layer Pipeline"

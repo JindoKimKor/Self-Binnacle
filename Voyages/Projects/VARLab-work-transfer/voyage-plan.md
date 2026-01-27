@@ -45,6 +45,8 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 ### Plotted (Underway)
 
+-
+
 ### Plotted Courses
 
 | Order | Deadline | Created | Purpose |
@@ -89,26 +91,31 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 - Phase/Step progress shown as voyage journey
 - Leverage achievement data from legs/ folder
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Explain how refactored Jenkins follows Domain-Driven Architecture | - | 2026-01-21 | DDD understanding & portfolio narrative |
-
-- Try breaking down the combined structure by Domain to see it more clearly
-- DDD core concepts to address:
-  - Ubiquitous Language: Shared language used by developers and domain experts
-  - Entities & Value Objects: Core business objects and values
-  - Bounded Context: Clear boundaries where a model applies
+### Plotted (Reached)
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
 | Update Software Smells portfolio README layout & fix TOC | - | 2026-01-23 | Better first impression |
 
-- Move Purpose section immediately below thumbnail image
-- Fix broken TOC links (`legs/` → `legs/README.md`)
-- Fix broken anchor links (build warnings)
-- Rebuild docs for GitHub Pages
+- Result: Fixed TOC format (bullet-only), updated mkdocs.yml navigation structure
+- Built mkdocs and deployed to docs/ for GitHub Pages
 
-### Plotted (Reached)
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Restructure 4-layer architecture portfolio for visitor navigation | - | 2026-01-25 | Better first impression & guided reading |
+
+- Result: Restructured folder from `legs/` → `problem-solving/` with Implementation Phases
+- Updated mkdocs.yml: Problem Analysis → Problem Solving structure
+- Added TOCs to all root-level documents
+- Renamed folders: `leg-{0-4}` → `phase-{0-4}`
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Analyze Strategic DDD concepts in Jenkins architecture | - | 2026-01-21 | DDD understanding & portfolio narrative |
+
+- Result: Created `domain-driven-analysis.md` explaining Strategic DDD (Bounded Contexts, Subdomains) application
+- Clarified: Tactical DDD (Entities, Aggregates) not applicable to Jenkins scripting environment
+- Updated terminology: "domain-driven" → "Strategic DDD concepts"
 
 ---
 
