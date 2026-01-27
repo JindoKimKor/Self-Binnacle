@@ -6,6 +6,8 @@ deadline: TBD
 
 # Joined as Backend Developer... But Couldn't Write Code
 
+![Helprr.ai SDLC Foundation](helprr-sdlc-overview.png)
+
 ## The Problem
 
 Joined as backend developer, but discovered multiple blockers:
