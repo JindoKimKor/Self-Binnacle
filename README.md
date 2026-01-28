@@ -1,5 +1,7 @@
 # Self-Binnacle
 
+![Binnacle](self-binnacle.jpg)
+
 **What is this?** AI-integrated personal life management framework built on nautical philosophy.
 
 **Core concept?** I navigate myself as a ship in the ocean of life—where I am both the captain and the ship. Self-Binnacle is the binnacle that holds my compass (direction) and logbook (voyage records).
