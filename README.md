@@ -85,6 +85,8 @@
 | [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) | - | Never |
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
+| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 64 |
+| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 35 |
 
 ---
 
@@ -130,7 +132,7 @@
 > </details>
 
 > ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) — 1 Underway
-> Total: 7.0h | Start: Dec 2025
+> Total: 6.0h | Start: Dec 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -145,7 +147,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■ |
+> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
@@ -216,14 +218,14 @@
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 111.5h | Start: May 2025 | Tracked from Sep 2025
+> Total: 110.0h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□■ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -232,14 +234,14 @@
 > </details>
 
 > ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 6 Plotted
-> Total: 116.0h | Start: Jan 2026
+> Total: 116.2h | Start: Jan 2026
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 116.0h | □□□□□□□■□■■■■■■■■□□□□□□■■■□ |
+> | Jan | 116.2h | □□□□□□□■□■■■■■■■■□□□□□□■■■□ |
 >
 > </details>
 
@@ -260,14 +262,14 @@
 ## Areas (4)
 
 > ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md)
-> Total: 19.2h | Start: Jul 2024 | Tracked from Oct 2025
+> Total: 18.2h | Start: Jul 2024 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□■ |
+> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -287,14 +289,14 @@
 > </details>
 
 > ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) — 2 Plotted
-> Total: 76.0h | Start: Jan 2025 | Tracked from Oct 2025
+> Total: 109.0h | Start: Jan 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□□□□□ |
+> | Jan | 95.8h | □□□□□□□□□□■■■■■■■■□□□□□■■■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
