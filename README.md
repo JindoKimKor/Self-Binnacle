@@ -98,12 +98,11 @@
 
 ---
 
-## Tasks (2)
+## Tasks (1)
 
 | Task | Created | Deadline |
 |------|---------|----------|
 | [Research Software Compliance Certificate](Voyages/Tasks/research-software-compliance-certificate/research-software-compliance-certificate.md) | Dec 21 | TBD |
-| [Winter 2026 General Awards Application](Voyages/Tasks/winter-2026-awards-application/winter-2026-awards-application.md) | Dec 20 | Jan 30 |
 
 ---
 
