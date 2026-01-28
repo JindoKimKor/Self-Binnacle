@@ -1,7 +1,5 @@
 # Self-Binnacle
 
-![Binnacle](self-binnacle.jpg)
-
 **What is this?** AI-integrated personal life management framework built on nautical philosophy.
 
 **Core concept?** I navigate myself as a ship in the ocean of life—where I am both the captain and the ship. Self-Binnacle is the binnacle that holds my compass (direction) and logbook (voyage records).
@@ -76,7 +74,7 @@
 
 ## Dashboard
 
-> Last updated: 2026-01-26
+> Last updated: 2026-01-27
 
 ---
 
@@ -87,8 +85,6 @@
 | [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) | - | Never |
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
-| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | 2025-11-24 | 63 |
-| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 34 |
 
 ---
 
@@ -96,8 +92,9 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | ⏰ 4 days |
-| Assignment 1: Project Plan | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-01 | ⏰ 6 days |
+| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | 🚨 3 days |
+| Assignment 1: Project Plan | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-01 | ⏰ 5 days |
+| Workshop 1 Content Preparation | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-03 | ⏰ 7 days |
 
 ---
 
@@ -128,13 +125,13 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□ |
+> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
 
 > ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) — 1 Underway
-> Total: 6.0h | Start: Dec 2025
+> Total: 7.0h | Start: Dec 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -149,13 +146,13 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□ |
+> | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 1 Underway
-> Total: 137.8h | Start: Sep 2025
+> Total: 138.8h | Start: Sep 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -170,7 +167,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 18.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■ |
+> | Jan | 19.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 47.2h | ■□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -194,7 +191,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□ |
+> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
@@ -212,7 +209,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□ |
+> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -220,14 +217,14 @@
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md)
-> Total: 110.0h | Start: May 2025 | Tracked from Sep 2025
+> Total: 111.5h | Start: May 2025 | Tracked from Sep 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 1.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 86.0h | ■■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -236,14 +233,14 @@
 > </details>
 
 > ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 6 Plotted
-> Total: 114.8h | Start: Jan 2026
+> Total: 116.0h | Start: Jan 2026
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 114.8h | □□□□□□□■□■■■■■■■■□□□□□□■■■ |
+> | Jan | 116.0h | □□□□□□□■□■■■■■■■■□□□□□□■■■□ |
 >
 > </details>
 
@@ -255,7 +252,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□□ |
 >
 > </details>
 
@@ -264,14 +261,14 @@
 ## Areas (4)
 
 > ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md)
-> Total: 18.2h | Start: Jul 2024 | Tracked from Oct 2025
+> Total: 19.2h | Start: Jul 2024 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 1.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -290,7 +287,7 @@
 >
 > </details>
 
-> ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) — 3 Plotted
+> ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) — 2 Plotted
 > Total: 76.0h | Start: Jan 2025 | Tracked from Oct 2025
 >
 > <details>
@@ -298,7 +295,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□□□□ |
+> | Jan | 62.8h | □□□□□□□□□□■■■■■■■■□□□□□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -337,7 +334,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□ |
+> | Jan | 13.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□ |
 >
 > </details>
 
@@ -360,7 +357,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□□□□□■□□□□□□■□□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□□■□□□□□□■□□□□ |
 >
 > </details>
 
@@ -372,7 +369,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 8.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□ |
+> | Jan | 8.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□□ |
 >
 > </details>
 
@@ -395,12 +392,12 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 6.0h | □□□□□□□□□□□□□□■□□□□□□■□□□□ |
+> | Jan | 6.0h | □□□□□□□□□□□□□□■□□□□□□■□□□□□ |
 >
 > </details>
 
 > ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 1 Underway
-> Total: 15.0h | Start: Jan 2026
+> Total: 18.0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -415,7 +412,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 15.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■ |
+> | Jan | 18.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■■ |
 >
 > </details>
 
