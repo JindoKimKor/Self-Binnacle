@@ -131,23 +131,15 @@
 >
 > </details>
 
-> ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) — 1 Underway
-> Total: 6.0h | Start: Dec 2025
+> ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md)
+> Total: 7.0h | Start: Dec 2025
 >
-> <details>
-> <summary>Sailing Orders</summary>
->
-> | Order | Created | Deadline |
-> |-------|---------|----------|
-> | Submit Session 1 Interaction Reflection Form | 2026-01-18 | - |
->
-> </details>
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□□ |
+> | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>

@@ -49,13 +49,13 @@ Free-form details can be added below each table
 
 ### Plotted (Underway)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Submit Session 1 Interaction Reflection Form | - | 2026-01-18 | Forgot to submit |
-
 ### Plotted Courses
 
 ### Plotted (Reached)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Submit Session 1 Interaction Reflection Form | - | 2026-01-18 | Forgot to submit |
 
 ---
 
