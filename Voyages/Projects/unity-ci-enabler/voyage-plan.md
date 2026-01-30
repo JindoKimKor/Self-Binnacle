@@ -39,7 +39,30 @@ Open-source tool for Unity developers. Democratizing VARLab's serverless build/t
 ---
 
 ## Sailing Orders
--
+
+### Plotted Courses
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Terraform Infrastructure Setup | - | 2026-01-29 | IaC for static infrastructure (VNet, NSG, Subnet) |
+
+**Details:**
+- [ ] `terraform/azure/main.tf` - Static infrastructure (VNet, Subnet, NSG)
+- [ ] `terraform/azure/variables.tf` - Variable definitions
+- [ ] `terraform/azure/outputs.tf` - Outputs for NIC connection
+- [ ] `.gitignore` update (*.tfstate, *.tfvars)
+- [ ] `terraform plan/apply` test
+- [ ] README documentation (user runs once)
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| vmManager.js Refactoring | - | 2026-01-29 | Modify to reference Terraform infrastructure |
+
+**Details:**
+- [ ] Remove existing VNet/NSG creation code
+- [ ] Reference Terraform outputs (subnet_id, nsg_id)
+- [ ] Simplify to only handle dynamic VM creation
+- [ ] Move hardcoded passwords to environment variables
 
 ---
 
@@ -67,7 +90,26 @@ Open-source tool for Unity developers. Democratizing VARLab's serverless build/t
 ---
 
 ## Notes
--
+
+### Why Terraform over Cloud SDK? (2026-01-29)
+
+**Summary**: Proactive IaC adoption for multi-cloud expansion and increasing infrastructure complexity
+
+| Reason | SDK Limitation | Terraform Solution |
+|--------|----------------|-------------------|
+| **Multi-cloud** | Need to learn/maintain SDK per cloud | Same HCL syntax, just swap providers |
+| **State Management** | No resource tracking | State file tracks current infrastructure |
+| **Cleanup** | Manual deletion required | `terraform destroy` auto-cleanup |
+| **Scalability** | Complexity spikes with Batch, SIG, Storage | Modular management |
+| **Collaboration** | Hard to understand infra from code alone | Code = Infrastructure documentation |
+
+**Decision Context**:
+- Current: 1 VM + network resources
+- Planned: Azure Batch, SIG, Blob Storage, Static Website, Multi-cloud
+
+**Hybrid Approach Rationale**:
+- Static infrastructure (VNet, NSG, Storage): Terraform - create once, maintain long-term
+- Dynamic resources (VM): Keep SDK - fast response needed in Serverless
 
 ---
 
