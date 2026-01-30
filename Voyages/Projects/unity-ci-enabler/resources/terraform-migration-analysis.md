@@ -12,25 +12,17 @@ This document analyzes the migration from Azure SDK to Terraform for the Unity C
 flowchart TB
     subgraph AF["Azure Functions (vmManager.js)"]
         direction TB
-        REQ[Request] --> RG[ensureResourceGroup]
-        RG --> VNET[createVirtualNetwork]
+        REQ[Request] --> RG["ensureResourceGroup ❌"]
+        RG --> VNET["createVirtualNetwork ❌"]
         VNET --> IP[createPublicIP]
-        IP --> NSG[createNSG]
+        IP --> NSG["createNSG ❌"]
         NSG --> NIC[createNIC]
         NIC --> VM[createVM]
     end
-
-    style RG fill:#ffcccc
-    style VNET fill:#ffcccc
-    style NSG fill:#ffcccc
-    style IP fill:#ffffcc
-    style NIC fill:#ffffcc
-    style VM fill:#ffffcc
 ```
 
 **Legend:**
-- Red: Redundant work (recreated every request)
-- Yellow: Dynamic resources (required per VM)
+- ❌ Redundant work (recreated every request)
 
 **Timeline per VM request:**
 
@@ -46,7 +38,7 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    subgraph TF["Terraform (Run Once)"]
+    subgraph TF["Terraform (Run Once) ✅"]
         direction TB
         TF_RG[azurerm_resource_group]
         TF_VNET[azurerm_virtual_network]
@@ -68,20 +60,11 @@ flowchart TB
     end
 
     TF_OUT -.->|subnet_id, nsg_id| NIC
-
-    style TF_RG fill:#ccffcc
-    style TF_VNET fill:#ccffcc
-    style TF_SUBNET fill:#ccffcc
-    style TF_NSG fill:#ccffcc
-    style TF_OUT fill:#ccffcc
-    style IP fill:#ffffcc
-    style NIC fill:#ffffcc
-    style VM fill:#ffffcc
 ```
 
 **Legend:**
-- Green: Terraform managed (created once, reused)
-- Yellow: SDK managed (dynamic, per request)
+- ✅ Terraform managed (created once, reused)
+- SDK managed (dynamic, per request)
 
 **Timeline per VM request:**
 
