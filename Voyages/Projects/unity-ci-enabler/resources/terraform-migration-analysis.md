@@ -110,6 +110,7 @@ graph LR
 ## Where Efficiency Gains Occur
 
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 mindmap
   root((Efficiency Gains))
     Time Savings
