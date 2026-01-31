@@ -23,7 +23,28 @@ Continuous study of data structures and algorithms for technical interviews and 
 ---
 
 ## Sailing Orders
--
+
+### Plotted Courses
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Decide learning approach for C# Type Characteristics | - | 2026-01-30 | Maximize learning effectiveness |
+
+**Options to consider:**
+1. **Fill-in-the-blank approach** - Use table format as-is but leave Big O notation blank, fill in while solving problems
+2. **Story-based approach** - Solve Coderbyte problems and document story-style ("I used Dictionary here because O(1) lookup...") + track in Progress Tracker
+
+| Order | Deadline | Created | Purpose |
+|-------|----------|---------|---------|
+| Plan how to deepen understanding of real-world DS/Algo applications | - | 2026-01-30 | Connect theory to industry practice |
+
+**Context:** Professor's PROG3330 material maps data structures to real companies (Google, Amazon, Netflix, etc.)
+
+**Potential directions:**
+- Deep dive into one company's stack (e.g., Redis: Skip List, Bloom Filter)
+- Pick one data structure and research all its real-world uses
+- Build mini-projects that simulate real-world use cases
+- Interview prep angle: "Why would you use X over Y?"
 
 ---
 
@@ -31,17 +52,17 @@ Continuous study of data structures and algorithms for technical interviews and 
 
 | Problem | Data Structure | Pattern | Technique | Time | Space | Note |
 |---------|---------------|---------|-----------|------|-------|------|
-| [Best Time to Buy/Sell Stock](resources/best-time-to-buy-and-sell-stock.md) | Array | Greedy | Min Tracking | O(n) | O(1) | Track minimum |
-| [Maximum Subarray](resources/maximum-subarray.md) | Array | DP / Greedy | Kadane's Algorithm | O(n) | O(1) | Continue vs restart |
-| [Reverse String](resources/reverse-string.md) | Array | Two Pointers | Swap | O(n) | O(1) | In-place swap |
-| [Valid Anagram](resources/valid-anagram.md) | Array (int[26]) | - | Frequency Count | O(n) | O(1) | Character counting |
-| [Binary Search](resources/binary-search.md) | Array (Sorted) | Binary Search | Halving | O(log n) | O(1) | Halve each step |
-| [Two Sum](resources/two-sum.md) | HashMap | Hashing | Complement Lookup | O(n) | O(n) | O(n²)→O(n) with Hash |
-| [Contains Duplicate](resources/contains-duplicate.md) | HashSet | Hashing | Existence Check | O(n) | O(n) | Set for duplicates |
-| [Linked List Cycle](resources/linked-list-cycle.md) | LinkedList | Two Pointers | Fast/Slow (Floyd's) | O(n) | O(1) | Tortoise and hare |
-| [Merge Two Sorted Lists](resources/merge-two-sorted-lists.md) | LinkedList | - | Dummy Node | O(n+m) | O(1) | Dummy node pattern |
-| [Reverse Linked List](resources/reverse-linked-list.md) | LinkedList | - | Three Pointers | O(n) | O(1) | Pointer manipulation |
-| [Valid Parentheses](resources/valid-parentheses.md) | Stack | - | LIFO Matching | O(n) | O(n) | Bracket pairing |
+| [Best Time to Buy/Sell Stock](resources/array/greedy/best-time-to-buy-and-sell-stock.md) | Array | Greedy | Min Tracking | O(n) | O(1) | Track minimum |
+| [Maximum Subarray](resources/array/greedy/maximum-subarray.md) | Array | DP / Greedy | Kadane's Algorithm | O(n) | O(1) | Continue vs restart |
+| [Reverse String](resources/array/two-pointers/reverse-string.md) | Array | Two Pointers | Swap | O(n) | O(1) | In-place swap |
+| [Valid Anagram](resources/array/frequency-count/valid-anagram.md) | Array (int[26]) | - | Frequency Count | O(n) | O(1) | Character counting |
+| [Binary Search](resources/array/binary-search/binary-search.md) | Array (Sorted) | Binary Search | Halving | O(log n) | O(1) | Halve each step |
+| [Two Sum](resources/hash/lookup/two-sum.md) | HashMap | Hashing | Complement Lookup | O(n) | O(n) | O(n²)→O(n) with Hash |
+| [Contains Duplicate](resources/hash/lookup/contains-duplicate.md) | HashSet | Hashing | Existence Check | O(n) | O(n) | Set for duplicates |
+| [Linked List Cycle](resources/linked-list/two-pointers/linked-list-cycle.md) | LinkedList | Two Pointers | Fast/Slow (Floyd's) | O(n) | O(1) | Tortoise and hare |
+| [Merge Two Sorted Lists](resources/linked-list/manipulation/merge-two-sorted-lists.md) | LinkedList | - | Dummy Node | O(n+m) | O(1) | Dummy node pattern |
+| [Reverse Linked List](resources/linked-list/manipulation/reverse-linked-list.md) | LinkedList | - | Three Pointers | O(n) | O(1) | Pointer manipulation |
+| [Valid Parentheses](resources/stack/matching/valid-parentheses.md) | Stack | - | LIFO Matching | O(n) | O(n) | Bracket pairing |
 
 **Total: 11 problems**
 
@@ -82,7 +103,16 @@ Continuous study of data structures and algorithms for technical interviews and 
 ---
 
 ## Notes
-- [Big-O Notation](resources/big-o-notation.md) - O 표기법 기초
+- [Big-O Notation](resources/big-o-notation.md) - Big-O basics
+- [Real-World Applications](resources/real-world-applications.md) - Real-world use cases (PROG3330)
+- [C# Type Characteristics](resources/Csharp-type-chracteristics.md) - Type combinations & complexity
+
+### Practice Platforms
+| Platform | Purpose |
+|----------|---------|
+| [Coderbyte](https://coderbyte.com/challenges) | Get familiar with actual test environment (free challenges) |
+| [LeetCode](https://leetcode.com/) | Increase Easy/Medium problem volume |
+| [HackerRank](https://www.hackerrank.com/domains/tutorials/10-days-of-csharp) | C# specific track available |
 
 ---
 

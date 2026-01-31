@@ -29,7 +29,6 @@
 | [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) | - | Never |
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
-| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | 2025-12-23 | 38 |
 
 ---
 
@@ -90,7 +89,7 @@
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 1 Underway
-> Total: 130.8h | Start: Sep 2025 | Tracked from Oct 2025
+> Total: 131.8h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -105,7 +104,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 19.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□□ |
+> | Jan | 20.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□■ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 45.2h | □□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -154,17 +153,17 @@
 > </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) — 2 Plotted
-> Total: 100.8h | Start: May 2025 | Tracked from Oct 2025
+> Total: 95.0h | Start: May 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□ |
+> | Jan | 2.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■■ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
-> | Oct | 77.2h | □■□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
+> | Oct | 70.5h | □□□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
 >
 > </details>
 
@@ -196,15 +195,15 @@
 
 ## Areas (4)
 
-> ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md)
-> Total: 18.2h | Start: Jul 2024 | Tracked from Oct 2025
+> ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) — 2 Plotted
+> Total: 21.2h | Start: Jul 2024 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -275,7 +274,7 @@
 > </details>
 
 > ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 2 Underway, 7 Plotted
-> Total: 12.2h | Start: Jan 2026
+> Total: 15.2h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -291,7 +290,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 12.2h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■□ |
+> | Jan | 15.2h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■ |
 >
 > </details>
 

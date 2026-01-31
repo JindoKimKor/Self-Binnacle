@@ -3,8 +3,8 @@
 ## When to Use?
 
 **Signals:**
-- ✓ "sorted array" (정렬된 배열)
-- ✓ "find target" (값 찾기)
+- ✓ "sorted array"
+- ✓ "find target"
 - ✓ "O(log n)" requirement
 
 **Counter-signals:**
