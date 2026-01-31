@@ -18,7 +18,7 @@
 
 ## Dashboard
 
-> Last updated: 2026-01-30
+> Last updated: 2026-01-31
 
 ---
 
@@ -36,10 +36,9 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Workshop 1 Content Preparation | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-03 | ⏰ 4 days |
-| Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | ⏰ 5 days |
-| Checkpoint 1: Sprint 1 Execution | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-06 | ⏰ 7 days |
-| Workshop 1 Posting Content Delivery | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-06 | ⏰ 7 days |
+| Workshop 1 Content Preparation | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-03 | 🚨 3 days |
+| Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | ⏰ 4 days |
+| Workshop 1 Posting Content Delivery | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-06 | ⏰ 6 days |
 
 ---
 
@@ -53,7 +52,7 @@
 
 ## Projects (9)
 
-> ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) — 1 Underway, 1 Plotted
+> ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) — 3 Underway, 6 Plotted
 > Total: 10.8h | Start: Dec 2025
 >
 > <details>
@@ -62,6 +61,8 @@
 > | Order | Created | Deadline |
 > |-------|---------|----------|
 > | Workshop 1 Content Preparation | 2026-01-21 | 2026-02-03 |
+> | Workshop 2 Content Preparation | 2026-01-21 | 2026-03-01 |
+> | Workshop 3 Content Preparation | 2026-01-21 | 2026-03-06 |
 >
 > </details>
 > <details>
@@ -69,7 +70,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□□□□□ |
+> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
 > </details>
@@ -82,12 +83,12 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■□□□ |
+> | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
-> ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 1 Underway
+> ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 2 Underway
 > Total: 131.8h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
@@ -96,6 +97,7 @@
 > | Order | Created | Deadline |
 > |-------|---------|----------|
 > | Upload CodePipeline Demo video to YouTube and replace mp4 link | 2026-01-21 | - |
+> | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | 2026-01-21 | - |
 >
 > </details>
 > <details>
@@ -103,7 +105,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 20.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□■ |
+> | Jan | 20.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
 > | Oct | 45.2h | □□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
@@ -126,13 +128,13 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□□□□□ |
+> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□□□□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
 >
 > </details>
 
-> ### [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) — 2 Plotted
+> ### [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) — 4 Plotted
 > Total: 0h | Start: Jan 2026
 >
 
@@ -144,7 +146,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□□□□□ |
+> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
@@ -159,7 +161,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 2.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■■ |
+> | Jan | 2.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
 > | Oct | 70.5h | □□□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
@@ -174,7 +176,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 116.2h | □□□□□□□■□■■■■■■■■□□□□□□■■■□□□□ |
+> | Jan | 116.2h | □□□□□□□■□■■■■■■■■□□□□□□■■■□□□□□ |
 >
 > </details>
 
@@ -186,7 +188,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□□□□□ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□□□□□□ |
 >
 > </details>
 
@@ -202,7 +204,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
+> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
 > | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
@@ -229,7 +231,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 95.8h | □□□□□□□□□□■■■■■■■■□□□□□■■■□□□□ |
+> | Jan | 95.8h | □□□□□□□□□□■■■■■■■■□□□□□■■■□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
 > | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
@@ -252,7 +254,7 @@
 
 ## Classes (5)
 
-> ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 1 Underway
+> ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 2 Underway
 > Total: 16.0h | Start: Jan 2026
 >
 > <details>
@@ -260,7 +262,8 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Organize Venture Lab materials | 2026-01-20 | - |
+> | Created | Deadline | Order |
+> | 2026-01-20 | - | Organize Venture Lab materials |
 >
 > </details>
 > <details>
@@ -268,11 +271,11 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 16.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□ |
+> | Jan | 16.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□□ |
 >
 > </details>
 
-> ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 2 Underway, 7 Plotted
+> ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 4 Underway, 14 Plotted
 > Total: 15.2h | Start: Jan 2026
 >
 > <details>
@@ -280,8 +283,10 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | [Idea] Visualize Capstone as Full-Stack BI Engineer pipeline | 2026-01-22 | - |
-> | [Idea] Propose documentation culture to team | 2026-01-22 | - |
+> | Created | Deadline | Order |
+> | 2026-01-22 | - | [Idea] Visualize Capstone as Full-Stack BI Engineer pipeline |
+> | Created | Deadline | Order |
+> | 2026-01-22 | - | [Idea] Propose documentation culture to team |
 >
 > </details>
 > <details>
@@ -289,11 +294,11 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 15.2h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■ |
+> | Jan | 15.2h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■□ |
 >
 > </details>
 
-> ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) — 3 Plotted
+> ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) — 6 Plotted
 > Total: 12.0h | Start: Jan 2026
 >
 > <details>
@@ -301,11 +306,11 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 12.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□□■■□ |
+> | Jan | 12.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□□■■□□ |
 >
 > </details>
 
-> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 4 Underway
+> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 8 Underway
 > Total: 9.0h | Start: Jan 2026
 >
 > <details>
@@ -313,10 +318,14 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Document full BI architecture flow | 2026-01-22 | - |
-> | Document Data → Information → Knowledge transformation | 2026-01-22 | - |
-> | Compare Structured vs Semi-structured vs Unstructured | 2026-01-22 | - |
-> | Resolve questions | 2026-01-22 | - |
+> | Created | Deadline | Order |
+> | 2026-01-22 | - | Document full BI architecture flow |
+> | Created | Deadline | Order |
+> | 2026-01-22 | - | Document Data → Information → Knowledge transformation |
+> | Created | Deadline | Order |
+> | 2026-01-22 | - | Compare Structured vs Semi-structured vs Unstructured |
+> | Created | Deadline | Order |
+> | 2026-01-22 | - | Resolve questions |
 >
 > </details>
 > <details>
@@ -324,11 +333,11 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 9.0h | □□□□□□□□□□□□□□■□□□□□□■□□□□□□■□ |
+> | Jan | 9.0h | □□□□□□□□□□□□□□■□□□□□□■□□□□□□■□□ |
 >
 > </details>
 
-> ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 1 Underway
+> ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 2 Underway
 > Total: 18.0h | Start: Jan 2026
 >
 > <details>
@@ -336,7 +345,8 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Organize Dockerfile analysis documentation | 2026-01-19 | - |
+> | Created | Deadline | Order |
+> | 2026-01-19 | - | Organize Dockerfile analysis documentation |
 >
 > </details>
 > <details>
@@ -344,7 +354,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 18.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■■□□□ |
+> | Jan | 18.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■■□□□□ |
 >
 > </details>
 

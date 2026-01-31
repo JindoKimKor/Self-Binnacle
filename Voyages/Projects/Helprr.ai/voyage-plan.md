@@ -31,33 +31,29 @@ Backend Development Lead (Part-time Contract) at Helprr.ai - a mental wellness a
 
 ### Plotted (Underway)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Upload CodePipeline Demo video to YouTube and replace mp4 link | - | 2026-01-21 | GitHub doesn't support video playback |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-21 | Upload CodePipeline Demo video to YouTube and replace mp4 link | GitHub doesn't support video playback |
+<br>
 
----
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Plan how to present Helprr.ai portfolio on LinkedIn/Resume | - | 2026-01-21 | Portfolio external sharing strategy |
-
----
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-21 | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | Portfolio external sharing strategy |
+<br>
 
 ### Plotted Courses
 
 ### Plotted (Reached)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Enhance "What I Did" section using cover letter content | - | 2026-01-23 | Strengthen portfolio narrative |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-23 | Enhance "What I Did" section using cover letter content | Strengthen portfolio narrative |
+<br>
 
----
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| GitHub Branch Protection documentation | - | 2026-01-19 | Team onboarding support |
-
----
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-19 | GitHub Branch Protection documentation | Team onboarding support |
+<br>
 
 ## Progress Tracker
 

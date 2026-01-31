@@ -18,9 +18,27 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 ## Sailing Orders
 <!--
 Subsections: Plotted (Underway) / Plotted Courses / Plotted (Reached)
-Format: | Order | Deadline | Created | Purpose | (one table per Order)
-Deadline/Purpose can be empty (use - for no deadline)
-Free-form details can be added below each table
+
+Format: Blockquote-wrapped table + optional <details> + <br> separator
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | YYYY-MM-DD or - | YYYY-MM-DD | Order description | Purpose |
+>
+> <details>
+> <summary>Details</summary>  (or "Result" for Plotted Reached)
+>
+> - Detail item 1
+> - Detail item 2
+>
+> </details>
+<br>
+
+Notes:
+- Each order wrapped in blockquote (>)
+- <details> for additional info (optional)
+- <br> after each order for spacing
+- Plotted (Reached) uses <summary>Result</summary>
 -->
 
 ### Plotted (Underway)

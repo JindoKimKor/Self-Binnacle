@@ -23,27 +23,39 @@ Comparative study and deep learning of programming languages (Python, C#, Java, 
 
 ### Plotted (Underway)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Consolidate distributed programming language study materials | - | 2026-01-23 | Gather scattered learning materials into one place |
-
-- Sources: Miro, Discord, Confluence, Google Docs, OneDrive
-- Search and organize language comparison docs from each platform
-- Categorize into `resources/` folders by topic
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-23 | Consolidate distributed programming language study materials | Gather scattered learning materials into one place |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Sources: Miro, Discord, Confluence, Google Docs, OneDrive
+> - Search and organize language comparison docs from each platform
+> - Categorize into `resources/` folders by topic
+>
+> </details>
+<br>
 
 ### Plotted Courses
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Research "Why Different?" questions in data-types-comparison | - | 2026-01-23 | Understand design decisions behind language differences |
-
-- Source: `resources/comparisons/data-types-comparison-python-csharp-java.md`
-- Research each TODO item and document findings
-- Topics include:
-  - Python: no char type, arbitrary precision int, truthy/falsy, singleton None
-  - Java: no unsigned types, no generators, no tuple, Optional vs nullable
-  - C#: decimal built-in, Span/Memory introduction
-  - CPython internals: arbitrary precision, list storage, compact dict
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-23 | Research "Why Different?" questions in data-types-comparison | Understand design decisions behind language differences |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Source: `resources/comparisons/data-types-comparison-python-csharp-java.md`
+> - Research each TODO item and document findings
+> - Topics include:
+>   - Python: no char type, arbitrary precision int, truthy/falsy, singleton None
+>   - Java: no unsigned types, no generators, no tuple, Optional vs nullable
+>   - C#: decimal built-in, Span/Memory introduction
+>   - CPython internals: arbitrary precision, list storage, compact dict
+>
+> </details>
+<br>
 
 ### Plotted (Reached)
 

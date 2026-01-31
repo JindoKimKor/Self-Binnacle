@@ -199,7 +199,21 @@ When user requests to organize a passage file (log.md, passage-plan.md, or passa
 
 When user requests Sailing Orders operations:
 
-1. **Format**: `| Order | Deadline | Created | Purpose |` (one table per Order)
+1. **Format**: Blockquote-wrapped table + optional `<details>` + `<br>` separator
+   ```markdown
+   > | Deadline | Created | Order | Purpose |
+   > |----------|---------|-------|---------|
+   > | YYYY-MM-DD or - | YYYY-MM-DD | Order description | Purpose |
+   >
+   > <details>
+   > <summary>Details</summary>
+   >
+   > - Detail item 1
+   > - Detail item 2
+   >
+   > </details>
+   <br>
+   ```
 2. **Subsections**: Plotted (Underway) / Plotted Courses / Plotted (Reached)
 3. **Operations**:
    - Add new order → Place in appropriate subsection with today's date as Created
@@ -207,11 +221,14 @@ When user requests Sailing Orders operations:
    - Complete order → Move from Plotted (Underway) → Plotted (Reached)
    - Delete order → Remove table and details
 4. **Fields**:
-   - Order: Task description (required)
    - Deadline: Due date or `-` if none - Format: `YYYY-MM-DD`
    - Created: Date order was added (required) - Format: `YYYY-MM-DD`
+   - Order: Task description (required)
    - Purpose: Why this order exists (optional)
-5. **Details**: Free-form content below each table (steps, links, notes, etc.)
+5. **Details**: Inside `<details>` block (optional)
+   - Use `<summary>Details</summary>` for Plotted (Underway) / Plotted Courses
+   - Use `<summary>Result</summary>` for Plotted (Reached)
+6. **Spacing**: Add `<br>` after each order block for visual separation
 
 ---
 

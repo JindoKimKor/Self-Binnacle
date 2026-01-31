@@ -49,73 +49,117 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 ### Plotted Courses
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | - | 2026-01-15 | Portfolio completeness |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-15 | Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | Portfolio completeness |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - ACI, ACA, AKS vs Azure Batch comparison
+> - Why each was not selected (reasoning)
+>
+> </details>
+<br>
 
-- ACI, ACA, AKS vs Azure Batch comparison
-- Why each was not selected (reasoning)
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-15 | Research NotebookLM video generation best practices | Content creation workflow |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Community prompts for customized output
+> - Alternative AI tools for video generation
+> - Multi-step workflows for better results
+>
+> </details>
+<br>
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Research NotebookLM video generation best practices | - | 2026-01-15 | Content creation workflow |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-18 | LinkedIn posting for Software Smells Analysis portfolio | Professional visibility |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Core message: "Transform experience-based understanding into systematic, reusable knowledge"
+> - Motivation: Like a doctor diagnosing - clear diagnosis for future/team
+> - Process: Before commit → Analysis → After commit
+> - Concepts: What frameworks/principles guided the analysis
+> - Design patterns applied in refactored code
+> - Attach: Flashcard / Slide Deck from NotebookLM
+>
+> </details>
+<br>
 
-- Community prompts for customized output
-- Alternative AI tools for video generation
-- Multi-step workflows for better results
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-15 | Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | Learning material creation |
+<br>
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| LinkedIn posting for Software Smells Analysis portfolio | - | 2026-01-18 | Professional visibility |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-15 | Link YouTube videos (README top / Dashboard / LinkedIn) | Content distribution |
+<br>
 
-- Core message: "Transform experience-based understanding into systematic, reusable knowledge"
-- Motivation: Like a doctor diagnosing - clear diagnosis for future/team
-- Process: Before commit → Analysis → After commit
-- Concepts: What frameworks/principles guided the analysis
-- Design patterns applied in refactored code
-- Attach: Flashcard / Slide Deck from NotebookLM
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Generate Flashcard / Slide Deck from Portfolio docs using NotebookLM | - | 2026-01-15 | Learning material creation |
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Link YouTube videos (README top / Dashboard / LinkedIn) | - | 2026-01-15 | Content distribution |
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Interactive Portfolio Website: Git commit-based Timeline UI | - | 2026-01-15 | Portfolio presentation |
-
-- Calendar background + sailing ship + reef (obstacles) visualization
-- Phase/Step progress shown as voyage journey
-- Leverage achievement data from legs/ folder
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-15 | Interactive Portfolio Website: Git commit-based Timeline UI | Portfolio presentation |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Calendar background + sailing ship + reef (obstacles) visualization
+> - Phase/Step progress shown as voyage journey
+> - Leverage achievement data from legs/ folder
+>
+> </details>
+<br>
 
 ### Plotted (Reached)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Update Software Smells portfolio README layout & fix TOC | - | 2026-01-23 | Better first impression |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-23 | Update Software Smells portfolio README layout & fix TOC | Better first impression |
+>
+> <details>
+> <summary>Result</summary>
+>
+> - Fixed TOC format (bullet-only), updated mkdocs.yml navigation structure
+> - Built mkdocs and deployed to docs/ for GitHub Pages
+>
+> </details>
+<br>
 
-- Result: Fixed TOC format (bullet-only), updated mkdocs.yml navigation structure
-- Built mkdocs and deployed to docs/ for GitHub Pages
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-25 | Restructure 4-layer architecture portfolio for visitor navigation | Better first impression & guided reading |
+>
+> <details>
+> <summary>Result</summary>
+>
+> - Restructured folder from `legs/` → `problem-solving/` with Implementation Phases
+> - Updated mkdocs.yml: Problem Analysis → Problem Solving structure
+> - Added TOCs to all root-level documents
+> - Renamed folders: `leg-{0-4}` → `phase-{0-4}`
+>
+> </details>
+<br>
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Restructure 4-layer architecture portfolio for visitor navigation | - | 2026-01-25 | Better first impression & guided reading |
-
-- Result: Restructured folder from `legs/` → `problem-solving/` with Implementation Phases
-- Updated mkdocs.yml: Problem Analysis → Problem Solving structure
-- Added TOCs to all root-level documents
-- Renamed folders: `leg-{0-4}` → `phase-{0-4}`
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Analyze Strategic DDD concepts in Jenkins architecture | - | 2026-01-21 | DDD understanding & portfolio narrative |
-
-- Result: Created `domain-driven-analysis.md` explaining Strategic DDD (Bounded Contexts, Subdomains) application
-- Clarified: Tactical DDD (Entities, Aggregates) not applicable to Jenkins scripting environment
-- Updated terminology: "domain-driven" → "Strategic DDD concepts"
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-21 | Analyze Strategic DDD concepts in Jenkins architecture | DDD understanding & portfolio narrative |
+>
+> <details>
+> <summary>Result</summary>
+>
+> - Created `domain-driven-analysis.md` explaining Strategic DDD (Bounded Contexts, Subdomains) application
+> - Clarified: Tactical DDD (Entities, Aggregates) not applicable to Jenkins scripting environment
+> - Updated terminology: "domain-driven" → "Strategic DDD concepts"
+>
+> </details>
+<br>
 
 ---
 

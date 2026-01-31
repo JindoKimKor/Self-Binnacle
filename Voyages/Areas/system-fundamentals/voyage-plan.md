@@ -29,13 +29,19 @@ created: 2026-01-23
 
 ### Plotted (Underway)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Consolidate distributed CS study materials | - | 2026-01-23 | Gather scattered learning materials into one place |
-
-- Sources: Miro, Discord, Confluence, Google Docs, OneDrive
-- Search and organize CS fundamentals from each platform
-- Categorize into `resources/` folders by topic
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-23 | Consolidate distributed CS study materials | Gather scattered learning materials into one place |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Sources: Miro, Discord, Confluence, Google Docs, OneDrive
+> - Search and organize CS fundamentals from each platform
+> - Categorize into `resources/` folders by topic
+>
+> </details>
+<br>
 
 ### Plotted Courses
 

@@ -23,14 +23,20 @@ Riipen experiential learning platform project. Working on real-world projects to
 
 ### Plotted (Reached)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Complete Riipen Labs verification | 2026-01-22 | 2026-01-19 | Platform access requirement |
-
-- 2-step: Proof of Identity + Proof of Enrolment
-- Login/Signup: https://riipenlabs.riipen.com/login
-- Both steps must show "Completed" status
-- Completed on Jan 19
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-01-22 | 2026-01-19 | Complete Riipen Labs verification | Platform access requirement |
+>
+> <details>
+> <summary>Result</summary>
+>
+> - 2-step: Proof of Identity + Proof of Enrolment
+> - Login/Signup: https://riipenlabs.riipen.com/login
+> - Both steps must show "Completed" status
+> - Completed on Jan 19
+>
+> </details>
+<br>
 
 ---
 

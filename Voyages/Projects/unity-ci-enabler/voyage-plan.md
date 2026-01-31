@@ -40,29 +40,43 @@ Open-source tool for Unity developers. Democratizing VARLab's serverless build/t
 
 ## Sailing Orders
 
+### Plotted (Underway)
+
 ### Plotted Courses
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Terraform Infrastructure Setup | - | 2026-01-29 | IaC for static infrastructure (VNet, NSG, Subnet) |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-29 | Terraform Infrastructure Setup | IaC for static infrastructure (VNet, NSG, Subnet) |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - [ ] `terraform/azure/main.tf` - Static infrastructure (VNet, Subnet, NSG)
+> - [ ] `terraform/azure/variables.tf` - Variable definitions
+> - [ ] `terraform/azure/outputs.tf` - Outputs for NIC connection
+> - [ ] `.gitignore` update (*.tfstate, *.tfvars)
+> - [ ] `terraform plan/apply` test
+> - [ ] README documentation (user runs once)
+>
+> </details>
+<br>
 
-**Details:**
-- [ ] `terraform/azure/main.tf` - Static infrastructure (VNet, Subnet, NSG)
-- [ ] `terraform/azure/variables.tf` - Variable definitions
-- [ ] `terraform/azure/outputs.tf` - Outputs for NIC connection
-- [ ] `.gitignore` update (*.tfstate, *.tfvars)
-- [ ] `terraform plan/apply` test
-- [ ] README documentation (user runs once)
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-29 | vmManager.js Refactoring | Modify to reference Terraform infrastructure |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - [ ] Remove existing VNet/NSG creation code
+> - [ ] Reference Terraform outputs (subnet_id, nsg_id)
+> - [ ] Simplify to only handle dynamic VM creation
+> - [ ] Move hardcoded passwords to environment variables
+>
+> </details>
+<br>
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| vmManager.js Refactoring | - | 2026-01-29 | Modify to reference Terraform infrastructure |
-
-**Details:**
-- [ ] Remove existing VNet/NSG creation code
-- [ ] Reference Terraform outputs (subnet_id, nsg_id)
-- [ ] Simplify to only handle dynamic VM creation
-- [ ] Move hardcoded passwords to environment variables
+### Plotted (Reached)
 
 ---
 

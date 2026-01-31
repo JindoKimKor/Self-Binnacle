@@ -24,27 +24,43 @@ Continuous study of data structures and algorithms for technical interviews and 
 
 ## Sailing Orders
 
+### Plotted (Underway)
+
 ### Plotted Courses
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Decide learning approach for C# Type Characteristics | - | 2026-01-30 | Maximize learning effectiveness |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-30 | Decide learning approach for C# Type Characteristics | Maximize learning effectiveness |
+>
+> <details>
+> <summary>Details</summary>
+>
+> **Options to consider:**
+> 1. **Fill-in-the-blank approach** - Use table format as-is but leave Big O notation blank, fill in while solving problems
+> 2. **Story-based approach** - Solve Coderbyte problems and document story-style ("I used Dictionary here because O(1) lookup...") + track in Progress Tracker
+>
+> </details>
+<br>
 
-**Options to consider:**
-1. **Fill-in-the-blank approach** - Use table format as-is but leave Big O notation blank, fill in while solving problems
-2. **Story-based approach** - Solve Coderbyte problems and document story-style ("I used Dictionary here because O(1) lookup...") + track in Progress Tracker
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-30 | Plan how to deepen understanding of real-world DS/Algo applications | Connect theory to industry practice |
+>
+> <details>
+> <summary>Details</summary>
+>
+> **Context:** Professor's PROG3330 material maps data structures to real companies (Google, Amazon, Netflix, etc.)
+>
+> **Potential directions:**
+> - Deep dive into one company's stack (e.g., Redis: Skip List, Bloom Filter)
+> - Pick one data structure and research all its real-world uses
+> - Build mini-projects that simulate real-world use cases
+> - Interview prep angle: "Why would you use X over Y?"
+>
+> </details>
+<br>
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Plan how to deepen understanding of real-world DS/Algo applications | - | 2026-01-30 | Connect theory to industry practice |
-
-**Context:** Professor's PROG3330 material maps data structures to real companies (Google, Amazon, Netflix, etc.)
-
-**Potential directions:**
-- Deep dive into one company's stack (e.g., Redis: Skip List, Bloom Filter)
-- Pick one data structure and research all its real-world uses
-- Build mini-projects that simulate real-world use cases
-- Interview prep angle: "Why would you use X over Y?"
+### Plotted (Reached)
 
 ---
 

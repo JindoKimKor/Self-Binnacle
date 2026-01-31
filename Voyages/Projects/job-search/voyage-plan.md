@@ -24,29 +24,64 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 
 ### Plotted (Underway)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Research Coderbyte platform | - | 2026-01-20 | Prepare for coding test |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-20 | Research Coderbyte platform | Prepare for coding test |
+<br>
 
 ### Plotted Courses
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Attend P4E Job Fair Winter 2026 | 2026-02-04 | 2026-01-23 | In-Person, Bingemans Kitchener |
-| Attend Toronto Diversity Virtual Job Fair | 2026-02-11 | 2026-01-23 | JobFairX - Waiting for invite |
-| Attend Toronto Technology Virtual Job Fair | 2026-02-19 | 2026-01-23 | JobFairX ⭐ Tech - Waiting for invite |
-| Attend Waterloo Technology Virtual Job Fair | 2026-02-26 | 2026-01-23 | JobFairX ⭐ Tech - Waiting for invite |
-| Attend Toronto Entry-Level Virtual Job Fair | 2026-02-27 | 2026-01-23 | JobFairX - Waiting for invite |
-| Attend Waterloo Entry-Level Virtual Job Fair | 2026-03-06 | 2026-01-23 | JobFairX - Waiting for invite |
-| Attend Hire Canada Job Fair | 2026-03-25 | 2026-01-23 | In-Person, Holiday Inn Toronto Airport |
-| Attend Waterloo Technology Virtual Job Fair | 2026-04-02 | 2026-01-23 | JobFairX ⭐ Tech - Waiting for invite |
-| Attend Toronto Career Fair | 2026-04-03 | 2026-01-23 | In-Person, Hilton Toronto |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-04 | 2026-01-23 | Attend P4E Job Fair Winter 2026 | In-Person, Bingemans Kitchener |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-11 | 2026-01-23 | Attend Toronto Diversity Virtual Job Fair | JobFairX - Waiting for invite |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-19 | 2026-01-23 | Attend Toronto Technology Virtual Job Fair | JobFairX ⭐ Tech - Waiting for invite |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-26 | 2026-01-23 | Attend Waterloo Technology Virtual Job Fair | JobFairX ⭐ Tech - Waiting for invite |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-27 | 2026-01-23 | Attend Toronto Entry-Level Virtual Job Fair | JobFairX - Waiting for invite |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-03-06 | 2026-01-23 | Attend Waterloo Entry-Level Virtual Job Fair | JobFairX - Waiting for invite |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-03-25 | 2026-01-23 | Attend Hire Canada Job Fair | In-Person, Holiday Inn Toronto Airport |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-04-02 | 2026-01-23 | Attend Waterloo Technology Virtual Job Fair | JobFairX ⭐ Tech - Waiting for invite |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-04-03 | 2026-01-23 | Attend Toronto Career Fair | In-Person, Hilton Toronto |
+<br>
 
 ### Plotted (Reached)
 
-| Order | Deadline | Created | Result |
-|-------|----------|---------|--------|
-| Attend Waterloo Entry-Level Virtual Job Fair | 2026-01-30 | 2026-01-23 | Did not receive invitation |
+> | Deadline | Created | Order | Result |
+> |----------|---------|-------|--------|
+> | 2026-01-30 | 2026-01-23 | Attend Waterloo Entry-Level Virtual Job Fair | Did not receive invitation |
+<br>
 
 ---
 
