@@ -38,6 +38,7 @@
 |-------|--------|----------|--------|
 | Workshop 1 Content Preparation | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-03 | 🚨 3 days |
 | Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | ⏰ 4 days |
+| Checkpoint 1: Sprint 1 Execution | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-06 | ⏰ 6 days |
 | Workshop 1 Posting Content Delivery | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-06 | ⏰ 6 days |
 
 ---
@@ -134,7 +135,7 @@
 >
 > </details>
 
-> ### [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) — 4 Plotted
+> ### [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) — 2 Plotted
 > Total: 0h | Start: Jan 2026
 >
 
@@ -254,7 +255,7 @@
 
 ## Classes (5)
 
-> ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 2 Underway
+> ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 1 Underway
 > Total: 16.0h | Start: Jan 2026
 >
 > <details>
@@ -262,8 +263,7 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Created | Deadline | Order |
-> | 2026-01-20 | - | Organize Venture Lab materials |
+> | Organize Venture Lab materials | 2026-01-20 | - |
 >
 > </details>
 > <details>
@@ -275,7 +275,7 @@
 >
 > </details>
 
-> ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 4 Underway, 14 Plotted
+> ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 2 Underway, 7 Plotted
 > Total: 15.2h | Start: Jan 2026
 >
 > <details>
@@ -283,10 +283,8 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Created | Deadline | Order |
-> | 2026-01-22 | - | [Idea] Visualize Capstone as Full-Stack BI Engineer pipeline |
-> | Created | Deadline | Order |
-> | 2026-01-22 | - | [Idea] Propose documentation culture to team |
+> | [Idea] Visualize Capstone as Full-Stack BI Engineer pipeline | 2026-01-22 | - |
+> | [Idea] Propose documentation culture to team | 2026-01-22 | - |
 >
 > </details>
 > <details>
@@ -298,7 +296,7 @@
 >
 > </details>
 
-> ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) — 6 Plotted
+> ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) — 3 Plotted
 > Total: 12.0h | Start: Jan 2026
 >
 > <details>
@@ -310,7 +308,7 @@
 >
 > </details>
 
-> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 8 Underway
+> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 4 Underway
 > Total: 9.0h | Start: Jan 2026
 >
 > <details>
@@ -318,14 +316,10 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Created | Deadline | Order |
-> | 2026-01-22 | - | Document full BI architecture flow |
-> | Created | Deadline | Order |
-> | 2026-01-22 | - | Document Data → Information → Knowledge transformation |
-> | Created | Deadline | Order |
-> | 2026-01-22 | - | Compare Structured vs Semi-structured vs Unstructured |
-> | Created | Deadline | Order |
-> | 2026-01-22 | - | Resolve questions |
+> | Document full BI architecture flow | 2026-01-22 | - |
+> | Document Data → Information → Knowledge transformation | 2026-01-22 | - |
+> | Compare Structured vs Semi-structured vs Unstructured | 2026-01-22 | - |
+> | Resolve questions | 2026-01-22 | - |
 >
 > </details>
 > <details>
@@ -337,7 +331,7 @@
 >
 > </details>
 
-> ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 2 Underway
+> ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 1 Underway
 > Total: 18.0h | Start: Jan 2026
 >
 > <details>
@@ -345,8 +339,7 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | Created | Deadline | Order |
-> | 2026-01-19 | - | Organize Dockerfile analysis documentation |
+> | Organize Dockerfile analysis documentation | 2026-01-19 | - |
 >
 > </details>
 > <details>
