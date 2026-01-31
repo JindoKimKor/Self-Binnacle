@@ -32,7 +32,6 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 
 | Order | Deadline | Created | Purpose |
 |-------|----------|---------|---------|
-| Attend Waterloo Entry-Level Virtual Job Fair | 2026-01-30 | 2026-01-23 | JobFairX - Waiting for invite |
 | Attend P4E Job Fair Winter 2026 | 2026-02-04 | 2026-01-23 | In-Person, Bingemans Kitchener |
 | Attend Toronto Diversity Virtual Job Fair | 2026-02-11 | 2026-01-23 | JobFairX - Waiting for invite |
 | Attend Toronto Technology Virtual Job Fair | 2026-02-19 | 2026-01-23 | JobFairX ⭐ Tech - Waiting for invite |
@@ -44,6 +43,10 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 | Attend Toronto Career Fair | 2026-04-03 | 2026-01-23 | In-Person, Hilton Toronto |
 
 ### Plotted (Reached)
+
+| Order | Deadline | Created | Result |
+|-------|----------|---------|--------|
+| Attend Waterloo Entry-Level Virtual Job Fair | 2026-01-30 | 2026-01-23 | Did not receive invitation |
 
 ---
 

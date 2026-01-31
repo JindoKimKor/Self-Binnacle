@@ -36,7 +36,6 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Attend Waterloo Entry-Level Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-01-30 | 🚨 Today |
 | Workshop 1 Content Preparation | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-03 | ⏰ 4 days |
 | Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | ⏰ 5 days |
 | Checkpoint 1: Sprint 1 Execution | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-06 | ⏰ 7 days |
@@ -111,7 +110,7 @@
 >
 > </details>
 
-> ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) — 1 Underway, 10 Plotted
+> ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) — 1 Underway, 9 Plotted
 > Total: 68.5h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > <details>
