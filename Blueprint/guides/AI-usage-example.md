@@ -10,7 +10,8 @@
 - [7. Past Reference](#7-past-reference)
 - [8. Passage Writing Flow](#8-passage-writing-flow)
 - [9. AI Scan Alerts](#9-ai-scan-alerts)
-- [10. Sailing Orders Management](#10-sailing-orders-management)
+- [10. Raw Processing](#10-raw-processing)
+- [11. Sailing Orders Management](#11-sailing-orders-management)
 
 ---
 
@@ -217,7 +218,50 @@ Implement VM provisioning. Referring to existing VARLab code.
 
 ---
 
-## 10. Sailing Orders Management
+## 10. Raw Processing
+
+### Basic Raw Processing
+
+**User:** (writes rough notes in log.md Raw section)
+```
+finished vm setup
+got stuck on networking
+need to check azure docs tomorrow
+```
+
+**User:** "Organize raw"
+
+**AI:** Organized into sections:
+- What did I actually do? → "Finished VM setup"
+- Blockers → "Got stuck on networking"
+- Next Steps → "Check Azure docs tomorrow"
+- Raw → (cleared)
+
+---
+
+### Cross-File Raw Processing (Forecast Review)
+
+**User:** (writes in passage-forecast-review.md Raw section)
+```
+took 2 hours as expected
+was easier than thought because AI did most of the work
+this assignment doesn't teach anything real
+```
+
+**User:** "Organize raw"
+
+**AI:** Organized into:
+- passage-forecast-review.md:
+  - Time > Actual: 2 hours
+  - Difficulty > Was it accurate?: Easier than expected, AI handled most work
+- log.md > Reflection:
+  - "This assignment doesn't teach anything real"
+
+"Cross-file items moved to log.md Reflection section."
+
+---
+
+## 11. Sailing Orders Management
 
 ### Adding a New Order
 

@@ -17,5 +17,10 @@ date: YYYY-MM-DD
 ### How can I forecast better next time? (Metacognition)
 -
 
-### Raw (AI: organize into sections above)
+### Raw (AI: organize into sections)
+<!--
+Target sections:
+- Time/Difficulty actuals, Metacognition → sections above
+- Reflection/Blockers/Next Steps/Notes → ../log.md
+-->
 -

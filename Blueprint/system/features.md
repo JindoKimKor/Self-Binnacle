@@ -3,12 +3,13 @@
 ## Table of Contents
 
 - [1. Dashboard (README.md)](#1-dashboard-readmemd)
-- [2. Logbook Reminder (Not implemented)](#2-logbook-reminder-not-implemented)
-- [3. AI Scan (Not implemented)](#3-ai-scan-not-implemented)
+- [2. Raw Processing (Implemented v1.3.0)](#2-raw-processing-implemented-v130)
+- [3. Logbook Reminder (Not implemented)](#3-logbook-reminder-not-implemented)
+- [4. AI Scan (Not implemented)](#4-ai-scan-not-implemented)
   - Security Scan
   - Scope Scan
   - Structure Scan
-- [4. Self Reflection Report (Not implemented)](#4-self-reflection-report-not-implemented)
+- [5. Self Reflection Report (Not implemented)](#5-self-reflection-report-not-implemented)
 
 ---
 
@@ -41,7 +42,27 @@ See the current state at a glance.
 
 ---
 
-## 2. Logbook Reminder (Not implemented)
+## 2. Raw Processing (Implemented v1.3.0)
+
+Quick capture without categorization overhead.
+
+> **What it does:**
+> - `### Raw` section in log.md, passage-plan.md, passage-forecast-review.md
+> - Write rough notes without thinking about structure
+> - AI organizes into appropriate sections on request
+
+> **Cross-file organization (passage-forecast-review.md):**
+> - Time/Difficulty actuals → stay in current file
+> - Reflection/Blockers/Next Steps/Notes → move to ../log.md
+
+> **How to use:**
+> - Write anything in Raw section
+> - Say "organize raw" to AI
+> - AI categorizes and clears Raw section
+
+---
+
+## 3. Logbook Reminder (Not implemented)
 
 Records become assets later.
 
@@ -64,7 +85,7 @@ Records become assets later.
 
 ---
 
-## 3. AI Scan (Not implemented)
+## 4. AI Scan (Not implemented)
 
 Automatically detect principle violations and structure deviations.
 
@@ -106,7 +127,7 @@ Automatically detect principle violations and structure deviations.
 
 ---
 
-## 4. Self Reflection Report (Not implemented)
+## 5. Self Reflection Report (Not implemented)
 
 Compare only with my past self.
 

@@ -12,7 +12,7 @@
 - PARA method (Tasks, Projects, Areas)
 - Metacognition cycle (Planning → Monitoring → Evaluating)
 
-**Framework Version:** 1.2.0 | **License:** [CC BY-NC-SA 4.0](LICENSE)
+**Framework Version:** 1.3.0 | **License:** [CC BY-NC-SA 4.0](LICENSE)
 
 ---
 
@@ -90,7 +90,7 @@
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 2 Underway
-> Total: 131.8h | Start: Sep 2025 | Tracked from Oct 2025
+> Total: 131.0h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -109,7 +109,7 @@
 > | Jan | 20.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
-> | Oct | 45.2h | □□■■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
+> | Oct | 44.5h | □□□■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
 >
 > </details>
 
@@ -255,8 +255,8 @@
 
 ## Classes (5)
 
-> ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 1 Underway
-> Total: 16.0h | Start: Jan 2026
+> ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 1 Underway, 5 Plotted
+> Total: 18.0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -271,7 +271,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Jan | 16.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□□ |
+> | Jan | 18.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□■ |
 >
 > </details>
 

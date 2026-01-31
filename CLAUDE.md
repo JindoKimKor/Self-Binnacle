@@ -198,9 +198,20 @@ Evaluation criteria:
 
 When user requests to organize a passage file (log.md, passage-plan.md, or passage-forecast-review.md):
 1. Read the `### Raw` section content
-2. Categorize each item into appropriate sections above
-3. Move processed items from Raw to their correct labels
+2. Categorize each item into appropriate sections:
+   - Items belonging to current file → move to sections above
+   - Items belonging to sibling files → move to those files
+3. Move processed items from Raw to their correct locations
 4. Keep Raw section empty after processing (just `-`)
+
+### Cross-File Organization (passage-forecast-review.md)
+When organizing `passage-forecast-review.md` Raw section:
+- Time/Difficulty actuals → stay in passage-forecast-review.md
+- Metacognition insights → stay in passage-forecast-review.md
+- Reflection on process/experience → move to `../log.md` Reflection section
+- Blockers encountered → move to `../log.md` Blockers section
+- Next steps identified → move to `../log.md` Next Steps section
+- General notes → move to `../log.md` Notes section
 
 ## AI Sailing Orders Management
 
