@@ -12,6 +12,7 @@
 - [Documentation Reference](#documentation-reference-blueprint)
 
 ### 3. AI Guidelines
+- [Korean Question Handling](#korean-question-handling)
 - [Context Management](#context-management)
 - [Q&A Save Format](#qa-save-format)
 - [AI Passage Creation](#ai-passage-creation)
@@ -130,6 +131,12 @@ Self-Binnacle/
 
 - **NEVER suggest adding files in `.gitignore` to git.** All items in `.gitignore` are intentionally excluded from version control by design.
 - When committing, only stage files that are NOT in `.gitignore`.
+
+## Korean Question Handling
+
+When the user writes in Korean:
+1. First, translate the question to English and show as: **Q (EN):** [translated question]
+2. Then provide the answer
 
 ## Context Management
 
