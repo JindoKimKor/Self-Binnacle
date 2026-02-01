@@ -43,6 +43,11 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
+> | 2026-02-18 | 2026-02-01 | Attend JVS North Hiring Event | In-Person, North Toronto - Pending review |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
 > | 2026-02-19 | 2026-01-23 | Attend Toronto Technology Virtual Job Fair | JobFairX ⭐ Tech - Waiting for invite |
 <br>
 

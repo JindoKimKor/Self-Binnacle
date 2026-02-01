@@ -1,6 +1,6 @@
 # Tech Hiring Events Calendar - Toronto/GTA 2026
 
-> Last Updated: January 23, 2026
+> Last Updated: February 1, 2026
 > **Focus**: Job Fairs & Hiring Events Only (No networking events)
 
 ---
@@ -12,9 +12,10 @@
 
 | Date | Event | Location | Type | Platform | Status |
 |------|-------|----------|------|----------|--------|
-| Jan 30 | Entry-Level Virtual | Waterloo, ON | Entry-Level | JobFairX | ⏳ Waiting for invite |
+| Jan 30 | Entry-Level Virtual | Waterloo, ON | Entry-Level | JobFairX | No invitation |
 | **Feb 4** | **P4E Job Fair Winter 2026** | **Kitchener (Bingemans)** | Multi-Industry | **Conestoga** | ✅ Confirmed (#14056410193) |
 | Feb 11 | Diversity Virtual | Toronto, ON | Diversity | JobFairX | ⏳ Waiting for invite |
+| **Feb 18** | **JVS North Hiring Event** | **North Toronto** | Multi-Industry | **JVS Toronto** | ⏳ Pending review |
 | Feb 19 | **Technology Virtual** | Toronto, ON | **Tech** ⭐ | JobFairX | ⏳ Waiting for invite |
 | Feb 26 | **Technology Virtual** | Waterloo, ON | **Tech** ⭐ | JobFairX | ⏳ Waiting for invite |
 | Feb 27 | Entry-Level Virtual | Toronto, ON | Entry-Level | JobFairX | ⏳ Waiting for invite |
@@ -54,6 +55,27 @@
 **Notes:**
 - Monthly events (Mar 18, Apr 22)
 - Focus on diversity hiring
+
+---
+
+### JVS North Hiring Event
+| Item | Details |
+|------|---------|
+| **Date** | February 18, 2026 |
+| **Time** | TBD |
+| **Location** | North Toronto |
+| **Cost** | Free |
+| **Type** | In-Person Hiring Event |
+| **Relevance** | 🟡 Medium - Multi-industry, client-only |
+| **Link** | [JVS Toronto](https://www.jvstoronto.org) |
+
+**Notes:**
+- JVS Toronto clients only
+- Registration requires review/approval
+- Not eligible if actively receiving services from another agency
+- Submitted Feb 1, 2026 - awaiting approval
+
+**Status:** ⏳ Pending review
 
 ---
 
