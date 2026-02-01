@@ -18,7 +18,7 @@
 
 ## Dashboard
 
-> Last updated: 2026-01-31
+> Last updated: 2026-02-01
 
 ---
 
@@ -51,10 +51,10 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Workshop 1 Content Preparation | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-03 | 🚨 3 days |
-| Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | ⏰ 4 days |
-| Checkpoint 1: Sprint 1 Execution | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-06 | ⏰ 6 days |
-| Workshop 1 Posting Content Delivery | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-06 | ⏰ 6 days |
+| Workshop 1 Content Preparation | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-03 | 🚨 2 days |
+| Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | 🚨 3 days |
+| Checkpoint 1: Sprint 1 Execution | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-06 | ⏰ 5 days |
+| Workshop 1 Posting Content Delivery | [GDG-Conestoga-Git-CICD-Workshop](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-02-06 | ⏰ 5 days |
 
 ---
 
@@ -99,7 +99,7 @@
 >
 > </details>
 
-> ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) — 1 Underway, 9 Plotted
+> ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) — 1 Underway, 10 Plotted
 > Total: 0h | Start: Oct 2025
 >
 > <details>
@@ -183,7 +183,7 @@
 >
 > </details>
 
-> ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 2 Underway, 7 Plotted
+> ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 1 Underway, 7 Plotted
 > Total: 0h | Start: Jan 2026
 >
 > <details>
@@ -191,7 +191,6 @@
 >
 > | Order | Created | Deadline |
 > |-------|---------|----------|
-> | [Idea] Visualize Capstone as Full-Stack BI Engineer pipeline | 2026-01-22 | - |
 > | [Idea] Propose documentation culture to team | 2026-01-22 | - |
 >
 > </details>

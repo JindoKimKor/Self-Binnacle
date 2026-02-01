@@ -61,6 +61,7 @@ Conestoga College's Helena Webb Professional Mentorship Program. Bi-weekly 1-hou
 | [2026-01-02](logbook/2026-01-02/log.md) | Jan 2 | Self-work | Interview questions review |
 | [2026-01-04](logbook/2026-01-04/log.md) | Jan 4 | Session #2 | First official bi-weekly session |
 | [2026-01-18](logbook/2026-01-18/log.md) | Jan 18 | Session #3 | |
+| [2026-02-01](logbook/2026-02-01/log.md) | Feb 1 | Session #4 | |
 
 ---
 
