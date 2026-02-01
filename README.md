@@ -26,9 +26,24 @@
 
 | Voyage | Last Activity | Days |
 |--------|---------------|------|
+| [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | - | Never |
+| [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md) | - | Never |
+| [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) | - | Never |
+| [Job Search](Voyages/Projects/job-search/voyage-plan.md) | - | Never |
 | [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) | - | Never |
+| [Riipen](Voyages/Projects/riipen/voyage-plan.md) | - | Never |
+| [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) | - | Never |
+| [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) | - | Never |
+| [Year-End Knowledge Cleanup](Voyages/Projects/year-end-cleanup/voyage-plan.md) | - | Never |
+| [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) | - | Never |
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
+| [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
+| [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) | - | Never |
+| [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | - | Never |
+| [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) | - | Never |
+| [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) | - | Never |
+| [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) | - | Never |
 
 ---
 
@@ -54,7 +69,7 @@
 ## Projects (9)
 
 > ### [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) — 3 Underway, 6 Plotted
-> Total: 10.8h | Start: Dec 2025
+> Total: 0h | Start: Dec 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -66,31 +81,13 @@
 > | Workshop 3 Content Preparation | 2026-01-21 | 2026-03-06 |
 >
 > </details>
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□□□□□□ |
-> | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
->
-> </details>
 
 > ### [Helena Webb Mentorship Program](Voyages/Projects/Helena%20Webb%20Mentorship%20Program/voyage-plan.md)
-> Total: 7.0h | Start: Dec 2025
+> Total: 0h | Start: Dec 2025
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■□□□□ |
-> | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
->
-> </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 2 Underway
-> Total: 131.0h | Start: Sep 2025 | Tracked from Oct 2025
+> Total: 0h | Start: Sep 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -101,20 +98,9 @@
 > | Plan how to present Helprr.ai portfolio on LinkedIn/Resume | 2026-01-21 | - |
 >
 > </details>
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 20.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□■□ |
-> | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
-> | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
-> | Oct | 44.5h | □□□■■□□■□□□□□■■□□□□□■■□□■□□□■■□ |
->
-> </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) — 1 Underway, 9 Plotted
-> Total: 68.5h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 0h | Start: Oct 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -124,93 +110,34 @@
 > | Research Coderbyte platform | 2026-01-20 | - |
 >
 > </details>
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□□□□□□ |
-> | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
-> | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
->
-> </details>
 
 > ### [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) — 2 Plotted
 > Total: 0h | Start: Jan 2026
 >
 
 > ### [Riipen](Voyages/Projects/riipen/voyage-plan.md)
-> Total: 22.2h | Start: Sep 2025 | Tracked from Oct 2025
+> Total: 0h | Start: Sep 2025
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□□□□□□ |
-> | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
-> | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
-> | Oct | 16.2h | □□■□□□□□□□□□□□■■□□□□□□■□□□□□■□□ |
->
-> </details>
 
 > ### [Unity CI Enabler](Voyages/Projects/unity-ci-enabler/voyage-plan.md) — 2 Plotted
-> Total: 95.0h | Start: May 2025 | Tracked from Oct 2025
+> Total: 0h | Start: May 2025
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 2.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■■□ |
-> | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
-> | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
-> | Oct | 70.5h | □□□□□■■■■■□□□□■■■□□■■□■□■■■□□■□ |
->
-> </details>
 
 > ### [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) — 6 Plotted
-> Total: 116.2h | Start: Jan 2026
+> Total: 0h | Start: Jan 2026
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 116.2h | □□□□□□□■□■■■■■■■■□□□□□□■■■□□□□□ |
->
-> </details>
 
 > ### [Year-End Knowledge Cleanup](Voyages/Projects/year-end-cleanup/voyage-plan.md)
-> Total: 3.0h | Start: Dec 2025 | Tracked from Jan 2026
+> Total: 0h | Start: Dec 2025
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□□□□□□ |
->
-> </details>
 
 ---
 
 ## Areas (4)
 
 > ### [Data Structures and Algorithms](Voyages/Areas/data-structures-and-algorithms/voyage-plan.md) — 2 Plotted
-> Total: 21.2h | Start: Jul 2024 | Tracked from Oct 2025
+> Total: 0h | Start: Jul 2024
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■□ |
-> | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
-> | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
-> | Oct | 2.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■□□ |
->
-> </details>
 
 > ### [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) — 1 Underway, 1 Plotted
 > Total: 0h | Start: Jan 2026
@@ -225,19 +152,8 @@
 > </details>
 
 > ### [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) — 2 Plotted
-> Total: 109.0h | Start: Jan 2025 | Tracked from Oct 2025
+> Total: 0h | Start: Jan 2025
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 95.8h | □□□□□□□□□□■■■■■■■■□□□□□■■■□□□□□ |
-> | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
-> | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
-> | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□■□□□ |
->
-> </details>
 
 > ### [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) — 1 Underway
 > Total: 0h | Start: Jan 2026
@@ -256,7 +172,7 @@
 ## Classes (5)
 
 > ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 1 Underway, 5 Plotted
-> Total: 18.0h | Start: Jan 2026
+> Total: 0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -266,17 +182,9 @@
 > | Organize Venture Lab materials | 2026-01-20 | - |
 >
 > </details>
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 18.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□■ |
->
-> </details>
 
 > ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 2 Underway, 7 Plotted
-> Total: 15.2h | Start: Jan 2026
+> Total: 0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -287,29 +195,13 @@
 > | [Idea] Propose documentation culture to team | 2026-01-22 | - |
 >
 > </details>
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 15.2h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■□ |
->
-> </details>
 
 > ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) — 3 Plotted
-> Total: 12.0h | Start: Jan 2026
+> Total: 0h | Start: Jan 2026
 >
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 12.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□□■■□□ |
->
-> </details>
 
-> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 4 Underway
-> Total: 9.0h | Start: Jan 2026
+> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 3 Underway
+> Total: 0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -317,22 +209,13 @@
 > | Order | Created | Deadline |
 > |-------|---------|----------|
 > | Document full BI architecture flow | 2026-01-22 | - |
-> | Document Data → Information → Knowledge transformation | 2026-01-22 | - |
 > | Compare Structured vs Semi-structured vs Unstructured | 2026-01-22 | - |
 > | Resolve questions | 2026-01-22 | - |
 >
 > </details>
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 9.0h | □□□□□□□□□□□□□□■□□□□□□■□□□□□□■□□ |
->
-> </details>
 
 > ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 1 Underway
-> Total: 18.0h | Start: Jan 2026
+> Total: 0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -340,14 +223,6 @@
 > | Order | Created | Deadline |
 > |-------|---------|----------|
 > | Organize Dockerfile analysis documentation | 2026-01-19 | - |
->
-> </details>
-> <details>
-> <summary>Monthly Activity</summary>
->
-> | Month | Hours | Activity |
-> |-------|-------|----------|
-> | Jan | 18.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■■□□□□ |
 >
 > </details>
 
