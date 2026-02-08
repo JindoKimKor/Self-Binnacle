@@ -15,14 +15,14 @@ What is this voyage about? (Scope, Background, Context, Problem Statement, Defin
 - 4 workshop series hosted by GDG @ Conestoga College
 - Collaborating with Dany
 - Organized by Arsh and Olena (GDG President)
+Your status is set to do not disturb. You'll only get notifications for urgent messages and from your priority contacts.
 
 **Workshop Schedule:**
 | # | Date | Day | Time | Topic |
 |---|------|-----|------|-------|
-| 1 | Feb 13, 2026 | Fri | 7pm | Git/GitHub basics |
-| 2 | Mar 11, 2026 | Wed | 7pm | CI/CD 1 |
-| 3 | Mar 16, 2026 | Mon | 7pm | CI/CD 2 |
-| 4 | Mar 25, 2026 | Wed | 7pm | Reserved |
+| 1 | Mar 11, 2026 | Wed | 7pm | Git/GitHub basics |
+| 2 | Mar 16, 2026 | Mon | 7pm | CI/CD 1 |
+| 3 | Mar 25, 2026 | Wed | 7pm | CI/CD 2 |
 
 **Requirements:**
 - Workshop content + poster info needed ~1 week before each workshop
@@ -44,7 +44,7 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-02-03 | 2026-01-21 | Workshop 1 Content Preparation | Content must be finalized before posting |
+> | 2026-03-01 | 2026-01-21 | Workshop 1 Content Preparation | Content must be finalized before posting |
 >
 > <details>
 > <summary>Details</summary>
@@ -67,7 +67,7 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-03-01 | 2026-01-21 | Workshop 2 Content Preparation | Content must be finalized before posting |
+> | 2026-03-06 | 2026-01-21 | Workshop 2 Content Preparation | Content must be finalized before posting |
 >
 > <details>
 > <summary>Details</summary>
@@ -80,7 +80,7 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-03-06 | 2026-01-21 | Workshop 3 Content Preparation | Content must be finalized before posting |
+> | 2026-03-15 | 2026-01-21 | Workshop 3 Content Preparation | Content must be finalized before posting |
 >
 > <details>
 > <summary>Details</summary>
@@ -95,7 +95,7 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-02-06 | 2026-01-21 | Workshop 1 Posting Content Delivery | GDG platform + LinkedIn promotion |
+> | 2026-03-04 | 2026-01-21 | Workshop 1 Posting Content Delivery | GDG platform + LinkedIn promotion |
 >
 > <details>
 > <summary>Details</summary>
@@ -109,33 +109,7 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-02-13 | 2026-01-21 | Workshop 1 Delivery | Git/GitHub basics |
->
-> <details>
-> <summary>Details</summary>
->
-> - Fri 7pm
->
-> </details>
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-03-04 | 2026-01-21 | Workshop 2 Posting Content Delivery | GDG platform + LinkedIn promotion |
->
-> <details>
-> <summary>Details</summary>
->
-> - Write GDG Community RSVP posting content
-> - Write LinkedIn/Instagram promotion content
-> - Provide poster info or poster itself
->
-> </details>
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-03-11 | 2026-01-21 | Workshop 2 Delivery | CI/CD 1 |
+> | 2026-03-11 | 2026-01-21 | Workshop 1 Delivery | Git/GitHub basics |
 >
 > <details>
 > <summary>Details</summary>
@@ -147,7 +121,7 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-03-09 | 2026-01-21 | Workshop 3 Posting Content Delivery | GDG platform + LinkedIn promotion |
+> | 2026-03-09 | 2026-01-21 | Workshop 2 Posting Content Delivery | GDG platform + LinkedIn promotion |
 >
 > <details>
 > <summary>Details</summary>
@@ -161,12 +135,38 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-03-16 | 2026-01-21 | Workshop 3 Delivery | CI/CD 2 |
+> | 2026-03-16 | 2026-01-21 | Workshop 2 Delivery | CI/CD 1 |
 >
 > <details>
 > <summary>Details</summary>
 >
 > - Mon 7pm
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-03-18 | 2026-01-21 | Workshop 3 Posting Content Delivery | GDG platform + LinkedIn promotion |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Write GDG Community RSVP posting content
+> - Write LinkedIn/Instagram promotion content
+> - Provide poster info or poster itself
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-03-25 | 2026-01-21 | Workshop 3 Delivery | CI/CD 2 |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Wed 7pm
 >
 > </details>
 <br>
