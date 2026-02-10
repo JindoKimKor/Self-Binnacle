@@ -18,7 +18,7 @@
 
 ## Dashboard
 
-> Last updated: 2026-02-07
+> Last updated: 2026-02-10
 
 ---
 
@@ -29,8 +29,10 @@
 | [Portfolio AI Video Marketing](Voyages/Projects/portfolio-ai-video-marketing/voyage-plan.md) | - | Never |
 | [Programming Languages](Voyages/Areas/programming-languages/voyage-plan.md) | - | Never |
 | [System Fundamentals](Voyages/Areas/system-fundamentals/voyage-plan.md) | - | Never |
-| [Year-End Knowledge Cleanup](Voyages/Projects/year-end-cleanup/voyage-plan.md) | 2026-01-20 | 18 |
-| [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-01-21 | 17 |
+| [Year-End Knowledge Cleanup](Voyages/Projects/year-end-cleanup/voyage-plan.md) | 2026-01-20 | 21 |
+| [Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series](Voyages/Projects/GDG-Conestoga-Git-CICD-Workshop/voyage-plan.md) | 2026-01-21 | 20 |
+| [VARLab Work Transfer](Voyages/Projects/VARLab-work-transfer/voyage-plan.md) | 2026-01-26 | 15 |
+| [Software Design Patterns](Voyages/Areas/software-design-patterns/voyage-plan.md) | 2026-01-26 | 15 |
 
 ---
 
@@ -38,9 +40,9 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | 🚨 3 days overdue |
-| Checkpoint 1: Sprint 1 Execution | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-06 | 🚨 1 days overdue |
-| Attend Toronto Diversity Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-11 | ⏰ 4 days |
+| Attend P4E Job Fair Winter 2026 | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-04 | 🚨 6 days overdue |
+| Checkpoint 1: Sprint 1 Execution | [Class-INFO3220-systems-project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) | 2026-02-06 | 🚨 4 days overdue |
+| Attend Toronto Diversity Virtual Job Fair | [job-search](Voyages/Projects/job-search/voyage-plan.md) | 2026-02-11 | 🚨 1 days |
 
 ---
 
@@ -72,7 +74,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 0.0h | □□□□□□□ |
+> | Feb | 0.0h | □□□□□□□□□□ |
 > | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
 >
@@ -86,14 +88,14 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 2.0h | ■□□□□□□ |
+> | Feb | 2.0h | ■□□□□□□□□□ |
 > | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
 >
 > </details>
 
 > ### [Helprr.ai](Voyages/Projects/Helprr.ai/voyage-plan.md) — 2 Underway
-> Total: 119.8h | Start: Sep 2025 | Tracked from Oct 2025
+> Total: 121.8h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -109,7 +111,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 3.2h | □■□□□□□ |
+> | Feb | 5.2h | □■□□□□□■■□ |
 > | Jan | 20.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
 > | Nov | 43.0h | ■■□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
@@ -118,7 +120,7 @@
 > </details>
 
 > ### [Job Search](Voyages/Projects/job-search/voyage-plan.md) — 1 Underway, 10 Plotted
-> Total: 94.8h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 99.8h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -133,7 +135,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 26.2h | ■■■■□■■ |
+> | Feb | 31.2h | ■■■■□■■□■□ |
 > | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□□□□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
 > | Nov | 23.8h | ■■□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
@@ -152,7 +154,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 1.0h | □□□□□□■ |
+> | Feb | 1.0h | □□□□□□■□□□ |
 > | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
@@ -168,7 +170,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 0.0h | □□□□□□□ |
+> | Feb | 0.0h | □□□□□□□□□□ |
 > | Jan | 2.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 22.0h | □□■□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
@@ -184,7 +186,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 0.0h | □□□□□□□ |
+> | Feb | 0.0h | □□□□□□□□□□ |
 > | Jan | 116.2h | □□□□□□□■□■■■■■■■■□□□□□□■■■□□□□□ |
 >
 > </details>
@@ -197,7 +199,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 0.0h | □□□□□□□ |
+> | Feb | 0.0h | □□□□□□□□□□ |
 > | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□□□□□□ |
 >
 > </details>
@@ -214,7 +216,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 0.0h | □□□□□□□ |
+> | Feb | 0.0h | □□□□□□□□□□ |
 > | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
 > | Nov | 14.2h | ■■□□□□□□□□□□□□■□□■□□□□□■□□■■□□ |
@@ -242,7 +244,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 0.0h | □□□□□□□ |
+> | Feb | 0.0h | □□□□□□□□□□ |
 > | Jan | 95.8h | □□□□□□□□□□■■■■■■■■□□□□□■■■□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Nov | 2.8h | □□□□□□□□■□□□□□□□□□□□□□□□□□□□□□ |
@@ -282,13 +284,13 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 4.0h | □□■■□□□ |
+> | Feb | 4.0h | □□■■□□□□□□ |
 > | Jan | 18.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□■ |
 >
 > </details>
 
 > ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 1 Underway, 7 Plotted
-> Total: 29.5h | Start: Jan 2026
+> Total: 32.5h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -303,20 +305,20 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 12.8h | ■■□□□■□ |
+> | Feb | 15.8h | ■■□□□■□■□□ |
 > | Jan | 16.8h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■■ |
 >
 > </details>
 
 > ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) — 3 Plotted
-> Total: 18.8h | Start: Jan 2026
+> Total: 17.8h | Start: Jan 2026
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 6.8h | □□□■■■■ |
+> | Feb | 5.8h | □□□■■■□□□□ |
 > | Jan | 12.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□□■■□□ |
 >
 > </details>
@@ -339,13 +341,13 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 4.0h | □□□□■□□ |
+> | Feb | 4.0h | □□□□■□□□□□ |
 > | Jan | 11.5h | □□□□□□□□□□□□□□■□□□□□□■□□□□□□■□■ |
 >
 > </details>
 
 > ### [Software Delivery and Release Management](Voyages/Projects/Class-PROG3360-software-delivery-and-release-management/voyage-plan.md) — 1 Underway
-> Total: 37.0h | Start: Jan 2026
+> Total: 43.0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -360,7 +362,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 19.0h | ■■■□■■□ |
+> | Feb | 25.0h | ■■■□■■□□■■ |
 > | Jan | 18.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■■□□□□ |
 >
 > </details>
