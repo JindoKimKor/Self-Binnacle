@@ -150,7 +150,7 @@
 >
 
 > ### [Riipen](Voyages/Projects/riipen/voyage-plan.md)
-> Total: 21.5h | Start: Sep 2025 | Tracked from Oct 2025
+> Total: 17.5h | Start: Sep 2025 | Tracked from Oct 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
@@ -161,7 +161,7 @@
 > | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
 > | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
-> | Oct | 14.5h | □□□□□□□□□□□□□□□■□□□□□□■□□□□□■□□ |
+> | Oct | 10.5h | □□□□□□□□□□□□□□□□□□□□□□■□□□□□■□□ |
 >
 > </details>
 
@@ -280,7 +280,7 @@
 ## Classes (5)
 
 > ### [IT Entrepreneurship](Voyages/Projects/Class-BUS3140-IT-Entrepreneurship/voyage-plan.md) — 1 Underway, 5 Plotted
-> Total: 25.0h | Start: Jan 2026
+> Total: 26.0h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -295,13 +295,13 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 7.0h | □□■■□□□□□□■□□ |
+> | Feb | 8.0h | □□■■□□□□□□■□■ |
 > | Jan | 18.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□■ |
 >
 > </details>
 
 > ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 1 Underway, 7 Plotted
-> Total: 32.5h | Start: Jan 2026
+> Total: 36.5h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -316,20 +316,20 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 15.8h | ■■□□□■□■□□□□□ |
+> | Feb | 19.8h | ■■□□□■□■□□□□■ |
 > | Jan | 16.8h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■■ |
 >
 > </details>
 
 > ### [Programming: Distributed Apps Developmt](Voyages/Projects/Class-PROG3176-distributed-applications-development/voyage-plan.md) — 4 Plotted
-> Total: 25.5h | Start: Jan 2026
+> Total: 28.5h | Start: Jan 2026
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 13.5h | □□□■■■□□□□■■□ |
+> | Feb | 16.5h | □□□■■■□□□□■■■ |
 > | Jan | 12.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□□■■□□ |
 >
 > </details>
