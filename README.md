@@ -302,7 +302,7 @@
 > </details>
 
 > ### [Systems Project](Voyages/Projects/Class-INFO3220-systems-project/voyage-plan.md) — 1 Underway, 7 Plotted
-> Total: 36.5h | Start: Jan 2026
+> Total: 37.5h | Start: Jan 2026
 >
 > <details>
 > <summary>Sailing Orders</summary>
@@ -317,7 +317,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Feb | 19.8h | ■■□□□■□■□□□□■□ |
+> | Feb | 20.8h | ■■□□□■□■□□□□■■ |
 > | Jan | 16.8h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■■ |
 >
 > </details>
@@ -335,7 +335,7 @@
 >
 > </details>
 
-> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 3 Underway
+> ### [Business Intelligence](Voyages/Projects/Class-PROG3240-business-intelligence/voyage-plan.md) — 2 Underway
 > Total: 21.0h | Start: Jan 2026
 >
 > <details>
@@ -345,7 +345,6 @@
 > |-------|---------|----------|
 > | Document full BI architecture flow | 2026-01-22 | - |
 > | Compare Structured vs Semi-structured vs Unstructured | 2026-01-22 | - |
-> | Resolve questions | 2026-01-22 | - |
 >
 > </details>
 > <details>
