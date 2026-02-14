@@ -78,7 +78,10 @@ Continuous study of software design patterns for writing maintainable, scalable,
 ---
 
 ## Resources
--
+- [Design Patterns Catalog](resources/README.md) - Comprehensive catalog of design patterns
+  - creational/ - Object creation patterns
+  - structural/ - Object composition patterns
+  - behavioral/ - Object collaboration patterns
 
 ---
 
