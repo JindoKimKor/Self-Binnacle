@@ -43,8 +43,11 @@ Riipen experiential learning platform project. Working on real-world projects to
 ## Progress Tracker
 | Passage | Date | Topic | Note |
 |---------|------|-------|------|
+| 1 | 2025-12-31 | ProsperaLabs Application | Researched company, drafted and submitted application |
+| 2 | 2026-01-06 | FuturePath Re-application | Reapplied to FuturePath cohort after previous elimination |
 | 3 | 2026-01-19 | Verification | Completed 2-step verification (ID + Enrolment) |
-| 4 | 2026-01-23 | Project Assigned | Team 48 - Jill Hewlett Inc. Growth Strategy |
+| 4 | 2026-01-23 | Project Reassignment | Auto-assigned Team 48 (non-technical); sent reassignment request |
+| 5 | 2026-02-14 | New Project Applications | Researched 4 projects, applied to MyHelpr + Kreative Retail Solutions |
 
 ---
 
