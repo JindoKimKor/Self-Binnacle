@@ -62,12 +62,16 @@ Conestoga College's Helena Webb Professional Mentorship Program. Bi-weekly 1-hou
 | [2026-01-04](logbook/2026-01-04/log.md) | Jan 4 | Session #2 | First official bi-weekly session |
 | [2026-01-18](logbook/2026-01-18/log.md) | Jan 18 | Session #3 | |
 | [2026-02-01](logbook/2026-02-01/log.md) | Feb 1 | Session #4 | |
+| [2026-02-16](logbook/2026-02-16/log.md) | Feb 16 | Session #5 | |
 
 ---
 
 ## Resources
 - Shared Doc (Homework): (Conestoga Outlook - search "Helena Webb mentorship program - Jindo")
 - Interaction Reflection Form: [resources/Interaction-Reflection-Form.pdf](resources/Interaction-Reflection-Form.pdf)
+- [ACHEV](https://achev.ca/events/) - Employment services, GTA, newcomer-focused
+- [ACCES Employment](https://accesemployment.ca/) - IT Connections program, GTA + online
+- [FEATS](https://feat.findhelp.ca/) - Ontario-wide employment & training service finder, filter by location/population
 
 ### Interaction Reflection Form Questions (for log.md)
 > 7. What were the topics of discussion during this meeting?
