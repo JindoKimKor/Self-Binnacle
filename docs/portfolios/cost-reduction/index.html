@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="94.88% CI/CD Infrastructure Cost Reduction - Azure Batch, Spot VMs, Docker, Unity, Cost Optimization">
+  <meta name="author" content="Jindo Kim">
+  <title>94.88% CI/CD Infrastructure Cost Reduction | Jindo Kim</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;700&display=swap">
+  <style>
+    :root {
+      --bg-primary: #1e1e2e;
+      --bg-secondary: #252536;
+      --bg-surface: #2a2a3d;
+      --bg-code: #1a1a2e;
+      --text-primary: #cdd6f4;
+      --text-secondary: #a6adc8;
+      --text-muted: #7f849c;
+      --accent: #6c7bda;
+      --accent-light: #8992e8;
+      --border: #363650;
+      --link: #89b4fa;
+      --link-hover: #b4d0fb;
+      --success: #a6e3a1;
+      --highlight-bg: #313244;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--link); }
+    .back-link svg { width: 16px; height: 16px; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-secondary), var(--bg-surface));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      line-height: 1.3;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--bg-code);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .hero-summary {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .hero-summary strong { color: var(--text-primary); }
+
+    /* Sections */
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 1.8rem 0 0.8rem;
+      color: var(--accent-light);
+    }
+    p { margin-bottom: 0.8rem; color: var(--text-secondary); }
+    strong { color: var(--text-primary); }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 0.7rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    td { color: var(--text-secondary); }
+    tr:hover td { background: var(--highlight-bg); }
+    .highlight-cell { color: var(--success); font-weight: 700; }
+
+    /* Cost comparison table */
+    .cost-table tr:last-child td {
+      font-weight: 700;
+      color: var(--success);
+    }
+
+    /* Architecture diagrams */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 700px) {
+      .arch-grid { grid-template-columns: 1fr; }
+    }
+    .arch-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.8rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .arch-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .arch-card.before::before {
+      background: linear-gradient(90deg, #f38ba8, #fab387);
+    }
+    .arch-card.after::before {
+      background: linear-gradient(90deg, #a6e3a1, #89b4fa);
+    }
+    .arch-card h4 {
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+      color: var(--text-muted);
+    }
+    .arch-diagram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .arch-box {
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .arch-box-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+    .arch-box-inner {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .arch-chip {
+      background: var(--bg-code);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      font-family: 'Roboto Mono', monospace;
+      white-space: nowrap;
+    }
+    .arch-chip.primary {
+      border-color: var(--accent);
+      color: var(--accent-light);
+    }
+    .arch-chip.danger {
+      border-color: #f38ba8;
+      color: #f38ba8;
+    }
+    .arch-chip.success {
+      border-color: var(--success);
+      color: var(--success);
+    }
+    .arch-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+    .arch-arrow svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--text-muted);
+    }
+    .arch-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      font-style: italic;
+    }
+    .arch-status.bad { color: #f38ba8; }
+    .arch-status.good { color: var(--success); }
+
+    /* After card: horizontal flow */
+    .arch-flow {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+    }
+    @media (max-width: 700px) {
+      .arch-flow { flex-direction: column; }
+      .arch-flow .arch-arrow svg { transform: rotate(90deg); }
+    }
+    .arch-flow > .arch-box { flex: 1; min-width: 0; }
+    .arch-dots {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Phase cards */
+    .phase {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.2rem 0;
+      border-left: 3px solid var(--accent);
+    }
+    .phase h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+    .phase p { font-size: 0.9rem; }
+    .phase-result {
+      margin-top: 0.8rem;
+    }
+
+    /* Blockquote / notes */
+    blockquote {
+      background: var(--bg-code);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    blockquote a { color: var(--link); text-decoration: none; }
+    blockquote a:hover { text-decoration: underline; }
+
+    /* Lists */
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      color: var(--text-secondary);
+    }
+    li { margin-bottom: 0.3rem; font-size: 0.9rem; }
+
+    /* Links */
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); text-decoration: underline; }
+
+    /* HR */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* Benefits list */
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1rem 0;
+      list-style: none;
+      padding: 0;
+    }
+    @media (max-width: 600px) {
+      .benefits { grid-template-columns: 1fr; }
+    }
+    .benefits li {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    .benefits li strong { display: block; margin-bottom: 0.2rem; }
+
+    /* PDF links */
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      color: var(--link);
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .pdf-link:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Trade-off callout */
+    .callout {
+      background: var(--bg-code);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <a href="../../" class="back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>94.88% CI/CD Infrastructure Cost Reduction</h1>
+      <div class="hero-meta">
+        <span class="hero-tag">Azure Batch</span>
+        <span class="hero-tag">Spot VMs</span>
+        <span class="hero-tag">Docker</span>
+        <span class="hero-tag">Unity</span>
+        <span class="hero-tag">Cost Optimization</span>
+      </div>
+      <div class="hero-summary">
+        <p><strong>Context:</strong> Unity CI/CD build environment isolation at VARLab</p>
+        <p><strong>Problem:</strong> Unity Editor 100% CPU usage causing server crashes on concurrent builds</p>
+        <p><strong>Solution:</strong> Azure Batch + Spot VMs for on-demand execution</p>
+        <p><strong>Result:</strong> 94.88% infrastructure cost reduction ($618 &rarr; $32 for 56 days)</p>
+      </div>
+    </div>
+
+    <!-- Key Achievements -->
+    <h2>Key Achievements</h2>
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Before</th><th>After</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Build environment</td><td>Shared CI/CD server</td><td>Isolated cloud containers</td></tr>
+        <tr><td>Concurrent builds</td><td>Server crash risk</td><td>Parallel execution safe</td></tr>
+        <tr><td>Cost model</td><td>24/7 VM running</td><td>Pay-per-use</td></tr>
+        <tr><td>Cost reduction</td><td>-</td><td class="highlight-cell">94.88%</td></tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <!-- Problem Evolution -->
+    <h2>Problem Evolution &amp; Solutions</h2>
+
+    <!-- Phase 1 -->
+    <div class="phase">
+      <h3>Phase 1: The Initial Crisis (June 2024)</h3>
+      <p><strong>Problem:</strong> Unity Editor provides no CPU usage control during builds. When 2+ projects build simultaneously, the CI/CD server crashes.</p>
+      <p><strong>Root Cause Analysis:</strong></p>
+      <ul>
+        <li>Git clone &rarr; Unity Editor project open: <strong>8-9 minutes</strong> (initial compile)</li>
+        <li>Unit testing: ~1 minute</li>
+        <li>Build optimization phase: <strong>2-3+ minutes</strong></li>
+        <li>All phases consume 100% available CPU</li>
+      </ul>
+      <p><strong>Solution:</strong> Trade-off approach &mdash; maintain project files &amp; artifacts (skip &ldquo;from scratch&rdquo; builds), set optimization level to 0 (skip optimization phase).</p>
+      <p><strong>Result:</strong> Reduced initial compile time from 10 min &rarr; 1 min, prevented server crashes.</p>
+      <div class="callout"><strong>Trade-off Cost:</strong> Violated CI/CD best practice of &ldquo;clean builds from scratch&rdquo;</div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase">
+      <h3>Phase 2: Containerization + Build Optimization (May 2025)</h3>
+      <p><strong>Goal:</strong> Eliminate the trade-off from Phase 1 &mdash; enable clean builds without sacrificing speed.</p>
+      <p><strong>Solution 1:</strong> Docker containerization with CPU allocation &mdash; enabled concurrent builds without crashes.</p>
+      <p><strong>Solution 2:</strong> PID-level profiling + Unity settings optimization &mdash; analyzed CPU usage at 5-second intervals, tuned <code>emscriptenArgs</code>, <code>Il2CppCodeGeneration</code>, <code>managedStrippingLevel</code>, etc.</p>
+      <div class="phase-result">
+        <table>
+          <thead>
+            <tr><th>Metric</th><th>Before</th><th>After</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Clean build time</td><td>13-14 min</td><td class="highlight-cell">7.4 min (47% faster)</td></tr>
+            <tr><td>Build size</td><td>146 MB</td><td class="highlight-cell">95.2 MB (35% smaller)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="Build-Optimization-PID-Level-Profiling.pdf" class="pdf-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        PID-Level Profiling &amp; Build Optimization (PDF)
+      </a>
+      <p style="margin-top: 0.8rem; font-size: 0.85rem; color: var(--text-muted);"><strong>Limitation:</strong> Still running on the same CI/CD server.</p>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase">
+      <h3>Phase 3: Cloud-Native Architecture (June 2025)</h3>
+      <p><strong>Proactive Initiative:</strong> Docker containerization in Phase 2 proved builds could run in isolated environments. This raised a question: if containers can run independently, why not leverage cloud infrastructure for parallel, on-demand execution?</p>
+      <p><strong>Solution:</strong> Azure Batch + Spot VMs &mdash; completely separated Unity build/test environment from CI/CD server. On-demand ephemeral containers, pay only for actual compute time.</p>
+      <div class="phase-result">
+        <table class="cost-table">
+          <thead>
+            <tr><th>Strategy</th><th>Cost (56 days)</th><th>vs Always-On</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Always-On VM (24/7)</td><td>$618.24</td><td>baseline</td></tr>
+            <tr><td>Deallocated VM (job-triggered)</td><td>$144.60</td><td>-76.6%</td></tr>
+            <tr><td>Azure Batch + Spot VMs</td><td>$31.64</td><td class="highlight-cell">-94.88%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="Cloud-Native-Architecture-Cost-Benchmarking.pdf" class="pdf-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Cloud-Native Architecture &amp; Cost Benchmarking (PDF)
+      </a>
+      <blockquote>Analysis Period: May 5 - June 29, 2025 (56 days, 37 active days) | Projects: 2 Unity VR projects (855 CI jobs, 166 CD jobs)</blockquote>
+    </div>
+
+    <hr>
+
+    <!-- Architecture Comparison -->
+    <h2>Architecture Comparison</h2>
+    <div class="arch-grid">
+      <div class="arch-card before">
+        <h4>Before: Coupled Architecture</h4>
+        <div class="arch-diagram">
+          <div class="arch-box" style="border-color: #45455a;">
+            <div class="arch-box-label">CI/CD Server (VM)</div>
+            <div class="arch-box-inner">
+              <span class="arch-chip primary">Jenkins<br><small style="opacity:.6">Orchestration</small></span>
+              <span class="arch-chip danger">Unity Editor<br><small style="opacity:.6">Build</small></span>
+            </div>
+            <div class="arch-status bad">CPU: 100% during builds</div>
+          </div>
+        </div>
+      </div>
+      <div class="arch-card after">
+        <h4>After: Decoupled Architecture</h4>
+        <div class="arch-diagram">
+          <div class="arch-flow">
+            <div class="arch-box" style="border-color: #45455a; flex: 0.7;">
+              <div class="arch-box-label">CI/CD Server</div>
+              <div class="arch-box-inner">
+                <span class="arch-chip primary">Jenkins<br><small style="opacity:.6">Orchestration</small></span>
+              </div>
+              <div class="arch-status good">Lightweight</div>
+            </div>
+            <div class="arch-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </div>
+            <div class="arch-box" style="border-color: #45455a; flex: 1;">
+              <div class="arch-box-label">Azure Batch Pool</div>
+              <div class="arch-box-inner">
+                <span class="arch-chip success">Spot VM</span>
+                <span class="arch-chip success">Spot VM</span>
+                <span class="arch-dots">...</span>
+              </div>
+              <div class="arch-status good">On-demand, isolated</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Additional Benefits -->
+    <h2>Additional Benefits</h2>
+    <ul class="benefits">
+      <li><strong>Isolated Build Environments</strong>Each job runs in clean, separate container</li>
+      <li><strong>Reliable Results</strong>Consistent conditions every time</li>
+      <li><strong>Stronger Security</strong>Jenkins no longer needs direct access to project files</li>
+      <li><strong>Parallel Execution</strong>Tests and builds can run simultaneously</li>
+    </ul>
+
+  </div>
+</body>
+</html>
