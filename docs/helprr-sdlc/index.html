@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Establishing SDLC Foundation for Helprr.ai - From blocked backend developer to Backend Development Lead">
+  <meta name="author" content="Jindo Kim">
+  <title>SDLC Foundation for Helprr.ai | Jindo Kim</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;700&display=swap">
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ theme: 'dark', themeVariables: {
+      primaryColor: '#363650',
+      primaryTextColor: '#cdd6f4',
+      primaryBorderColor: '#6c7bda',
+      lineColor: '#a6adc8',
+      secondaryColor: '#252536',
+      tertiaryColor: '#1e1e2e',
+      noteBkgColor: '#2a2a3d',
+      noteTextColor: '#cdd6f4',
+      actorBkg: '#2a2a3d',
+      actorBorder: '#6c7bda',
+      actorTextColor: '#cdd6f4',
+      signalColor: '#cdd6f4',
+      signalTextColor: '#cdd6f4',
+      labelBoxBkgColor: '#252536',
+      labelBoxBorderColor: '#363650',
+      labelTextColor: '#cdd6f4',
+      loopTextColor: '#cdd6f4',
+      activationBorderColor: '#6c7bda',
+      activationBkgColor: '#363650',
+      sequenceNumberColor: '#1e1e2e'
+    }});
+  </script>
+  <style>
+    :root {
+      --bg-primary: #1e1e2e;
+      --bg-secondary: #252536;
+      --bg-surface: #2a2a3d;
+      --bg-code: #1a1a2e;
+      --text-primary: #cdd6f4;
+      --text-secondary: #a6adc8;
+      --text-muted: #7f849c;
+      --accent: #6c7bda;
+      --accent-light: #8992e8;
+      --border: #363650;
+      --link: #89b4fa;
+      --link-hover: #b4d0fb;
+      --success: #a6e3a1;
+      --warning: #fab387;
+      --danger: #f38ba8;
+      --highlight-bg: #313244;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--bg-secondary), var(--bg-surface));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      line-height: 1.3;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--bg-code);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .hero-summary {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .hero-summary strong { color: var(--text-primary); }
+
+    /* Role badge */
+    .role-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #6c7bda22, #89b4fa22);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      color: var(--accent-light);
+      font-weight: 500;
+      margin-top: 0.8rem;
+    }
+
+    /* Sections */
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 1.8rem 0 0.8rem;
+      color: var(--accent-light);
+    }
+    p { margin-bottom: 0.8rem; color: var(--text-secondary); }
+    strong { color: var(--text-primary); }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 0.7rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    td { color: var(--text-secondary); }
+
+    /* Problem cards */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .problem-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--danger);
+      border-radius: 0 8px 8px 0;
+      padding: 1.2rem 1.5rem;
+    }
+    .problem-card h4 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--danger);
+      margin-bottom: 0.4rem;
+    }
+    .problem-card p {
+      font-size: 0.88rem;
+      margin-bottom: 0;
+      color: var(--text-secondary);
+    }
+
+    /* Blockquote */
+    blockquote {
+      background: var(--bg-code);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* Result cards */
+    .result-section {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.2rem 0;
+      border-left: 3px solid var(--success);
+    }
+    .result-section p { font-size: 0.9rem; }
+    .result-item {
+      margin-bottom: 0.6rem;
+    }
+    .result-item strong {
+      color: var(--success);
+    }
+    .result-detail {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-left: 1.5rem;
+    }
+
+    /* SDLC section */
+    .sdlc-context {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .sdlc-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.2rem 0;
+      border-left: 3px solid var(--accent);
+    }
+    .sdlc-card h3 { margin-top: 0; }
+    .sdlc-outcome {
+      background: var(--bg-code);
+      border-left: 3px solid var(--success);
+      border-radius: 0 6px 6px 0;
+      padding: 0.6rem 1rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--success);
+    }
+
+    /* Mermaid diagrams */
+    .mermaid-wrapper {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+
+    /* Lists */
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      color: var(--text-secondary);
+    }
+    li { margin-bottom: 0.3rem; font-size: 0.9rem; }
+
+    /* Links */
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); text-decoration: underline; }
+
+    /* HR */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* Role info table */
+    .role-table td:first-child {
+      font-weight: 500;
+      color: var(--text-primary);
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Joined as Backend Developer... But Couldn't Write Code</h1>
+      <div class="hero-meta">
+        <span class="hero-tag">SDLC</span>
+        <span class="hero-tag">AWS CodePipeline</span>
+        <span class="hero-tag">GitHub Rulesets</span>
+        <span class="hero-tag">IAM</span>
+        <span class="hero-tag">Process Design</span>
+      </div>
+      <div class="hero-summary">
+        <p>Joined <strong>Helprr.ai</strong> as a backend developer, but discovered the team had no development workflow, isolated environments, or CI/CD feedback. Instead of waiting, I designed and led the adoption of a complete SDLC foundation.</p>
+      </div>
+      <div class="role-badge">Backend Developer &rarr; Backend Development Lead</div>
+    </div>
+
+    <!-- Infographic -->
+    <img src="helprr-sdlc-overview.png" alt="Helprr.ai SDLC Foundation Overview" style="width:100%; border-radius:12px; margin-bottom:2rem; border:1px solid var(--border);">
+
+    <!-- The Problem -->
+    <h2>The Problem</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <h4>1. No Requirements-to-Code Workflow</h4>
+        <p>No documentation system to translate CEO/PM requirements into implementable specs. Developers couldn't design code or database without clear specifications.</p>
+      </div>
+      <div class="problem-card">
+        <h4>2. Isolated Development Environment</h4>
+        <p>Production branch exposed to human error, causing CEO/PM hesitant to give developer access to base repo. Had to work on forked repo, but no third-party credentials, environment config, or mock database existed.</p>
+      </div>
+      <div class="problem-card">
+        <h4>3. No CI/CD Feedback Loop</h4>
+        <p>Developers couldn't see if integration succeeded, failed, or why it failed on the pipeline.</p>
+      </div>
+    </div>
+
+    <!-- What I Did -->
+    <h2>What I Did</h2>
+    <blockquote>
+      I didn't limit myself to my position title.<br><br>
+      The situation was challenging: <strong>part-time schedules</strong> across the team, <strong>no development process</strong>, <strong>limited real-time communication</strong>. Development couldn't move forward.<br><br>
+      To unblock my own development and set up future developers, I designed and led the adoption of a workflow system that guides each role naturally through the SDLC. That system is now the team's standard reference.
+    </blockquote>
+
+    <!-- The Result -->
+    <h2>The Result</h2>
+    <div class="result-section">
+      <p>Led team's first successful SDLC by establishing development infrastructure and workflow:</p>
+      <div class="result-item">
+        <strong>Workflow:</strong> Unblocked stalled development by designing unified feature specification format combining user stories, wireframes, and API contracts, and leading cross-functional team to adopt it as standard reference.
+      </div>
+      <div class="result-item">
+        <strong>Infrastructure:</strong> Resolved bottlenecked backend code integration workflow by configuring GitHub Ruleset and AWS IAM policies on CodePipeline, enabling developer-owned code-to-staging feedback loop.
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Role Info -->
+    <h2>Role Info</h2>
+    <table class="role-table">
+      <tbody>
+        <tr><td>Position</td><td>Backend Development Lead</td></tr>
+        <tr><td>Type</td><td>Part-time</td></tr>
+        <tr><td>Period</td><td>Sep 2025 - Present</td></tr>
+        <tr><td>Location</td><td>Toronto, Ontario, Canada (Remote)</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.9rem; color:var(--text-secondary);">Responsibilities: Lead backend development for mental wellness application adding mood-based care features. Mentored junior backend developer through database schema design and API implementation.</p>
+
+    <hr>
+
+    <!-- SDLC Foundation -->
+    <h2>SDLC Foundation I Built</h2>
+    <p class="sdlc-context">Context: Part-time team, Students with limited SDLC experience, Startup environment</p>
+
+    <!-- Unified Feature Specification -->
+    <div class="sdlc-card">
+      <h3>Unified Feature Specification</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted);">SDLC: Planning &amp; Analysis, Design Phases</p>
+      <ul>
+        <li>User Story</li>
+        <li>Wireframe &amp; User Action</li>
+        <li>Frontend Requirements (UI Components, State Management)</li>
+        <li>Backend Requirements (Business Logic, Validation Rules)</li>
+        <li>API Contract (Endpoint, Request, Response)</li>
+        <li>Discussion Points</li>
+      </ul>
+      <div class="mermaid-wrapper">
+        <pre class="mermaid">
+sequenceDiagram
+    participant PM as CEO/PM
+    participant DF as Designer/Frontend
+    participant Spec as Feature Spec
+    participant FE as Frontend Dev
+    participant BE as Backend Dev
+    participant Next as Code-to-Staging
+
+    rect rgb(55, 105, 150)
+        Note over PM,Next: Planning & Design Phase
+        PM->>Spec: User Story
+        DF->>Spec: Wireframe
+        loop UNTIL SPECIFICATION COMPLETE
+            DF->>Spec: Map User Interaction
+            FE->>Spec: State Management
+            BE->>Spec: DB Design, Logic, Error Handling
+        end
+        Spec->>Next: Specification Complete
+    end
+        </pre>
+      </div>
+      <div class="sdlc-outcome"><strong>Outcome:</strong> Enables fully independent development</div>
+    </div>
+
+    <!-- Code-to-Staging -->
+    <div class="sdlc-card">
+      <h3>Code-to-Production SDLC Workflow</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted);">SDLC: Implementation, Testing, Deployment Phases</p>
+      <div class="mermaid-wrapper">
+        <pre class="mermaid">
+sequenceDiagram
+    participant Dev as Developer
+    participant PR1 as PR to dev
+    participant DevBranch as dev branch
+    participant DevEnv as Dev Environment
+    participant PR2 as PR to main
+    participant Main as main branch
+    participant Prod as Production
+
+    rect rgb(55, 105, 150)
+        Note over Dev,PR1: Development Phase
+        Dev->>PR1: Create PR
+        PR1->>DevBranch: Merge (after approval)
+    end
+
+    rect rgb(45, 140, 85)
+        Note over DevBranch,DevEnv: Testing Phase
+        DevBranch->>DevEnv: CodePipeline deploy
+        Note over DevEnv: Test on browser
+    end
+
+    rect rgb(180, 40, 50)
+        Note over PR2,Prod: Production Phase
+        DevBranch->>PR2: Create PR to main
+        PR2->>Main: Merge (after approval)
+        Main->>Prod: CodePipeline deploy
+    end
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
