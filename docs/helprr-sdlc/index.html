@@ -8,9 +8,9 @@
   <title>SDLC Foundation for Helprr.ai | Jindo Kim</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;700&display=swap">
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ theme: 'dark', themeVariables: {
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: 'dark', themeVariables: {
       primaryColor: '#363650',
       primaryTextColor: '#cdd6f4',
       primaryBorderColor: '#6c7bda',
@@ -244,6 +244,29 @@
       color: var(--success);
     }
 
+    /* PDF/resource links */
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      color: var(--link);
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .pdf-link:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+    .pdf-icon {
+      width: 14px; height: 14px;
+      flex-shrink: 0;
+    }
+
     /* Mermaid diagrams */
     .mermaid-wrapper {
       background: var(--bg-surface);
@@ -382,7 +405,7 @@ sequenceDiagram
     participant Next as Code-to-Staging
 
     rect rgb(55, 105, 150)
-        Note over PM,Next: Planning & Design Phase
+        Note over PM,Next: Planning &amp; Design Phase
         PM->>Spec: User Story
         DF->>Spec: Wireframe
         loop UNTIL SPECIFICATION COMPLETE
@@ -395,12 +418,45 @@ sequenceDiagram
         </pre>
       </div>
       <div class="sdlc-outcome"><strong>Outcome:</strong> Enables fully independent development</div>
+      <div style="margin-top:1rem;">
+        <a href="unified-feature-specification-template.pdf" class="pdf-link">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Unified Feature Specification Template (PDF)
+        </a>
+      </div>
     </div>
 
-    <!-- Code-to-Staging -->
+    <!-- Code-to-Staging Infrastructure -->
+    <div class="sdlc-card">
+      <h3>Code-to-Staging Infrastructure</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted);">SDLC: Implementation, Testing, Deployment Phases</p>
+      <div style="margin-top:0.8rem; display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <a href="codepipeline-permission-guide.pdf" class="pdf-link">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          CodePipeline Permission Setup Guide
+        </a>
+        <a href="iam-permission-demo.pdf" class="pdf-link">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          IAM Permission Verification Demo
+        </a>
+        <a href="CodePipeline-PR-Merge-Demo.mp4" class="pdf-link">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          CodePipeline PR Merge Demo (Video)
+        </a>
+        <a href="dev-only-codepipeline-access-setup-guide.pdf" class="pdf-link">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Dev-Only CodePipeline Access Setup Guide
+        </a>
+        <a href="github-branch-protection-setup-guide.pdf" class="pdf-link">
+          <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          GitHub Branch Protection Setup Guide
+        </a>
+      </div>
+    </div>
+
+    <!-- Code-to-Production Workflow -->
     <div class="sdlc-card">
       <h3>Code-to-Production SDLC Workflow</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted);">SDLC: Implementation, Testing, Deployment Phases</p>
       <div class="mermaid-wrapper">
         <pre class="mermaid">
 sequenceDiagram
@@ -433,6 +489,12 @@ sequenceDiagram
         </pre>
       </div>
     </div>
+
+    <hr>
+
+    <!-- References -->
+    <h2>References</h2>
+    <p>Production Website: <a href="https://helprr.ai/">helprr.ai</a></p>
 
   </div>
 </body>
