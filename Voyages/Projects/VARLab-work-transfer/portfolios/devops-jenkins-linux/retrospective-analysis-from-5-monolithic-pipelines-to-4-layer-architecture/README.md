@@ -67,8 +67,6 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 
 > **Q: Want to see how I analyzed a single file?**
 >
-> Example: [generalHelper Analysis](problem-analysis/01-generalHelper/)
->
 > - [SRP Violation Analysis](problem-analysis/01-generalHelper/01-srp-violation-analysis.md)
 > - [Software Smells Analysis](problem-analysis/01-generalHelper/02-software-smells-analysis.md)
 > - [Design Smells Analysis](problem-analysis/01-generalHelper/03-design-smells-symptoms.md)
@@ -99,7 +97,6 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 > **Q: Want the step-by-step implementation process?**
 >
 > - [solution-overview.md](problem-solving/solution-overview.md) - Phase 0~4 overview with links
-> - [phase-0~4/](problem-solving/) - Detailed changelogs by commit
 
 ### 📄 Supplement
 
@@ -109,7 +106,7 @@ This analysis transforms intuition into evidence. It provides the vocabulary and
 
 > **Q: Want to see the Pull Request documentation?**
 >
-> - [pull-request-documentation.pdf](problem-solving/pull-request-documentation.pdf)
+> - [pull-request-documentation.pdf](problem-solving/pull-request-documentation/pull-request-documentation.pdf)
 
 ---
 

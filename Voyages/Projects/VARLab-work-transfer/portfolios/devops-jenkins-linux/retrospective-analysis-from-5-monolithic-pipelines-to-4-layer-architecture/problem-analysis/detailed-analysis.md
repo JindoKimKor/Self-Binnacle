@@ -22,42 +22,7 @@
 
 ## Analysis Methodology
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    DATA COLLECTION                               │
-├─────────────────────────────────────────────────────────────────┤
-│  pipeline-sequence-diagrams     SRP Analysis      Helper Call   │
-│  (procedural → domain)          (reasons for     Frequency      │
-│                                  change per                      │
-│                                  function)                       │
-└──────────────┬─────────────────────┬─────────────────┬──────────┘
-               │                     │                 │
-               ▼                     ▼                 ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    INDIVIDUAL FILE ANALYSIS                      │
-├─────────────────────────────────────────────────────────────────┤
-│  Concepts: Fowler's Code Smells + Suryanarayana's Design Smells │
-│  Output: 01-08 individual analyses                               │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    DESIGN SYMPTOM IDENTIFICATION                 │
-├─────────────────────────────────────────────────────────────────┤
-│  Concept: Martin's 7 Design Symptoms                             │
-│  Output: Per-file symptom evidence                               │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    SYSTEM-LEVEL ANALYSIS                         │
-├─────────────────────────────────────────────────────────────────┤
-│  Architecture Smells + domain-mapping cross-comparison           │
-│  - Cross-pipeline duplication (by stage, by domain)              │
-│  - Shotgun Surgery locations                                     │
-│  - Abstraction inconsistency patterns                            │
-└─────────────────────────────────────────────────────────────────┘
-```
+![Analysis Methodology](../resources/analysis-methodology.png)
 
 ### Applied Concepts & Principles
 

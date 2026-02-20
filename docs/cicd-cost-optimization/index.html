@@ -8,40 +8,8 @@
   <title>94.88% CI/CD Infrastructure Cost Reduction | Jindo Kim</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="../css/portfolio-theme.css">
   <style>
-    :root {
-      --bg-primary: #1e1e2e;
-      --bg-secondary: #252536;
-      --bg-surface: #2a2a3d;
-      --bg-code: #1a1a2e;
-      --text-primary: #cdd6f4;
-      --text-secondary: #a6adc8;
-      --text-muted: #7f849c;
-      --accent: #6c7bda;
-      --accent-light: #8992e8;
-      --border: #363650;
-      --link: #89b4fa;
-      --link-hover: #b4d0fb;
-      --success: #a6e3a1;
-      --highlight-bg: #313244;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
     /* Hero */
     .hero {
       background: linear-gradient(135deg, var(--bg-secondary), var(--bg-surface));
@@ -78,46 +46,6 @@
     }
     .hero-summary strong { color: var(--text-primary); }
 
-    /* Sections */
-    h2 {
-      font-size: 1.35rem;
-      font-weight: 500;
-      margin: 2.5rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-      color: var(--text-primary);
-    }
-    h3 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin: 1.8rem 0 0.8rem;
-      color: var(--accent-light);
-    }
-    p { margin-bottom: 0.8rem; color: var(--text-secondary); }
-    strong { color: var(--text-primary); }
-
-    /* Tables */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0 1.5rem;
-      font-size: 0.9rem;
-    }
-    th, td {
-      padding: 0.7rem 1rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    th {
-      background: var(--bg-surface);
-      color: var(--text-primary);
-      font-weight: 500;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    td { color: var(--text-secondary); }
-    tr:hover td { background: var(--highlight-bg); }
     .highlight-cell { color: var(--success); font-weight: 700; }
 
     /* Cost comparison table */
@@ -269,37 +197,6 @@
     .phase p { font-size: 0.9rem; }
     .phase-result {
       margin-top: 0.8rem;
-    }
-
-    /* Blockquote / notes */
-    blockquote {
-      background: var(--bg-code);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 6px 6px 0;
-      padding: 0.8rem 1.2rem;
-      margin: 1rem 0;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    blockquote a { color: var(--link); text-decoration: none; }
-    blockquote a:hover { text-decoration: underline; }
-
-    /* Lists */
-    ul {
-      margin: 0.5rem 0 1rem 1.5rem;
-      color: var(--text-secondary);
-    }
-    li { margin-bottom: 0.3rem; font-size: 0.9rem; }
-
-    /* Links */
-    a { color: var(--link); text-decoration: none; }
-    a:hover { color: var(--link-hover); text-decoration: underline; }
-
-    /* HR */
-    hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 2rem 0;
     }
 
     /* Benefits list */
