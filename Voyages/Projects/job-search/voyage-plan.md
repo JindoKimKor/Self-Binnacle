@@ -33,26 +33,6 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
-> | 2026-02-04 | 2026-01-23 | Attend P4E Job Fair Winter 2026 | In-Person, Bingemans Kitchener |
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-02-11 | 2026-01-23 | Attend Toronto Diversity Virtual Job Fair | JobFairX - Waiting for invite |
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-02-18 | 2026-02-01 | Attend JVS North Hiring Event | In-Person, North Toronto - Pending review |
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-02-19 | 2026-01-23 | Attend Toronto Technology Virtual Job Fair | JobFairX ⭐ Tech - Waiting for invite |
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
 > | 2026-02-26 | 2026-01-23 | Attend Waterloo Technology Virtual Job Fair | JobFairX ⭐ Tech - Waiting for invite |
 <br>
 
@@ -87,6 +67,22 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 > |----------|---------|-------|--------|
 > | 2026-01-30 | 2026-01-23 | Attend Waterloo Entry-Level Virtual Job Fair | Did not receive invitation |
 <br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-04 | 2026-01-23 | Attend P4E Job Fair Winter 2026 | In-Person, Bingemans Kitchener |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-11 | 2026-01-23 | Attend Toronto Diversity Virtual Job Fair | Did not receive invitation |
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | 2026-02-18 | 2026-02-01 | Attend JVS North Hiring Event | In-Person, North Toronto - Toronto or GTA only |
+<br>
+
 
 ---
 
@@ -131,3 +127,15 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 
 ### Harvest
 - actual:
+
+
+https://training.interviewprep.app/
+
+reserve part time.
+police civiliance job
+
+
+![alt text](image.png)
+
+https://www.canadastop100.com/national/
+
