@@ -15,6 +15,12 @@ Riipen experiential learning platform project. Working on real-world projects to
 
 ---
 
+## My Profile (for Project Matching)
+- Documents (resume, transcript, references): `Voyages/Projects/job-search/resources/documents/`
+- Interview Prep (strengths, patterns, STAR evidence): `Voyages/Projects/job-search/resources/documents/interview-prep-playbook.md`
+
+---
+
 ## Sailing Orders
 
 ### Plotted (Underway)
@@ -48,13 +54,14 @@ Riipen experiential learning platform project. Working on real-world projects to
 | 3 | 2026-01-19 | Verification | Completed 2-step verification (ID + Enrolment) |
 | 4 | 2026-01-23 | Project Reassignment | Auto-assigned Team 48 (non-technical); sent reassignment request |
 | 5 | 2026-02-14 | New Project Applications | Researched 4 projects, applied to MyHelpr + Kreative Retail Solutions |
+| 6 | 2026-02-23 | Butter Web Design Application | Analyzed AI SMS agent project, deep dive into business model, drafted Q1-Q3 + Intro, submitted application |
 
 ---
 
 ## Resources
 - FuturePath Program: https://futurepath.riipen.com/lrn/dashboard
 - Project Page: https://riipenlabs.riipen.com/teams/pOR4P26L/project
-- Template: `resources/growth-strategy-report-template.pdf`
+- Template: `resources/reference/growth-strategy-report-template.pdf`
 
 ---
 

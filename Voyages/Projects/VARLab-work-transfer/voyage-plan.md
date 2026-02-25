@@ -51,6 +51,20 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
+> | - | 2026-02-07 | Draw network diagram showing Moodle and LTI Server connection process | Complete understanding of system architecture |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Network flow between Moodle and LTI Server
+> - Authentication/authorization steps
+> - All connection processes and protocols
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
 > | - | 2026-01-15 | Add cloud service benchmarking section to 94.88% Cost Reduction portfolio | Portfolio completeness |
 >
 > <details>

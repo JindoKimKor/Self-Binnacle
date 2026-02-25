@@ -90,6 +90,21 @@ created: 2026-01-23
 > </details>
 <br>
 
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-02-23 | What happens when you type google.com — full-stack breakdown | Understand every layer from keystroke to rendered page |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Layers to cover: Browser UI → OS/DNS resolver → Network (TCP/TLS/HTTP) → Server-side → Response (HTML/CSS/JS) → Browser engine (parsing, DOM, CSSOM, render tree, paint) → GPU compositing
+> - Already covered: Network fundamentals (TCP, HTTP)
+> - Remaining: Hardware/input, OS-level input handling, URL parsing, browser internals, DOM/JS execution, rendering pipeline, caching
+> - Reference: https://github.com/alex/what-happens-when (42.7k stars)
+>
+> </details>
+<br>
+
 ### Plotted (Reached)
 
 ---
@@ -107,6 +122,7 @@ created: 2026-01-23
 ## Resources
 - networking/ - TCP, Socket, Two-Tier Architecture
 - runtimes/ - JVM, CLR, interpreter comparison
+- operating-systems/ - Windows APIs, media subsystems
 
 ### Learning Roadmaps
 - https://roadmap.sh/
@@ -114,6 +130,9 @@ created: 2026-01-23
 ### Technical Talks & Interview Prep
 - https://www.youtube.com/watch?v=RP_f5dMoHFc - Naver Day1, 2-2. Is That REST API Really RESTful?
 - https://www.youtube.com/watch?v=-GsrYvZoAdA - Why Is This Equation Wrong? (Dev Interview) 1 + 1.1 == 1.2 False
+- https://youtu.be/LbGS7s67Rh0?si=XmuxdFVzNRW1aw0H - Attack on Titan is a VPC Network (Network architecture explained via Attack on Titan concept)
+- https://www.youtube.com/watch?v=8B8jXKaKBrw - [10분 테코톡] 포라의 Docker 빌드 속도 최적화
+- https://www.youtube.com/watch?v=EhkYZ2HnwIM - 빅테크가 경제학 박사를 싹쓸이하고 있습니다 - 김현철 원장(연세대 인구와 인재연구원)
 
 ### Open Source Projects
 **Python:**

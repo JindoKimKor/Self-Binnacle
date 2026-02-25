@@ -23,6 +23,9 @@
 ### 4. Tools
 - [Dashboard Generation](#dashboard-generation)
 
+### 5. Safety
+- [File Deletion Policy](#file-deletion-policy)
+
 ---
 
 # 1. Overview
@@ -257,7 +260,7 @@ When user requests Sailing Orders operations:
 To update the Dashboard (README.md), run:
 
 ```bash
-python _system/scripts/generate_dashboard.py
+py _system/scripts/generate_dashboard.py
 ```
 
 This script:
@@ -266,3 +269,22 @@ This script:
 - Generates README.md with activity visualization
 
 Note: Requires Google Calendar API credentials in `_system/credentials/`
+
+## Environment
+
+- **Python:** Always use `py` (not `python` or `python3`). Windows App Execution Aliases redirect `python`/`python3` to Microsoft Store stubs, causing failures.
+- **PDF:** pypdf (`from pypdf import PdfReader`) is installed. Use this for all PDF text extraction. Do not install other PDF libraries.
+
+---
+
+# 5. Safety
+
+## File Deletion Policy
+
+- **NEVER use `rm`, `del`, `Remove-Item`, or any permanent delete command.** This is a hard rule with zero exceptions.
+- **To remove files, send to Windows Recycle Bin:**
+  ```bash
+  powershell -Command "Add-Type -AssemblyName Microsoft.VisualBasic; [Microsoft.VisualBasic.FileIO.FileSystem]::DeleteFile('FULL_FILE_PATH', 'OnlyErrorDialogs', 'SendToRecycleBin')"
+  ```
+- **NEVER delete, remove, or overwrite user's image files (screenshots, PNGs, etc.) without explicit user approval.**
+- Before removing any file: list every file by name, explain why, and **wait for user confirmation** before executing.

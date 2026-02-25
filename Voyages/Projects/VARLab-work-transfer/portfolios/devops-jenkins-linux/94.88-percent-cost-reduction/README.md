@@ -1,5 +1,7 @@
 # 94.88% CI/CD Infrastructure Cost Reduction
 
+![Cloud-Native Unity CI/CD Infographic](cloud-native-cicd-infographic.png)
+
 > **Context:** Unity CI/CD build environment isolation at VARLab
 >
 > **Problem:** Unity Editor 100% CPU usage → server crashes on concurrent builds

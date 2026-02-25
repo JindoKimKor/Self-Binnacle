@@ -152,6 +152,6 @@ sequenceDiagram
 ---
 
 ## References
-- Production Website: https://web.helprr.ai/
+- Production Website: https://helprr.ai/
 
 ---

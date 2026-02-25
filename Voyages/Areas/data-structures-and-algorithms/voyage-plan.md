@@ -20,6 +20,28 @@ Continuous study of data structures and algorithms for technical interviews and 
 
 > LeetCode's real value is internalizing this thought process. Understanding 30 problems deeply is better than solving 100 superficially.
 
+### Interview Approach Framework Workflow
+
+**For each problem:**
+1. Read problem → Think (don't code yet!)
+2. Write explanation using [Interview Approach Framework](interview-approach-framework.md):
+   - Input/Output
+   - Keywords & Constraints
+   - Pattern + Why
+   - Approach (with example walkthrough)
+   - "I'll go ahead and write the code"
+3. Code the solution
+4. Log in today's passage: problem name, pattern, explanation quality
+
+**Weekly:**
+- Review all problems solved
+- Identify weak explanations
+- Update pattern library in resources/
+
+**Resources:**
+- Framework reference: [interview-approach-framework.md](interview-approach-framework.md)
+- Pattern library: [resources/patterns/](resources/patterns/)
+
 ---
 
 ## Sailing Orders
@@ -130,6 +152,26 @@ Continuous study of data structures and algorithms for technical interviews and 
 | [LeetCode](https://leetcode.com/) | Increase Easy/Medium problem volume |
 | [HackerRank](https://www.hackerrank.com/domains/tutorials/10-days-of-csharp) | C# specific track available |
 
+### Learning Resources
+
+**Books:**
+- "Introduction to Algorithms" by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein
+- "Data Structures and Algorithms in Java" by Robert Lafore
+- "Algorithms" by Robert Sedgewick and Kevin Wayne
+- "The Algorithm Design Manual" by Steven Skiena
+
+**Websites:**
+- GeeksforGeeks: https://www.geeksforgeeks.org/
+- HackerRank: https://www.hackerrank.com/domains/data-structures
+- Topcoder: https://www.topcoder.com/community/data-science/data-science-tutorials/
+- LeetCode: https://leetcode.com/
+- Tech Interview Handbook - Grind 75: https://www.techinterviewhandbook.org/grind75/
+
+**YouTube Channels:**
+- MIT OpenCourseWare: https://www.youtube.com/channel/UCEBb1b_L6zDS3xTUrIALZOw
+- Abdul Bari: https://www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw
+- Back To Back SWE: https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA
+
 ---
 
 ## Reflection
@@ -141,3 +183,7 @@ Continuous study of data structures and algorithms for technical interviews and 
 
 ### Harvest
 - actual:
+
+https://deepmind.google/blog/alphadev-discovers-faster-sorting-algorithms/
+
+https://www.geeksforgeeks.org/dsa/dsa-tutorial-learn-data-structures-and-algorithms/

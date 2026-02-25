@@ -1,5 +1,7 @@
 # Stabilized Crashed Unity Build Server
 
+![Build Server Stabilization Infographic](build-server-stabilization-infographic.png)
+
 > **Context:** Unity CI/CD server stability crisis at VARLab (June 2024)
 >
 > **Problem:** VM crashes when 2-3 pipelines run simultaneously due to Unity Editor's 100% CPU usage

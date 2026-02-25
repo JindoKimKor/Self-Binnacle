@@ -67,6 +67,7 @@ Backend Development Lead (Part-time Contract) at Helprr.ai - a mental wellness a
 | 6 | 2026-01-19 | GitHub Branch Protection | Ruleset setup guide, Confluence docs, shared with PM |
 | 7 | 2026-01-24 | Portfolio Enhancement | What I Did section, terminology update (API Contract → Unified Feature Specification) |
 | 8 | 2026-01-27 | GitHub Ruleset Private Repo Issue | Researched Free vs Pro plans, tested ruleset on private repo, documented solution |
+| 9 | 2026-02-02 | Backend Integration to Dev | Deployed all backend updates to Dev, recorded integration steps, proposed 3 approaches for next phase (Wait for Frontend / Early Access / Joint Testing) |
 
 ---
 

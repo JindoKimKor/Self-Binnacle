@@ -187,8 +187,8 @@ How will I accomplish this? (Workflow, Process, Schedule, etc.)
 
 
 ## Resources
-List of materials in the resources/ folder
--
+- GitHub (Workshop CI/CD Pipeline): https://github.com/Ko-dany/ko-dany.github.io-ci-cd-pipeline-workshop
+- Miro (Workshop Planning): https://miro.com/app/board/uXjVGYzIvuk=/
 
 ---
 

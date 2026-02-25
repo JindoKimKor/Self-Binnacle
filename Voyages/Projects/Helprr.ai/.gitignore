@@ -1,6 +1,7 @@
 # NDA - Confidential information
 logbook/*
 resources/*
+repos/
 
 # Not affected by NDA
 !logbook/2025-12-23/
