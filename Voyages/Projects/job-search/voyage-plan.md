@@ -24,27 +24,7 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 
 ### Plotted (Underway)
 
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | - | 2026-01-20 | Research Coderbyte platform | Prepare for coding test |
-<br>
-
 ### Plotted Courses
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-02-26 | 2026-01-23 | Attend Waterloo Technology Virtual Job Fair | JobFairX ⭐ Tech - Waiting for invite |
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-02-27 | 2026-01-23 | Attend Toronto Entry-Level Virtual Job Fair | JobFairX - Waiting for invite |
-<br>
-
-> | Deadline | Created | Order | Purpose |
-> |----------|---------|-------|---------|
-> | 2026-03-06 | 2026-01-23 | Attend Waterloo Entry-Level Virtual Job Fair | JobFairX - Waiting for invite |
-<br>
 
 > | Deadline | Created | Order | Purpose |
 > |----------|---------|-------|---------|
@@ -62,6 +42,21 @@ Apply, track, iterate on resume/cover letter, prepare for interviews.
 <br>
 
 ### Plotted (Reached)
+
+> | Deadline | Created | Order | Result |
+> |----------|---------|-------|--------|
+> | 2026-02-26 | 2026-01-23 | Attend Waterloo Technology Virtual Job Fair | Did not receive invitation |
+<br>
+
+> | Deadline | Created | Order | Result |
+> |----------|---------|-------|--------|
+> | 2026-02-27 | 2026-01-23 | Attend Toronto Entry-Level Virtual Job Fair | Did not receive invitation |
+<br>
+
+> | Deadline | Created | Order | Result |
+> |----------|---------|-------|--------|
+> | 2026-03-06 | 2026-01-23 | Attend Waterloo Entry-Level Virtual Job Fair | Did not receive invitation |
+<br>
 
 > | Deadline | Created | Order | Result |
 > |----------|---------|-------|--------|

@@ -14,14 +14,14 @@
 |------|-------|----------|------|----------|--------|
 | Jan 30 | Entry-Level Virtual | Waterloo, ON | Entry-Level | JobFairX | No invitation |
 | **Feb 4** | **P4E Job Fair Winter 2026** | **Kitchener (Bingemans)** | Multi-Industry | **Conestoga** | ✅ Confirmed (#14056410193) |
-| Feb 11 | Diversity Virtual | Toronto, ON | Diversity | JobFairX | ⏳ Waiting for invite |
+| Feb 11 | Diversity Virtual | Toronto, ON | Diversity | JobFairX | No invitation |
 | **Feb 18** | **JVS North Hiring Event** | **North Toronto** | Multi-Industry | **JVS Toronto** | ✅ Registered |
-| Feb 19 | **Technology Virtual** | Toronto, ON | **Tech** ⭐ | JobFairX | ⏳ Waiting for invite |
-| Feb 26 | **Technology Virtual** | Waterloo, ON | **Tech** ⭐ | JobFairX | ⏳ Waiting for invite |
-| Feb 27 | Entry-Level Virtual | Toronto, ON | Entry-Level | JobFairX | ⏳ Waiting for invite |
-| Mar 6 | Entry-Level Virtual | Waterloo, ON | Entry-Level | JobFairX | ⏳ Waiting for invite |
+| Feb 19 | **Technology Virtual** | Toronto, ON | **Tech** ⭐ | JobFairX | No invitation |
+| Feb 26 | **Technology Virtual** | Waterloo, ON | **Tech** ⭐ | JobFairX | No invitation |
+| Feb 27 | Entry-Level Virtual | Toronto, ON | Entry-Level | JobFairX | No invitation |
+| Mar 6 | Entry-Level Virtual | Waterloo, ON | Entry-Level | JobFairX | No invitation |
 | **Mar 25** | **Hire Canada Job Fair** | **Toronto (Holiday Inn Airport)** | Multi-Industry | **Eventbrite** | ✅ Ticket Confirmed |
-| Apr 2 | **Technology Virtual** | Waterloo, ON | **Tech** ⭐ | JobFairX | ⏳ Waiting for invite |
+| Apr 2 | **Technology Virtual** | Waterloo, ON | **Tech** ⭐ | JobFairX | No invitation |
 | **Apr 3** | **Career Fair** | **Toronto (Hilton)** | Multi-Industry | **Eventbrite** | ✅ Ticket Confirmed |
 
 ---
