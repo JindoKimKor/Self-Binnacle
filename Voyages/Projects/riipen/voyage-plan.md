@@ -55,6 +55,7 @@ Riipen experiential learning platform project. Working on real-world projects to
 | 4 | 2026-01-23 | Project Reassignment | Auto-assigned Team 48 (non-technical); sent reassignment request |
 | 5 | 2026-02-14 | New Project Applications | Researched 4 projects, applied to MyHelpr + Kreative Retail Solutions |
 | 6 | 2026-02-23 | Butter Web Design Application | Analyzed AI SMS agent project, deep dive into business model, drafted Q1-Q3 + Intro, submitted application |
+| 7 | 2026-03-01 | Great White Wash + Quotey Applications | Refined GWW drafts (user-written Q2), drafted Quotey Q1-Q3 + Intro, submitted both applications |
 
 ---
 
