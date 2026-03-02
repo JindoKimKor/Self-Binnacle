@@ -42,6 +42,7 @@ created: 2026-01-23
 > - While consolidating, prepare tech interview Q&A per topic with AI
 > - Practice answering verbally (speak out loud)
 > - Record key answers as keyword notes in resources
+> - **OpenText SRA alignment**: Prioritize topics that map to JD (Linux, Ansible, Networking, Monitoring, K8s)
 >
 > </details>
 <br>
@@ -101,6 +102,97 @@ created: 2026-01-23
 > - Already covered: Network fundamentals (TCP, HTTP)
 > - Remaining: Hardware/input, OS-level input handling, URL parsing, browser internals, DOM/JS execution, rendering pipeline, caching
 > - Reference: https://github.com/alex/what-happens-when (42.7k stars)
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-03-02 | Linux Fundamentals & System Administration | Required skill + core daily responsibility (OpenText SRA) |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - **Priority 1** — Only required skill with no existing resource
+> - File system hierarchy (FHS), permissions (chmod/chown/umask), users/groups
+> - Bash scripting: variables, conditionals, loops, functions, exit codes
+> - Process management: ps, top, htop, kill, systemd/systemctl
+> - Package management: apt (Ubuntu) vs dnf/yum (RHEL)
+> - Logs & debugging: journalctl, /var/log/, dmesg
+> - Networking tools: ip, ss, netstat, curl, dig, nslookup
+> - File operations: find, grep, awk, sed, xargs
+> - Resources: roadmap.sh/linux, OverTheWire Bandit, RHEL docs
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-03-02 | Ansible Basics — Playbooks & Configuration Management | First listed JD responsibility: "Assist in writing and maintaining Ansible playbooks" |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - **Priority 2** — ❌ Gap in skills checklist, but literally first responsibility in JD
+> - YAML syntax, inventory files, playbook structure
+> - Modules: apt/yum, copy, template, service, file
+> - Variables, facts, handlers, roles
+> - Idempotency concept
+> - Practice: simple provisioning playbook (install packages, configure services, manage users)
+> - Resources: Ansible official getting-started, Jeff Geerling "Ansible for DevOps"
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-03-02 | Networking Fundamentals (IPs, DNS, HTTP, VPC) | "Bridge the gap between software development and network operations" |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - **Priority 3** — Preferred but essential for the role's core mission
+> - OSI/TCP-IP model overview
+> - IP addressing, subnets, CIDR notation
+> - DNS resolution flow
+> - HTTP/HTTPS, TLS handshake
+> - Ports, firewalls, NAT
+> - VPC, subnets, security groups (cloud networking)
+> - Overlaps with: "What happens when you type google.com" order, "Attack on Titan is a VPC Network" video
+> - Existing: cloud-security-features.md (WAF, DDoS, Virtual Firewall)
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-03-02 | Monitoring & Observability (Prometheus, Grafana) | SRE industry standard — ❌ Gap in skills checklist |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - **Priority 4** — Preferred qualification, ❌ Gap
+> - Three pillars of observability: Monitoring vs Logging vs Tracing
+> - Prometheus: pull model, metrics types (counter, gauge, histogram), PromQL basics
+> - Grafana: dashboards, alerting, data sources
+> - Log aggregation concepts (ELK stack / Splunk)
+>
+> </details>
+<br>
+
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-03-02 | Kubernetes Basics — Pods, Services, Deployments | "Basic understanding of orchestration" (Preferred) |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - **Priority 5** — Preferred, not a daily responsibility but good foundation
+> - Core concepts: Pod, Service, Deployment, ReplicaSet
+> - kubectl basics
+> - Relationship to Docker (container runtime vs orchestrator)
+> - YAML manifests
+> - Minikube for local practice
 >
 > </details>
 <br>
