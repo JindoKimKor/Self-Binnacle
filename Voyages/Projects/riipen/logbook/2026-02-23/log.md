@@ -26,11 +26,11 @@ date: 2026-02-23
 
 | Timestamp | File | What Changed |
 |-----------|------|-------------|
-| 15:28 | `resources/Riipen _ AI-Powered SMS Customer Support Agent.pdf` | Downloaded Riipen project listing PDF |
-| 15:58 | `resources/Web Design Portfolio _ Butter Web Design.pdf` | Downloaded portfolio PDF (34MB, 35 pages) for client verification |
-| ~16:00 | `resources/portfolio-screenshots/` | Extracted portfolio page images (page_4.png - page_34.png) for visual verification |
-| 16:53 | `resources/Butter-Web-Design.md` | Created and iteratively refined: company research, fit analysis, Q1-Q3 drafts, Intro Message, Deep Dive section (user flow, why SMS/AI, modules, build vs off-the-shelf, platform costs, verified clients) |
-| 16:56 | `resources/Riipen _ Evolve Solar Teardrops...pdf` | Downloaded for evaluation (passed) |
+| 15:28 | `resources/butter-web-design/riipen-listing.pdf` | Downloaded Riipen project listing PDF |
+| 15:58 | `resources/butter-web-design/portfolio.pdf` | Downloaded portfolio PDF (34MB, 35 pages) for client verification |
+| ~16:00 | `resources/butter-web-design/portfolio-screenshots/` | Extracted portfolio page images (page_4.png - page_34.png) for visual verification |
+| 16:53 | `resources/butter-web-design/analysis.md` | Created and iteratively refined: company research, fit analysis, Q1-Q3 drafts, Intro Message, Deep Dive section (user flow, why SMS/AI, modules, build vs off-the-shelf, platform costs, verified clients) |
+| 16:56 | `resources/evolve-solar-teardrops/riipen-listing.pdf` | Downloaded for evaluation (passed) |
 
 ### Key Decisions Made
 - **OpenAI + Twilio over GoHighLevel:** Enough real coding for portfolio value, near-zero dev cost ($15-30), 60hr feasible
@@ -51,10 +51,10 @@ date: 2026-02-23
 - If matched with Butter: confirm tech stack preferences, discuss platform costs with Ryan
 
 ### References
-- Butter Web Design: ../../resources/butter-web-design/Butter-Web-Design.md
-- Riipen PDF: ../../resources/butter-web-design/Riipen _ AI-Powered SMS Customer Support Agent.pdf
-- Portfolio PDF: ../../resources/butter-web-design/Web Design Portfolio _ Butter Web Design.pdf
-- Evolve Solar (PASS): ../../resources/evolve-solar-teardrops/Riipen _ Evolve Solar Teardrops Rental Division Website Development.pdf
+- Butter Web Design: ../../resources/butter-web-design/analysis.md
+- Riipen PDF: ../../resources/butter-web-design/riipen-listing.pdf
+- Portfolio PDF: ../../resources/butter-web-design/portfolio.pdf
+- Evolve Solar (PASS): ../../resources/evolve-solar-teardrops/riipen-listing.pdf
 
 ### Notes
 - Butter Web Design is strongest fit so far: actual development work + AI integration + reusable architecture

@@ -26,7 +26,7 @@ date: 2026-01-23
 
 ### References
 - Company: https://www.jillhewlett.com/
-- Template: `resources/growth-strategy-report-template.pdf`
+- Template: `resources/reference/growth-strategy-report-template.pdf`
 - Project page: https://riipenlabs.riipen.com/teams/pOR4P26L/project
 
 ### Notes
