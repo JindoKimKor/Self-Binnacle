@@ -63,12 +63,13 @@ Conestoga College's Helena Webb Professional Mentorship Program. Bi-weekly 1-hou
 | [2026-01-18](logbook/2026-01-18/log.md) | Jan 18 | Session #3 | |
 | [2026-02-01](logbook/2026-02-01/log.md) | Feb 1 | Session #4 | |
 | [2026-02-16](logbook/2026-02-16/log.md) | Feb 16 | Session #5 | |
+| [2026-03-01](logbook/2026-03-01/log.md) | Mar 1 | Session #6 | AI disruption, DevOps/SRE focus |
 
 ---
 
 ## Resources
 - Shared Doc (Homework): (Conestoga Outlook - search "Helena Webb mentorship program - Jindo")
-- Interaction Reflection Form: [resources/Interaction-Reflection-Form.pdf](resources/Interaction-Reflection-Form.pdf)
+- Interaction Reflection Form: [resources/interaction-reflection-form.pdf](resources/interaction-reflection-form.pdf)
 - [ACHEV](https://achev.ca/events/) - Employment services, GTA, newcomer-focused
 - [ACCES Employment](https://accesemployment.ca/) - IT Connections program, GTA + online
 - [FEATS](https://feat.findhelp.ca/) - Ontario-wide employment & training service finder, filter by location/population
