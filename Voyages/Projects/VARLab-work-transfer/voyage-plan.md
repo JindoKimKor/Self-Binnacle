@@ -131,6 +131,21 @@ Transfer all VARLab work (code, documentation, PR records, presentations) to per
 > </details>
 <br>
 
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-02-26 | Apply Northstar / Unleash UI design elements to portfolio | Portfolio visual upgrade |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - Northstar Shipping Platform: 깔끔한 테이블 UI, 색상 배합, 레이아웃
+> - Unleash UI: 색상 스킴, 토글 디자인, 대시보드 구성
+> - 현재 포트폴리오 (dark theme slate/indigo) 에 적용 가능한 요소 분석
+> - 발견 계기: PROG3360 Assignment 2 작업 중
+>
+> </details>
+<br>
+
 ### Plotted (Reached)
 
 > | Deadline | Created | Order | Purpose |
