@@ -1,0 +1,3 @@
+[submodule "Voyages/public"]
+	path = Voyages/public
+	url = https://github.com/JindoKimKor/Self-Binnacle-Voyages-Public.git

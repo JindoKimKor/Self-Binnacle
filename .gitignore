@@ -15,7 +15,3 @@ _system/
 
 # MkDocs build output (use docs/ for GitHub Pages)
 site/
-
-# Private ideas (not for public)
-Voyages/embryonic-voyages.md
-Voyages/standing-orders.md
