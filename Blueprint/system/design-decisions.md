@@ -81,8 +81,64 @@ Self-Binnacle is the Source of Truth for all data.
 
 | Classification | Description | Examples |
 |----------------|-------------|----------|
-| User-driven | User does directly or requests AI (user intention/judgment present) | Create Voyage, write Voyage Plan, create folders, organize content, etc. |
-| System-auto | Script runs automatically without user intervention | Dashboard generation |
-| System-auto + AI | AI analyzes/detects without user intervention | Principle violation detection, structure deviation detection, human error catch |
+| User-driven | User does directly or requests AI (user intention/judgment present) | Create Voyage, write Voyage Plan, create folders, organize content |
+| AI-orchestrated | AI interprets CONTRACT rules, invokes micro scripts, delivers metacognition awareness | Passage Builder (resolve → query → decision matrix → create files) |
+| System-auto | Script runs automatically without user intervention | Dashboard generation, Passage Plan Observer |
+| System-auto + AI | AI analyzes/detects without user intervention | Principle violation detection, structure deviation detection |
 
-Things requiring user's thinking/judgment process are user-driven; processing based on existing data is system-auto.
+Things requiring user's thinking/judgment process are user-driven; processing based on existing data is system-auto. AI-orchestrated is the middle ground: AI follows CONTRACT rules but user triggers and makes decisions.
+
+---
+
+## 7. CONTRACT-Driven Architecture
+
+System behavior is defined by `CONTRACT.md` files rather than hard-coded logic.
+
+**Pattern:** `CONTRACT.md` (rules) + micro scripts (stateless tools) + AI (orchestrator)
+
+**Why this pattern:**
+- CONTRACTs are human-readable — user can audit and modify rules
+- Scripts are stateless and single-purpose — easy to test, replace, reuse
+- AI handles the conditional logic and user interaction — flexible orchestration
+- Adding new behavior = writing a new CONTRACT + scripts, not modifying existing code
+
+**Script classification by system role:**
+
+| System | Role | Examples |
+|--------|------|---------|
+| PARA | Organizing/navigating what exists | Dashboard, Voyage Resolver |
+| Metacognition | Improving how you think and work | Passage Builder, Passage Plan Observer |
+| Self-Binnacle | Core infrastructure serving both | Calendar micro scripts |
+
+---
+
+## 8. Voyage Tier System
+
+Voyages are separated by visibility into three tiers.
+
+| Tier | Git | Location | Purpose |
+|------|-----|----------|---------|
+| Public | Submodule (public repo) | `Voyages/public/` | Shareable work (portfolio, open-source) |
+| Private | Independent repo (private) | `Voyages/private/` | Sensitive work (school, client projects) |
+| Embryonic | No git (local only) | `Voyages/embryonic/` | Ideas not yet committed to |
+
+**Why this separation:**
+- Public work can be shared/showcased without exposing private data
+- Private work has full version control but restricted access
+- Embryonic ideas have zero friction — no git overhead until the voyage is worth tracking
+
+---
+
+## 9. Calendar as First-Class Data Source
+
+Google Calendar events are not just schedule reminders — they are data sources that drive system behavior.
+
+**How Calendar events are used:**
+- **Dashboard**: Fetches time data from `[Project]`/`[Area]` events for activity visualization
+- **Passage Plan Observer**: Scans upcoming events, injects planning skeleton into empty descriptions
+- **Passage Builder**: Queries events to determine timing (before/during/after), reads plan content from descriptions
+
+**Why Calendar (not a database or task manager):**
+- User already plans their day in Calendar — no new tool to adopt
+- Calendar event descriptions become the planning stage of metacognition
+- Time data is naturally embedded (start/end times = duration tracking)

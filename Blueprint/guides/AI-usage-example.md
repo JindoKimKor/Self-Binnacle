@@ -23,8 +23,12 @@
 
 **User:** "Project"
 
+**AI:** "Which visibility tier? public, private, or embryonic?"
+
+**User:** "public"
+
 **AI:**
-- Create Projects/unity-ci-enabler/ folder
+- Create Voyages/public/Projects/unity-ci-enabler/ folder
 - Create voyage-plan.md (template)
 - Create logbook/ folder
 
@@ -123,19 +127,29 @@ Package VARLab's CI/CD infrastructure as open-source plug-and-play solution
 
 ## 8. Passage Writing Flow
 
-### Writing Passage Plan
+### Creating a Passage (Passage Builder CONTRACT)
 
-**User:** "Starting Unity CI work today"
-
-**AI:** "Should I create a Passage for today's date?"
-
-**User:** "Yes"
+**User:** "riipen passage 만들어줘" (or "create riipen passage")
 
 **AI:**
-- Create logbook/2024-12-29/ folder
-- Create passage-plan.md, log.md, passage-forecast-review.md
+1. Runs `voyage/resolve.py "riipen"` → resolves to `[Project] Riipen` at `Voyages/private/Projects/riipen`
+2. Runs `calendar/query.py "[Project] Riipen" "2026-03-03"` → checks Calendar
+3. Applies decision matrix:
 
-"Would you like to start with passage-plan.md?"
+**Case A — Event exists, plan filled:**
+- Runs `calendar/read-description.py` → gets plan content
+- Creates passage folder with pre-filled `metacognition/passage-plan.md`
+
+**Case B — Event exists, plan empty, before event:**
+- "Would you like to write the plan first?"
+- User writes plan in Calendar → AI re-reads and creates passage
+
+**Case C — No Calendar event:**
+- Creates empty passage
+- "No Calendar event found. Would you like to create one?"
+- User provides start/end time → AI runs `calendar/create-event.py`
+
+### Writing Passage Plan
 
 **User:** "I'll do vm provisioning, referring to varlab code. Should take about 3 hours since I have azure experience. Might get stuck on networking though"
 
@@ -273,21 +287,17 @@ this assignment doesn't teach anything real
 
 **AI:** Added to Plotted Courses in VARLab voyage-plan.md:
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |
-
-"Any details to add below the table?"
-
-**User:** "ACI, ACA, AKS vs Azure Batch comparison"
-
-**AI:** Updated:
-
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |
-
-- ACI, ACA, AKS vs Azure Batch comparison
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-20 | Cloud benchmarking section | Portfolio completeness |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - ACI, ACA, AKS vs Azure Batch comparison
+>
+> </details>
+<br>
 
 ---
 
@@ -299,9 +309,17 @@ this assignment doesn't teach anything real
 
 ### Plotted (Underway)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-20 | Cloud benchmarking section | Portfolio completeness |
+>
+> <details>
+> <summary>Details</summary>
+>
+> - ACI, ACA, AKS vs Azure Batch comparison
+>
+> </details>
+<br>
 
 ---
 
@@ -313,6 +331,14 @@ this assignment doesn't teach anything real
 
 ### Plotted (Reached)
 
-| Order | Deadline | Created | Purpose |
-|-------|----------|---------|---------|
-| Cloud benchmarking section | - | Jan 20 | Portfolio completeness |
+> | Deadline | Created | Order | Purpose |
+> |----------|---------|-------|---------|
+> | - | 2026-01-20 | Cloud benchmarking section | Portfolio completeness |
+>
+> <details>
+> <summary>Result</summary>
+>
+> - Completed ACI, ACA, AKS vs Azure Batch comparison
+>
+> </details>
+<br>

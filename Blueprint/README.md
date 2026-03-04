@@ -46,7 +46,8 @@ Templates for creating voyages.
 
 | Template | Description |
 |----------|-------------|
-| [voyage-plan.md](voyage-templates/voyage-plan.md) | Voyage plan template (Why/What/How) |
-| [passage-plan.md](voyage-templates/passage-plan.md) | Daily passage plan template |
-| [log.md](voyage-templates/log.md) | Daily log template |
-| [passage-forecast-review.md](voyage-templates/passage-forecast-review.md) | Forecast review template |
+| [voyage-plan.md](voyage-templates/voyage/voyage-plan.md) | Voyage plan template (Why/What/How) |
+| [task.md](voyage-templates/task/task.md) | Task template |
+| [log.md](voyage-templates/voyage/logbook/YYYY-MM-DD/log.md) | Daily log template |
+| [passage-plan.md](voyage-templates/voyage/logbook/YYYY-MM-DD/metacognition/passage-plan.md) | Daily passage plan template |
+| [passage-forecast-review.md](voyage-templates/voyage/logbook/YYYY-MM-DD/metacognition/passage-forecast-review.md) | Forecast review template |

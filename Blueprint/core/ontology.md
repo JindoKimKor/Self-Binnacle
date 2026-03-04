@@ -55,7 +55,7 @@ Definition of all Things in the Self-Binnacle system.
 > | Lifecycle | Plotted Courses → Plotted (Underway) → Plotted (Reached) |
 > | Relationship | 1 Voyage Plan : 1 Sailing Orders section |
 > | Contrast | Logbook = past records, Sailing Orders = future tasks |
-> | Format | `| Order | Deadline | Created | Purpose |` table (per Order) + free-form details (optional) |
+> | Format | Blockquote-wrapped `| Deadline | Created | Order | Purpose |` table + optional `<details>` block + `<br>` separator |
 > | Subsections | Plotted (Underway) (in progress) / Plotted Courses (pending) / Plotted (Reached) (completed) |
 
 > ### Logbook (Folder)
@@ -105,7 +105,7 @@ Definition of all Things in the Self-Binnacle system.
 > |----------|-------|
 > | Definition | Daily forecast (Planning stage) |
 > | Created by | User |
-> | Storage | `logbook/{YYYY-MM-DD}/passage-plan.md` |
+> | Storage | `logbook/{YYYY-MM-DD}/metacognition/passage-plan.md` |
 > | Purpose | Record time/difficulty forecast and rationale |
 > | Lifecycle | Created at Passage start |
 > | Contents | Task (what + approach), Time Estimate (how long + why), Difficulty Estimate (how well + expected obstacles) |
@@ -129,7 +129,7 @@ Definition of all Things in the Self-Binnacle system.
 > |----------|-------|
 > | Definition | Compare forecast vs actual (Evaluating stage) |
 > | Created by | User |
-> | Storage | `logbook/{YYYY-MM-DD}/passage-forecast-review.md` |
+> | Storage | `logbook/{YYYY-MM-DD}/metacognition/passage-forecast-review.md` |
 > | Purpose | Check forecast accuracy, improve next forecast |
 > | Lifecycle | Written at Passage end |
 > | Contents | Time (forecast vs actual + accuracy + why), Difficulty (forecast vs actual + accuracy + why), How to forecast better next time |

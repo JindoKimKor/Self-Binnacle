@@ -63,32 +63,33 @@ I navigate myself as a ship in the ocean of life. Self-Binnacle is a framework t
 ```
 Self-Binnacle/
 ├── Voyages/
-│   ├── Tasks/                    # One-off tasks
-│   │   └── {task-name}/
-│   │       ├── {task-name}.md
-│   │       └── resources/        # (optional)
-│   ├── Projects/                 # Goal with deadline
-│   │   └── {project-name}/
-│   │       ├── voyage-plan.md
-│   │       ├── logbook/
-│   │       │   └── {YYYY-MM-DD}/
-│   │       │       ├── log.md
-│   │       │       ├── metacognition/
-│   │       │       │   ├── passage-plan.md
-│   │       │       │   └── passage-forecast-review.md
-│   │       │       └── resources/    # Daily materials/outputs (optional)
-│   │       └── resources/            # Voyage-wide materials (optional)
-│   └── Areas/                    # Ongoing interests
-│       └── {area-name}/
-│           ├── voyage-plan.md
-│           ├── logbook/
-│           │   └── {YYYY-MM-DD}/             # Passage
-│           │       ├── log.md
-│           │       ├── metacognition/
-│           │       │   ├── passage-plan.md
-│           │       │   └── passage-forecast-review.md
-│           │       └── resources/    # Daily materials/outputs (optional)
-│           └── resources/            # Voyage-wide materials (optional)
+│   ├── CONTRACT.md               # Defines repo relationships
+│   ├── public/                   # Public repo (submodule)
+│   │   ├── Projects/
+│   │   ├── Areas/
+│   │   └── Tasks/
+│   ├── private/                  # Private repo (independent, gitignored)
+│   │   ├── Projects/
+│   │   └── Areas/
+│   └── embryonic/                # No git, local only (gitignored)
+│       ├── Projects/
+│       └── Areas/
+│
+│   # Inside each visibility tier, voyage structure is identical:
+│   # Projects/{project-name}/
+│   #   ├── voyage-plan.md
+│   #   ├── logbook/{YYYY-MM-DD}/
+│   #   │   ├── log.md
+│   #   │   ├── metacognition/
+│   #   │   │   ├── passage-plan.md
+│   #   │   │   └── passage-forecast-review.md
+│   #   │   └── resources/        # Daily materials (optional)
+│   #   └── resources/            # Voyage-wide materials (optional)
+│   # Areas/{area-name}/          # Same structure as Projects
+│   # Tasks/{task-name}/
+│   #   ├── {task-name}.md
+│   #   └── resources/            # (optional)
+│
 ├── Archive/                      # Completed voyages
 ├── Resources/                    # Global reference materials
 ├── Blueprint/                    # Framework documentation (public)
@@ -161,11 +162,21 @@ When the user writes in Korean:
 
 ## AI Passage Creation
 
-When creating a new passage:
-1. Copy templates from `Blueprint/voyage-templates/voyage/logbook/YYYY-MM-DD/`
-2. Create folder with today's date (get from system)
-3. Update `date:` field in frontmatter to today's date
-4. Do NOT fill in content - let user fill it themselves
+Follow the Passage Builder CONTRACT at `_system/scripts/passage-builder/CONTRACT.md`.
+
+**Steps:**
+1. Resolve voyage name: `py _system/scripts/voyage/resolve.py "{user_input}"`
+2. Query Calendar: `py _system/scripts/calendar/query.py "{resolved_title}" "{date}"`
+3. Apply Decision Matrix from CONTRACT:
+   - **Event exists + Plan filled** → Read plan with `py _system/scripts/calendar/read-description.py`, pre-fill passage-plan.md
+   - **Event exists + Plan empty + Before** → Suggest writing plan first (AskUserQuestion)
+   - **Event exists + Plan empty + During** → Create empty passage, message: "Proceeding without a plan"
+   - **Event exists + Plan empty + After** → Create empty passage, message: "Completed without a plan"
+   - **No event** → Create empty passage, offer Calendar event creation with `py _system/scripts/calendar/create-event.py`
+4. Copy templates from `Blueprint/voyage-templates/voyage/logbook/YYYY-MM-DD/`
+5. Create folder with the given date
+6. Update `date:` field in frontmatter
+7. If plan content exists from Calendar, write it into `metacognition/passage-plan.md`
 
 ## AI Passage Evaluation
 
@@ -260,11 +271,11 @@ When user requests Sailing Orders operations:
 To update the Dashboard (README.md), run:
 
 ```bash
-py _system/scripts/generate_dashboard.py
+py _system/scripts/dashboard/generate.py
 ```
 
 This script:
-- Scans Voyages folders (Tasks, Projects, Areas)
+- Scans Voyages folders across all visibility tiers (public, private, embryonic)
 - Fetches time data from Google Calendar (events with `[Project]` or `[Area]` prefix)
 - Generates README.md with activity visualization
 

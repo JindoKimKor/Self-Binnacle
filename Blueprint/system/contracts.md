@@ -39,6 +39,10 @@
   - AI's Responsibilities
   - Invariants
   - Operations
+- [CONTRACT-Driven Microservices](#contract-driven-microservices)
+  - Pattern
+  - Implemented CONTRACTs
+  - Shared Data Artifacts
 
 ---
 
@@ -148,10 +152,11 @@
 >
 > #### Create Voyage
 > - **Preconditions:**
+>   - Visibility tier selected (public/private/embryonic)
 >   - Category selected (Task/Project/Area)
 >   - voyage-name decided
 > - **Postconditions:**
->   - {Category}/{voyage-name}/ folder created
+>   - Voyages/{visibility}/{Category}/{voyage-name}/ folder created
 >   - voyage-plan.md file created
 >   - logbook/ folder created (Project/Area only)
 >
@@ -170,7 +175,7 @@
 >   - Voyage exists
 >   - Completion decided (user decision)
 > - **Postconditions:**
->   - Voyage folder moved to Archive/{Category}/
+>   - Voyage folder moved to Archive/{visibility}/{Category}/
 
 ---
 
@@ -244,8 +249,9 @@
 
 > ### Invariants
 >
-> - Entire Self-Binnacle is managed by Git
-> - All changes are recorded in history
+> - Self-Binnacle is managed by three Git repos: framework (public), Voyages/public (submodule, public), Voyages/private (independent, private)
+> - Voyages/embryonic has no Git tracking (local only)
+> - All changes in tracked repos are recorded in history
 
 > ### Operations
 >
@@ -333,6 +339,13 @@
 
 > ### AI's Responsibilities
 >
+> **As Orchestrator (CONTRACT-driven):**
+> - Interpret CONTRACT.md rules to determine actions
+> - Invoke micro scripts as stateless tools
+> - Deliver metacognition awareness messages
+> - Apply decision matrices (e.g., Passage Builder timing logic)
+>
+> **As Analyzer:**
 > - Detect principle violations (Security Scan)
 > - Detect structure deviations (Structure Scan)
 > - Detect scope deviations (Scope Scan)
@@ -376,3 +389,37 @@
 > - **Postconditions:**
 >   - Report generated
 >   - Delivered to user
+
+---
+
+## CONTRACT-Driven Microservices
+
+### Pattern
+
+`CONTRACT.md` (rules) + micro scripts (stateless tools) + AI (orchestrator)
+
+Each CONTRACT defines:
+- **Parties** — who is involved (User, Google Calendar, Self-Binnacle, etc.)
+- **Flow** — what happens step by step
+- **Decision Matrix** — conditional logic for different states
+- **Invariants** — what must never be violated
+- **Micro Scripts** — single-purpose scripts AI invokes as tools
+
+AI reads the CONTRACT, assesses the current state, applies the decision matrix, and invokes scripts accordingly.
+
+### Implemented CONTRACTs
+
+| CONTRACT | Location | System | Purpose |
+|----------|----------|--------|---------|
+| Voyages | `Voyages/CONTRACT.md` | PARA | Defines visibility tiers (public/private/embryonic) and repo relationships |
+| Dashboard | `_system/scripts/dashboard/CONTRACT.md` | PARA | Scans Voyages + Calendar → generates READMEs + voyage-map.json |
+| Passage Plan Observer | `_system/scripts/passage-plan-observer/CONTRACT.md` | Metacognition | Injects planning skeleton into empty Calendar event descriptions |
+| Passage Builder | `_system/scripts/passage-builder/CONTRACT.md` | Metacognition | AI-orchestrated passage creation with Calendar integration and decision matrix |
+
+### Shared Data Artifacts
+
+| Artifact | Produced by | Consumed by |
+|----------|-------------|-------------|
+| `voyage-map.json` | Dashboard | Passage Builder (via resolve.py) |
+| Calendar event descriptions | Passage Plan Observer (skeleton injection) | Passage Builder (plan content extraction) |
+| Logbook passages | Passage Builder | Dashboard (scanning) |
