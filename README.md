@@ -18,7 +18,7 @@
 
 ## Dashboard
 
-> Last updated: 2026-03-04
+> Last updated: 2026-03-09
 
 ---
 
@@ -29,11 +29,12 @@
 | Portfolio AI Video Marketing | - | Never |
 | English Language | - | Never |
 | Programming Languages | - | Never |
-| Year-End Knowledge Cleanup | 2026-01-20 | 43 |
-| Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series | 2026-01-21 | 42 |
-| VARLab Work Transfer | 2026-01-26 | 37 |
-| Software Design Patterns | 2026-01-26 | 37 |
-| Unity CI Enabler | 2026-01-30 | 33 |
+| Year-End Knowledge Cleanup | 2026-01-20 | 48 |
+| VARLab Work Transfer | 2026-01-26 | 42 |
+| Software Design Patterns | 2026-01-26 | 42 |
+| Job Search | 2026-02-19 | 18 |
+| System Fundamentals | 2026-02-22 | 15 |
+| Data Structures and Algorithms | 2026-02-23 | 14 |
 
 ---
 
@@ -41,11 +42,13 @@
 
 | Order | Voyage | Deadline | Status |
 |-------|--------|----------|--------|
-| Workshop 1 Content Preparation | GDG-Conestoga-Git-CICD-Workshop | 2026-03-01 | 🚨 3 days overdue |
-| Workshop 1 Posting Content Delivery | GDG-Conestoga-Git-CICD-Workshop | 2026-03-04 | 🚨 Today |
-| Workshop 2 Content Preparation | GDG-Conestoga-Git-CICD-Workshop | 2026-03-06 | 🚨 2 days |
-| Workshop 2 Posting Content Delivery | GDG-Conestoga-Git-CICD-Workshop | 2026-03-09 | ⏰ 5 days |
-| Workshop 1 Delivery | GDG-Conestoga-Git-CICD-Workshop | 2026-03-11 | ⏰ 7 days |
+| Workshop 1 Content Preparation | GDG-Conestoga-Git-CICD-Workshop | 2026-03-01 | 🚨 8 days overdue |
+| Workshop 1 Posting Content Delivery | GDG-Conestoga-Git-CICD-Workshop | 2026-03-04 | 🚨 5 days overdue |
+| Workshop 2 Content Preparation | GDG-Conestoga-Git-CICD-Workshop | 2026-03-06 | 🚨 3 days overdue |
+| Workshop 2 Posting Content Delivery | GDG-Conestoga-Git-CICD-Workshop | 2026-03-09 | 🚨 Today |
+| Workshop 1 Delivery | GDG-Conestoga-Git-CICD-Workshop | 2026-03-11 | 🚨 2 days |
+| Workshop 3 Content Preparation | GDG-Conestoga-Git-CICD-Workshop | 2026-03-15 | ⏰ 6 days |
+| Workshop 2 Delivery | GDG-Conestoga-Git-CICD-Workshop | 2026-03-16 | ⏰ 7 days |
 
 ---
 
@@ -60,14 +63,14 @@
 ## Projects (9)
 
 > ### Google Developer Group @ Conestoga College - Git/CI-CD Workshop Series
-> Total: 10.8h | Start: Dec 2025
+> Total: 16.5h | Start: Dec 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 5.8h | □□□■□□□□■ |
 > | Feb | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Jan | 4.0h | □□□■□□□□□□□□□□□□□□□□■□□□□□□□□□□ |
 > | Dec | 6.8h | □□□□□□□□□□□□□□□□□□■□□□□□□□■□□□□ |
@@ -75,18 +78,18 @@
 > </details>
 
 > ### Unity CI Enabler
-> Total: 20.8h | Start: May 2025 | Tracked from Nov 2025
+> Total: 52.2h | Start: May 2025 | Tracked from Nov 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 33.2h | □□□□□■■■■ |
 > | Feb | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Jan | 2.5h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□■■□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
-> | Nov | 18.2h | □□□□□■□□□■■■■■■□□■□□□□□■□□□□□□ |
+> | Nov | 16.5h | □□□□□□□□□■■■■■■□□■□□□□□■□□□□□□ |
 >
 > </details>
 
@@ -98,7 +101,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Jan | 116.2h | □□□□□□□■□■■■■■■■■□□□□□□■■■□□□□□ |
 >
@@ -112,7 +115,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□■□□□□□□□□□□□ |
 >
@@ -126,7 +129,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 1.0h | ■□□□ |
+> | Mar | 1.0h | ■□□□□□□□□ |
 > | Feb | 2.0h | ■□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Jan | 4.5h | □■□■□□□□□□□□□□□□□■□□□□□□□□■□□□□ |
 > | Dec | 2.5h | □□□□□□□□□■□□□□□□□□□□■□■□□□□□□□□ |
@@ -134,50 +137,49 @@
 > </details>
 
 > ### Helprr.ai
-> Total: 94.0h | Start: Sep 2025 | Tracked from Nov 2025
+> Total: 91.0h | Start: Sep 2025 | Tracked from Nov 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 1.0h | □□□□■□□□□ |
 > | Feb | 10.5h | □■□□□□□■■□□□□□□■□□■□□□□□□■□□ |
 > | Jan | 20.0h | □■□■□□■□□□□□□□■□□□■□□■□■□■■□□■□ |
 > | Dec | 23.5h | □■□□■□□■□□□□□□□■■■■□□□■□□□■□■□■ |
-> | Nov | 40.0h | □□□□■□□□□■■■□□■■■□■□□□■□□■□□□□ |
+> | Nov | 36.0h | □□□□□□□□□■■■□□■■■□■□□□■□□■□□□□ |
 >
 > </details>
 
 > ### Job Search
-> Total: 109.2h | Start: Oct 2025 | Tracked from Nov 2025
+> Total: 103.0h | Start: Oct 2025 | Tracked from Nov 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 55.8h | ■■■■□■■□■■■□□□□□■■■□□□□□□□□□ |
 > | Jan | 19.8h | □□□□■■□□□■□□□□□□■■■■□■□□□□□□□□□ |
 > | Dec | 25.0h | ■■□■□□□□□□□□□□□□□□□□□■■□□■□□□■□ |
-> | Nov | 8.8h | □□□□□□□■□□□□□□□□□□□□□□□■□□□■□□ |
+> | Nov | 2.5h | □□□□□□□□□□□□□□□□□□□□□□□■□□□■□□ |
 >
 > </details>
 
 > ### Riipen
-> Total: 9.8h | Start: Sep 2025 | Tracked from Nov 2025
+> Total: 11.8h | Start: Sep 2025 | Tracked from Dec 2025
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 3.0h | □□□■□□□□□ |
 > | Feb | 3.8h | □□□□□□■□□□□□□■□□□□□□□□■□□□□□ |
 > | Jan | 1.0h | □□□□□■□□□□□□□□□□□□■□□□□□□□□□□□□ |
 > | Dec | 4.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□■ |
-> | Nov | 1.0h | □□□□□■□□□□□□□□□□□□□□□□□□□□□□□□ |
 >
 > </details>
 
@@ -205,7 +207,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
 > | Jan | 95.8h | □□□□□□□□□□■■■■■■■■□□□□□■■■□□□□□ |
 > | Dec | 0.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ |
@@ -221,7 +223,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 9.9h | □□□□□□□□□□■□■■□□■□■□□■□□□□□□ |
 >
 > </details>
@@ -234,7 +236,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 15.5h | □□□□□□□□□□□■■□□□□□□□■■■□□□□□ |
 > | Jan | 3.0h | □□□□□□□□□□□□□□□□□□□□□□□□□□□□□■□ |
 > | Dec | 2.0h | □□□□□□□□□□□□□□□□□□□□■□■□□□□□□□□ |
@@ -254,7 +256,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 20.5h | □□■■□□□□□□■□■□□□■■□□□□□□■■■□ |
 > | Jan | 18.0h | □□□□□□□□□□□□□■□□□□□■■□□□□□□■□□■ |
 >
@@ -268,7 +270,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 54.2h | ■■□□□■□■□□□□■■□■■□□■□□□□□□■□ |
 > | Jan | 16.8h | □□□□□□□□□□□□□□□■□□□□□□■□□□□■■■■ |
 >
@@ -282,7 +284,7 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 50.5h | □□□■■■□□□□■■■□■■□■■□□□□□■■□□ |
 > | Jan | 12.0h | □□□□□□□□□□□□□■■□□□□□■■□□□□□■■□□ |
 >
@@ -296,21 +298,21 @@
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 0.0h | □□□□□□□□□ |
 > | Feb | 25.8h | □□□□■□□□□□□■□□□□□□■□■□□□□■□□ |
 > | Jan | 11.5h | □□□□□□□□□□□□□□■□□□□□□■□□□□□□■□■ |
 >
 > </details>
 
 > ### Software Delivery and Release Management
-> Total: 81.8h | Start: Jan 2026
+> Total: 84.8h | Start: Jan 2026
 >
 > <details>
 > <summary>Monthly Activity</summary>
 >
 > | Month | Hours | Activity |
 > |-------|-------|----------|
-> | Mar | 0.0h | □□□□ |
+> | Mar | 3.0h | □□□□□□□□■ |
 > | Feb | 63.8h | ■■■□■■□□■■□□□□□■■□□□□□■■□■■□ |
 > | Jan | 18.0h | □□□□□□□□□□□■■□□□□□■■□□□□□■■□□□□ |
 >
